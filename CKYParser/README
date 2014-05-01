@@ -1,0 +1,5 @@
+Je ne suis pas sur qu'on ait besoin de l'attribut isTerminal pour la classe
+Symbol. Apres tout la grammaire ne contient que des regles non-lexicales si
+on considere que l'entree est deja taggee, non ? En tout cas je le laisse la
+mais il me semble qu'un symbole peut etre tres simplement reduit a un String,
+meme si je suis d'accord avec ton idee que c'est un peu "raw".
