@@ -5,8 +5,8 @@
  */
 public class Symbol
 {
-	private String		_value;
-	private boolean		_isTerminal;
+	private final String		_value;
+	private final boolean		_isTerminal;
 	
 	public Symbol(String value, boolean isTerminal)
 	{
@@ -17,6 +17,18 @@ public class Symbol
 	public Symbol(String value)
 	{
 		this(value, false);
+	}
+	
+	@Override
+	public boolean equals(Object o)
+	{
+		Symbol		s;
+
+		if (o == null || !(o instanceof Symbol))
+			return (false);
+		s = (Symbol)o;
+		return (this._value.equals(s._value)
+				&& this._isTerminal == s._isTerminal);
 	}
 	
 	public boolean isTerminal()
