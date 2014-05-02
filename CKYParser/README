@@ -1,3 +1,8 @@
+02/05/2014
+J'ai fini par supprimer la classe Symbol, pour les raisons auxquelles je pensais
+hier et parce que ca simplifie visiblement beaucoup le code.
+
+01/05/2014
 Je ne suis pas sur qu'on ait besoin de l'attribut isTerminal pour la classe
 Symbol. Apres tout la grammaire ne contient que des regles non-lexicales si
 on considere que l'entree est deja taggee, non ? En tout cas je le laisse la

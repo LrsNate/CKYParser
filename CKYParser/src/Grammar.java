@@ -8,28 +8,33 @@ import java.util.HashMap;
  */
 public class Grammar
 {
-	private final HashMap<LinkedList<Symbol>, LinkedList<RewritingRule>> _map;
+	private final HashMap<String, LinkedList<RewritingRule>> _map;
 	
 	public Grammar()
 	{
 		this._map =
-				new HashMap<LinkedList<Symbol>, LinkedList<RewritingRule>>();
+				new HashMap<String, LinkedList<RewritingRule>>();
 	}
 	
 	public void addRule(RewritingRule r)
 	{
 		LinkedList<RewritingRule>	lst;
+		String						rhs;
 
-		if (this._map.containsKey(r.getRHS()))
+		rhs = r.getRHS()[0];
+		if (r.getRHS().length == 2)
+			rhs += " " + r.getRHS()[1];
+		if (!this._map.containsKey(rhs))
 		{
 			lst = new LinkedList<RewritingRule>();
 			lst.add(r);
-			this._map.put(r.getRHS(), lst);
+			this._map.put(rhs, lst);
 		}
-		else if (!this._map.get(r.getRHS()).contains(r))
+		else if (!this._map.get(rhs).contains(r))
 		{
-			this._map.get(r.getRHS()).add(r);
-			Collections.sort(this._map.get(r.getRHS()));
+			this._map.get(rhs).add(r);
+			Collections.sort(this._map.get(rhs),
+					Collections.reverseOrder());
 		}
 		else
 			throw new RuntimeException("Duplicate rules in the grammar");
@@ -38,17 +43,33 @@ public class Grammar
 	
 	public void addRule(String line)
 	{
-		String				tab[];
-		LinkedList<Symbol>	rhs;
+		String		tab[];
+		String		rhs[];
 		
-		rhs = new LinkedList<Symbol>();
 		tab = line.split(" ");
-		if (tab.length < 4)
+		if (tab.length < 4 || tab.length > 5)
 			throw new RuntimeException("Incorrect grammar rule");
-		for (int i = 3; i < tab.length; i++)
-			rhs.add(new Symbol(tab[i]));
-		addRule(new RewritingRule(new Symbol(tab[1]),
-				rhs,
+		rhs = new String[tab.length == 5 ? 2 : 1];
+		rhs[0] = tab[3];
+		if (tab.length == 5)
+			rhs[1] = tab[4];
+		this.addRule(new RewritingRule(tab[1], rhs,
 				Double.parseDouble(tab[0])));
+	}
+
+	public LinkedList<RewritingRule> getRules(String[] rhs)
+	{
+		String	k;
+		
+		k = rhs[0];
+		if (rhs.length > 1)
+			k += " " + rhs[1];
+		return (this.getRules(k));
+	}
+	
+	
+	public LinkedList<RewritingRule> getRules(String rhs)
+	{
+		return (this._map.get(rhs));
 	}
 }

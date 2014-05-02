@@ -1,7 +1,5 @@
 import static org.junit.Assert.*;
 
-import java.util.LinkedList;
-
 import org.junit.Test;
 
 public class RewritingRuleTest
@@ -10,55 +8,46 @@ public class RewritingRuleTest
 	@Test
 	public void testConstructor()
 	{
-		Symbol				lhs;
-		LinkedList<Symbol>	rhs;
-		RewritingRule		r;
-		
-		lhs = new Symbol("DP");
-		rhs = new LinkedList<Symbol>();
-		rhs.add(new Symbol("NP"));
-		r = new RewritingRule(lhs, rhs, 0.5);
-		assertEquals(lhs, r.getLHS());
-		assertEquals(rhs, r.getRHS());
+		RewritingRule	r;
+		String			tab[];
+
+		tab = new String[2];
+		tab[0] = "V";
+		tab[1] = "DP";
+		r = new RewritingRule("VP", tab, 0.5);
+		assertEquals("VP", r.getLHS());
+		assertArrayEquals(tab, r.getRHS());
 		assertEquals(0.5, r.getProbability(), 0.001);
 	}
 	
 	@Test
 	public void testEquals()
 	{
-		Symbol				lhs;
-		LinkedList<Symbol>	rhs;
-		RewritingRule		r;
+		String[]		tab;
+		RewritingRule	r;
 		
-		lhs = new Symbol("DP");
-		rhs = new LinkedList<Symbol>();
-		rhs.add(new Symbol("NP"));
-		r = new RewritingRule(lhs, rhs, 0.5);
+		tab = new String[1];
+		tab[0] = "V";
+		r = new RewritingRule("VP", tab, 0.5);
 		assertFalse(r.equals(null));
 		assertFalse(r.equals("Toto"));
-		assertTrue(r.equals(new RewritingRule(lhs, rhs, 0)));
-		assertFalse(r.equals(new RewritingRule(lhs,
-				new LinkedList<Symbol>(),
-				0)));
-		assertFalse(r.equals(new RewritingRule(new Symbol("Toto"), rhs, 0)));
-		assertFalse(r.equals(new RewritingRule(new Symbol("Toto"),
-				new LinkedList<Symbol>(),
-				0)));
+		assertTrue(r.equals(new RewritingRule("VP", tab, 0)));
+		assertFalse(r.equals(new RewritingRule("VP", new String[2], 0)));
+		assertFalse(r.equals(new RewritingRule("Toto", tab, 0)));
+		assertFalse(r.equals(new RewritingRule("Toto", new String[2], 0)));
 	}
 	
 	@Test
 	public void testComparison()
 	{
-		Symbol				lhs;
-		LinkedList<Symbol>	rhs;
-		RewritingRule		r0;
-		RewritingRule		r1;
+		String[]		rhs;
+		RewritingRule	r0;
+		RewritingRule	r1;
 		
-		lhs = new Symbol("DP");
-		rhs = new LinkedList<Symbol>();
-		rhs.add(new Symbol("NP"));
-		r0 = new RewritingRule(lhs, rhs, 0.5);
-		r1 = new RewritingRule(lhs, rhs, 0.3);
+		rhs = new String[1];
+		rhs[0] = "NP";
+		r0 = new RewritingRule("DP", rhs, 0.5);
+		r1 = new RewritingRule("DP", rhs, 0.3);
 		assertEquals(1, r0.compareTo(r1));
 		assertEquals(0, r0.compareTo(r0));
 		assertEquals(-1, r1.compareTo(r0));
