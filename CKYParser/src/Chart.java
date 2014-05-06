@@ -1,7 +1,6 @@
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map.Entry;
 
 public class Chart
 {
@@ -17,10 +16,9 @@ public class Chart
 		Coord				c;
 		LinkedList<Tree>	l;
 		
-		for (Entry<Coord, LinkedList<Tree>> e : this._map.entrySet())
-			System.out.println(e.getKey());
+		System.out.println("Adding: " + t);
 		c = new Coord(row, col);
-		if (this._map.containsKey(c))
+		if (this._map.get(c) != null)
 		{
 			System.out.println("Adding a complementary key");
 			this._map.get(c).add(t);
@@ -62,6 +60,13 @@ public class Chart
 			return (this._row == c._row && this._col == c._col);
 		}
 		
+		@Override
+		public int hashCode()
+		{
+			return (this.toString().hashCode());
+		}
+		
+		@Override
 		public String toString()
 		{
 			return ("(" + this._row + ", " + this._col +")");
