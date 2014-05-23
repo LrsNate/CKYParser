@@ -16,7 +16,7 @@ public class RewrRule {
 	/**
 	 * the right-hand side of the production
 	 */
-	protected final LinkedList<Symbol> _rhs;
+	protected final RHS _rhs;
 	
 	/**
 	 * construct a production rule
@@ -24,6 +24,19 @@ public class RewrRule {
 	 * @param rhs: right-hand side
 	 */
 	public RewrRule(Symbol lhs, LinkedList<Symbol> rhs) {
+		if (lhs.IsTerminal()) {
+			throw new IllegalArgumentException();
+		}
+		this._lhs = lhs; 
+		this._rhs = new RHS(rhs);
+	}
+	
+	/**
+	 * construct a production rule
+	 * @param lhs: left-hand side
+	 * @param rhs: right-hand side
+	 */
+	public RewrRule(Symbol lhs, RHS rhs) {
 		if (lhs.IsTerminal()) {
 			throw new IllegalArgumentException();
 		}
@@ -41,8 +54,7 @@ public class RewrRule {
 			throw new IllegalArgumentException();
 		}
 		this._lhs = lhs;
-		_rhs = new LinkedList<Symbol>();
-		_rhs.add(rhs_smb);
+		_rhs = new RHS(rhs_smb);
 	}
 	
 	/**
@@ -65,7 +77,7 @@ public class RewrRule {
 			list_words.removeFirst();
 			// then comes the right-hand side of the rule
 			// (a string with several names of symbols separated by white-spaces)
-			this._rhs = Symbol.ListSymbols(list_words);
+			this._rhs = new RHS(list_words.toArray(new String[list_words.size()]));
 		} catch (NoSuchElementException e) {
 			throw new IllegalArgumentException();
 		}
@@ -84,8 +96,8 @@ public class RewrRule {
 		}
 		// the right-hand side of the rule
 		// (a string with several names of symbols separated by white-spaces)
-		LinkedList<String> list_words = new LinkedList<String>( Arrays.asList(rhs_str.split(" ")) );
-		this._rhs = Symbol.ListSymbols(list_words);
+		String[] list_symbol_names = rhs_str.split(" ");
+		this._rhs = new RHS(list_symbol_names);
 	}
 	
 	/**
@@ -108,16 +120,13 @@ public class RewrRule {
 	 * get the right-hand side of the rule
 	 * @return: the symbol in the left-hand side of the rule
 	 */
-	public LinkedList<Symbol> getRHS() {
+	public RHS getRHS() {
 		return _rhs;
 	}
 	
 	@Override
 	public String toString() {
-		String str_rule = _lhs + " ->";
-		for (Symbol smb : _rhs) {
-			str_rule = str_rule + " " + smb;
-		}
+		String str_rule = _lhs + " ->" + _rhs;
 		return str_rule;
 	}
 	
@@ -127,19 +136,7 @@ public class RewrRule {
 			return false;
 		}
 		if (o instanceof RewrRule) {
-			if (!(((RewrRule)o).getLHS().equals(this._lhs))) {
-				return false;
-			}
-			LinkedList<Symbol> o_rhs = ((RewrRule)o)._rhs;
-			if (o_rhs.size() != this._rhs.size()) {
-				return false;				
-			}
-			for (int i = 0; i < this._rhs.size(); i++) {
-				if (!(o_rhs.get(i).equals(this._rhs.get(i)))) {
-					return false;
-				}
-			}
-			return true;
+			return ((!(((RewrRule)o).getLHS().equals(this._lhs))) && (!(((RewrRule)o).getRHS().equals(this._rhs))));
 		}
 		return false;
 	}

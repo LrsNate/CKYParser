@@ -81,7 +81,7 @@ public class Symbol {
 	 * @param list_words: list of strings
 	 * @return: list of symbols (produced by calls to the constructor Symbol(String))
 	 */
-	public static LinkedList<Symbol> ListSymbols(LinkedList<String> list_words) {
+	public static LinkedList<Symbol> ListSymbols(String[] list_words) {
 		LinkedList<Symbol> list_symbols = new LinkedList<Symbol>();
 		for (String word : list_words) {
 			list_symbols.add(new Symbol(word));

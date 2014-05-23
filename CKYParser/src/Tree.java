@@ -4,7 +4,7 @@ public class Tree implements Comparable<Tree>
 	/**
 	 * the symbol at the root of the tree
 	 */
-	private String	_value;
+	private Symbol	_value;
 	/**
 	 * the probability of the whole tree 
 	 */
@@ -12,7 +12,7 @@ public class Tree implements Comparable<Tree>
 	private Tree	_left = null;
 	private Tree	_right = null;
 	
-	public Tree(String value)
+	public Tree(Symbol value)
 	{
 		this._value = value;
 		this._prob = 1;
@@ -20,7 +20,7 @@ public class Tree implements Comparable<Tree>
 		//this._right = null;
 	}
 	
-	public Tree(String value, double prob, Tree left)
+	public Tree(Symbol value, double prob, Tree left)
 	{
 		this(value);
 		this._prob = prob;
@@ -28,7 +28,7 @@ public class Tree implements Comparable<Tree>
 		//this._right = null; 
 	}
 	
-	public Tree(String value, double prob, Tree left, Tree right)
+	public Tree(Symbol value, double prob, Tree left, Tree right)
 	{
 		this(value, prob, left);
 		this._right = right;
@@ -38,7 +38,7 @@ public class Tree implements Comparable<Tree>
 	 * 
 	 * @return: the Symbol at the root of the tree
 	 */
-	public String getRoot() {
+	public Symbol getRoot() {
 		return _value;
 	}
 	

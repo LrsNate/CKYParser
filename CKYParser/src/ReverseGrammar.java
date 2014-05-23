@@ -7,28 +7,34 @@ import java.util.HashMap;
  * @author Antoine LAFOUASSE
  */
 public class ReverseGrammar extends Grammar0 {
-	private HashMap<String, LinkedList<RewrRuleProb>> _map;
+	private HashMap<RHS, LinkedList<RewrRuleProb>> _map;
 	
 	/**
 	 * initialise the container that actually stores the grammar
 	 */
 	protected void init() {
-		this._map = new HashMap<String, LinkedList<RewrRuleProb>>();
+		this._map = new HashMap<RHS, LinkedList<RewrRuleProb>>();
 	}
 	
+	/**
+	 * create a new grammar with the given axiom
+	 * @param axiom: the axiom of the grammar
+	 */
 	public ReverseGrammar(Symbol axiom) {
 		super(axiom);
 		this.init();
 	}
 	
+	/**
+	 * add a new rewriting rule to the grammar
+	 * @param r: the rewriting rule to add to the grammar
+	 */
 	public void addRule(RewrRuleProb r)
 	{
 		LinkedList<RewrRuleProb>	lst;
-		String						rhs;
+		RHS					rhs;
 
-		rhs = r.getRHS()[0];
-		if (r.getRHS().length == 2)
-			rhs += " " + r.getRHS()[1];
+		rhs = r.getRHS();
 		if (!this._map.containsKey(rhs))
 		{
 			lst = new LinkedList<RewrRuleProb>();
@@ -38,6 +44,8 @@ public class ReverseGrammar extends Grammar0 {
 		else if (!this._map.get(rhs).contains(r))
 		{
 			this._map.get(rhs).add(r);
+			// fait en sorte que les productions sont toujours ordonnees 
+			// par ordre decroissant de probabilites
 			Collections.sort(this._map.get(rhs),
 					Collections.reverseOrder());
 		}
@@ -48,33 +56,12 @@ public class ReverseGrammar extends Grammar0 {
 	
 	public void addRule(String new_rule)
 	{
-		String		tab[];
-		String		rhs[];
-		
-		tab = new_rule.split(" ");
-		if (tab.length < 4 || tab.length > 5)
-			throw new RuntimeException("Incorrect grammar rule");
-		rhs = new String[tab.length == 5 ? 2 : 1];
-		rhs[0] = tab[3];
-		if (tab.length == 5)
-			rhs[1] = tab[4];
-		this.addRule(new RewrRuleProb(tab[1], rhs,
-				Double.parseDouble(tab[0])));
+		addRule(new RewrRuleProb(new_rule));
 	}
 
-	public LinkedList<RewrRuleProb> getRules(String[] rhs)
+	public LinkedList<RewrRuleProb> getRules(RHS rhs)
 	{
-		String	k;
-		
-		k = rhs[0];
-		if (rhs.length > 1)
-			k += " " + rhs[1];
-		return (this.getRules(k));
+		return this._map.get(rhs);
 	}
-	
-	
-	public LinkedList<RewrRuleProb> getRules(String rhs)
-	{
-		return (this._map.get(rhs));
-	}
+
 }

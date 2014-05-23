@@ -10,49 +10,33 @@ public class GrammarTest
 	public void testAddRule()
 	{
 		ReverseGrammar		g;
-		String		tab[];
-		String		ref[];
-		int			i;
+		Symbol		left_hand_sides[];
+		RHS		right_hand_sides[];
+		
+		Symbol axiom = new Symbol("S");
 
-		g = new ReverseGrammar();
-		tab = new String[2];
-		tab[0] = "N";
-		tab[1] = "PP";
-		ref = new String[3];
-		ref[0] = "VP";
-		ref[1] = "NP";
-		ref[2] = "DP";
-		g.addRule(new RewritingRule("NP", tab, 0.8));
-		g.addRule(new RewritingRule("VP", tab, 0.9));
-		g.addRule(new RewritingRule("DP", tab, 0.6));
-		i = 0;
-		for (RewritingRule r : g.getRules(tab))
+		g = new ReverseGrammar(axiom);
+		
+		left_hand_sides = new Symbol[4];
+		left_hand_sides[0] = new Symbol("Nbar");
+		left_hand_sides[1] = new Symbol("NP");
+		left_hand_sides[2] = new Symbol("VP");
+		left_hand_sides[3] = new Symbol("VP");
+		
+		right_hand_sides = new RHS[4];
+		right_hand_sides[0] = new RHS("N PP");
+		right_hand_sides[1] = new RHS("Det Nbar");
+		right_hand_sides[2] = new RHS("V PP");
+		right_hand_sides[3] = new RHS("V N PP");
+		for (int i = 0; i < 4; i++) {
+			g.addRule(new RewrRuleProb(left_hand_sides[i], right_hand_sides[i], 0.8));
+		}
+		int j = 0;
+		for (RewrRuleProb r : g.getRules(right_hand_sides[j]))
 		{
-			assertEquals(ref[i], r.getLHS());
-			i++;
+			assertEquals(left_hand_sides[j], r.getLHS());
+			j++;
 		}
 	}
-	
-	@Test
-	public void testRuleParsing()
-	{
-		ReverseGrammar		g;
-		String		ref[];
-		int			i;
 
-		g = new ReverseGrammar();
-		ref = new String[3];
-		ref[0] = "VP";
-		ref[1] = "NP";
-		ref[2] = "DP";
-		g.addRule("0.8 NP -> NP VP");
-		g.addRule("0.9 VP -> NP VP");
-		g.addRule("0.6 DP -> NP VP");
-		i = 0;
-		for (RewritingRule r : g.getRules("NP VP"))
-		{
-			assertEquals(ref[i], r.getLHS());
-			i++;
-		}
-	}
 }
