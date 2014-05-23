@@ -6,19 +6,24 @@ import java.util.HashMap;
  * A reversed grammar.
  * @author Antoine LAFOUASSE
  */
-public class Grammar
-{
-	private final HashMap<String, LinkedList<RewritingRule>> _map;
+public class ReverseGrammar extends Grammar0 {
+	private HashMap<String, LinkedList<RewrRuleProb>> _map;
 	
-	public Grammar()
-	{
-		this._map =
-				new HashMap<String, LinkedList<RewritingRule>>();
+	/**
+	 * initialise the container that actually stores the grammar
+	 */
+	protected void init() {
+		this._map = new HashMap<String, LinkedList<RewrRuleProb>>();
 	}
 	
-	public void addRule(RewritingRule r)
+	public ReverseGrammar(Symbol axiom) {
+		super(axiom);
+		this.init();
+	}
+	
+	public void addRule(RewrRuleProb r)
 	{
-		LinkedList<RewritingRule>	lst;
+		LinkedList<RewrRuleProb>	lst;
 		String						rhs;
 
 		rhs = r.getRHS()[0];
@@ -26,7 +31,7 @@ public class Grammar
 			rhs += " " + r.getRHS()[1];
 		if (!this._map.containsKey(rhs))
 		{
-			lst = new LinkedList<RewritingRule>();
+			lst = new LinkedList<RewrRuleProb>();
 			lst.add(r);
 			this._map.put(rhs, lst);
 		}
@@ -41,23 +46,23 @@ public class Grammar
 				
 	}
 	
-	public void addRule(String line)
+	public void addRule(String new_rule)
 	{
 		String		tab[];
 		String		rhs[];
 		
-		tab = line.split(" ");
+		tab = new_rule.split(" ");
 		if (tab.length < 4 || tab.length > 5)
 			throw new RuntimeException("Incorrect grammar rule");
 		rhs = new String[tab.length == 5 ? 2 : 1];
 		rhs[0] = tab[3];
 		if (tab.length == 5)
 			rhs[1] = tab[4];
-		this.addRule(new RewritingRule(tab[1], rhs,
+		this.addRule(new RewrRuleProb(tab[1], rhs,
 				Double.parseDouble(tab[0])));
 	}
 
-	public LinkedList<RewritingRule> getRules(String[] rhs)
+	public LinkedList<RewrRuleProb> getRules(String[] rhs)
 	{
 		String	k;
 		
@@ -68,7 +73,7 @@ public class Grammar
 	}
 	
 	
-	public LinkedList<RewritingRule> getRules(String rhs)
+	public LinkedList<RewrRuleProb> getRules(String rhs)
 	{
 		return (this._map.get(rhs));
 	}

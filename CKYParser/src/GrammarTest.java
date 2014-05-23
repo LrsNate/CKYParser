@@ -9,12 +9,12 @@ public class GrammarTest
 	@Test
 	public void testAddRule()
 	{
-		Grammar		g;
+		ReverseGrammar		g;
 		String		tab[];
 		String		ref[];
 		int			i;
 
-		g = new Grammar();
+		g = new ReverseGrammar();
 		tab = new String[2];
 		tab[0] = "N";
 		tab[1] = "PP";
@@ -36,11 +36,11 @@ public class GrammarTest
 	@Test
 	public void testRuleParsing()
 	{
-		Grammar		g;
+		ReverseGrammar		g;
 		String		ref[];
 		int			i;
 
-		g = new Grammar();
+		g = new ReverseGrammar();
 		ref = new String[3];
 		ref[0] = "VP";
 		ref[1] = "NP";
