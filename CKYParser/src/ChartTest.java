@@ -13,8 +13,8 @@ public class ChartTest
 		int		i;
 		
 		c = new Chart();
-		c.addTree(3, 3, new Tree("V"));
-		c.addTree(3, 3, new Tree("VP", 0.5, new Tree("V")));
+		c.addTree(3, 3, new Tree(new Symbol("V")));
+		c.addTree(3, 3, new Tree(new Symbol("VP"), 0.5, new Tree(new Symbol("V"))));
 		tab = new String[2];
 		tab[0] = "V";
 		tab[1] = "(VP V)";
