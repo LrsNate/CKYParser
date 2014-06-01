@@ -66,7 +66,7 @@ public class CKY {
 					
 					for (Symbol smb1 : cell1.getSymbols()) {
 						for (Symbol smb2 : cell2.getSymbols()) {
-							LinkedList<Symbol> rhs = new LinkedList();
+							LinkedList<Symbol> rhs = new LinkedList<Symbol>();
 							rhs.add(smb1);
 							rhs.add(smb2);
 							LinkedList<RewrRuleProb> rules = G.getRules(new RHS(rhs));

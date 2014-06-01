@@ -1,6 +1,8 @@
 
 public class InvalidGrammarFormatException extends Exception {
-	private String message = "";
+	
+	private static final long serialVersionUID = 1L;
+	private String message;
 
 	public InvalidGrammarFormatException() {
 	}
@@ -8,5 +10,10 @@ public class InvalidGrammarFormatException extends Exception {
 	public InvalidGrammarFormatException(String message) {
 		this.message = message;
 	}
-
+	
+	@Override
+	public String getMessage()
+	{
+		return (this.message);
+	}
 }
