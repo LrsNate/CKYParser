@@ -74,9 +74,26 @@ public class CKY {
 							for (RewrRuleProb rule : rules) {
 								double prob = rule.getProbability();
 								Symbol lhs = rule.getLHS();
+
 								for (Tree tree1 : cell1.getTrees(smb1)) {
 									for (Tree tree2 : cell2.getTrees(smb2)) {
-										cell.add(new Tree(lhs, tree1.getProb() * tree2.getProb() * prob, tree1, tree2));
+										Tree t = new Tree(lhs, tree1.getProb() * tree2.getProb() * prob, tree1, tree2);
+										boolean ruleExists = false;
+										if (cell.getSymbols().contains(lhs)) {
+
+											for (Tree existingT : cell.getTrees(lhs)) {
+										
+												if((t.equals(existingT))) {
+													ruleExists = true;
+					
+												}
+											}
+										}
+					
+										
+										if(!ruleExists) {
+											cell.add(t);
+										}
 									}
 								}
 							}
@@ -101,7 +118,7 @@ public class CKY {
 		
 		LinkedList<Tree> kBest = new LinkedList<Tree>();
 		for (int best = 0; best < k; best++) {
-			kBest.add(res.getFirst());
+			kBest.add(res.pop());
 		}
 		return kBest;
 	}
@@ -131,12 +148,15 @@ public class CKY {
 
 								for (Tree sP : chart[i][j].getTrees(lhs)) {
 									if((t.equals(sP))) {
+										
 										ruleExists = true;
 									}
 								}
 							}
+							
 							for (Tree singleP : addedTrees) {
 								if((t.equals(singleP))) {
+							
 									ruleExists = true;
 								}
 							}
@@ -153,7 +173,8 @@ public class CKY {
 			
 		}
 		for (Tree addedT : addedTrees) {
-				chart[i][j].add(addedT);
+
+			chart[i][j].add(addedT);
 		}
 	}
 	}

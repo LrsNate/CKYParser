@@ -38,9 +38,14 @@ public class CKYTest {
 		
 		CKY parser = new CKY(g);
 		
-		LinkedList<Tree> res = parser.parse(Symbol.ListSymbols(("fish people fish tanks").split(" ")), 2);
+		LinkedList<Tree> res = parser.parse(Symbol.ListSymbols(("fish people fish tanks").split(" ")), 5);
 		String tree = res.getFirst().toString();
+		
 		assertEquals(tree, "(S (NP (NP (N fish)) (NP (N people))) (VP (V fish) (NP (N tanks))))");
+		
+		for (Tree t : res) {
+			System.out.println(t.toString());
+		}
 	}
 
 }
