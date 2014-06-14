@@ -1,10 +1,15 @@
+package test;
+
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
 
 import org.junit.Test;
 
-
+import main.CKY;
+import main.ReverseGrammar;
+import main.Symbol;
+import main.Tree;
 public class CKYTest {
 
 	@Test
