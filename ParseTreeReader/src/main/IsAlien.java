@@ -13,6 +13,7 @@ public class IsAlien implements Filter<TreeNode> {
 	
 	/**
 	 * the prefixe of the labels of nodes to be deleted
+	 * et encore de n'importe quoi pour un commit
 	 */
 	private String prefixe;
 	
