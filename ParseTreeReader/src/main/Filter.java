@@ -3,6 +3,7 @@ package main;
 /**
  * 
  * Represents a characteristic function of a set of objects
+ * Used to filter out the new non-terminals created during the conversion to CNF form
  * @author yuliya
  *
  * @param <T> : the type of the objects in the set

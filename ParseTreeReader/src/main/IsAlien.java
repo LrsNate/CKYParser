@@ -1,6 +1,11 @@
 package main;
 
 /**
+ * 
+ * Used to filter out the new non-terminals created during the conversion to CNF form.
+ * By convention we choose a specific prefixe for all the labels of the new non-terminals 
+ * created during this conversion. This class stores this prefixe 
+ * and is then capable of detecting these non-terminals later on.
  * @author yuliya
  *
  */

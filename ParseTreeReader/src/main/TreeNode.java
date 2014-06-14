@@ -25,17 +25,6 @@ public class TreeNode
 	}
 	
 	/**
-	 * makes a deep copy of the tree supplied in the parameter list 
-	 * @param tree: the tree to be copied
-	 */
-	public TreeNode(TreeNode tree) {
-		TreeNode tree_copy = new TreeNode();
-		tree_copy._value = tree._value;
-		for (TreeNode subtree : tree._children) {
-			tree_copy._children.add(new TreeNode(subtree));
-		}
-	}
-	/**
 	 * Builds a new syntactic tree.
 	 * @param v The representation of the tree (under bracketed form).
 	 */
