@@ -3,12 +3,15 @@ package main;
 import java.util.LinkedList;
 
 /**
- * The representation of a syntactic tree.
+ * The representation of a syntactic tree. 
  * @author Antoine LAFOUASSE
  *
  */
 public class TreeNode
 {
+	/**
+	 * Ici je vais ecrire de n'importe quoi pour faire un nouvel commit.
+	 */
 	private String					_value;
 	private LinkedList<TreeNode>	_children;
 	
