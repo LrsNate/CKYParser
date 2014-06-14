@@ -16,6 +16,15 @@ public class TreeNode
 			"could not be resolved to a bracketed sentence.";
 	
 	/**
+	 * creates a tree consisting of the root only
+	 * with empty string as the label of the root
+	 */
+	public TreeNode(String value, int k) {
+		this._value = value;
+		this._children = new  LinkedList<TreeNode>();
+	}
+	
+	/**
 	 * Builds a new syntactic tree.
 	 * @param v The representation of the tree (under bracketed form).
 	 */
@@ -51,7 +60,7 @@ public class TreeNode
 		while ((v = TreeNode.skipToNextChild(v)) != null)
 			this._children.addLast(new TreeNode(TreeNode.getNextChild(v)));
 	}
-
+	
 	public LinkedList<String[]> dumpWordTab()
 	{
 		LinkedList<String[]>		res;
@@ -90,6 +99,26 @@ public class TreeNode
 		}
 		return (s.toString());
 	}
+	
+	/**
+	 * Dumps the entire tree into a String by recursively calling its toString
+	 * method and stops on encountering a leaf.
+	 * @return A partial collection of rewriting rules.
+	 */
+	public String dump()
+	{
+		StringBuffer	s;
+
+		s = new StringBuffer();
+		if (!this._children.isEmpty())
+		{
+			s.append(this.toString() + "\n");
+			for (TreeNode n : this._children)
+				s.append(n.dump());
+		}
+		return (s.toString());
+	}
+
 	
 	public String[] toWordTab()
 	{
@@ -160,5 +189,48 @@ public class TreeNode
 				return (null);
 			}
 		}
+	}
+	
+	/**
+	 * copy the root node of this tree (without its children)
+	 * @return: a tree that consists of only one node which is identical to the root of this tree
+	 */
+	protected TreeNode copy_root() {
+		TreeNode new_node = new TreeNode(this._value, 1);
+		return new_node;
+	}
+	
+	/**
+	 * Copy selected nodes from one tree to another
+	 * preserving the hierarchy relationships between the selected nodes
+	 * @param to_be_deleted
+	 * @param tree_source : the tree from which we copy the selected nodes
+	 * @param new_root : the tree onto which we hook up copies of nodes of another tree
+	 */
+	private static void selective_subtree_copy(IsAlien to_be_deleted, TreeNode tree_source, TreeNode new_root) {
+		if (!(to_be_deleted.filter(tree_source))) {
+			TreeNode new_child = tree_source.copy_root();
+			new_root._children.add(new_child);
+			new_root = new_child;
+		}
+			// hook the children of this subtree directly onto the current node
+			for (TreeNode subtree : tree_source._children) {
+				selective_subtree_copy(to_be_deleted, subtree, new_root);
+			}
+	}
+	/**
+	 * Used for back transformation of a parse-tree from CNF form to the original form
+	 * Create a new tree by deleting a certain type of nodes from the tree supplied in the parameter list
+	 * @param to_be_deleted: a class that knows to distinguish between the nodes to be deleted and the nodes to be kept in the tree
+	 * @param tree: the tree to be transformed
+	 * @return: a new (transformed) tree 
+	 */
+	public static TreeNode eliminate_nodes(IsAlien to_be_deleted, TreeNode source_tree) {
+		// create the top node onto which all the nodes of the source_tree are to be hooked 
+		TreeNode new_tree = new TreeNode("", 1);
+		// we use this node and selectively hook the subtrees of the source_tree on it
+		selective_subtree_copy(to_be_deleted, source_tree, new_tree);
+		// we know that the root node of the source tree is never deleted
+		return new_tree._children.getFirst();
 	}
 }
