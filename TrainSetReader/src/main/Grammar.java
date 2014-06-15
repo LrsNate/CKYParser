@@ -19,11 +19,30 @@ public final class Grammar
 	
 	private final static Grammar	_instance = new Grammar();
 	private final static int		_defaultMapSize = 5000;
+	
+	/**
+	 * _count_unknown : if (_count_unknown == true), \
+	 * then for every occurrence of a lexical rule (A -> a) \
+	 * add the rule (A -> **UNKNOWN**) to the counter
+	 */
+	private boolean 	_count_unknown;
+	/**
+	 * the right-hand side of a rule 
+	 * conventionnaly chosen to represent all unknown terminals
+	 */
+	private RHS 	    _unknown_rhs;
 
 	private Grammar()
 	{
 		this._map = new ConcurrentHashMap<Symbol, RewrRuleCounter>(
 				Grammar._defaultMapSize);
+	}
+	
+	private Grammar(boolean _count_unknown, String unknown_label)
+	{
+		this();
+		this._count_unknown = _count_unknown;
+		this._unknown_rhs = new RHS(new Symbol(unknown_label, true));
 	}
 
 	/**
@@ -41,10 +60,19 @@ public final class Grammar
 		for (int i = 0; i < tab.length; i++)
 			tab[i] = tab[i].trim();
 		Symbol lhs = new Symbol(tab[0]);
+		RHS rhs = new RHS(tab[1]);
 		if (this._map.containsKey(lhs))
-			this._map.get(lhs).addRule(new RHS(tab[1]));
+			this._map.get(lhs).addRule(rhs);
 		else
-			this._map.put(lhs, new RewrRuleCounter(new Symbol(tab[0]), new RHS(tab[1])));
+			this._map.put(lhs, new RewrRuleCounter(lhs, rhs));
+		
+		// If the mode _count_unknown is known
+		// and the rule under consideration is a lexical one,
+		// then its LHS is a morpho-syntactic category Cat.
+		// Add the unknown terminal to the counter of this Category.
+		if (this._count_unknown && ((rhs.size() == 1) && (rhs.get(0).IsTerminal()))) {
+			this._map.get(lhs).addRule(_unknown_rhs);
+		}
 	}
 	
 	public synchronized void addRule(String tab[])
