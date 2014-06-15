@@ -120,6 +120,24 @@ public class TreeNode
 		}
 		return (s.toString());
 	}
+	
+	public String toBracketed()
+	{
+		StringBuffer	s;
+		
+		if (!(this._children.size() > 0)) {
+			return (this._value.toString());
+		}
+		s = new StringBuffer("(");
+		s.append(this._value);
+		for (int i = 0; i < this._children.size(); i++) {
+			s.append(" "); 
+			s.append(this._children.get(i).toBracketed());
+		}
+		s.append(")");
+		
+		return (s.toString());
+	}
 
 	
 	public String[] toWordTab()
