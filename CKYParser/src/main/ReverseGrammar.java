@@ -56,11 +56,20 @@ public class ReverseGrammar extends Grammar0 {
 				
 	}
 	
+	/**
+	 * create a new rewriting rule from a string and add it to the grammar
+	 * @param new_rul: the rewriting rule to add to the grammar
+	 */
 	public void addRule(String new_rule)
 	{
 		addRule(new RewrRuleProb(new_rule));
 	}
 
+	/** 
+	 * get all rules with a given right-hand side
+	 * @param rhs right-hand side of the rule
+	 * @return all the rules with that RHS
+	 */
 	public LinkedList<RewrRuleProb> getRules(RHS rhs)
 	{
 		if(this._map.containsKey(rhs)) {
@@ -68,6 +77,43 @@ public class ReverseGrammar extends Grammar0 {
 		}
 		else return new LinkedList<RewrRuleProb>();
 		
+	}
+	
+	/**
+	 * gives all final (lexical) non-terminals.
+	 * @return a list of all non-terminals that can generate a terminal
+	 */
+	public LinkedList<Symbol> getLexicalNonterms() {
+		
+		LinkedList<Symbol> lexNonterms = new LinkedList<Symbol>();
+		for (RHS rhs : this._map.keySet()) {
+			if(rhs.get(0).IsTerminal()) {
+				LinkedList<RewrRuleProb> rules = this.getRules(rhs);
+				for (RewrRuleProb rule : rules) {
+					Symbol lhs = rule.getLHS();
+					if(!lexNonterms.contains(lhs))
+						lexNonterms.add(lhs);
+				}
+			}
+		}
+		return lexNonterms;
+	}
+	
+	/**
+	 * add equiprobable productions for unknown words.
+	 * @return a list of all possible lexical productions for an unknown word.
+	 */
+	public LinkedList<RewrRuleProb> addUnknown() {
+		LinkedList<Symbol> lexicalNonterms = this.getLexicalNonterms();
+		double prob = 1.0 / (double) lexicalNonterms.size();
+		RHS unk = new RHS("UNK");
+		LinkedList<RewrRuleProb> unknownProds = new LinkedList<RewrRuleProb>();
+		for (Symbol lexNonterm : lexicalNonterms) {
+			RewrRuleProb r = new RewrRuleProb(lexNonterm, unk, prob);
+			unknownProds.add(r);
+		}
+		
+		return unknownProds;
 	}
 
 }

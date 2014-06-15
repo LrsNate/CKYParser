@@ -3,6 +3,11 @@ package main;
 import java.util.LinkedList;
 import java.util.Set;
 
+/**
+ * CKY parser. Parses a given phrase basing on a PCFG. Gives k best parses. 
+ * @author kira
+ *
+ */
 public class CKY {
 	
 	/**
@@ -19,9 +24,11 @@ public class CKY {
 	 * the grammar
 	 */
 	private final ReverseGrammar G;
+	private final LinkedList<RewrRuleProb> unknownProds;
 
 	public CKY(ReverseGrammar G) {
 		this.G = G;
+		this.unknownProds = this.G.addUnknown();
 	}
 	
 	private void init_chart(LinkedList<Symbol> phrase) {
@@ -32,12 +39,18 @@ public class CKY {
 				chart[i][j] = new Cell();
 			}
 		}
-		// add the "terminal rules"
+		// add the "terminal rules", works in both cases if terminal nodes are lexical or not
 		for (int i = 0; i < n; i++) {
 			Symbol word = phrase.get(i);
 			LinkedList<RewrRuleProb> rules = G.getRules(new RHS(word));
-			for (RewrRuleProb rule : rules) {			
+			for (RewrRuleProb rule : rules) {	
 				chart[i][i].add(new Tree(rule));
+			}
+			if(rules.isEmpty()) { // unknown word!
+				
+				for (RewrRuleProb r : this.unknownProds) {	
+					chart[i][i].add(new Tree(r));
+				}
 			}
 			this.handleSingleProds(i,i);
 		}

@@ -30,23 +30,23 @@ public class CKYTest {
 		g.addRule("1.0 PP -> P NP");
 		
 		// add lexical rules
-		g.addRule("0.5 N -> people");
-		g.addRule("0.2 N -> fish");
-		g.addRule("0.2 N -> tanks");
-		g.addRule("0.1 N -> rods");
-		g.addRule("0.1 V -> people");
-		g.addRule("0.6 V -> fish");
-		g.addRule("0.3 V -> tanks");
-		g.addRule("1.0 P -> with");
+		g.addRule("0.5 N -> \\people");
+		g.addRule("0.2 N -> \\fish");
+		g.addRule("0.2 N -> \\tanks");
+		g.addRule("0.1 N -> \\rods");
+		g.addRule("0.1 V -> \\people");
+		g.addRule("0.6 V -> \\fish");
+		g.addRule("0.3 V -> \\tanks");
+		g.addRule("1.0 P -> \\with");
 		
 		// create the parser and parse!
 		
 		CKY parser = new CKY(g);
 		
-		LinkedList<Tree> res = parser.parse(Symbol.ListSymbols(("fish people fish tanks").split(" ")), 5);
+		LinkedList<Tree> res = parser.parse(Symbol.ListSymbols(("\\fish \\people \\fish \\tanks").split(" ")), 5);
 		String tree = res.getFirst().toString();
 		
-		assertEquals(tree, "(S (NP (NP (N fish)) (NP (N people))) (VP (V fish) (NP (N tanks))))");
+		assertEquals(tree, "(S (NP (NP (N \\fish)) (NP (N \\people))) (VP (V \\fish) (NP (N \\tanks))))");
 		
 		for (Tree t : res) {
 			System.out.println(t.toString());
