@@ -1,11 +1,11 @@
 package main;
 
-public class RewritingRuleDisplayer implements Runnable
+public class RewrRuleDisplayer implements Runnable
 {
 	private final int			_precision;
-	private final RewritingRule	_rule;
+	private final RewrRuleCounter	_rule;
 
-	public RewritingRuleDisplayer(RewritingRule r, int p)
+	public RewrRuleDisplayer(RewrRuleCounter r, int p)
 	{
 		this._precision = p;
 		this._rule = r;

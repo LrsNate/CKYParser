@@ -12,23 +12,23 @@ import java.util.Map;
  * @author Antoine LAFOUASSE
  *
  */
-public class RewritingRule
+public class RewrRuleCounter
 {
-	private final String							_lhs;
-	private int										_lho;
-	private final HashMap<String, AtomicInteger>	_rhs;
+	private final Symbol						_lhs;
+	private int									_lho;
+	private final HashMap<RHS, AtomicInteger>	_rhs;
 	
-	private static final int				_defaultPrecision = 7;
+	private static final int					_defaultPrecision = 7;
 
-	public RewritingRule(String lhs, String rhs)
+	public RewrRuleCounter(Symbol lhs, RHS rhs)
 	{
 		this._lhs = lhs;
 		this._lho = 1;
-		this._rhs = new HashMap<String, AtomicInteger>();
+		this._rhs = new HashMap<RHS, AtomicInteger>();
 		this._rhs.put(rhs, new AtomicInteger(1));
 	}
 	
-	public void addRule(String rhs)
+	public void addRule(RHS rhs)
 	{
 		this._lho++;
 		if (this._rhs.containsKey(rhs))
@@ -41,7 +41,7 @@ public class RewritingRule
 	@Deprecated
 	public String toString()
 	{
-		return (this.toString(RewritingRule._defaultPrecision));
+		return (this.toString(RewrRuleCounter._defaultPrecision));
 	}
 
 	public String toString(int precision)
@@ -52,11 +52,11 @@ public class RewritingRule
 		
 		res = new StringBuffer();
 		tk = String.format("%%.%df ", precision);
-		for (Map.Entry<String, AtomicInteger> e : this._rhs.entrySet())
+		for (Map.Entry<RHS, AtomicInteger> e : this._rhs.entrySet())
 		{
 			prob = e.getValue().doubleValue() / (double) this._lho;
 			res.append(String.format(tk, prob, precision));
-			res.append(String.format("%s -> %s\n", this._lhs, e.getKey()));
+			res.append(String.format("%s -> %s\n", this._lhs.toString(), e.getKey().toString()));
 		}
 		return (res.toString());
 	}

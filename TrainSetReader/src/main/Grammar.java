@@ -15,14 +15,14 @@ import java.util.concurrent.TimeUnit;
  */
 public final class Grammar
 {	
-	private final ConcurrentHashMap<String, RewritingRule>	_map;
+	private final ConcurrentHashMap<Symbol, RewrRuleCounter>	_map;
 	
 	private final static Grammar	_instance = new Grammar();
 	private final static int		_defaultMapSize = 5000;
 
 	private Grammar()
 	{
-		this._map = new ConcurrentHashMap<String, RewritingRule>(
+		this._map = new ConcurrentHashMap<Symbol, RewrRuleCounter>(
 				Grammar._defaultMapSize);
 	}
 
@@ -40,18 +40,20 @@ public final class Grammar
 			throw new IllegalArgumentException("Grammar: illegal rule");
 		for (int i = 0; i < tab.length; i++)
 			tab[i] = tab[i].trim();
-		if (this._map.containsKey(tab[0]))
-			this._map.get(tab[0]).addRule(tab[1]);
+		Symbol lhs = new Symbol(tab[0]);
+		if (this._map.containsKey(lhs))
+			this._map.get(lhs).addRule(new RHS(tab[1]));
 		else
-			this._map.put(tab[0], new RewritingRule(tab[0], tab[1]));
+			this._map.put(lhs, new RewrRuleCounter(new Symbol(tab[0]), new RHS(tab[1])));
 	}
 	
 	public synchronized void addRule(String tab[])
 	{
-		if (this._map.containsKey(tab[0]))
-			this._map.get(tab[0]).addRule(tab[1]);
+		Symbol lhs = new Symbol(tab[0]);
+		if (this._map.containsKey(lhs))
+			this._map.get(lhs).addRule(new RHS(tab[1]));
 		else
-			this._map.put(tab[0], new RewritingRule(tab[0], tab[1]));
+			this._map.put(lhs, new RewrRuleCounter(lhs, new RHS(tab[1])));
 	}
 	
 	/**
@@ -65,9 +67,9 @@ public final class Grammar
 		
 		e = Executors.newFixedThreadPool(
 				Environment.getNThreads());
-		for (RewritingRule r : this._map.values())
+		for (RewrRuleCounter r : this._map.values())
 		{
-			t = new RewritingRuleDisplayer(r, precision);
+			t = new RewrRuleDisplayer(r, precision);
 			e.submit(t);
 		}
 		e.shutdown();
@@ -88,7 +90,7 @@ public final class Grammar
 		StringBuffer	s;
 		
 		s = new StringBuffer();
-		for (RewritingRule r : this._map.values())
+		for (RewrRuleCounter r : this._map.values())
 			s.append(r.toString());
 		return (s.toString());
 	}
@@ -106,7 +108,7 @@ public final class Grammar
 		StringBuffer	s;
 		
 		s = new StringBuffer();
-		for (RewritingRule r : this._map.values())
+		for (RewrRuleCounter r : this._map.values())
 			s.append(r.toString(precision));
 		return (s.toString());
 	}
