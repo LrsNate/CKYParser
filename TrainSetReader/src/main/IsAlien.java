@@ -26,7 +26,7 @@ public class IsAlien implements Filter<TreeNode> {
 	 * @return: true if the node is to be dispensed of
 	 */
 	public boolean filter(TreeNode t_node) {
-		return t_node.getValue().startsWith(prefix);
+		return t_node.getValue().toString().startsWith(prefix);
 	}
 
 }

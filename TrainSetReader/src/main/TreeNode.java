@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class TreeNode
 {
-	private final String					_value;
+	private final Symbol					_value;
 	private final LinkedList<TreeNode>		_children;
 	
 	private static String			_errorMessage =
@@ -19,7 +19,7 @@ public class TreeNode
 	 * creates a tree consisting of the root only
 	 * with empty string as the label of the root
 	 */
-	public TreeNode(String value, int k) {
+	public TreeNode(Symbol value) {
 		this._value = value;
 		this._children = new  LinkedList<TreeNode>();
 	}
@@ -46,16 +46,16 @@ public class TreeNode
 			&& Environment.hasLexical())
 		{
 			tab = v.split(" ");
-			this._value = tab[0];
+			this._value = new Symbol(tab[0]);
 			this._children = new LinkedList<TreeNode>();
 			if (tab.length > 1)
-				this._children.addLast(new TreeNode(tab[1]));
+				this._children.addLast(new TreeNode(tab[1])); // ???????????????????????
 			return ;
 		}
 		end = 0;
 		while (v.charAt(end) != ' ' && v.charAt(end) != '-')
 			end++;
-		this._value = v.substring(0, end);
+		this._value = new Symbol(v.substring(0, end));
 		this._children = new LinkedList<TreeNode>();
 		while ((v = TreeNode.skipToNextChild(v)) != null)
 			this._children.addLast(new TreeNode(TreeNode.getNextChild(v)));
@@ -79,27 +79,29 @@ public class TreeNode
 	 * Returns the tree's syntactic category.
 	 * @return The tree root's syntactic category.
 	 */
-	public String getValue()
+	public Symbol getValue()
 	{
 		return (this._value);
 	}
 	
+	// top rewriting rule
 	@Override
 	public String toString()
 	{
 		StringBuffer	s;
 
-		s = new StringBuffer(this._value);
+		s = new StringBuffer(this._value.toString());
 		if (!this._children.isEmpty())
 			s.append(" ->");
 		for (TreeNode n : this._children)
 		{
 			s.append(' ');
-			s.append(n.getValue());
+			s.append(n.getValue().toString());
 		}
 		return (s.toString());
 	}
 	
+	// list of rewriting rules
 	/**
 	 * Dumps the entire tree into a String by recursively calling its toString
 	 * method and stops on encountering a leaf.
@@ -126,7 +128,7 @@ public class TreeNode
 		StringBuffer		s;
 		
 		res = new String[2];
-		res[0] = this._value;
+		res[0] = this._value.toString();
 		s = new StringBuffer();
 		for (TreeNode n : this._children)
 			s.append(" " + n.getValue());
@@ -196,7 +198,7 @@ public class TreeNode
 	 * @return: a tree that consists of only one node which is identical to the root of this tree
 	 */
 	protected TreeNode copy_root() {
-		TreeNode new_node = new TreeNode(this._value, 1);
+		TreeNode new_node = new TreeNode(this._value);
 		return new_node;
 	}
 	
@@ -227,7 +229,7 @@ public class TreeNode
 	 */
 	public static TreeNode eliminate_nodes(IsAlien to_be_deleted, TreeNode source_tree) {
 		// create the top node onto which all the nodes of the source_tree are to be hooked 
-		TreeNode new_tree = new TreeNode("", 1);
+		TreeNode new_tree = new TreeNode(new Symbol("Root0"));
 		// we use this node and selectively hook the subtrees of the source_tree on it
 		selective_subtree_copy(to_be_deleted, source_tree, new_tree);
 		// we know that the root node of the source tree is never deleted

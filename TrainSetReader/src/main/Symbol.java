@@ -1,6 +1,7 @@
 package main;
 
 import java.util.LinkedList;
+import java.lang.IllegalArgumentException;
 
 /**
  * A symbol: terminal or non-terminal  
@@ -23,6 +24,9 @@ public class Symbol {
 	 * (if str starts with an unescaped backslash ('\'), then the Symbol is terminal, and its name is "str minus that backslash")
 	 */
 	public Symbol(String str) {
+		if (!(str.length() > 0)) {
+			throw new IllegalArgumentException("Trying to create a Symbol with no name.");
+		}
 		char first_char = str.charAt(0); 
 		if (first_char == '\\') {
 			if (!(str.length() > 1)) {
