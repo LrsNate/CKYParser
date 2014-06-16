@@ -1,0 +1,211 @@
+\documentclass[12pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath,amssymb,enumerate,cite}
+\usepackage{amsthm}
+\usepackage{multimedia}
+\usepackage[mathscr]{eucal}
+\usepackage{srcltx}
+\usepackage{graphicx,enumerate}
+
+\begin{document}
+
+\section{Pr\'esentation du probl\`eme}
+
+Le pr\'esent projet s'inscrit dans le cadre du domaine de Traitement Automatiques de Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs d'extraire de l'information des textes en langages naturels en minimisant l'implication des humains. G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
+\begin{enumerate}
+\item D\'ecoupage du texte en phrases.
+\item (Tok\'enisation) D\'ecoupage du texte en mot-occurrences (tokens).
+\item (Tagging) Identification de la cat\'egorie morpho-syntaxique de chaque mot-occurrence.
+\item (Parsing) Analyse syntaxique.
+\item Analyse s\'emantique.
+\end{enumerate}
+
+Dans notre projet nous nous concentrons sur l' analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on a envie de se rapprocher de la situation r\'eelle et donc travailler avec des textes brutes, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. Par contre, le dernier \'etape list\'e ci-dessus ne fait pas partie de notre travail...
+
+\subsection{Analyse syntaxique en constituants}
+ On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain langage $L_0$. Le but est de trouver l' arbre syntaxique de la phrase repr\'esent\'ee par cette s\'equence dans une grammaire donn\'ee.
+
+\subsection{Le but (l'utilit\'e) de l'analyse syntaxique}
+
+Il faut avouer que l'analyse syntaxique en soi est rarement le but d'un outil de TAL quelconque. Par contre, c' est un \'etape qui s'av\`ere crucial pour la possibilit\'e d'une analyse s\'emantique effective, car ...
+
+\subsection{La grammaire}
+
+D\'efinition d'une grammaire formelle.
+
+\subsection{Ambiguit\'e syntaxique et grammaires probabilistes}
+
+Une des propri\'et\'es les plus distinctives des langages naturels qui leur oppose aux langages de programmation, par exemple, est leur ambiguit\'e inh\'erente. L'ambiguit\'e peut se pr\'esenter sur des niveaux de l'analyse diff\'erents:
+\begin{enumerate}
+\item Ambiguit\'e de d\'ecoupage en mot-formes:
+//
+EXEMPLE ... d'accord d'+accord ...
+\item Ambiguit\'e morpho-syntaxique:
+//
+EXEMPLE: ... LA BELLE PORTE LA VOILE ...
+\item Ambiguit\'e syntaxique:
+EXEMPLE
+\end{enumerate}
+
+En parlant de l'ambiguit\'e il est important d'en distinguer deux types, le premier \'etant l'ambiguit\'e r\'eelle qui correspond au cas quand l'ambiguit\'e ne peut pas \^etre enlev\'e par des humains eux-m\^emes en absence de contexte, le deuxi\`eme \'etant l'ambiguit\'e artificiel qui ne se pr\'esente que pour des machines, tandis que pour les humains il n'existe qu'une seule variante d'analyse possible.
+
+On note ici que m\^emes si les deux types d'ambiguit\'e sont pr\'esents sur tous les niveaux de l'analyse, l'ambiguit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
+rel\`eve largement d'ambiguit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus de l'ambiguit\'e syntaxique r\'eelle on peut mentionner l'ambiguit\'e de rattachement pr\'epositionnel
+// EXEMPLE
+et l'ambiguit\'e de structures de coordination
+// EXEMPLE
+
+Ce constat nous am\`ene \`a conclure que l'un des points principaux d'une analyse syntaxique consiste en traitement de l'ambiguit\'e. Deux solutions sont envisageable vis \`a vis de ce probl\`eme. On pourrait choisir de ne garder qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant donn\'e l'abondance d'ambiguit\'e r\'eelle susmentionn\'ee. L'option de g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase se pr\'esente comme plus avantageuse dans le cadre de ce travail (?).
+
+D\'efinition d'une grammaire probabiliste. Comment elle aide \`a traiter l'ambiguit\'e.
+
+
+\section{Choix de m\'ethodologie et d'impl\'ementation}
+
+\subsection{Deux strat\'egies d'analyse}
+
+Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjoint $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
+\begin{itemize}
+\item des r\`egles lexicales
+$$\mathscr{R}_{LEX} = \left\{ A \rightarrow a \mid
+        A \in \mathscr{V}, \, a \in \Sigma \right\}$$
+qui sont des appariements de mot-formes et de leurs cat\'egories syntaxiques
+\item des r\`egles non-lexicales
+$$\mathscr{R}_{NL} = \left\{ A \rightarrow \beta \mid
+     A \in \mathscr{V}, \beta \in \mathscr{V}^* \right\},$$
+qui ne contiennent pas de symb\^oles terminaux.
+\end{itemize}
+
+Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e puisque chaque grammaire hors-contexte puet \^etre transform\'e en forme susdite sans que son langage engendr\'e soit chang\'e. En m\^eme temps en adoptant cette perspective (????) on peut envisager deux strat\'egies de conception de notre outil de l'analyse syntaxique.
+
+Deux strat\'egies.
+
+\subsection{Corpus d'apprentissage, de d\'eveloppement et de test}
+
+Sequoia Tree Bank. \cite{Sequoia}
+
+\subsection{Apprentissage de la grammaire probabiliste}
+
+En g\'en\'erale l'estimation des probabilit\'es des r\`egles d'une grammaire hors-contexte probabiliste (PCFG)
+se fait par fr\'equences relatives:
+\begin{eqnarray}
+P(A \rightarrow \beta) = \frac{ct(A \rightarrow \beta)}{\sum\limits_{\gamma \in (\Sigma \cup \mathcal{V})^*}{ct(A \rightarrow \gamma)}},
+\end{eqnarray}
+$ct(A \rightarrow \beta)$ --- le nombre de fois que le non-terminal $A$ se r\'eecrit en $\beta$ dans le corpus d'apprentissage.
+
+Il est important de noter ici que le probl\`eme d'estimation des probabilit\'es d'un PCFG
+
+Dans leur article de 1998 Chi et Geman ont prouv\'e qu'une PCFG estim\'ee par fr\'equences relatives sur un corpus annot\'e est toujours consistent \cite{proper_PCFG_estimation}.
+
+\subsection{Tok\'enisation et analyse morpho-syntaxique}
+
+L'utilisation de l'outil MELt.
+
+\subsection{Le parseur tabulaire de Cocke, Younger et Kasami (CKY)}
+
+\subsubsection{L'algorithme standard}
+\subsubsection{L'injection des probabilit\'es dans l'algorithme}
+
+\subsection{La transformation de la grammaire probabiliste en forme normale de Chomsky flexible}
+
+\subsection{Le traitement des mots inconnus}
+
+Si on adopte la strat\'egie 1 de l'analyse syntaxique, alors le traitement des mots inconnus est laiss\'e au taggeur.
+Le taggeur MELt r\'esout ce probl\`eme avec succes (??). Faut-il \'ecrire qch sur comment est-ce que MELt le fait ?
+
+On va se concentrer sur la r\'esolution de ce probl\`eme dans le cas de la strat\'egie 2 quand c'est le parseur CKY probabiliste qui assigne les cat\'egories morphosyntaxiques aux entr\'ees lexicales. \'Evidement si on estime les probabilit\'es des r\`egles lexicales sur le corpus d'entrainement, alors n'importe quelle phrase qui contient au moins un mot non-observ\'e dans ce corpus va recevoir une probabilit\'e nulle avec chaque arbre syntaxique de cette phrase \'etant aussi de probabilit\'e nulle. Par cons\'equent, selon le choix d'impl\'ementation soit le parseur probabiliste s'\'echouera, soit il envoyera un arbre syntaxique arbitraire (choisi parmi les arbres \'equiprobables). Pour contourner cet effet ind\'esirable il nous faut modifier notre proc\'edure d'estimation de la PCFG de fa\'con \`a ce que la probabilit\'e d'un mot inconnu soit non-nulle. Pour le faire on a choisi de tester deux m\'ethodes diff\'erentes.
+
+\subsubsection{Le traitement des mots inconnus: m\'ethode 1}
+
+Mod\'elisons la probabilit\'e d'un mot $w$ sachant sa cat\'egorie morphosyntaxique $C$ comme la probabilit\'e conjointe suivante
+\begin{eqnarray}
+\label{prob_mot_inconnu_0}
+ P(W = w \mid \tilde{C} = C) = P(W = w, \mathrm{UNKNOWN} = unknown \mid \tilde{C} = C).
+\end{eqnarray}
+La valeur $unknown$ est \'egale \`a 1 si le mot $w$ a \'et\'e observ\'e dans le corpus d'entrainement et 0 sinon. D\`es lors que la valeur de la variable $\mathrm{UNKNOWN}$ est en d\'ependance directe de la valeur $w$,
+on a affaire \`a une relation d' inclusion entre les \'ev\'enements: l'\'ev\'enement $W = w$ est inclu dans l'\'ev\'enement $\mathrm{UNKNOWN} = unknown$, donc l'\'egalit\'e \ref{prob_mot_inconnu_0} tient grace \`a l'axiome de th\'eorie des probabilit\'es suivante:
+$$ A \subset B \Rightarrow P(A) = P(A,B).$$
+
+Adoptons que pour chaque cat\'egorie morphosyntaxique $C$ la probabilit\'e de rencontrer un mot inconnu est toujours la m\^eme et est \'egale \`a $\alpha$:
+$$ \forall C \text{--- cat\'egorie morphosyntaxique} \; P(\mathrm{UNKNOWN} = 1 \mid \tilde{C} = C) = \alpha.$$
+
+Ensuite on va d\'ecomposer la probabilit\'e en \ref{prob_mot_inconnu_0} en utilisant la d\'efinition de la probabilit\'e conditionnelle.
+\begin{multline}
+\label{prob_mot_inconnu_cond}
+ P(W = w \mid \tilde{C} = C) = P(W = w, \mathrm{UNKNOWN} = unknown \mid \tilde{C} = C) = 
+ \\
+ P(\mathrm{UNKNOWN} = unknown \mid \tilde{C} = C) P(W = w \mid \mathrm{UNKNOWN} = unknown , \tilde{C} = C).
+\end{multline}
+
+ Si le mot $w$ a \'et\'e observ\'e dans le corpus d'entrainement, alors on a
+\begin{multline}
+\label{prob_mot_connu_1}
+ P(W = w \mid \tilde{C} = C) = P(W = w, \mathrm{UNKNOWN} = 0 \mid \tilde{C} = C) = 
+ \\
+ P(\mathrm{UNKNOWN} = 0 \mid \tilde{C} = C) P(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C) =
+ \\
+ (1 - \alpha) P(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C).
+\end{multline}
+La probabilit\'e $P(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C)$ est estim\'e 
+comme d'habitude par la fr\'equence relative de la paire $(w, C)$ dans le corpus d'entrainement:
+\begin{eqnarray*}
+\hat{P}(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C) =
+\frac{ct(C \rightarrow w)}{\sum\limits_{a \in \Sigma}{ct(C \rightarrow a)}}.
+\end{eqnarray*}
+
+Ensuite on va traiter tous les mots inconnus comme un seul mot en ne faisant pas distinction entre eux. 
+Par cons\'equent on peut supposer qu'on a pretrait\'e notre corpus de developpement (ou de test) de fa\'con \`a remplacer tous les mots inconnus par le m\^eme mot $w_{unknown}$ (qui n'a jamais \'et\'e rencontr\'e dans le corpus d'entrainement). Alors 
+$$\forall C \; P(W = w_{unknown} \mid \mathrm{UNKNOWN} = 1, \tilde{C} = C) = 1$$
+et la probabilit\'e d'un mot inconnu est calcul\'ee comme suit
+\begin{multline}
+\label{prob_mot_inconnu_1}
+ P(W = w_{unknown} \mid \tilde{C} = C) = P(W = w_{unknown}, \mathrm{UNKNOWN} = 1 \mid \tilde{C} = C) =
+ \\
+ P(\mathrm{UNKNOWN} = 1 \mid \tilde{C} = C) P(W = w_{unknown} \mid \mathrm{UNKNOWN} = 1, \tilde{C} = C) =
+ \\
+ P(\mathrm{UNKNOWN} = 1 \mid \tilde{C} = C) = \alpha.
+\end{multline}
+
+
+\subsection{\'Evaluation}
+
+Etapes \`a \'evaluer :
+\begin{itemize}
+\item Segmentation de l'entr\'e (Tok\'enisation)
+\item \'Etiqu\'etage morpho-syntaxique (Tagging)
+\item Analyse syntaxique (Parsing)
+\end{itemize}
+
+Types d'entr\'ee :
+\begin{itemize}
+\item Texte non-annot\'e et non-segment\'e (en mots)
+\item Texte segment\'e (tok\'enis\'e)
+\item Texte morpho-syntaxiquement \'etiquet\'e (tagg\'e)
+\item Corpus arbor\'e (muni d'annotations syntaxiques)
+\end{itemize}
+
+
+\section{R\'esultats}
+
+
+
+
+\begin{thebibliography}{9}
+    \bibitem{Jurafsky}
+    Jurafsky,~D., Martin,~J., 2009. \emph{Speech and Language Processing: An Introduction to Natural Language Processing, Speech Recognition, and Computational Linguistics.} 2nd edition. Prentice-Hall.
+    \bibitem{Sequoia}
+    Candito,~M., Seddah,~D.
+    \emph{Le corpus Sequoia: annotation syntaxique et exploitation pour
+    l'adaptation d'analyseur par pont lexical.} Actes de TALN'2012, Grenoble,
+    France.
+    \bibitem{proper_PCFG_estimation}
+    Chi,~Z., Geman,~S., 1998.
+    \emph{Estimation of probabilistic context-free grammars.}, Computational Linguistics, 24(2):299-305.
+\end{thebibliography}
+
+\end{document}
+
+
