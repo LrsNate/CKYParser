@@ -1,5 +1,6 @@
 package main;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Set;
 
@@ -24,11 +25,68 @@ public class CKY {
 	 * the grammar
 	 */
 	private final ReverseGrammar G;
-	private final LinkedList<RewrRuleProb> unknownProds;
+	
+	// I made it an array instead of having just one field for alpha
+	// in order to leave the possibility of assigning different probs
+	// to different categories...
+	/**
+	 * the apriori probability of getting an unknown word in a category
+	 * key: category CAT
+	 * value: probability of producing an unknown word = P(UNKNOWN | CAT)
+	 */	
+	private HashMap<Symbol, Double>  _unknown_probs;
+	
+	/**
+	 * the unique RHS representing all the unknown words
+	 */
+	private RHS _unknown_rhs;
+	
+	/**
+	 * the method of deailing with unknown words
+	 */
+	private final DealWithUnknown deal_with_unknown; 
 
 	public CKY(ReverseGrammar G) {
 		this.G = G;
-		this.unknownProds = this.G.addUnknown();
+		// set the mode of dealing with unknown words
+		// if an unknown terminal occurs in the corpus, then the probability of producing it is taken to be zero
+		deal_with_unknown = DealWithUnknown.IGNORE;
+	}
+	
+	/**
+	 * The constructor 
+	 * that corresponds to the mode of deailing with unknown words = APRIORI_PROB
+	 * @param G: the grammar (with lexical rules for the observed words only)
+	 * @param alpha = P(UNKNOWN | CAT) (the same for every morphosyntactic category CAT)
+	 */
+	public CKY(ReverseGrammar G, double alpha) {
+		this.G = G;
+		deal_with_unknown = DealWithUnknown.APRIORI_PROB;
+		this._unknown_probs = new HashMap<Symbol, Double>();
+		// modify the existing lexical rules 
+		// and return the list of all the non-terminals that may produce terminals
+		LinkedList<Symbol> lexicalNonterms = G.modifyLexicalRules(alpha);
+		for (Symbol lexNonterm : lexicalNonterms) {
+			_unknown_probs.put(lexNonterm, alpha);
+		}
+	}
+	
+	/**
+	 * The constructor 
+	 * that corresponds to the mode of deailing with unknown words = RARE
+	 * In this case the probabilities of unknown words
+	 * are supposed to be already present in the grammar passed in the parameter.
+	 * @param G: the grammar (with lexical rules for the observed words only)
+	 * @param unknown_word: the unique terminal symbol that represents all the "unknown" words
+	 */
+	public CKY(ReverseGrammar G, Symbol unknown_word) {
+		this.G = G;
+		deal_with_unknown = DealWithUnknown.RARE;
+		this._unknown_rhs = new RHS(unknown_word);
+		LinkedList<RewrRuleProb> rules = G.getRules(this._unknown_rhs);
+		if(rules.isEmpty()) {
+			throw new IllegalArgumentException("MODE = RARE. The grammar does not contain productions with UNKNOWN words in their right hand side.");
+		}
 	}
 	
 	private void init_chart(LinkedList<Symbol> phrase) {
@@ -47,10 +105,22 @@ public class CKY {
 				chart[i][i].add(new Tree(rule));
 			}
 			if(rules.isEmpty()) { // unknown word!
+				// if (this.deal_with_unknown.equals(DealWithUnknown.IGNORE)) ???
 				
-				for (RewrRuleProb r : this.unknownProds) {	
-					chart[i][i].add(new Tree(r));
+				if (this.deal_with_unknown.equals(DealWithUnknown.APRIORI_PROB)) {
+					// for every category that is capable of producing a terminal symbol
+					// add the corresponding production rule
+					for (Symbol lexNonterm : this._unknown_probs.keySet()) {
+						chart[i][i].add(new Tree(new RewrRuleProb(lexNonterm, new RHS(word), this._unknown_probs.get(lexNonterm))));
+					}
 				}
+				if (this.deal_with_unknown.equals(DealWithUnknown.RARE)) {
+					LinkedList<RewrRuleProb> rules_for_unknown = G.getRules(this._unknown_rhs);
+					for (RewrRuleProb rule : rules_for_unknown) {	
+						chart[i][i].add(new Tree(new RewrRuleProb(rule.getLHS(), new RHS(word), rule.getProbability())));
+					}
+				}
+				
 			}
 			this.handleSingleProds(i,i);
 		}
