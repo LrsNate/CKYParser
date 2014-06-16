@@ -14,7 +14,8 @@
 
 \section{Pr\'esentation du probl\`eme}
 
-Le pr\'esent projet s'inscrit dans le cadre du domaine de Traitement Automatiques de Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs d'extraire de l'information des textes en langages naturels en minimisant l'implication des humains. G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
+Le pr\'esent projet s'inscrit dans le cadre du domaine de Traitement Automatique
+des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs d'extraire de l'information des textes en langages naturels en minimisant l'implication des humains. G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
 \begin{enumerate}
 \item D\'ecoupage du texte en phrases.
 \item (Tok\'enisation) D\'ecoupage du texte en mot-occurrences (tokens).
@@ -30,7 +31,11 @@ Dans notre projet nous nous concentrons sur l' analyse syntaxique. Cependant, d\
 
 \subsection{Le but (l'utilit\'e) de l'analyse syntaxique}
 
-Il faut avouer que l'analyse syntaxique en soi est rarement le but d'un outil de TAL quelconque. Par contre, c' est un \'etape qui s'av\`ere crucial pour la possibilit\'e d'une analyse s\'emantique effective, car ...
+Il faut avouer que l'analyse syntaxique en soi est rarement le but d'un outil de
+TAL quelconque. Par contre, c' est une \'etape qui s'av\`ere cruciale pour la
+possibilit\'e d'une analyse s\'emantique effective, car toute description
+s\'emantique se base en partie sur les relations entre les parties d' une
+phrase.
 
 \subsection{La grammaire}
 
@@ -38,27 +43,40 @@ D\'efinition d'une grammaire formelle.
 
 \subsection{Ambiguit\'e syntaxique et grammaires probabilistes}
 
-Une des propri\'et\'es les plus distinctives des langages naturels qui leur oppose aux langages de programmation, par exemple, est leur ambiguit\'e inh\'erente. L'ambiguit\'e peut se pr\'esenter sur des niveaux de l'analyse diff\'erents:
+Une des propri\'et\'es les plus distinctives des langages naturels qui les
+oppose aux langages de programmation, par exemple, est leur ambiguit\'e inh\'erente. L'ambiguit\'e peut se pr\'esenter sur des niveaux de l'analyse diff\'erents:
 \begin{enumerate}
 \item Ambiguit\'e de d\'ecoupage en mot-formes:
 //
 EXEMPLE ... d'accord d'+accord ...
 \item Ambiguit\'e morpho-syntaxique:
 //
-EXEMPLE: ... LA BELLE PORTE LA VOILE ...
+EXEMPLE ... la belle porte le voile ...
 \item Ambiguit\'e syntaxique:
-EXEMPLE
+EXEMPLE ... la description de l' occupation d'Ath\`enes par les Turcs ottomans ... 
 \end{enumerate}
 
-En parlant de l'ambiguit\'e il est important d'en distinguer deux types, le premier \'etant l'ambiguit\'e r\'eelle qui correspond au cas quand l'ambiguit\'e ne peut pas \^etre enlev\'e par des humains eux-m\^emes en absence de contexte, le deuxi\`eme \'etant l'ambiguit\'e artificiel qui ne se pr\'esente que pour des machines, tandis que pour les humains il n'existe qu'une seule variante d'analyse possible.
+En parlant de l'ambiguit\'e il est important d'en distinguer deux types, le
+premier \'etant l'ambiguit\'e r\'eelle qui correspond au cas quand l'ambiguit\'e
+ne peut pas \^etre enlev\'ee par des humains eux-m\^emes en absence de contexte,
+le deuxi\`eme \'etant l'ambiguit\'e artificielle qui ne se pr\'esente que pour des machines, tandis que pour les humains il n'existe qu'une seule variante d'analyse possible.
 
-On note ici que m\^emes si les deux types d'ambiguit\'e sont pr\'esents sur tous les niveaux de l'analyse, l'ambiguit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
+On note ici que m\^eme si les deux types d'ambiguit\'e sont pr\'esents sur tous les niveaux de l'analyse, l'ambiguit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
 rel\`eve largement d'ambiguit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus de l'ambiguit\'e syntaxique r\'eelle on peut mentionner l'ambiguit\'e de rattachement pr\'epositionnel
-// EXEMPLE
+EXEMPLE ... la fille voit le professeur avec un t\'elescope ... 
 et l'ambiguit\'e de structures de coordination
-// EXEMPLE
+EXEMPLE  ... elle ne mange que des gateaux et des glaces au chocolat  ... 
 
-Ce constat nous am\`ene \`a conclure que l'un des points principaux d'une analyse syntaxique consiste en traitement de l'ambiguit\'e. Deux solutions sont envisageable vis \`a vis de ce probl\`eme. On pourrait choisir de ne garder qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant donn\'e l'abondance d'ambiguit\'e r\'eelle susmentionn\'ee. L'option de g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase se pr\'esente comme plus avantageuse dans le cadre de ce travail (?).
+Ce constat nous am\`ene \`a conclure que l'un des points principaux d'une
+analyse syntaxique consiste en traitement de l'ambiguit\'e. Deux solutions sont
+envisageables vis \`a vis de ce probl\`eme. On pourrait choisir de ne garder
+qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant
+donn\'e l'abondance d'ambiguit\'e r\'eelle susmentionn\'ee. L'option de
+g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase se pr\'esente comme
+plus avantageuse dans le cadre de ce travail. Dans les cas d'ambiguit\'e
+r\'eelle, c'est l'humain qui choisit le bon analyse en se basant sur le
+contexte.
+EXEMPLE ... fish people fish tanks ...
 
 D\'efinition d'une grammaire probabiliste. Comment elle aide \`a traiter l'ambiguit\'e.
 
