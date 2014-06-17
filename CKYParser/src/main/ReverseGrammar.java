@@ -80,40 +80,33 @@ public class ReverseGrammar extends Grammar0 {
 	}
 	
 	/**
-	 * gives all final (lexical) non-terminals.
+	 * 1. Modifies the probabilities of all the productions of the form 
+	 * ( Non-ternminal symbol -> Terminal symbol )
+	 * by multiplying their probability by (1-alpha)
+	 * 2. Gives all final (lexical) non-terminals.
+	 * @param: alpha = P(UNKNOWN | CAT) / for every CAT that is capable of producing a lexical (known) symbol /
 	 * @return a list of all non-terminals that can generate a terminal
 	 */
-	public LinkedList<Symbol> getLexicalNonterms() {
-		
-		LinkedList<Symbol> lexNonterms = new LinkedList<Symbol>();
+	public LinkedList<Symbol> modifyLexicalRules(double alpha) {
+		LinkedList<Symbol> lexNonterms = new LinkedList<Symbol>();		
 		for (RHS rhs : this._map.keySet()) {
-			if(rhs.get(0).IsTerminal()) {
+			// NOTE: the grammar being in CNF, there cannot be more than one terminal in the RHS
+			if(rhs.get(0).IsTerminal()) {				
+				// get all the rules that have this terminal as their RHS
 				LinkedList<RewrRuleProb> rules = this.getRules(rhs);
+				// for every rule
 				for (RewrRuleProb rule : rules) {
+					// modify its probability by multiplying it by (1-alpha)
+					rule.mult_prob(1-alpha);
+					// add the category to the list of Symbols that may produce terminals
 					Symbol lhs = rule.getLHS();
-					if(!lexNonterms.contains(lhs))
+					if(!lexNonterms.contains(lhs)) {
 						lexNonterms.add(lhs);
+					}
 				}
 			}
 		}
 		return lexNonterms;
-	}
-	
-	/**
-	 * add equiprobable productions for unknown words.
-	 * @return a list of all possible lexical productions for an unknown word.
-	 */
-	public LinkedList<RewrRuleProb> addUnknown() {
-		LinkedList<Symbol> lexicalNonterms = this.getLexicalNonterms();
-		double prob = 1.0 / (double) lexicalNonterms.size();
-		RHS unk = new RHS("UNK");
-		LinkedList<RewrRuleProb> unknownProds = new LinkedList<RewrRuleProb>();
-		for (Symbol lexNonterm : lexicalNonterms) {
-			RewrRuleProb r = new RewrRuleProb(lexNonterm, unk, prob);
-			unknownProds.add(r);
-		}
-		
-		return unknownProds;
 	}
 
 }

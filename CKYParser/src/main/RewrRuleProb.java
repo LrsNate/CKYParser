@@ -5,12 +5,20 @@ import java.util.LinkedList;
 
 public class RewrRuleProb extends RewrRule implements Comparable<RewrRuleProb> {
 
-	private final double 	_prob;
+	private double 	_prob;
 	
 	private void check_prob() {
 		if ((this._prob < 0) || (this._prob > 1)) {
 			throw new IllegalArgumentException();
 		}
+	}
+	
+	protected double mult_prob(double alpha) {
+		if ((alpha < 0) || (alpha > 1)) {
+			throw new IllegalArgumentException();
+		}
+		this._prob *= alpha;
+		return this._prob;
 	}
 	
 	public RewrRuleProb(Symbol lhs, LinkedList<Symbol> rhs, double prob) {
