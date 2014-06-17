@@ -48,8 +48,12 @@ public class TreeNode
 			tab = v.split(" ");
 			this._value = new Symbol(tab[0]);
 			this._children = new LinkedList<TreeNode>();
-			if (tab.length > 1)
-				this._children.addLast(new TreeNode(tab[1])); // ???????????????????????
+			if (tab.length > 1) {
+				// ??? this is the lexical entry...
+				// this._children.addLast(new TreeNode(tab[1])); 
+				// new Symbol(value = tab[1], is_terminal = true)
+				this._children.addLast(new TreeNode(new Symbol(tab[1], true))); 
+			}
 			return ;
 		}
 		end = 0;

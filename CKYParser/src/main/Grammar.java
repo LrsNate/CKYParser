@@ -13,17 +13,16 @@ import java.util.concurrent.TimeUnit;
  * processed at display time.
  * @author Antoine LAFOUASSE
  */
-public class Grammar
+public final class Grammar
 {	
-	private final ConcurrentHashMap<Symbol, RewrRuleCounter>	_map;
+	private final ConcurrentHashMap<String, RewritingRule>	_map;
 	
 	private final static Grammar	_instance = new Grammar();
 	private final static int		_defaultMapSize = 5000;
-	
 
-	public Grammar()
+	private Grammar()
 	{
-		this._map = new ConcurrentHashMap<Symbol, RewrRuleCounter>(
+		this._map = new ConcurrentHashMap<String, RewritingRule>(
 				Grammar._defaultMapSize);
 	}
 
@@ -31,9 +30,8 @@ public class Grammar
 	 * Adds a rule to the grammar and either creates a new entry or increments
 	 * its occurrence count.
 	 * @param rule The rule to be added.
-	 * @return the counter of the rule that has just been added
 	 */
-	public RewrRuleCounter addRule(String rule)
+	public void addRule(String rule)
 	{
 		String		tab[];
 		
@@ -42,27 +40,18 @@ public class Grammar
 			throw new IllegalArgumentException("Grammar: illegal rule");
 		for (int i = 0; i < tab.length; i++)
 			tab[i] = tab[i].trim();
-		Symbol lhs = new Symbol(tab[0]);
-		RHS rhs = new RHS(tab[1]);
-		RewrRuleCounter rule_counter = null;
-		if (this._map.containsKey(lhs)) {
-			rule_counter = this._map.get(lhs);
-			rule_counter.addRule(rhs);
-		} else {
-			rule_counter = new RewrRuleCounter(lhs, rhs);
-			this._map.put(lhs, rule_counter);
-		}
-		
-		return rule_counter;
+		if (this._map.containsKey(tab[0]))
+			this._map.get(tab[0]).addRule(tab[1]);
+		else
+			this._map.put(tab[0], new RewritingRule(tab[0], tab[1]));
 	}
 	
 	public synchronized void addRule(String tab[])
 	{
-		Symbol lhs = new Symbol(tab[0]);
-		if (this._map.containsKey(lhs))
-			this._map.get(lhs).addRule(new RHS(tab[1]));
+		if (this._map.containsKey(tab[0]))
+			this._map.get(tab[0]).addRule(tab[1]);
 		else
-			this._map.put(lhs, new RewrRuleCounter(lhs, new RHS(tab[1])));
+			this._map.put(tab[0], new RewritingRule(tab[0], tab[1]));
 	}
 	
 	/**
@@ -76,9 +65,9 @@ public class Grammar
 		
 		e = Executors.newFixedThreadPool(
 				Environment.getNThreads());
-		for (RewrRuleCounter r : this._map.values())
+		for (RewritingRule r : this._map.values())
 		{
-			t = new RewrRuleDisplayer(r, precision);
+			t = new RewritingRuleDisplayer(r, precision);
 			e.submit(t);
 		}
 		e.shutdown();
@@ -99,7 +88,7 @@ public class Grammar
 		StringBuffer	s;
 		
 		s = new StringBuffer();
-		for (RewrRuleCounter r : this._map.values())
+		for (RewritingRule r : this._map.values())
 			s.append(r.toString());
 		return (s.toString());
 	}
@@ -117,7 +106,7 @@ public class Grammar
 		StringBuffer	s;
 		
 		s = new StringBuffer();
-		for (RewrRuleCounter r : this._map.values())
+		for (RewritingRule r : this._map.values())
 			s.append(r.toString(precision));
 		return (s.toString());
 	}
