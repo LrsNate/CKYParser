@@ -24,17 +24,17 @@ des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordi
 \item Analyse s\'emantique.
 \end{enumerate}
 
-Dans notre projet nous nous concentrons sur l' analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on a envie de se rapprocher de la situation r\'eelle et donc travailler avec des textes brutes, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. Par contre, le dernier \'etape list\'e ci-dessus ne fait pas partie de notre travail...
+Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on a envie de se rapprocher de la situation r\'eelle et donc travailler avec des textes brutes, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. Par contre, le dernier \'etape list\'e ci-dessus ne fait pas partie de notre travail...
 
 \subsection{Analyse syntaxique en constituants}
- On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain langage $L_0$. Le but est de trouver l' arbre syntaxique de la phrase repr\'esent\'ee par cette s\'equence dans une grammaire donn\'ee.
+ On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain langage $L_0$. Le but est de trouver l'arbre syntaxique de la phrase repr\'esent\'ee par cette s\'equence dans une grammaire donn\'ee.
 
 \subsection{Le but (l'utilit\'e) de l'analyse syntaxique}
 
 Il faut avouer que l'analyse syntaxique en soi est rarement le but d'un outil de
-TAL quelconque. Par contre, c' est une \'etape qui s'av\`ere cruciale pour la
+TAL quelconque. Par contre, c'est une \'etape qui s'av\`ere cruciale pour la
 possibilit\'e d'une analyse s\'emantique effective, car toute description
-s\'emantique se base en partie sur les relations entre les parties d' une
+s\'emantique se base en partie sur les relations entre les parties d'une
 phrase.
 
 \subsection{La grammaire}
@@ -53,7 +53,7 @@ EXEMPLE ... d'accord d'+accord ...
 //
 EXEMPLE ... la belle porte le voile ...
 \item Ambiguit\'e syntaxique:
-EXEMPLE ... la description de l' occupation d'Ath\`enes par les Turcs ottomans ... 
+EXEMPLE ... la description de l'occupation d'Ath\`enes par les Turcs ottomans ... 
 \end{enumerate}
 
 En parlant de l'ambiguit\'e il est important d'en distinguer deux types, le
@@ -78,7 +78,16 @@ r\'eelle, c'est l'humain qui choisit le bon analyse en se basant sur le
 contexte.
 EXEMPLE ... fish people fish tanks ...
 
-D\'efinition d'une grammaire probabiliste. Comment elle aide \`a traiter l'ambiguit\'e.
+Une grammaire probabiliste hors contexte (Probabilistic context-free grammar,
+PCFG) est une grammaire hors contexte dans laquelle une probabilit\'e est
+attribu\'ee \`a chaque r\`egle. La somme des toutes les probabilit\'es des
+productions \`a partir d'une m\^eme partie gauche est \'egale \`a un. 
+En cas d'ambiguit\'e, les probabilit\'es associ\'ees aux productions permettent
+de choisir la derivation la plus probable de la phrase. On appelle la
+probabilit\'e d'une derivation le produit des probabilit\'es des r\`egles de
+production qui ont men\'e \`a cette derivation. Il faut noter que la
+probabilit\'e maximale de la derivation de la phrase n'est pas toujours obtenu
+en appliquant les r\`egles avec les probabilit\'es maximales.
 
 
 \section{Choix de m\'ethodologie et d'impl\'ementation}
@@ -94,10 +103,14 @@ qui sont des appariements de mot-formes et de leurs cat\'egories syntaxiques
 \item des r\`egles non-lexicales
 $$\mathscr{R}_{NL} = \left\{ A \rightarrow \beta \mid
      A \in \mathscr{V}, \beta \in \mathscr{V}^* \right\},$$
-qui ne contiennent pas de symb\^oles terminaux.
+qui ne contiennent pas de symboles terminaux.
 \end{itemize}
 
-Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e puisque chaque grammaire hors-contexte puet \^etre transform\'e en forme susdite sans que son langage engendr\'e soit chang\'e. En m\^eme temps en adoptant cette perspective (????) on peut envisager deux strat\'egies de conception de notre outil de l'analyse syntaxique.
+Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e puisque
+chaque grammaire hors-contexte peut \^etre transform\'ee en forme susdite sans
+que son langage engendr\'e soit chang\'e. En m\^eme temps, en adoptant cette
+approche, on peut envisager deux strat\'egies de conception de notre outil de
+l'analyse syntaxique.
 
 Deux strat\'egies.
 
@@ -107,16 +120,25 @@ Sequoia Tree Bank. \cite{Sequoia}
 
 \subsection{Apprentissage de la grammaire probabiliste}
 
-En g\'en\'erale l'estimation des probabilit\'es des r\`egles d'une grammaire hors-contexte probabiliste (PCFG)
-se fait par fr\'equences relatives:
+En g\'en\'eral, l'estimation des probabilit\'es des r\`egles d'une grammaire
+hors-contexte probabiliste (PCFG) se fait par fr\'equences relatives:
 \begin{eqnarray}
 P(A \rightarrow \beta) = \frac{ct(A \rightarrow \beta)}{\sum\limits_{\gamma \in (\Sigma \cup \mathcal{V})^*}{ct(A \rightarrow \gamma)}},
 \end{eqnarray}
 $ct(A \rightarrow \beta)$ --- le nombre de fois que le non-terminal $A$ se r\'eecrit en $\beta$ dans le corpus d'apprentissage.
 
-Il est important de noter ici que le probl\`eme d'estimation des probabilit\'es d'un PCFG
+Il est important de noter ici que le probl\`eme d'estimation des probabilit\'es
+d'un PCFG vient du fait que le corpus d'entra\^inement, aussi grand soit-il,
+n'est jamais complet, donc il y a toujours des mots-formes qui ne sont pas
+pr\'esents dans la grammaire et dont la cat\'egorie lexicale et la
+probabilit\'e d'emission sont donc inconnues. Pour d\'eterminer la cat\'egorie
+lexicale il est possible d'avoir recours \`a un dictionnaire externe. Mais il
+n'existe pas de solution por conna\^itre la probabilit\'e de la production de ce
+mot inconnu, donc des m\'ethodes artificielles sont utilis\'ees pour estimer
+cette probabilit\'e.
 
-Dans leur article de 1998 Chi et Geman ont prouv\'e qu'une PCFG estim\'ee par fr\'equences relatives sur un corpus annot\'e est toujours consistent \cite{proper_PCFG_estimation}.
+Dans leur article de 1998 Chi et Geman ont prouv\'e qu'une PCFG estim\'ee par
+fr\'equences relatives sur un corpus annot\'e est toujours consistente \cite{proper_PCFG_estimation}.
 
 \subsection{Tok\'enisation et analyse morpho-syntaxique}
 
@@ -144,7 +166,7 @@ Mod\'elisons la probabilit\'e d'un mot $w$ sachant sa cat\'egorie morphosyntaxiq
  P(W = w \mid \tilde{C} = C) = P(W = w, \mathrm{UNKNOWN} = unknown \mid \tilde{C} = C).
 \end{eqnarray}
 La valeur $unknown$ est \'egale \`a 1 si le mot $w$ a \'et\'e observ\'e dans le corpus d'entrainement et 0 sinon. D\`es lors que la valeur de la variable $\mathrm{UNKNOWN}$ est en d\'ependance directe de la valeur $w$,
-on a affaire \`a une relation d' inclusion entre les \'ev\'enements: l'\'ev\'enement $W = w$ est inclu dans l'\'ev\'enement $\mathrm{UNKNOWN} = unknown$, donc l'\'egalit\'e \ref{prob_mot_inconnu_0} tient grace \`a l'axiome de th\'eorie des probabilit\'es suivante:
+on a affaire \`a une relation d'inclusion entre les \'ev\'enements: l'\'ev\'enement $W = w$ est inclu dans l'\'ev\'enement $\mathrm{UNKNOWN} = unknown$, donc l'\'egalit\'e \ref{prob_mot_inconnu_0} tient grace \`a l'axiome de th\'eorie des probabilit\'es suivante:
 $$ A \subset B \Rightarrow P(A) = P(A,B).$$
 
 Adoptons que pour chaque cat\'egorie morphosyntaxique $C$ la probabilit\'e de rencontrer un mot inconnu est toujours la m\^eme et est \'egale \`a $\alpha$:
@@ -222,6 +244,15 @@ Types d'entr\'ee :
     \bibitem{proper_PCFG_estimation}
     Chi,~Z., Geman,~S., 1998.
     \emph{Estimation of probabilistic context-free grammars.}, Computational Linguistics, 24(2):299-305.
+    \bibitem{Jurafsky-Manning}
+    Jurafsky,~D., Manning,~C., 2012. \emph{Free online course on Natural
+    Language Programming.}
+    \bibitem{MElt tagger} 
+    Denis,~P., Sagot,~B.,2012.
+    \emph{Coupling an annotated corpus and a lexicon for state-of-the-art POS
+    tagging.} In Language Resources and Evaluation 46:4, pp. 721-736,
+    DOI 10.1007/s10579-012-9193-0.
+    
 \end{thebibliography}
 
 \end{document}
