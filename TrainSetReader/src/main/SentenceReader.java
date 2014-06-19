@@ -3,10 +3,12 @@ package main;
 public class SentenceReader implements Runnable
 {
 	private final String		_line;
+	private final Grammar		_grammar;
 	
-	public SentenceReader(String line)
+	public SentenceReader(String line, Grammar g)
 	{
 		this._line = line;
+		this._grammar = g;
 	}
 
 	@Override
@@ -20,7 +22,7 @@ public class SentenceReader implements Runnable
 		{
 			t = new TreeNode(this._line.substring(2, this._line.length() - 1));
 			for (String tab[] : t.dumpWordTab())
-				Grammar.getInstance().addRule(tab);
+				this._grammar.addRule(tab);
 		}
 		catch (IllegalArgumentException e)
 		{

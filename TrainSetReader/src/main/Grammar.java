@@ -17,7 +17,6 @@ public class Grammar
 {	
 	private final ConcurrentHashMap<Symbol, RewrRuleCounter>	_map;
 	
-	private final static Grammar	_instance = new Grammar();
 	private final static int		_defaultMapSize = 5000;
 	
 
@@ -33,7 +32,7 @@ public class Grammar
 	 * @param rule The rule to be added.
 	 * @return the counter of the rule that has just been added
 	 */
-	public RewrRuleCounter addRule(String rule)
+	public synchronized RewrRuleCounter addRule(String rule)
 	{
 		String		tab[];
 		
@@ -120,14 +119,5 @@ public class Grammar
 		for (RewrRuleCounter r : this._map.values())
 			s.append(r.toString(precision));
 		return (s.toString());
-	}
-	
-	/**
-	 * Fetches and return the singleton instance of the grammar.
-	 * @return A unique grammar object.
-	 */
-	public static Grammar getInstance()
-	{
-		return (Grammar._instance);
 	}
 }

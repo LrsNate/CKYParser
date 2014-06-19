@@ -40,7 +40,7 @@ public class GrammarCountUnknown extends Grammar {
 		this._count_threshold = count_threshold;
 	}
 	
-	public RewrRuleCounter addRule(String rule) {
+	public synchronized RewrRuleCounter addRule(String rule) {
 		RewrRuleCounter rule_counter = super.addRule(rule);
 		if (rule_counter.hasLexical()) {
 			lexical_rules.add(rule_counter);

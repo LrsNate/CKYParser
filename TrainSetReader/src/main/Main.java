@@ -14,14 +14,26 @@ public final class Main
 		ArgumentParser	ap;
 		BufferedReader	br;
 		Timer			t;
-
+		CorpusReader	r;
+		Grammar			g;
+		
 		t = new Timer();
 		ap = new ArgumentParser(argv);
+		if (Environment.isAltMode())
+			g = new GrammarCountUnknown(
+					Environment.getUnknownLabel(),
+					Environment.getUnknownThreshold()
+			);
+		else
+			g = new Grammar();
+		r = new CorpusReader(g);
 		while ((br = ap.getNextFile()) != null)
-			CorpusReader.read(br);
+			r.read(br);
 		ThreadPool.terminate();
+		if (g instanceof GrammarCountUnknown)
+			((GrammarCountUnknown)g).recomputeLexicalCounts();
 		Messages.info(t.lap());
-		Grammar.getInstance().display(Environment.getPrecision());
+		g.display(Environment.getPrecision());
 		Messages.info(t.lap());
 	}
 }
