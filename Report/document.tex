@@ -8,6 +8,7 @@
 \usepackage{multimedia}
 \usepackage[mathscr]{eucal}
 \usepackage{srcltx}
+\usepackage{enumitem}
 \usepackage{graphicx,enumerate}
 
 \begin{document}
@@ -230,7 +231,48 @@ Types d'entr\'ee :
 
 \section{R\'esultats}
 
+\section{Utilisation}
+\subsection{TrainSetReader}
+\subsubsection{Nom}
+ 
+TrainSetReader --- Générer une grammaire à partir d'un corpus d'apprentissage.
+ 
+\subsubsection{Synopsis}
+ 
+{\ttfamily
+\begin{verbatim}
+java -jar TrainSetReader.jar [-p precision] [-t nthreads] [-u
+unknown_threshold] [-s unknown_label] [-l] [files...]
+\end{verbatim}
+}
+ 
+\subsubsection{Description}
+ 
+Le programme \texttt{TrainSetReader} lit un texte annoté en constituants
+syntaxiques sous forme arborée, selon les conventions utilisées par le Sequoia Tree Bank. Il en
+génère ensuite une grammaire algébrique probabiliste, chaque règle de réécriture
+voyant sa probabilité estimée par un calcul de fréquence relative. Cette
+grammaire est affichée sur la sortie standard.
+ 
+Si des fichiers d'entrée sont spécifiés, le programme lira seulement ceux-ci. Si
+aucun fichier d'entrée n'est spécifié, les corpora d'entraînement seront lus sur
+l'entrée standard.
 
+\begin{description}[style=nextline]
+\item[\texttt{-p, --precision precision}] Spécifie un nombre de chiffres après
+la virgule qui seront affichés avec chaque règle de réécriture. Sa valeur par défaut est
+\texttt{10}.
+\item[\texttt{-t, --nthreads threads}] Spéficie le nombre de fils d'exécution
+qui seront exécutés en même temps par le programme.
+\item[\texttt{-u, --unknown-threshold unknown\_threshold}] Spécifie le nombre
+d'occurrences dans le corpus en-dessous duquel la partie droite d'une règle de
+réécriture sera considérée comme rare, et donc inconnue.
+\item[\texttt{-s, --unknown-label unknown\_label}] Spécifie le label qui sera
+attribué aux symboles inconnus.
+\item[\texttt{-l, --lexical}] Si cette option est spécifiée, le programme
+affichera la grammaire avec ses règles lexicales (dont la partie droite est un
+symbole terminal). Celles-ci ne sont pas affichées par défaut.
+\end{description}
 
 
 \begin{thebibliography}{9}
