@@ -1,18 +1,18 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import main.ReverseGrammar;
+//import main.ReverseGrammar;
 
 public class RewrRuleProbTest {
 
 	@Test
 	public void testRuleParsing()
 	{
-		ReverseGrammar		g;
+		//ReverseGrammar		g;
 		String		ref[];
-		int			i;
+		//int			i;
 
 		ref = new String[3];
 		ref[0] = "0.8 NP -> NP VP";
