@@ -5,7 +5,7 @@ public abstract class Environment
 	private static int			_precision = 10;
 	private static int			_nThreads = 4;
 	private static Integer		_unknownThreshold = null;
-	private static String		_unknownLabel = "UNK";
+	private static String		_unknownLabel = "**UNKNOWN**";
 	private static boolean		_lexical = false;
 	
 	public static boolean isAltMode()
