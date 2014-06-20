@@ -45,12 +45,27 @@ public class CKY {
 	 * the method of deailing with unknown words
 	 */
 	private final DealWithUnknown deal_with_unknown; 
+	
+	/**
+	 * set to true if log-probabilities are bieng used to compute the score of a parse tree
+	 */
+	private boolean _log_mode = false;
 
 	public CKY(ReverseGrammar G) {
 		this.G = G;
 		// set the mode of dealing with unknown words
 		// if an unknown terminal occurs in the corpus, then the probability of producing it is taken to be zero
 		deal_with_unknown = DealWithUnknown.IGNORE;
+	}
+	
+	/**
+	 * 
+	 * @param G: the grammar
+	 * @param log_mode: set to true if log-probabilities are to be used to compute the score of a parse tree
+	 */
+	public CKY(ReverseGrammar G, boolean log_mode) {
+		this(G);
+		this._log_mode = log_mode;
 	}
 	
 	/**
@@ -73,6 +88,18 @@ public class CKY {
 	
 	/**
 	 * The constructor 
+	 * that corresponds to the mode of deailing with unknown words = APRIORI_PROB
+	 * @param G: the grammar (with lexical rules for the observed words only)
+	 * @param alpha = P(UNKNOWN | CAT) (the same for every morphosyntactic category CAT)
+	 * @param log_mode: set to true if log-probabilities are to be used to compute the score of a parse tree
+	 */
+	public CKY(ReverseGrammar G, double alpha, boolean log_mode) {
+		this(G, alpha);
+		this._log_mode = log_mode;
+	}
+	
+	/**
+	 * The constructor 
 	 * that corresponds to the mode of deailing with unknown words = RARE
 	 * In this case the probabilities of unknown words
 	 * are supposed to be already present in the grammar passed in the parameter.
@@ -89,6 +116,55 @@ public class CKY {
 		}
 	}
 	
+	/**
+	 * The constructor 
+	 * that corresponds to the mode of deailing with unknown words = RARE
+	 * In this case the probabilities of unknown words
+	 * are supposed to be already present in the grammar passed in the parameter.
+	 * @param G: the grammar (with lexical rules for the observed words only)
+	 * @param unknown_word: the unique terminal symbol that represents all the "unknown" words
+	 * @param log_mode: set to true if log-probabilities are to be used to compute the score of a parse tree
+	 */
+	public CKY(ReverseGrammar G, Symbol unknown_word, boolean log_mode) {
+		this(G, unknown_word);
+		this._log_mode = log_mode;
+	}
+	
+	/**
+	 * 
+	 * @param probRule
+	 * @param probLeftTree
+	 * @param probRightTree
+	 * @return
+	 */
+	private double calculateProbability(double probRule, double probLeftTree, double probRightTree) {
+		if (this._log_mode) {
+			return (Math.log(probRule) + probLeftTree + probRightTree);
+		}
+		return (probRule * probLeftTree * probRightTree);
+	}
+	
+	/**
+	 * 
+	 * @param probRule
+	 * @param probUniqueDescendant
+	 * @return
+	 */
+	private double calculateProbability(double probRule, double probUniqueDescendant) {
+		double probRightTree;
+		if (this._log_mode) {
+			 probRightTree = 0;
+		} else {
+			probRightTree = 1;
+		}
+		return calculateProbability(probRule, probUniqueDescendant, probRightTree);
+	}
+	
+	
+	/**
+	 * Initialisation of the chart (the insertion of lexical rules + potentially some single productions)
+	 * @param phrase: the phrase to be parsed
+	 */
 	private void init_chart(LinkedList<Symbol> phrase) {
 		this.n = phrase.size();
 		chart = new Cell[n][n];		
@@ -102,7 +178,12 @@ public class CKY {
 			Symbol word = phrase.get(i);
 			LinkedList<RewrRuleProb> rules = G.getRules(new RHS(word));
 			for (RewrRuleProb rule : rules) {	
-				chart[i][i].add(new Tree(rule));
+				RewrRuleProb rule_to_insert = rule;
+				if (this._log_mode) { 
+					rule_to_insert = new RewrRuleProb(rule); 
+					rule_to_insert.probTakeLog();
+				}
+				chart[i][i].add(new Tree(rule_to_insert));
 			}
 			if(rules.isEmpty()) { // unknown word!
 				// if (this.deal_with_unknown.equals(DealWithUnknown.IGNORE)) ???
@@ -111,13 +192,17 @@ public class CKY {
 					// for every category that is capable of producing a terminal symbol
 					// add the corresponding production rule
 					for (Symbol lexNonterm : this._unknown_probs.keySet()) {
-						chart[i][i].add(new Tree(new RewrRuleProb(lexNonterm, new RHS(word), this._unknown_probs.get(lexNonterm))));
+						RewrRuleProb new_rule = new RewrRuleProb(lexNonterm, new RHS(word), this._unknown_probs.get(lexNonterm));
+						if (this._log_mode) { new_rule.probTakeLog(); }
+						chart[i][i].add(new Tree(new_rule));
 					}
 				}
 				if (this.deal_with_unknown.equals(DealWithUnknown.RARE)) {
 					LinkedList<RewrRuleProb> rules_for_unknown = G.getRules(this._unknown_rhs);
 					for (RewrRuleProb rule : rules_for_unknown) {	
-						chart[i][i].add(new Tree(new RewrRuleProb(rule.getLHS(), new RHS(word), rule.getProbability())));
+						RewrRuleProb new_rule = new RewrRuleProb(rule.getLHS(), new RHS(word), rule.getProbability());
+						if (this._log_mode) { new_rule.probTakeLog(); }
+						chart[i][i].add(new Tree(new_rule));
 					}
 				}
 				
@@ -161,7 +246,8 @@ public class CKY {
 
 								for (Tree tree1 : cell1.getTrees(smb1)) {
 									for (Tree tree2 : cell2.getTrees(smb2)) {
-										Tree t = new Tree(lhs, tree1.getProb() * tree2.getProb() * prob, tree1, tree2);
+										double new_tree_prob = calculateProbability(prob, tree1.getProb(), tree2.getProb());
+										Tree t = new Tree(lhs, new_tree_prob, tree1, tree2);
 										boolean ruleExists = false;
 										if (cell.getSymbols().contains(lhs)) {
 
@@ -226,7 +312,8 @@ public class CKY {
 						double prob = rule.getProbability();
 						Symbol lhs = rule.getLHS();
 						for (Tree tree : chart[i][j].getTrees(singleRhs)) {
-							Tree t = new Tree(lhs, tree.getProb() * prob, tree);
+							double new_tree_prob = calculateProbability(prob, tree.getProb());
+							Tree t = new Tree(lhs, new_tree_prob, tree);
 							boolean ruleExists = false;
 							if (chart[i][j].getSymbols().contains(lhs)) {
 
