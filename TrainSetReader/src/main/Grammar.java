@@ -13,44 +13,26 @@ import java.util.concurrent.TimeUnit;
  * processed at display time.
  * @author Antoine LAFOUASSE
  */
-public final class Grammar
+public class Grammar
 {	
 	private final ConcurrentHashMap<Symbol, RewrRuleCounter>	_map;
 	
-	private final static Grammar	_instance = new Grammar();
 	private final static int		_defaultMapSize = 5000;
 	
-	/**
-	 * _count_unknown : if (_count_unknown == true), \
-	 * then for every occurrence of a lexical rule (A -> a) \
-	 * add the rule (A -> **UNKNOWN**) to the counter
-	 */
-	private boolean 	_count_unknown;
-	/**
-	 * the right-hand side of a rule 
-	 * conventionnaly chosen to represent all unknown terminals
-	 */
-	private RHS 	    _unknown_rhs;
 
-	private Grammar()
+	public Grammar()
 	{
 		this._map = new ConcurrentHashMap<Symbol, RewrRuleCounter>(
 				Grammar._defaultMapSize);
-	}
-	
-	private Grammar(boolean _count_unknown, String unknown_label)
-	{
-		this();
-		this._count_unknown = _count_unknown;
-		this._unknown_rhs = new RHS(new Symbol(unknown_label, true));
 	}
 
 	/**
 	 * Adds a rule to the grammar and either creates a new entry or increments
 	 * its occurrence count.
 	 * @param rule The rule to be added.
+	 * @return the counter of the rule that has just been added
 	 */
-	public void addRule(String rule)
+	public synchronized RewrRuleCounter addRule(String rule)
 	{
 		String		tab[];
 		
@@ -61,18 +43,16 @@ public final class Grammar
 			tab[i] = tab[i].trim();
 		Symbol lhs = new Symbol(tab[0]);
 		RHS rhs = new RHS(tab[1]);
-		if (this._map.containsKey(lhs))
-			this._map.get(lhs).addRule(rhs);
-		else
-			this._map.put(lhs, new RewrRuleCounter(lhs, rhs));
-		
-		// If the mode _count_unknown is known
-		// and the rule under consideration is a lexical one,
-		// then its LHS is a morpho-syntactic category Cat.
-		// Add the unknown terminal to the counter of this Category.
-		if (this._count_unknown && ((rhs.size() == 1) && (rhs.get(0).IsTerminal()))) {
-			this._map.get(lhs).addRule(_unknown_rhs);
+		RewrRuleCounter rule_counter = null;
+		if (this._map.containsKey(lhs)) {
+			rule_counter = this._map.get(lhs);
+			rule_counter.addRule(rhs);
+		} else {
+			rule_counter = new RewrRuleCounter(lhs, rhs);
+			this._map.put(lhs, rule_counter);
 		}
+		
+		return rule_counter;
 	}
 	
 	public synchronized void addRule(String tab[])
@@ -139,14 +119,5 @@ public final class Grammar
 		for (RewrRuleCounter r : this._map.values())
 			s.append(r.toString(precision));
 		return (s.toString());
-	}
-	
-	/**
-	 * Fetches and return the singleton instance of the grammar.
-	 * @return A unique grammar object.
-	 */
-	public static Grammar getInstance()
-	{
-		return (Grammar._instance);
 	}
 }

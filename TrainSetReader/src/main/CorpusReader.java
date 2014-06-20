@@ -10,14 +10,23 @@ import java.io.IOException;
  * @author Antoine LAFOUASSE
  */
 public class CorpusReader
-{	
-	public static void read(BufferedReader fd)
+{
+	private Grammar	_grammar;
+	
+	public CorpusReader(Grammar g)
+	{
+		this._grammar = g;
+	}
+	
+	public void read(BufferedReader fd)
 	{
 		String		line;
 		try
 		{
 			while ((line = fd.readLine()) != null)
-				ThreadPool.getInstance().submit(new SentenceReader(line));
+				ThreadPool.getInstance().submit(
+						new SentenceReader(line, this._grammar)
+				);
 		}
 		catch (IOException e)
 		{

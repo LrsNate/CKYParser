@@ -60,6 +60,25 @@ public class ArgumentParser
 							argv[i + 1]));
 				}
 			}
+			else if (argv[i].equals("-u") || argv[i].equals("--unknown-threshold"))
+			{
+				try
+				{
+					ArgumentParser.parseUnknownThreshold(argv, i);
+					i++;
+				}
+				catch (NumberFormatException e)
+				{
+					Messages.warning(String.format(
+							"invalid unknown threshold argument: %s",
+							argv[i + 1]));
+				}
+			}
+			else if (argv[i].equals("-s") || argv[i].equals("--unknown-label"))
+			{
+				ArgumentParser.parseUnknownLabel(argv, i);
+				i++;
+			}
 			else if (argv[i].equals("-l") || argv[i].equals("--lexical"))
 			{
 				Messages.info("reader set to track lexical rules.");
@@ -172,5 +191,38 @@ public class ArgumentParser
 		Messages.info(String.format("precision set to: %d digits.",
 				res));
 		Environment.setPrecision(res);
+	}
+	
+	private static void parseUnknownThreshold(String argv[], int idx)
+			throws NumberFormatException
+	{
+		int		res;
+
+		if ((idx + 1) >= argv.length)
+		{
+			Messages.warning("missing unknown threshold argument.");
+			return ;
+		}
+		res = Integer.parseInt(argv[idx + 1]);
+		if (res < 0)
+			throw new NumberFormatException(String.format(
+					"%d (must be non-negative)",
+					res));
+		Messages.info(String.format("unknown threshold set to: %d.",
+				res));
+		Environment.setUnknownThreshold(res);
+	}
+
+	private static void parseUnknownLabel(String argv[], int idx)
+			throws NumberFormatException
+	{
+		if ((idx + 1) >= argv.length)
+		{
+			Messages.warning("missing unknown label argument.");
+			return ;
+		}
+		Messages.info(String.format("unknown label set to: %s.",
+				argv[idx + 1]));
+		Environment.setUnknownLabel(argv[idx + 1]);
 	}
 }
