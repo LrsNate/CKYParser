@@ -20,7 +20,7 @@ public class MainAnnotationStripper
 			{
 				while ((line = br.readLine()) != null)
 				{
-					System.out.println(new TreeNode(line.substring(2, line.length() - 1)).getBarePhrase());
+					Environment.getOutputStream().println(new TreeNode(line.substring(2, line.length() - 1)).getBarePhrase());
 				}
 			}
 			catch (IOException e)

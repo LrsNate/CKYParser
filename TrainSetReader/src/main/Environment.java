@@ -10,6 +10,7 @@ public abstract class Environment
 	private static String		_unknownLabel = "**UNKNOWN**";
 	private static boolean		_lexical = false;
 	private static	PrintWriter 	_out = null;
+	private static  AnnotationStripperOption annotation_stripper_opt = null;
 	
 	public static void setOutputStream(PrintWriter p) {
 		Environment._out = p;
@@ -69,6 +70,10 @@ public abstract class Environment
 	public static void setUnknownLabel(String l)
 	{
 		Environment._unknownLabel = l;
+	}
+	
+	public static void setAnnotationStripperOption(AnnotationStripperOption opt) {
+		Environment.annotation_stripper_opt = opt;
 	}
 
 	public static void setLexical(boolean l)

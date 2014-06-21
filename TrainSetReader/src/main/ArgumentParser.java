@@ -66,6 +66,15 @@ public class ArgumentParser
 				ArgumentParser0.checkArgumentPresence(argv, i);
 				Environment.setOutputStream(ArgumentParser0.openOutputFile(argv[i+1]));
 				i++;
+			} else if (argv[i].equals("--get-bare-phrase"))
+			{
+				Environment.setAnnotationStripperOption(AnnotationStripperOption.LEX);
+			} else if (argv[i].equals("--get-categories"))
+			{
+				Environment.setAnnotationStripperOption(AnnotationStripperOption.CAT);
+			} else if (argv[i].equals("--get-tagging"))
+			{
+				Environment.setAnnotationStripperOption(AnnotationStripperOption.LEX_N_CAT);
 			}
 			else
 			{
