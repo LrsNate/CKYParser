@@ -11,7 +11,6 @@ public final class Main
 	public static void main(String[] argv)
 	{
 		CKYArgumentParser	ap;
-		BufferedReader	br;
 		CKY parser = null;
 		try {
 			
@@ -41,9 +40,12 @@ public final class Main
 					line_number++;
 					System.out.println("**" + line_number + "**  " + line);
 					k_best_parses = parser.parse(Symbol.ListSymbols(line.split(" ")), k_best);
-					// TODO: option: print probabilities or not 
+					boolean print_probas = false;
+					if(k_best > 1) {
+						print_probas = true;
+					}
 					for (int i = 0; i < k_best_parses.size(); i++) {
-						System.out.println(k_best_parses.get(i).treeToString(false));						
+						System.out.println(k_best_parses.get(i).treeToString(print_probas));						
 					}
 				} catch (UnknownWordException e) {
 					// no parses were obtained, nothing is printed 

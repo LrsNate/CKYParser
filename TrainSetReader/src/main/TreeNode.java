@@ -86,10 +86,11 @@ public class TreeNode
 		String				tmp;
 		
 		lst = new LinkedList<String>();
-		if (this._value.IsTerminal())
-			lst.add(this._value.toString());
 		for (TreeNode c : this._children)
 		{
+			if (c.getValue().IsTerminal()) {
+				lst.add(c.getValue().toString() + "/" + this._value.toString());
+			}
 			if ((tmp = c.getBarePhrase()) != "")
 				lst.add(tmp);
 		}

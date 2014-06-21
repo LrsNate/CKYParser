@@ -21,7 +21,7 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	private int 	_k = 1;
 	
 	/**
-	 * the method of deailing with unknown words
+	 * the method of dealing with unknown words
 	 */
 	private DealWithUnknown deal_with_unknown = DealWithUnknown.IGNORE; 
 	
@@ -31,7 +31,10 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	private BufferedReader 	_input_grammar = null;
 	
 	public int getKBest() {
-		return this._k;
+		if (this._get_k_best) {
+			return this._k;
+		}
+		return 1;
 	}
 	
 	public boolean getLogMode() {
