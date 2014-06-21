@@ -12,6 +12,10 @@ public abstract class Environment
 	private static	PrintWriter 	_out = null;
 	private static  AnnotationStripperOption annotation_stripper_opt = null;
 	
+	public static AnnotationStripperOption getAnnotationStripperOption() {
+		return Environment.annotation_stripper_opt;
+	}
+	
 	public static void setOutputStream(PrintWriter p) {
 		Environment._out = p;
 	}

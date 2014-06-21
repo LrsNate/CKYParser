@@ -79,7 +79,19 @@ public class TreeNode
 		return (res);
 	}
 	
-	public String getBarePhrase()
+	private String strippedPhrase(LinkedList<String>	lst) {
+		StringBuffer		res;
+		res = new StringBuffer();
+		for (String s : lst)
+		{
+			if (res.toString() != "")
+				res.append(" ");
+			res.append(s.trim().replace("\\", ""));
+		}
+		return (res.toString());
+	}
+	
+	public String getTaggedPhrase()
 	{
 		LinkedList<String>	lst;
 		StringBuffer		res;
@@ -91,17 +103,46 @@ public class TreeNode
 			if (c.getValue().IsTerminal()) {
 				lst.add(c.getValue().toString() + "/" + this._value.toString());
 			}
+			if ((tmp = c.getTaggedPhrase()) != "")
+				lst.add(tmp);
+		}
+		return strippedPhrase(lst);
+	}
+	
+	public String getTaggingOnly()
+	{
+		LinkedList<String>	lst;
+		String				tmp;
+		
+		lst = new LinkedList<String>();
+		for (TreeNode c : this._children)
+		{
+			if (c.getValue().IsTerminal()) {
+				lst.add(this._value.toString());
+			}
+			if ((tmp = c.getTaggingOnly()) != "")
+				lst.add(tmp);
+		}
+		String res = strippedPhrase(lst);
+		return res;
+	}
+	
+	public String getBarePhrase()
+	{
+		LinkedList<String>	lst;
+		StringBuffer		res;
+		String				tmp;
+		
+		lst = new LinkedList<String>();		
+		if (this._value.IsTerminal()) {
+			lst.add(this._value.toString());
+		}
+		for (TreeNode c : this._children)
+		{
 			if ((tmp = c.getBarePhrase()) != "")
 				lst.add(tmp);
 		}
-		res = new StringBuffer();
-		for (String s : lst)
-		{
-			if (res.toString() != "")
-				res.append(" ");
-			res.append(s.trim().replace("\\", ""));
-		}
-		return (res.toString());
+		return strippedPhrase(lst);
 	}
 	
 	/**
