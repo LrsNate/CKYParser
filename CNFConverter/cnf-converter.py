@@ -30,7 +30,6 @@ usage=u""" Ce programme lit de STDIN une grammaire hors-context (probabiliste ou
 # gestion des options et des arguments
 parser=OptionParser(usage=usage)
 # déclaration d'une option
-parser.add_option("-f", "--transformation_file",dest="f_trans",default="",help=u"File for storage of transformations", metavar="F_TRANS")
 parser.add_option("-p", "--prob",  action="store_true",  dest="is_prob", help = u"The CFG is probabilistic")
 parser.add_option("-s", "--sing_elimin",  action="store_true",  dest="sing_elimin", help = u"Eliminate singular productions")
 parser.add_option("-t", "--term_droite",  action="store_true",  dest="term_droite", 
