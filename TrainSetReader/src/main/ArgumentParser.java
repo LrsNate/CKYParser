@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 
@@ -60,6 +61,11 @@ public class ArgumentParser
 			{
 				Messages.info("reader set to track lexical rules.");
 				Environment.setLexical(true);
+			} else if (argv[i].equals("-o") || argv[i].equals("--output_file"))
+			{
+				ArgumentParser0.checkArgumentPresence(argv, i);
+				Environment.setOutputStream(ArgumentParser0.openOutputFile(argv[i+1]));
+				i++;
 			}
 			else
 			{
@@ -82,6 +88,8 @@ public class ArgumentParser
 			Messages.warning(e.getMessage());
 		} catch (MissingArgumentValueException e1) {
 			Messages.warning(e1.getMessage());
+		} catch (FileNotFoundException e2) {
+			Messages.warning(e2.getMessage());
 		}
 	}
 	
@@ -103,6 +111,9 @@ public class ArgumentParser
 			Messages.info("no valid input files provided.");
 			Messages.info("reading from standard input.");
 			this._fds.addLast(ArgumentParser0.openStandardInput());
+		}
+		if (Environment.getOutputStream() == null) {
+			Environment.setOutputStream(new PrintWriter(System.out, true));
 		}
 	}
 		
