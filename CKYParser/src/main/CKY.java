@@ -42,12 +42,12 @@ public class CKY {
 	private RHS _unknown_rhs;
 	
 	/**
-	 * the method of deailing with unknown words
+	 * the method of dealing with unknown words
 	 */
 	private final DealWithUnknown deal_with_unknown; 
 	
 	/**
-	 * set to true if log-probabilities are bieng used to compute the score of a parse tree
+	 * set to true if log-probabilities are being used to compute the score of a parse tree
 	 */
 	private boolean _log_mode = false;
 
@@ -164,8 +164,9 @@ public class CKY {
 	/**
 	 * Initialisation of the chart (the insertion of lexical rules + potentially some single productions)
 	 * @param phrase: the phrase to be parsed
+	 * @throws UnknownWordException 
 	 */
-	private void init_chart(LinkedList<Symbol> phrase) {
+	private void init_chart(LinkedList<Symbol> phrase) throws UnknownWordException {
 		this.n = phrase.size();
 		chart = new Cell[n][n];		
 		for (int i = 0; i < n; i++) {
@@ -186,7 +187,11 @@ public class CKY {
 				chart[i][i].add(new Tree(rule_to_insert));
 			}
 			if(rules.isEmpty()) { // unknown word!
-				// if (this.deal_with_unknown.equals(DealWithUnknown.IGNORE)) ???
+				if (this.deal_with_unknown.equals(DealWithUnknown.IGNORE)) {
+					//the probability of producing an unknown word is taken to be zero
+					//if an unknown word is found, the whole phrase probability will be 0, so the phrase cannot be parsed
+					throw new UnknownWordException("In the IGNORE mode, we cannot parse phrases with unknown words.");
+				}
 				
 				if (this.deal_with_unknown.equals(DealWithUnknown.APRIORI_PROB)) {
 					// for every category that is capable of producing a terminal symbol
@@ -216,8 +221,9 @@ public class CKY {
 	 * @param phrase: the phrase to be parsed
 	 * @param k: the number of parse trees to return
 	 * @return k best parse trees of the phrase or null if no parse trees were found 
+	 * @throws UnknownWordException 
 	 */
-	public LinkedList<Tree> parse(LinkedList<Symbol> phrase, int k) {
+	public LinkedList<Tree> parse(LinkedList<Symbol> phrase, int k) throws UnknownWordException {
 		LinkedList<Tree> res = new LinkedList<Tree>();
 		this.init_chart(phrase);
 		
