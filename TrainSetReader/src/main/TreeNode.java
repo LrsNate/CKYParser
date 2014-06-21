@@ -79,6 +79,30 @@ public class TreeNode
 		return (res);
 	}
 	
+	public String getBarePhrase()
+	{
+		LinkedList<String>	lst;
+		StringBuffer		res;
+		String				tmp;
+		
+		lst = new LinkedList<String>();
+		if (this._value.IsTerminal())
+			lst.add(this._value.toString());
+		for (TreeNode c : this._children)
+		{
+			if ((tmp = c.getBarePhrase()) != "")
+				lst.add(tmp);
+		}
+		res = new StringBuffer();
+		for (String s : lst)
+		{
+			if (res.toString() != "")
+				res.append(" ");
+			res.append(s.trim().replace("\\", ""));
+		}
+		return (res.toString());
+	}
+	
 	/**
 	 * Returns the tree's syntactic category.
 	 * @return The tree root's syntactic category.
