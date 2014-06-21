@@ -14,13 +14,27 @@ public class MainAnnotationStripper
 		
 		ap = new ArgumentParser(argv);
 		Environment.setLexical(true);
+		
 		while ((br = ap.getNextFile()) != null)
 		{
 			try
 			{
-				while ((line = br.readLine()) != null)
-				{
-					Environment.getOutputStream().println(new TreeNode(line.substring(2, line.length() - 1)).getBarePhrase());
+				switch (Environment.getAnnotationStripperOption()) {
+				case LEX:
+					while ((line = br.readLine()) != null) {
+						Environment.getOutputStream().println(new TreeNode(line.substring(2, line.length() - 1)).getBarePhrase());
+					}
+					break;
+				case CAT:
+					while ((line = br.readLine()) != null) {
+						Environment.getOutputStream().println(new TreeNode(line.substring(2, line.length() - 1)).getTaggingOnly());
+					}
+					break;
+				case LEX_N_CAT:
+					while ((line = br.readLine()) != null) {
+						Environment.getOutputStream().println(new TreeNode(line.substring(2, line.length() - 1)).getTaggedPhrase());
+					}
+					break;
 				}
 			}
 			catch (IOException e)

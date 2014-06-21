@@ -72,7 +72,7 @@ public class ArgumentParser
 			} else if (argv[i].equals("--get-categories"))
 			{
 				Environment.setAnnotationStripperOption(AnnotationStripperOption.CAT);
-			} else if (argv[i].equals("--get-tagging"))
+			} else if (argv[i].equals("--get-tagged-phrase"))
 			{
 				Environment.setAnnotationStripperOption(AnnotationStripperOption.LEX_N_CAT);
 			}
