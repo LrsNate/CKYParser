@@ -1,0 +1,8 @@
+A -> A B C
+T -> A B C D E F G
+Y -> T \y U \r RR \\\abcdef
+V -> F G
+VB -> E F G
+K -> K1 K2
+H -> \h
+TTT -> \\\ttt

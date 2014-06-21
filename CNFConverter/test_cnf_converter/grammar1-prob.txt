@@ -1,0 +1,8 @@
+0.12344 A -> A B C
+0.56677 T -> A B C D E F G
+0.543432 Y -> T \y U \r RR \\\abcdef
+0.00045 V -> F G
+0.1 VB -> E F G
+0.988 K -> K1 K2
+0.23222 H -> \h
+0.2 TTT -> \\\ttt

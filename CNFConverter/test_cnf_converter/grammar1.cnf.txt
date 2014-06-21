@@ -1,0 +1,21 @@
+Z1 -> B C
+A -> A Z1
+Z2 -> F G
+Z3 -> E Z2
+Z4 -> D Z3
+Z5 -> C Z4
+Z6 -> B Z5
+T -> A Z6
+Z7 -> \y
+Z8 -> \r
+Z9 -> \\\abcdef
+Z10 -> RR Z9
+Z11 -> Z8 Z10
+Z12 -> U Z11
+Z13 -> Z7 Z12
+Y -> T Z13
+V -> F G
+VB -> E Z2
+K -> K1 K2
+H -> \h
+TTT -> \\\ttt

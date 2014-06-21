@@ -30,6 +30,7 @@ usage=u""" Ce programme lit de STDIN une grammaire hors-context (probabiliste ou
 # gestion des options et des arguments
 parser=OptionParser(usage=usage)
 # déclaration d'une option
+parser.add_option("-f", "--transformation_file",dest="f_trans",default="",help=u"File for storage of transformations", metavar="F_TRANS")
 parser.add_option("-p", "--prob",  action="store_true",  dest="is_prob", help = u"The CFG is probabilistic")
 parser.add_option("-s", "--sing_elimin",  action="store_true",  dest="sing_elimin", help = u"Eliminate singular productions")
 parser.add_option("-t", "--term_droite",  action="store_true",  dest="term_droite", 
@@ -116,9 +117,6 @@ class CNFConvert:
             ### parse standard input
             n_lines_in_stdin += 1
             line = line.strip('\r').strip('\n')
-            ## if the line does not contain "->", than this line is ignored !
-            if (not ("->" in line)):
-                continue;
             regle = line.split()
             # p: the (conditional) probability of the rewriting rule P(RHS | LHS)
             if (self.is_prob):
@@ -159,6 +157,9 @@ class CNFConvert:
 # =============================================
 input_stream = sys.stdin
 C = CNFConvert(is_prob)
-term_droite = True
-C.convert(input_stream, term_droite)
+line = input_stream.readline() 
+while line:
+    line = line.strip('\r').strip('\n');
+    print line + " " + str(C.is_terminal(line));
+    line = input_stream.readline()
 
