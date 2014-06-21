@@ -1,23 +1,59 @@
 package main;
 
 import java.util.LinkedList;
+import java.lang.Math;
 
 
 public class RewrRuleProb extends RewrRule implements Comparable<RewrRuleProb> {
-
+	
+	/**
+	 * The value representing the probability of the rewriting rule.
+	 * If no logarithmisation has been applied, 
+	 * it stores a positive value in the interval [0,1]
+	 */
 	private double 	_prob;
 	
+	/**
+	 * The counter that keeps track of the number of times
+	 * logarithmisation has been applied to the probability
+	 */
+	private int 	_nlog = 0;
+	
+	/**
+	 * 
+	 * @return: the number of times logarithmisation has been applied to the probability
+	 */
+	public int getNLog() {
+		return this._nlog;
+	}
+	
 	private void check_prob() {
-		if ((this._prob < 0) || (this._prob > 1)) {
+		if (!(this._prob > 0) || (this._prob > 1)) {
 			throw new IllegalArgumentException();
 		}
 	}
 	
+	/**
+	 * Modify the field containing the probability
+	 * by multipliyng it by the value passed in the parameter list
+	 * @param alpha: the multiplier
+	 * @return: the new value of the probability
+	 */
 	protected double mult_prob(double alpha) {
 		if ((alpha < 0) || (alpha > 1)) {
 			throw new IllegalArgumentException();
 		}
 		this._prob *= alpha;
+		return this._prob;
+	}
+	
+	/**
+	 * replace the probability of the rewriting rule by the logarithm of the probability
+	 * @return: log(probability)
+	 */
+	protected double probTakeLog() {
+		this._prob = Math.log(this._prob);
+		this._nlog++;
 		return this._prob;
 	}
 	
@@ -31,6 +67,14 @@ public class RewrRuleProb extends RewrRule implements Comparable<RewrRuleProb> {
 		super(lhs,rhs);
 		this._prob = prob;
 		check_prob();		
+	}
+	
+	/**
+	 * deep copy constructor
+	 * @param rule
+	 */
+	public RewrRuleProb(RewrRuleProb rule) {
+		this(rule.getLHS(), rule.getRHS(), rule.getProbability());
 	}
 	
 	public RewrRuleProb(Symbol lhs, LinkedList<Symbol> rhs) {

@@ -69,8 +69,7 @@ public class Tree implements Comparable<Tree>
 		return (new Double(this._prob).compareTo(new Double(t._prob)));
 	}
 	
-	@Override
-	public String toString()
+	public String treeToString(boolean with_prob)
 	{
 		StringBuffer	s;
 		
@@ -79,14 +78,24 @@ public class Tree implements Comparable<Tree>
 		s = new StringBuffer("(");
 		s.append(this._value);
 		s.append(" ");
-		s.append(this._left);
+		s.append(this._left.treeToString(with_prob));
 		if (this._right != null)
 		{
 			s.append(" ");
-			s.append(this._right);
+			s.append(this._right.treeToString(with_prob));
 		}
 		s.append(")");
 		return (s.toString());
+	}
+	
+	public String treeToString() {
+		return treeToString(false);
+	}
+	
+	@Override
+	public String toString()
+	{
+		return (Double.toString(this._prob) + " " + this.treeToString());
 	}
 	
 	public boolean equals(Tree t) 
