@@ -14,7 +14,7 @@ public class RewrRuleDisplayer implements Runnable
 	@Override
 	public void run()
 	{
-		Environment.getOutputStream().print(this._rule.toString(this._precision));
+		Environment.getOutputStream().println(this._rule.toString(this._precision));
 	}
 
 }
