@@ -8,18 +8,18 @@ import java.io.UnsupportedEncodingException;
 
 public abstract class ArgumentParser0 {
 	
-	protected static void checkArgumentPresence(String[] argv, int idx) throws MissingArgumentException {
+	protected static void checkArgumentPresence(String[] argv, int idx) throws MissingArgumentValueException {
 		if ((idx + 1) >= argv.length)
 		{
 			String message = String.format(
 					"Missing the argument %s",
 					argv[idx]);
 			Messages.warning(message);
-			throw new MissingArgumentException(message);
+			throw new MissingArgumentValueException(message);
 		}
 	}
 
-	protected static int parsePositiveInt(String[] argv, int idx) throws MissingArgumentException, NumberFormatException {
+	protected static int parsePositiveInt(String[] argv, int idx) throws MissingArgumentValueException, NumberFormatException {
 		checkArgumentPresence(argv,idx);
 		int res = Integer.parseInt(argv[idx + 1]);
 		if (res <= 0)
@@ -29,7 +29,7 @@ public abstract class ArgumentParser0 {
 		return res;
 	}
 	
-	protected static int parseNonNegativeInt(String[] argv, int idx) throws MissingArgumentException, NumberFormatException {
+	protected static int parseNonNegativeInt(String[] argv, int idx) throws MissingArgumentValueException, NumberFormatException {
 		checkArgumentPresence(argv,idx);
 		int res = Integer.parseInt(argv[idx + 1]);
 		if (res < 0)

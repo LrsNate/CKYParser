@@ -1,5 +1,8 @@
 package main;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+
 public class CKYArgumentParser extends ArgumentParser0 {
 	
 	/**
@@ -24,14 +27,30 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	
 	private double 	_apriori_unknown_prob;
 	private String 	_unknown_label;
+	
+	private BufferedReader 	_input_grammar = null;
+	
+	public BufferedReader getGrammarBufferedReader() {
+		return this._input_grammar;
+	}
+	
+	public DealWithUnknown getModeTreatUnknown() {
+		return this.deal_with_unknown;
+	}
+	
+	private void checkPresenceOfObligatoryArgs() throws MissingObligatoryArgException {
+		if (this._input_grammar == null) {
+			throw new MissingObligatoryArgException("Missing the grammar file in the arguments.");		
+		}
+		return;
+	}
 
 	/**
 	 * Builds a new ArgumentParser and parses the wordtab given in argument.
 	 * @param argv Originally the program's command line arguments.
 	 */
-	public CKYArgumentParser(String[] argv) {
+	public CKYArgumentParser(String[] argv) throws MissingArgumentValueException, NumberFormatException, FileNotFoundException, MissingObligatoryArgException {
 		int i = 0;
-		try {
 		while (i < argv.length)
 		{
 			if (argv[i].equals("-l") || argv[i].equals("--log_prob"))
@@ -45,7 +64,7 @@ public class CKYArgumentParser extends ArgumentParser0 {
 			} else if (argv[i].equals("-a") || argv[i].equals("--apriori_unknown_prob"))
 			{
 				this.deal_with_unknown = DealWithUnknown.APRIORI_PROB; 
-				parsePositiveProb(argv, i);
+				parseAprioriProb(argv, i);
 				i++;
 			} else if (argv[i].equals("-u") || argv[i].equals("--unknown_label"))
 			{
@@ -53,18 +72,19 @@ public class CKYArgumentParser extends ArgumentParser0 {
 				checkArgumentPresence(argv, i);
 				this._unknown_label = argv[i+1];
 				i++;
+			}  else if (argv[i].equals("-g") || argv[i].equals("--grammar_file"))
+			{
+				checkArgumentPresence(argv, i);
+				this._input_grammar = ArgumentParser0.openFile(argv[i+1]);
+				i++;
 			}
 			i++;
 		}
-		} catch (NumberFormatException e) {
-			Messages.warning(e.getMessage());
-		} catch (MissingArgumentException e1) {
-			Messages.warning(e1.getMessage());
-		}
+		checkPresenceOfObligatoryArgs();
 	}
 	
 	private void parseKBest(String argv[], int idx)
-			throws NumberFormatException, MissingArgumentException
+			throws NumberFormatException, MissingArgumentValueException
 	{
 		this._k = ArgumentParser0.parsePositiveInt(argv, idx);
 		Messages.info(String.format("Number of best parses to be returned for every phrase = %d",
@@ -72,14 +92,14 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	}
 	
 	private void parseAprioriProb(String argv[], int idx)
-			throws NumberFormatException, MissingArgumentException
+			throws NumberFormatException, MissingArgumentValueException
 	{
 		this._apriori_unknown_prob = parsePositiveProb(argv, idx);
 		Messages.info(String.format("For every morpho-syntactic category the apriori probability of getting an unknown word is set to = %f",
 				this._apriori_unknown_prob));
 	}
 	
-	protected static double parsePositiveProb(String[] argv, int idx) throws MissingArgumentException, NumberFormatException {
+	protected static double parsePositiveProb(String[] argv, int idx) throws MissingArgumentValueException, NumberFormatException {
 		checkArgumentPresence(argv,idx);
 		double res = Double.parseDouble(argv[idx + 1]);
 		if ((!(res > 0)) || (res > 1))
