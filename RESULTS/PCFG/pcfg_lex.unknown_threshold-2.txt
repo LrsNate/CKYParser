@@ -1,0 +1,4698 @@
+0,0031847 COORD ->  PONCT VPpart
+0,0063694 COORD ->  CC VN ADV NP
+0,0031847 COORD ->  CC PP PP
+0,0031847 COORD ->  CC ADV
+0,0541401 COORD ->  CC VPpart
+0,0031847 COORD ->  CC PONCT Sint PONCT PP
+0,0031847 COORD ->  CC VN NP VPinf PP
+0,0031847 COORD ->  CC VN NP PP VPinf
+0,0031847 COORD ->  CC VN PP PP PP
+0,0031847 COORD ->  NP
+0,0031847 COORD ->  CC PONCT NP PONCT
+0,0031847 COORD ->  CC ADV PP
+0,0031847 COORD ->  CC VN ADV PP
+0,0031847 COORD ->  CC ADV NP
+0,0031847 COORD ->  CC NP NP PONCT Ssub
+0,0031847 COORD ->  CC NP NP
+0,0031847 COORD ->  CC AP AP
+0,4426752 COORD ->  CC NP
+0,0127389 COORD ->  CC VN NP
+0,0031847 COORD ->  CC VPpart ADV
+0,0031847 COORD ->  CC PRO PP PONCT
+0,0031847 COORD ->  CC VN Ssub
+0,0159236 COORD ->  CC VN VPinf
+0,1305732 COORD ->  CC PP
+0,0031847 COORD ->  CC VN NP VPinf
+0,0063694 COORD ->  CC NP PP
+0,0031847 COORD ->  CC VPP
+0,0095541 COORD ->  CC DET
+0,0031847 COORD ->  CC VN PONCT VPpart NP PP
+0,0031847 COORD ->  PONCT Sint
+0,0031847 COORD ->  PONCT PP
+0,0286624 COORD ->  CC VN PP
+0,0095541 COORD ->  CC Ssub
+0,0573248 COORD ->  CC Sint
+0,0159236 COORD ->  CC Srel
+0,0031847 COORD ->  CC PP PONCT NP
+0,0127389 COORD ->  CC VPinf
+0,0031847 COORD ->  CC PONCT Sint
+0,0605096 COORD ->  PONCT NP
+0,0031847 COORD ->  CC PP PONCT PP
+0,0031847 COORD ->  CC VN PP NP
+0,0031847 COORD ->  CC VN NP PP
+0,0031847 COORD ->  CC VN VPpart
+0,0031847 COORD ->  VPpart
+0,0031847 COORD ->  PONCT NP PP
+0,0031847 COORD ->  CC VN NP PONCT PP
+0,0350318 COORD ->  CC AP
+
+0,0003256 NC ->  \causes
+0,0003256 NC ->  \fief
+0,0013025 NC ->  \Cour
+0,0016281 NC ->  \faits
+0,0003256 NC ->  \candidat
+0,0003256 NC ->  \escouade
+0,0003256 NC ->  \amateurisme
+0,0009769 NC ->  \ordonnance
+0,0003256 NC ->  \supérieurs
+0,0035819 NC ->  \amende
+0,0003256 NC ->  \Volume
+0,0006513 NC ->  \grâce
+0,0003256 NC ->  \distribution
+0,0003256 NC ->  \avion
+0,0006513 NC ->  \cadeau
+0,0003256 NC ->  \cléricafard
+0,0003256 NC ->  \parution
+0,0006513 NC ->  \piste
+0,0003256 NC ->  \confiance
+0,0006513 NC ->  \armées
+0,0042331 NC ->  \procès
+0,0003256 NC ->  \empereur
+0,0003256 NC ->  \filières
+0,0019538 NC ->  \secret
+0,0078150 NC ->  \Affaire
+0,0006513 NC ->  \construction
+0,0022794 NC ->  \diamants
+0,0055357 NC ->  \HLM
+0,0003256 NC ->  \exactions
+0,0003256 NC ->  \exil
+0,0006513 NC ->  \incompétence
+0,0003256 NC ->  \mariage
+0,0048844 NC ->  \ministre
+0,0003256 NC ->  \Commissions
+0,0003256 NC ->  \fond
+0,0003256 NC ->  \aéroport
+0,0009769 NC ->  \plainte
+0,0003256 NC ->  \paix
+0,0003256 NC ->  \chocs
+0,0003256 NC ->  \hélicoptère
+0,0003256 NC ->  \renseignements
+0,0016281 NC ->  \cour
+0,0042331 NC ->  \février
+0,0013025 NC ->  \Liens
+0,0006513 NC ->  \recours
+0,0003256 NC ->  \référence
+0,0003256 NC ->  \adultes
+0,0003256 NC ->  \Chevalier
+0,0006513 NC ->  \No.
+0,0009769 NC ->  \scène
+0,0003256 NC ->  \Dirigeant
+0,0003256 NC ->  \October
+0,0045588 NC ->  \instruction
+0,0016281 NC ->  \opération
+0,0003256 NC ->  \obtention
+0,0013025 NC ->  \vente
+0,0003256 NC ->  \saison
+0,0003256 NC ->  \Gendarmerie
+0,0006513 NC ->  \charniers
+0,0003256 NC ->  \aventure
+0,0003256 NC ->  \cardinal
+0,0003256 NC ->  \prime
+0,0006513 NC ->  \action
+0,0003256 NC ->  \boîte
+0,0006513 NC ->  \illustrations
+0,0006513 NC ->  \père
+0,0003256 NC ->  \Colonel
+0,0006513 NC ->  \Janvier
+0,0003256 NC ->  \délégation
+0,0003256 NC ->  \Ligue
+0,0003256 NC ->  \maison
+0,0003256 NC ->  \reconciliation
+0,0016281 NC ->  \versement
+0,0029306 NC ->  \appel
+0,0003256 NC ->  \salaires
+0,0009769 NC ->  \chefs
+0,0003256 NC ->  \déclassification
+0,0003256 NC ->  \racket
+0,0003256 NC ->  \546-571
+0,0013025 NC ->  \chambre
+0,0003256 NC ->  \incendie
+0,0003256 NC ->  \clefs
+0,0019538 NC ->  \biens
+0,0026050 NC ->  \avril
+0,0003256 NC ->  \bloc
+0,0009769 NC ->  \semaines
+0,0003256 NC ->  \passagers
+0,0003256 NC ->  \tête
+0,0013025 NC ->  \article
+0,0003256 NC ->  \militant
+0,0003256 NC ->  \colonisations
+0,0016281 NC ->  \mise
+0,0003256 NC ->  \découverte
+0,0003256 NC ->  \attente
+0,0003256 NC ->  \origines
+0,0003256 NC ->  \Ouverture
+0,0045588 NC ->  \euros
+0,0003256 NC ->  \idées
+0,0006513 NC ->  \filiale
+0,0003256 NC ->  \île
+0,0039075 NC ->  \prison
+0,0006513 NC ->  \Recours
+0,0003256 NC ->  \vocations
+0,0006513 NC ->  \million
+0,0003256 NC ->  \conséquence
+0,0003256 NC ->  \groupes
+0,0003256 NC ->  \plaquette
+0,0003256 NC ->  \soeur
+0,0003256 NC ->  \cash
+0,0003256 NC ->  \neveu
+0,0006513 NC ->  \fois
+0,0009769 NC ->  \équipe
+0,0003256 NC ->  \enjeu
+0,0006513 NC ->  \rénovation
+0,0003256 NC ->  \opinions
+0,0003256 NC ->  \captivité
+0,0003256 NC ->  \sens
+0,0003256 NC ->  \assemblée
+0,0009769 NC ->  \football
+0,0048844 NC ->  \mois
+0,0026050 NC ->  \intermédiaires
+0,0003256 NC ->  \revêtement
+0,0009769 NC ->  \travaux
+0,0003256 NC ->  \garde
+0,0013025 NC ->  \novembre
+0,0006513 NC ->  \veto
+0,0003256 NC ->  \sociétés-écrans
+0,0006513 NC ->  \preneurs
+0,0006513 NC ->  \immeubles
+0,0003256 NC ->  \dépôt
+0,0003256 NC ->  \amour
+0,0003256 NC ->  \organisateur
+0,0003256 NC ->  \majorité
+0,0003256 NC ->  \polémique
+0,0016281 NC ->  \jour
+0,0003256 NC ->  \notion
+0,0003256 NC ->  \18
+0,0003256 NC ->  \17
+0,0013025 NC ->  \opinion
+0,0003256 NC ->  \Propagande
+0,0003256 NC ->  \disproportion
+0,0016281 NC ->  \otages
+0,0003256 NC ->  \file
+0,0006513 NC ->  \procès-verbal
+0,0003256 NC ->  \compagnie
+0,0003256 NC ->  \titres
+0,0026050 NC ->  \entreprises
+0,0003256 NC ->  \subordonnés
+0,0003256 NC ->  \cas
+0,0003256 NC ->  \incarcération
+0,0006513 NC ->  \intervention
+0,0003256 NC ->  \spéculation
+0,0006513 NC ->  \année
+0,0006513 NC ->  \tranchée
+0,0003256 NC ->  \cheval
+0,0003256 NC ->  \séminariste
+0,0006513 NC ->  \vice
+0,0006513 NC ->  \fils
+0,0003256 NC ->  \main
+0,0003256 NC ->  \image
+0,0003256 NC ->  \Cassette
+0,0013025 NC ->  \dirigeant
+0,0003256 NC ->  \convocation
+0,0061869 NC ->  \francs
+0,0003256 NC ->  \film
+0,0006513 NC ->  \espèces
+0,0003256 NC ->  \estimation
+0,0006513 NC ->  \institutrice
+0,0003256 NC ->  \explication
+0,0006513 NC ->  \existence
+0,0003256 NC ->  \Office
+0,0003256 NC ->  \enrichissement
+0,0003256 NC ->  \complices
+0,0003256 NC ->  \putain
+0,0009769 NC ->  \morts
+0,0003256 NC ->  \nuque
+0,0003256 NC ->  \communion
+0,0003256 NC ->  \unité
+0,0009769 NC ->  \mandat
+0,0003256 NC ->  \évêques
+0,0009769 NC ->  \2003
+0,0029306 NC ->  \2002
+0,0006513 NC ->  \controverse
+0,0035819 NC ->  \2005
+0,0003256 NC ->  \Tentative
+0,0003256 NC ->  \confidences
+0,0045588 NC ->  \2004
+0,0016281 NC ->  \an
+0,0003256 NC ->  \calotin
+0,0003256 NC ->  \désignation
+0,0006513 NC ->  \marque
+0,0042331 NC ->  \2001
+0,0039075 NC ->  \2000
+0,0009769 NC ->  \Procès
+0,0029306 NC ->  \milliards
+0,0006513 NC ->  \États
+0,0003256 NC ->  \clandestins
+0,0003256 NC ->  \situation
+0,0003256 NC ->  \Cassation
+0,0003256 NC ->  \jésuitière
+0,0003256 NC ->  \ratification
+0,0006513 NC ->  \quartier
+0,0009769 NC ->  \révélations
+0,0029306 NC ->  \défense
+0,0003256 NC ->  \départ
+0,0006513 NC ->  \républicains
+0,0003256 NC ->  \Epreuve
+0,0026050 NC ->  \officiers
+0,0003256 NC ->  \commissaire
+0,0016281 NC ->  \réhabilitation
+0,0003256 NC ->  \OEil
+0,0003256 NC ->  \rencontres
+0,0003256 NC ->  \Opération
+0,0006513 NC ->  \Comité
+0,0003256 NC ->  \beau-père
+0,0003256 NC ->  \patrimoine
+0,0003256 NC ->  \offres
+0,0009769 NC ->  \matches
+0,0003256 NC ->  \immunité
+0,0003256 NC ->  \serviteurs
+0,0104201 NC ->  \2006
+0,0006513 NC ->  \fonctionnaires
+0,0006513 NC ->  \2007
+0,0003256 NC ->  \diffamation
+0,0003256 NC ->  \épouses
+0,0003256 NC ->  \interdiction
+0,0003256 NC ->  \consul
+0,0003256 NC ->  \café
+0,0006513 NC ->  \collègues
+0,0003256 NC ->  \Monsieur
+0,0003256 NC ->  \éléments
+0,0006513 NC ->  \montage
+0,0009769 NC ->  \Irakiens
+0,0003256 NC ->  \synergies
+0,0003256 NC ->  \médias
+0,0003256 NC ->  \longueur
+0,0016281 NC ->  \presse
+0,0003256 NC ->  \heure
+0,0003256 NC ->  \gauches
+0,0003256 NC ->  \obus
+0,0003256 NC ->  \parjures
+0,0003256 NC ->  \cellule
+0,0006513 NC ->  \terrain
+0,0003256 NC ->  \stock
+0,0003256 NC ->  \experts
+0,0003256 NC ->  \ensemble
+0,0016281 NC ->  \Président
+0,0009769 NC ->  \clichés
+0,0003256 NC ->  \Compagnie
+0,0003256 NC ->  \interrogatoire
+0,0003256 NC ->  \trace
+0,0003256 NC ->  \côtés
+0,0006513 NC ->  \juridiction
+0,0003256 NC ->  \avance
+0,0003256 NC ->  \pratiques
+0,0003256 NC ->  \décennies
+0,0003256 NC ->  \marge
+0,0003256 NC ->  \autorisations
+0,0006513 NC ->  \aide
+0,0003256 NC ->  \atteinte
+0,0013025 NC ->  \niveau
+0,0003256 NC ->  \locaux
+0,0003256 NC ->  \visage
+0,0003256 NC ->  \extension
+0,0003256 NC ->  \Contexte
+0,0003256 NC ->  \Champion
+0,0016281 NC ->  \ministère
+0,0003256 NC ->  \ascenseurs
+0,0003256 NC ->  \1634
+0,0013025 NC ->  \arrondissements
+0,0006513 NC ->  \pp.
+0,0003256 NC ->  \supermarchés
+0,0003256 NC ->  \2221100824
+0,0003256 NC ->  \Rétrocommissions
+0,0003256 NC ->  \télévision
+0,0003256 NC ->  \baisse
+0,0003256 NC ->  \Révélation
+0,0003256 NC ->  \aboutissement
+0,0003256 NC ->  \arrêt
+0,0003256 NC ->  \relâche
+0,0006513 NC ->  \série
+0,0003256 NC ->  \usines
+0,0006513 NC ->  \constitution
+0,0006513 NC ->  \implication
+0,0003256 NC ->  \intention
+0,0003256 NC ->  \banlieue
+0,0009769 NC ->  \conseil
+0,0006513 NC ->  \Secret
+0,0003256 NC ->  \secrétaire
+0,0006513 NC ->  \façon
+0,0009769 NC ->  \victoire
+0,0003256 NC ->  \suspens
+0,0026050 NC ->  \gouvernement
+0,0019538 NC ->  \siège
+0,0003256 NC ->  \1630
+0,0003256 NC ->  \commandant
+0,0003256 NC ->  \stagnation
+0,0003256 NC ->  \protestations
+0,0003256 NC ->  \site
+0,0003256 NC ->  \dérives
+0,0009769 NC ->  \matériel
+0,0003256 NC ->  \Images
+0,0003256 NC ->  \violation
+0,0019538 NC ->  \jours
+0,0006513 NC ->  \valeurs
+0,0016281 NC ->  \mort
+0,0003256 NC ->  \chasse
+0,0003256 NC ->  \Serie
+0,0003256 NC ->  \mari
+0,0003256 NC ->  \lobbyistes
+0,0003256 NC ->  \missiles
+0,0013025 NC ->  \note
+0,0009769 NC ->  \élections
+0,0003256 NC ->  \confessions
+0,0019538 NC ->  \information
+0,0003256 NC ->  \éditions
+0,0045588 NC ->  \mars
+0,0006513 NC ->  \après-midi
+0,0003256 NC ->  \gardien
+0,0032563 NC ->  \époque
+0,0026050 NC ->  \début
+0,0006513 NC ->  \rue
+0,0013025 NC ->  \paiement
+0,0013025 NC ->  \lycées
+0,0003256 NC ->  \entrée
+0,0003256 NC ->  \amie
+0,0006513 NC ->  \réponse
+0,0048844 NC ->  \directeur
+0,0003256 NC ->  \centaines
+0,0003256 NC ->  \Hôtel
+0,0003256 NC ->  \cauchemar
+0,0003256 NC ->  \représentation
+0,0003256 NC ->  \maçons
+0,0003256 NC ->  \personne
+0,0003256 NC ->  \politiques
+0,0019538 NC ->  \trafic
+0,0009769 NC ->  \démons
+0,0009769 NC ->  \droit
+0,0006513 NC ->  \amis
+0,0009769 NC ->  \soldats
+0,0003256 NC ->  \liaisons
+0,0003256 NC ->  \despote
+0,0022794 NC ->  \État
+0,0003256 NC ->  \mots
+0,0065125 NC ->  \millions
+0,0003256 NC ->  \page
+0,0003256 NC ->  \ouvrage
+0,0003256 NC ->  \Défenestration
+0,0016281 NC ->  \tranchées
+0,0003256 NC ->  \2_914571_14_3
+0,0003256 NC ->  \Université
+0,0029306 NC ->  \hommes
+0,0003256 NC ->  \patrouilleurs
+0,0003256 NC ->  \impôts
+0,0009769 NC ->  \PDG
+0,0003256 NC ->  \pays
+0,0003256 NC ->  \voisins
+0,0003256 NC ->  \masse
+0,0003256 NC ->  \choses
+0,0003256 NC ->  \malfaiteurs
+0,0003256 NC ->  \assainissement
+0,0003256 NC ->  \compagne
+0,0006513 NC ->  \frais
+0,0006513 NC ->  \yeux
+0,0006513 NC ->  \lettre
+0,0006513 NC ->  \décision
+0,0003256 NC ->  \accusations
+0,0003256 NC ->  \ordres
+0,0003256 NC ->  \colère
+0,0003256 NC ->  \factions
+0,0003256 NC ->  \Infanterie
+0,0003256 NC ->  \noms
+0,0003256 NC ->  \armes
+0,0003256 NC ->  \prêtre
+0,0003256 NC ->  \prestation
+0,0006513 NC ->  \conseiller
+0,0003256 NC ->  \code
+0,0006513 NC ->  \mains
+0,0061869 NC ->  \frégates
+0,0006513 NC ->  \dommages
+0,0003256 NC ->  \domicile
+0,0003256 NC ->  \envergure
+0,0003256 NC ->  \billets
+0,0019538 NC ->  \entreprise
+0,0006513 NC ->  \entretien
+0,0003256 NC ->  \2266106333
+0,0029306 NC ->  \photos
+0,0003256 NC ->  \concurrence
+0,0039075 NC ->  \sursis
+0,0009769 NC ->  \groupe
+0,0003256 NC ->  \Réaction
+0,0003256 NC ->  \Américains
+0,0003256 NC ->  \députés
+0,0003256 NC ->  \baie
+0,0003256 NC ->  \mouvement
+0,0019538 NC ->  \rétrocommissions
+0,0009769 NC ->  \Affaires
+0,0003256 NC ->  \professionnels
+0,0009769 NC ->  \flux
+0,0003256 NC ->  \accord
+0,0022794 NC ->  \comité
+0,0003256 NC ->  \importations
+0,0003256 NC ->  \connexion
+0,0009769 NC ->  \paillote
+0,0006513 NC ->  \appareil
+0,0009769 NC ->  \opposition
+0,0009769 NC ->  \montant
+0,0003256 NC ->  \Ville
+0,0019538 NC ->  \abus
+0,0003256 NC ->  \Juventus
+0,0003256 NC ->  \mentions
+0,0006513 NC ->  \eaux
+0,0003256 NC ->  \Théorie
+0,0003256 NC ->  \fanfaron
+0,0003256 NC ->  \délit
+0,0003256 NC ->  \anonymat
+0,0003256 NC ->  \condamnations
+0,0003256 NC ->  \paillotes
+0,0009769 NC ->  \libération
+0,0003256 NC ->  \Conseil
+0,0003256 NC ->  \publicités
+0,0003256 NC ->  \volume
+0,0003256 NC ->  \prolongement
+0,0003256 NC ->  \conviction
+0,0003256 NC ->  \journaux
+0,0003256 NC ->  \veuves
+0,0026050 NC ->  \contrat
+0,0003256 NC ->  \colonialisme
+0,0003256 NC ->  \2840985314
+0,0006513 NC ->  \mémoire
+0,0003256 NC ->  \soucis
+0,0006513 NC ->  \Français
+0,0003256 NC ->  \actes
+0,0006513 NC ->  \élus
+0,0013025 NC ->  \fr
+0,0006513 NC ->  \rapport
+0,0009769 NC ->  \responsable
+0,0003256 NC ->  \Volet
+0,0006513 NC ->  \dossiers
+0,0016281 NC ->  \franc
+0,0003256 NC ->  \vaisseau
+0,0003256 NC ->  \entrave
+0,0003256 NC ->  \médicaments
+0,0003256 NC ->  \ouverture
+0,0003256 NC ->  \Réquisitoire
+0,0029306 NC ->  \dossier
+0,0003256 NC ->  \écologie
+0,0016281 NC ->  \années
+0,0003256 NC ->  \conception
+0,0003256 NC ->  \détournement
+0,0003256 NC ->  \objections
+0,0003256 NC ->  \avaleur
+0,0003256 NC ->  \25/01/06
+0,0003256 NC ->  \conséquences
+0,0003256 NC ->  \convois
+0,0003256 NC ->  \milliers
+0,0009769 NC ->  \enquêteurs
+0,0006513 NC ->  \en
+0,0003256 NC ->  \fouineur
+0,0003256 NC ->  \arbitres
+0,0003256 NC ->  \printemps
+0,0009769 NC ->  \témoignage
+0,0003256 NC ->  \sol
+0,0003256 NC ->  \maçonnerie
+0,0003256 NC ->  \clé
+0,0003256 NC ->  \Franc-maçonnerie
+0,0003256 NC ->  \particule
+0,0006513 NC ->  \témoignages
+0,0009769 NC ->  \heures
+0,0016281 NC ->  \liste
+0,0003256 NC ->  \260_000
+0,0003256 NC ->  \Membre
+0,0003256 NC ->  \canal
+0,0003256 NC ->  \opéra
+0,0003256 NC ->  \curé
+0,0009769 NC ->  \cinquantaine
+0,0006513 NC ->  \intérêts
+0,0003256 NC ->  \corps
+0,0003256 NC ->  \sorcellerie
+0,0016281 NC ->  \comptes
+0,0003256 NC ->  \reste
+0,0006513 NC ->  \versements
+0,0003256 NC ->  \radicaux
+0,0003256 NC ->  \État-voyou
+0,0006513 NC ->  \conclusion
+0,0003256 NC ->  \vice-procureure
+0,0003256 NC ->  \avocat
+0,0003256 NC ->  \sillage
+0,0003256 NC ->  \Colloque
+0,0003256 NC ->  \Collection
+0,0016281 NC ->  \cassation
+0,0003256 NC ->  \cheminot
+0,0003256 NC ->  \Côte
+0,0009769 NC ->  \travail
+0,0003256 NC ->  \voyage
+0,0003256 NC ->  \neutralité
+0,0003256 NC ->  \dignitaires
+0,0006513 NC ->  \actions
+0,0003256 NC ->  \inspirateur
+0,0003256 NC ->  \traversée
+0,0009769 NC ->  \droits
+0,0003256 NC ->  \chronique
+0,0003256 NC ->  \instance
+0,0006513 NC ->  \division
+0,0003256 NC ->  \motif
+0,0003256 NC ->  \ravisseurs
+0,0003256 NC ->  \facturations
+0,0003256 NC ->  \négociateur
+0,0003256 NC ->  \papiers
+0,0006513 NC ->  \monde
+0,0003256 NC ->  \ordinateur
+0,0003256 NC ->  \section
+0,0026050 NC ->  \financement
+0,0009769 NC ->  \réquisitoire
+0,0003256 NC ->  \initiales
+0,0009769 NC ->  \gauche
+0,0003256 NC ->  \audition
+0,0003256 NC ->  \hebdomadaire
+0,0003256 NC ->  \employeurs
+0,0003256 NC ->  \vivant
+0,0003256 NC ->  \personnalités
+0,0003256 NC ->  \motions
+0,0003256 NC ->  \11.01.02.
+0,0003256 NC ->  \compensation
+0,0016281 NC ->  \inéligibilité
+0,0019538 NC ->  \fiches
+0,0006513 NC ->  \VLM
+0,0003256 NC ->  \filles
+0,0003256 NC ->  \pape
+0,0003256 NC ->  \m
+0,0003256 NC ->  \document
+0,0003256 NC ->  \privilège
+0,0003256 NC ->  \renseignement
+0,0003256 NC ->  \répression
+0,0003256 NC ->  \missile
+0,0006513 NC ->  \application
+0,0026050 NC ->  \justice
+0,0003256 NC ->  \sables
+0,0003256 NC ->  \Anticléricalisme
+0,0006513 NC ->  \agents
+0,0003256 NC ->  \ami
+0,0003256 NC ->  \manière
+0,0003256 NC ->  \promoteur
+0,0013025 NC ->  \objet
+0,0003256 NC ->  \patrons
+0,0003256 NC ->  \Editions
+0,0003256 NC ->  \gaulliste
+0,0003256 NC ->  \alias
+0,0003256 NC ->  \figure
+0,0003256 NC ->  \Février
+0,0003256 NC ->  \troupe
+0,0006513 NC ->  \policiers
+0,0003256 NC ->  \pamphlet
+0,0003256 NC ->  \Corruption
+0,0003256 NC ->  \chelem
+0,0006513 NC ->  \gendarmes
+0,0009769 NC ->  \part
+0,0003256 NC ->  \Commission
+0,0013025 NC ->  \droite
+0,0006513 NC ->  \extorsion
+0,0003256 NC ->  \coffres
+0,0003256 NC ->  \officier
+0,0006513 NC ->  \écoutes
+0,0003256 NC ->  \défenestrations
+0,0009769 NC ->  \piastres
+0,0006513 NC ->  \RPR
+0,0003256 NC ->  \Maître
+0,0003256 NC ->  \aggravation
+0,0003256 NC ->  \fiction
+0,0003256 NC ->  \région
+0,0009769 NC ->  \renvoi
+0,0006513 NC ->  \instructions
+0,0003256 NC ->  \alibi
+0,0003256 NC ->  \rachat
+0,0013025 NC ->  \procédure
+0,0003256 NC ->  \Lien
+0,0006513 NC ->  \fuite
+0,0019538 NC ->  \Histoire
+0,0003256 NC ->  \secrétaires
+0,0003256 NC ->  \doigt
+0,0003256 NC ->  \télégramme
+0,0003256 NC ->  \Frégates
+0,0003256 NC ->  \maximum
+0,0003256 NC ->  \malins
+0,0016281 NC ->  \histoire
+0,0009769 NC ->  \peines
+0,0003256 NC ->  \procédures
+0,0003256 NC ->  \active
+0,0006513 NC ->  \fonction
+0,0006513 NC ->  \service
+0,0003256 NC ->  \instant
+0,0006513 NC ->  \carrière
+0,0013025 NC ->  \mission
+0,0003256 NC ->  \p.
+0,0016281 NC ->  \factures
+0,0003256 NC ->  \diamant
+0,0003256 NC ->  \bassin
+0,0006513 NC ->  \Réseau
+0,0019538 NC ->  \compte
+0,0022794 NC ->  \société
+0,0009769 NC ->  \maire
+0,0003256 NC ->  \assaut
+0,0009769 NC ->  \A
+0,0006513 NC ->  \vacances
+0,0013025 NC ->  \B
+0,0201889 NC ->  \affaire
+0,0006513 NC ->  \C
+0,0003256 NC ->  \achat
+0,0003256 NC ->  \relaxe
+0,0006513 NC ->  \arrivée
+0,0003256 NC ->  \régime
+0,0003256 NC ->  \administrateur
+0,0003256 NC ->  \Chef
+0,0032563 NC ->  \janvier
+0,0003256 NC ->  \caisses
+0,0003256 NC ->  \Documents
+0,0003256 NC ->  \origine
+0,0009769 NC ->  \Parti
+0,0006513 NC ->  \X
+0,0003256 NC ->  \manifestation
+0,0003256 NC ->  \inculpés
+0,0003256 NC ->  \Citations
+0,0003256 NC ->  \Appel
+0,0003256 NC ->  \auteurs
+0,0035819 NC ->  \septembre
+0,0003256 NC ->  \limites
+0,0003256 NC ->  \inquiétudes
+0,0003256 NC ->  \provenance
+0,0006513 NC ->  \$
+0,0006513 NC ->  \bâtiment
+0,0022794 NC ->  \%
+0,0003256 NC ->  \carriéristes
+0,0003256 NC ->  \15_000
+0,0003256 NC ->  \désir
+0,0003256 NC ->  \pouvoir
+0,0003256 NC ->  \meubles
+0,0003256 NC ->  \promotions
+0,0003256 NC ->  \3
+0,0022794 NC ->  \2
+0,0006513 NC ->  \1
+0,0003256 NC ->  \7
+0,0006513 NC ->  \5
+0,0003256 NC ->  \développement
+0,0006513 NC ->  \4
+0,0003256 NC ->  \banquiers
+0,0003256 NC ->  \8
+0,0003256 NC ->  \frères
+0,0003256 NC ->  \caractéristiques
+0,0003256 NC ->  \barre
+0,0006513 NC ->  \August
+0,0006513 NC ->  \capitaine
+0,0006513 NC ->  \honneur
+0,0009769 NC ->  \verdict
+0,0013025 NC ->  \homme
+0,0006513 NC ->  \représentant
+0,0006513 NC ->  \Internationales
+0,0003256 NC ->  \échanges
+0,0003256 NC ->  \bancs
+0,0003256 NC ->  \avoirs
+0,0003256 NC ->  \hôpital
+0,0006513 NC ->  \Série
+0,0003256 NC ->  \marche
+0,0003256 NC ->  \remboursement
+0,0006513 NC ->  \période
+0,0003256 NC ->  \réalité
+0,0003256 NC ->  \impact
+0,0006513 NC ->  \photo
+0,0022794 NC ->  \recel
+0,0003256 NC ->  \compte-rendus
+0,0003256 NC ->  \Finances
+0,0009769 NC ->  \familles
+0,0006513 NC ->  \fait
+0,0003256 NC ->  \lois
+0,0003256 NC ->  \films
+0,0003256 NC ->  \tableaux
+0,0003256 NC ->  \liberté
+0,0003256 NC ->  \terres
+0,0003256 NC ->  \appartenance
+0,0032563 NC ->  \1994
+0,0022794 NC ->  \1993
+0,0019538 NC ->  \1992
+0,0026050 NC ->  \1991
+0,0003256 NC ->  \feu
+0,0003256 NC ->  \oeuvre
+0,0003256 NC ->  \bombardement
+0,0013025 NC ->  \1990
+0,0003256 NC ->  \virement
+0,0003256 NC ->  \fédération
+0,0006513 NC ->  \statut
+0,0003256 NC ->  \essentiel
+0,0006513 NC ->  \fer
+0,0003256 NC ->  \art
+0,0006513 NC ->  \poursuites
+0,0003256 NC ->  \Catholicisme
+0,0006513 NC ->  \corbeau
+0,0013025 NC ->  \somme
+0,0003256 NC ->  \jésuitard
+0,0006513 NC ->  \1988
+0,0026050 NC ->  \1989
+0,0003256 NC ->  \pouvoirs
+0,0006513 NC ->  \1986
+0,0006513 NC ->  \1987
+0,0003256 NC ->  \sous-chef
+0,0003256 NC ->  \dessous
+0,0006513 NC ->  \base
+0,0026050 NC ->  \ISBN
+0,0003256 NC ->  \dispositif
+0,0003256 NC ->  \2-7113-0389-6
+0,0003256 NC ->  \chiffres
+0,0003256 NC ->  \salon
+0,0003256 NC ->  \volets
+0,0006513 NC ->  \cours
+0,0003256 NC ->  \oubli
+0,0006513 NC ->  \école
+0,0006513 NC ->  \Homme
+0,0009769 NC ->  \place
+0,0003256 NC ->  \romantisme
+0,0003256 NC ->  \balles
+0,0003256 NC ->  \invités
+0,0026050 NC ->  \1999
+0,0003256 NC ->  \éditorial
+0,0022794 NC ->  \scandale
+0,0003256 NC ->  \concubinage
+0,0032563 NC ->  \mai
+0,0045588 NC ->  \1995
+0,0003256 NC ->  \1996
+0,0003256 NC ->  \courrier
+0,0009769 NC ->  \1997
+0,0006513 NC ->  \titre
+0,0013025 NC ->  \1998
+0,0003256 NC ->  \vengeance
+0,0003256 NC ->  \bons
+0,0003256 NC ->  \sorcières
+0,0003256 NC ->  \domination
+0,0003256 NC ->  \1971
+0,0006513 NC ->  \fonctions
+0,0003256 NC ->  \1970
+0,0003256 NC ->  \accidents
+0,0003256 NC ->  \1962
+0,0003256 NC ->  \femmes
+0,0009769 NC ->  \membre
+0,0003256 NC ->  \Feb
+0,0029306 NC ->  \lieu
+0,0006513 NC ->  \suite
+0,0003256 NC ->  \représentants
+0,0003256 NC ->  \Bureau
+0,0003256 NC ->  \organisme
+0,0003256 NC ->  \courant
+0,0003256 NC ->  \généraux
+0,0003256 NC ->  \entrevue
+0,0006513 NC ->  \terme
+0,0003256 NC ->  \Relégation
+0,0003256 NC ->  \Droits
+0,0006513 NC ->  \90
+0,0003256 NC ->  \raid
+0,0006513 NC ->  \durée
+0,0013025 NC ->  \analyse
+0,0013025 NC ->  \Guerre
+0,0003256 NC ->  \identité
+0,0009769 NC ->  \1981
+0,0003256 NC ->  \Manipulation
+0,0029306 NC ->  \président
+0,0006513 NC ->  \1983
+0,0003256 NC ->  \1973
+0,0003256 NC ->  \23/12/2006
+0,0006513 NC ->  \besoin
+0,0009769 NC ->  \parties
+0,0006513 NC ->  \magistrats
+0,0003256 NC ->  \exorcismes
+0,0003256 NC ->  \1979
+0,0003256 NC ->  \spectacle
+0,0013025 NC ->  \immeuble
+0,0009769 NC ->  \intérêt
+0,0003256 NC ->  \coups
+0,0022794 NC ->  \rançon
+0,0003256 NC ->  \dépaysement
+0,0006513 NC ->  \traces
+0,0003256 NC ->  \humiliation
+0,0009769 NC ->  \bombe
+0,0006513 NC ->  \1950
+0,0003256 NC ->  \délinquance
+0,0068382 NC ->  \ans
+0,0009769 NC ->  \activité
+0,0022794 NC ->  \influence
+0,0009769 NC ->  \fille
+0,0013025 NC ->  \Financement
+0,0009769 NC ->  \Mars
+0,0003256 NC ->  \Juillet
+0,0006513 NC ->  \maîtresse
+0,0003256 NC ->  \Edition
+0,0003256 NC ->  \date
+0,0003256 NC ->  \dispersion
+0,0003256 NC ->  \veille
+0,0003256 NC ->  \cabines
+0,0013025 NC ->  \couveuses
+0,0019538 NC ->  \arrondissement
+0,0003256 NC ->  \épidémie
+0,0003256 NC ->  \1949
+0,0032563 NC ->  \cabinet
+0,0003256 NC ->  \palais
+0,0003256 NC ->  \collaboration
+0,0003256 NC ->  \dimanche
+0,0003256 NC ->  \Condamnations
+0,0003256 NC ->  \journaliste
+0,0003256 NC ->  \reprises
+0,0003256 NC ->  \correspondant
+0,0009769 NC ->  \membres
+0,0003256 NC ->  \question
+0,0022794 NC ->  \prévenus
+0,0016281 NC ->  \responsables
+0,0003256 NC ->  \caution
+0,0009769 NC ->  \1953
+0,0003256 NC ->  \loges
+0,0003256 NC ->  \projet
+0,0003256 NC ->  \canailles
+0,0003256 NC ->  \1928
+0,0003256 NC ->  \crime
+0,0013025 NC ->  \temps
+0,0003256 NC ->  \1921
+0,0003256 NC ->  \1923
+0,0006513 NC ->  \publication
+0,0003256 NC ->  \1925
+0,0003256 NC ->  \acteurs
+0,0006513 NC ->  \tour
+0,0003256 NC ->  \consultant
+0,0003256 NC ->  \cercles
+0,0003256 NC ->  \déclenchement
+0,0003256 NC ->  \Extreme
+0,0003256 NC ->  \malédiction
+0,0009769 NC ->  \attaque
+0,0013025 NC ->  \retour
+0,0003256 NC ->  \Rebondissement
+0,0003256 NC ->  \face
+0,0026050 NC ->  \procureur
+0,0003256 NC ->  \offensive
+0,0003256 NC ->  \collecteur
+0,0009769 NC ->  \forme
+0,0003256 NC ->  \pension
+0,0003256 NC ->  \corbeaux
+0,0003256 NC ->  \camps
+0,0006513 NC ->  \autorités
+0,0003256 NC ->  \bureaux
+0,0006513 NC ->  \accusation
+0,0003256 NC ->  \instigateur
+0,0022794 NC ->  \office
+0,0003256 NC ->  \1933
+0,0006513 NC ->  \sociétés
+0,0006513 NC ->  \1934
+0,0016281 NC ->  \fraude
+0,0003256 NC ->  \professeur
+0,0003256 NC ->  \mépris
+0,0006513 NC ->  \directeurs
+0,0003256 NC ->  \poussières
+0,0003256 NC ->  \otage
+0,0009769 NC ->  \contrôle
+0,0009769 NC ->  \voyages
+0,0009769 NC ->  \trésorier
+0,0003256 NC ->  \conscience
+0,0003256 NC ->  \chances
+0,0006513 NC ->  \poursuite
+0,0035819 NC ->  \juin
+0,0003256 NC ->  \inexistence
+0,0006513 NC ->  \fantasmes
+0,0003256 NC ->  \peau
+0,0006513 NC ->  \autorisation
+0,0006513 NC ->  \prêt
+0,0006513 NC ->  \gendarmerie
+0,0003256 NC ->  \passage
+0,0009769 NC ->  \protagonistes
+0,0003256 NC ->  \2226116214
+0,0003256 NC ->  \1903
+0,0003256 NC ->  \AL
+0,0003256 NC ->  \Audition
+0,0013025 NC ->  \police
+0,0003256 NC ->  \présidentielle
+0,0006513 NC ->  \titulaire
+0,0006513 NC ->  \succès
+0,0003256 NC ->  \naïveté
+0,0006513 NC ->  \enlèvements
+0,0003256 NC ->  \obstacles
+0,0003256 NC ->  \marine
+0,0003256 NC ->  \proche
+0,0003256 NC ->  \issue
+0,0009769 NC ->  \1915
+0,0003256 NC ->  \nuit
+0,0003256 NC ->  \1914
+0,0003256 NC ->  \pharmacies
+0,0003256 NC ->  \impôt
+0,0026050 NC ->  \électeurs
+0,0003256 NC ->  \manuels
+0,0003256 NC ->  \insuccès
+0,0009769 NC ->  \2006-08-07
+0,0006513 NC ->  \Épilogue
+0,0006513 NC ->  \nombre
+0,0006513 NC ->  \contrats
+0,0003256 NC ->  \pistes
+0,0003256 NC ->  \Articles
+0,0003256 NC ->  \perquisitions
+0,0003256 NC ->  \sources
+0,0006513 NC ->  \semaine
+0,0003256 NC ->  \bords
+0,0006513 NC ->  \soeurs
+0,0006513 NC ->  \transaction
+0,0009769 NC ->  \listes
+0,0006513 NC ->  \détail
+0,0003256 NC ->  \disparus
+0,0013025 NC ->  \valeur
+0,0003256 NC ->  \Magazine
+0,0003256 NC ->  \décès
+0,0003256 NC ->  \Mises
+0,0006513 NC ->  \informations
+0,0006513 NC ->  \enfants
+0,0003256 NC ->  \agence
+0,0006513 NC ->  \positions
+0,0003256 NC ->  \demie
+0,0003256 NC ->  \contextes
+0,0006513 NC ->  \attribution
+0,0016281 NC ->  \dirigeants
+0,0006513 NC ->  \vérité
+0,0003256 NC ->  \époux
+0,0006513 NC ->  \Sources
+0,0003256 NC ->  \Colonies
+0,0019538 NC ->  \affaires
+0,0003256 NC ->  \lecteurs
+0,0006513 NC ->  \prospection
+0,0003256 NC ->  \dirigeante
+0,0003256 NC ->  \Capitaine
+0,0006513 NC ->  \réédition
+0,0003256 NC ->  \agenda
+0,0019538 NC ->  \mairie
+0,0003256 NC ->  \extradition
+0,0003256 NC ->  \dessaisissement
+0,0003256 NC ->  \appelations
+0,0003256 NC ->  \1900-1904
+0,0003256 NC ->  \crise
+0,0003256 NC ->  \navette
+0,0003256 NC ->  \clearing
+0,0003256 NC ->  \franc-maçon
+0,0003256 NC ->  \republique
+0,0003256 NC ->  \rues
+0,0039075 NC ->  \juillet
+0,0003256 NC ->  \Crédit
+0,0003256 NC ->  \travers
+0,0003256 NC ->  \effervescence
+0,0003256 NC ->  \préparation
+0,0009769 NC ->  \avis
+0,0003256 NC ->  \condamnation
+0,0003256 NC ->  \mentalité
+0,0003256 NC ->  \voûte
+0,0003256 NC ->  \Été
+0,0003256 NC ->  \évènement
+0,0006513 NC ->  \combat
+0,0003256 NC ->  \expertise
+0,0003256 NC ->  \acquisition
+0,0003256 NC ->  \championnat
+0,0003256 NC ->  \Scandales
+0,0003256 NC ->  \cadre
+0,0003256 NC ->  \couvent
+0,0003256 NC ->  \Société
+0,0006513 NC ->  \photographe
+0,0003256 NC ->  \assistance
+0,0003256 NC ->  \banquier
+0,0006513 NC ->  \administration
+0,0003256 NC ->  \cheveux
+0,0003256 NC ->  \absence
+0,0003256 NC ->  \4X4
+0,0003256 NC ->  \bénédiction
+0,0003256 NC ->  \Septembre
+0,0003256 NC ->  \hiérarchie
+0,0032563 NC ->  \République
+0,0006513 NC ->  \tentative
+0,0013025 NC ->  \armée
+0,0013025 NC ->  \signature
+0,0003256 NC ->  \tribunaux
+0,0013025 NC ->  \points
+0,0006513 NC ->  \fusillés
+0,0006513 NC ->  \manipulation
+0,0003256 NC ->  \bateau
+0,0003256 NC ->  \auditions
+0,0009769 NC ->  \exemple
+0,0006513 NC ->  \chute
+0,0003256 NC ->  \objets
+0,0013025 NC ->  \complicité
+0,0006513 NC ->  \modifications
+0,0003256 NC ->  \moitié
+0,0003256 NC ->  \séquestre
+0,0003256 NC ->  \indifférence
+0,0003256 NC ->  \promotion
+0,0003256 NC ->  \personnages
+0,0016281 NC ->  \M.
+0,0003256 NC ->  \don
+0,0003256 NC ->  \domaine
+0,0009769 NC ->  \Mairie
+0,0003256 NC ->  \taux
+0,0006513 NC ->  \destruction
+0,0003256 NC ->  \cousins
+0,0003256 NC ->  \commentaires
+0,0003256 NC ->  \piastre
+0,0006513 NC ->  \accès
+0,0009769 NC ->  \vie
+0,0003256 NC ->  \conspirationnistes
+0,0003256 NC ->  \jeu
+0,0003256 NC ->  \cléricanaille
+0,0029306 NC ->  \fonds
+0,0003256 NC ->  \préfecture
+0,0003256 NC ->  \écot
+0,0003256 NC ->  \scénarisation
+0,0009769 NC ->  \pénalité
+0,0009769 NC ->  \douanes
+0,0003256 NC ->  \maintenance
+0,0003256 NC ->  \député-maire
+0,0009769 NC ->  \demande
+0,0006513 NC ->  \Présidence
+0,0003256 NC ->  \participation
+0,0003256 NC ->  \type
+0,0003256 NC ->  \Médias
+0,0016281 NC ->  \Éditions
+0,0003256 NC ->  \Verdict
+0,0048844 NC ->  \examen
+0,0003256 NC ->  \aller
+0,0003256 NC ->  \nourriture
+0,0003256 NC ->  \nommé
+0,0003256 NC ->  \cavale
+0,0006513 NC ->  \colonel
+0,0003256 NC ->  \blocage
+0,0003256 NC ->  \hôtes
+0,0006513 NC ->  \cadavres
+0,0003256 NC ->  \métis
+0,0003256 NC ->  \présomptions
+0,0003256 NC ->  \fumées
+0,0003256 NC ->  \banques
+0,0003256 NC ->  \traîtres
+0,0003256 NC ->  \hôtel
+0,0003256 NC ->  \études
+0,0003256 NC ->  \parking
+0,0003256 NC ->  \Suisses
+0,0039075 NC ->  \décembre
+0,0006513 NC ->  \sommes
+0,0009769 NC ->  \services
+0,0013025 NC ->  \destination
+0,0003256 NC ->  \citoyen
+0,0003256 NC ->  \contacts
+0,0003256 NC ->  \augmentation
+0,0003256 NC ->  \façades
+0,0006513 NC ->  \URL
+0,0003256 NC ->  \circuit
+0,0003256 NC ->  \club
+0,0013025 NC ->  \chef
+0,0009769 NC ->  \relations
+0,0003256 NC ->  \ennuis
+0,0022794 NC ->  \personnes
+0,0013025 NC ->  \Chronologie
+0,0006513 NC ->  \volet
+0,0006513 NC ->  \phénomène
+0,0006513 NC ->  \doutes
+0,0009769 NC ->  \rôle
+0,0003256 NC ->  \December
+0,0022794 NC ->  \Références
+0,0003256 NC ->  \noyades
+0,0003256 NC ->  \liquide
+0,0006513 NC ->  \règlement
+0,0003256 NC ->  \possédées
+0,0003256 NC ->  \instituteur
+0,0003256 NC ->  \qualité
+0,0003256 NC ->  \employée
+0,0006513 NC ->  \adjoint
+0,0003256 NC ->  \enlisement
+0,0003256 NC ->  \jeudi
+0,0003256 NC ->  \civil
+0,0003256 NC ->  \ombre
+0,0003256 NC ->  \menaces
+0,0003256 NC ->  \siècle
+0,0078150 NC ->  \commissions
+0,0013025 NC ->  \livre
+0,0029306 NC ->  \système
+0,0058613 NC ->  \enquête
+0,0003256 NC ->  \chiffre
+0,0003256 NC ->  \employés
+0,0003256 NC ->  \garçon
+0,0003256 NC ->  \contributions
+0,0003256 NC ->  \blanchiment
+0,0006513 NC ->  \puissances
+0,0003256 NC ->  \annexes
+0,0003256 NC ->  \clientèle
+0,0003256 NC ->  \complémentarité
+0,0003256 NC ->  \avantages
+0,0003256 NC ->  \chance
+0,0003256 NC ->  \vingtaine
+0,0009769 NC ->  \élu
+0,0006513 NC ->  \paradis
+0,0003256 NC ->  \Opéra
+0,0003256 NC ->  \apaisement
+0,0003256 NC ->  \Procureur
+0,0006513 NC ->  \suites
+0,0006513 NC ->  \audience
+0,0003256 NC ->  \évidence
+0,0009769 NC ->  \messe
+0,0013025 NC ->  \association
+0,0006513 NC ->  \budget
+0,0009769 NC ->  \réseaux
+0,0003256 NC ->  \perquisition
+0,0006513 NC ->  \suicide
+0,0003256 NC ->  \Décembre
+0,0039075 NC ->  \dollars
+0,0003256 NC ->  \urgence
+0,0006513 NC ->  \télévisions
+0,0039075 NC ->  \tribunal
+0,0003256 NC ->  \synthèse
+0,0003256 NC ->  \inscription
+0,0003256 NC ->  \déjeuner
+0,0003256 NC ->  \Demande
+0,0009769 NC ->  \refus
+0,0003256 NC ->  \organisation
+0,0006513 NC ->  \Juin
+0,0003256 NC ->  \Premier
+0,0013025 NC ->  \général
+0,0003256 NC ->  \combattants
+0,0006513 NC ->  \trésorière
+0,0006513 NC ->  \déclaration
+0,0091176 NC ->  \juge
+0,0003256 NC ->  \mises
+0,0003256 NC ->  \2268052621
+0,0003256 NC ->  \Intérieur
+0,0003256 NC ->  \bataille
+0,0009769 NC ->  \lendemain
+0,0026050 NC ->  \Catégories
+0,0003256 NC ->  \anticlérical
+0,0003256 NC ->  \utilisation
+0,0003256 NC ->  \victimes
+0,0003256 NC ->  \parapet
+0,0006513 NC ->  \bas
+0,0048844 NC ->  \octobre
+0,0003256 NC ->  \plaisance
+0,0003256 NC ->  \Forum
+0,0003256 NC ->  \litige
+0,0019538 NC ->  \témoin
+0,0003256 NC ->  \horloger
+0,0003256 NC ->  \structure
+0,0003256 NC ->  \571-597
+0,0006513 NC ->  \Notes
+0,0003256 NC ->  \ébauche
+0,0003256 NC ->  \présidents
+0,0035819 NC ->  \commission
+0,0003256 NC ->  \livraison
+0,0003256 NC ->  \Dr
+0,0009769 NC ->  \bras
+0,0006513 NC ->  \dizaines
+0,0003256 NC ->  \fraudes
+0,0003256 NC ->  \preuves
+0,0003256 NC ->  \destin
+0,0003256 NC ->  \famille
+0,0006513 NC ->  \bébés
+0,0003256 NC ->  \condamnés
+0,0003256 NC ->  \incertitudes
+0,0006513 NC ->  \veuve
+0,0003256 NC ->  \inscriptions
+0,0003256 NC ->  \congrès
+0,0006513 NC ->  \images
+0,0006513 NC ->  \activités
+0,0006513 NC ->  \Enquête
+0,0006513 NC ->  \pages
+0,0026050 NC ->  \caporaux
+0,0003256 NC ->  \parité
+0,0006513 NC ->  \militaires
+0,0003256 NC ->  \avancement
+0,0013025 NC ->  \ville
+0,0003256 NC ->  \Fin
+0,0003256 NC ->  \invasion
+0,0003256 NC ->  \prérogatives
+0,0003256 NC ->  \défaite
+0,0003256 NC ->  \débats
+0,0003256 NC ->  \vieillard
+0,0003256 NC ->  \postes
+0,0003256 NC ->  \foi
+0,0003256 NC ->  \socialiste
+0,0003256 NC ->  \sable
+0,0006513 NC ->  \intermédiaire
+0,0003256 NC ->  \murailles
+0,0003256 NC ->  \armement
+0,0003256 NC ->  \tarifs
+0,0035819 NC ->  \guerre
+0,0003256 NC ->  \jugement
+0,0003256 NC ->  \indices
+0,0003256 NC ->  \similitudes
+0,0019538 NC ->  \emplois
+0,0003256 NC ->  \prébendes
+0,0026050 NC ->  \réseau
+0,0019538 NC ->  \peine
+0,0003256 NC ->  \processions
+0,0006513 NC ->  \accords
+0,0003256 NC ->  \références
+0,0003256 NC ->  \fisc
+0,0003256 NC ->  \ironie
+0,0016281 NC ->  \corruption
+0,0006513 NC ->  \retouches
+0,0013025 NC ->  \moment
+0,0003256 NC ->  \dommages-intérêts
+0,0003256 NC ->  \montants
+0,0022794 NC ->  \nom
+0,0006513 NC ->  \Mise
+0,0003256 NC ->  \meetings
+0,0003256 NC ->  \cancer
+0,0006513 NC ->  \idée
+0,0006513 NC ->  \journal
+0,0003256 NC ->  \Catégorie
+0,0009769 NC ->  \banque
+0,0003256 NC ->  \quiétude
+0,0003256 NC ->  \légalité
+0,0009769 NC ->  \préfet
+0,0003256 NC ->  \successeur
+0,0009769 NC ->  \investigations
+0,0003256 NC ->  \producteur
+0,0006513 NC ->  \escroquerie
+0,0003256 NC ->  \signatures
+0,0003256 NC ->  \données
+0,0003256 NC ->  \fondements
+0,0006513 NC ->  \camarades
+0,0006513 NC ->  \Budget
+0,0003256 NC ->  \choix
+0,0003256 NC ->  \clérical
+0,0003256 NC ->  \négociations
+0,0003256 NC ->  \coupable
+0,0003256 NC ->  \2234052785
+0,0003256 NC ->  \échange
+0,0006513 NC ->  \Études
+0,0013025 NC ->  \femme
+0,0006513 NC ->  \silence
+0,0055357 NC ->  \juges
+0,0003256 NC ->  \fichiers
+0,0003256 NC ->  \voleurs
+0,0003256 NC ->  \mode
+0,0003256 NC ->  \prix
+0,0003256 NC ->  \sourdine
+0,0003256 NC ->  \concurrent
+0,0003256 NC ->  \amendes
+0,0006513 NC ->  \Vol.
+0,0003256 NC ->  \annulation
+0,0003256 NC ->  \déroulement
+0,0016281 NC ->  \partie
+0,0032563 NC ->  \marché
+0,0003256 NC ->  \Page
+0,0006513 NC ->  \Livres
+0,0003256 NC ->  \soldat
+0,0003256 NC ->  \crédit
+0,0019538 NC ->  \partis
+0,0003256 NC ->  \vue
+0,0003256 NC ->  \maisons
+0,0003256 NC ->  \cartel
+0,0003256 NC ->  \rupture
+0,0003256 NC ->  \descente
+0,0006513 NC ->  \parti
+0,0003256 NC ->  \Défense
+0,0045588 NC ->  \marchés
+0,0006513 NC ->  \appartement
+0,0006513 NC ->  \institutions
+0,0003256 NC ->  \casier
+0,0006513 NC ->  \état
+0,0045588 NC ->  \août
+0,0003256 NC ->  \fins
+0,0003256 NC ->  \meurtres
+0,0006513 NC ->  \secrétariat
+0,0003256 NC ->  \mitrailleuses
+0,0003256 NC ->  \salaire
+0,0003256 NC ->  \capitaux
+0,0003256 NC ->  \mère
+0,0003256 NC ->  \Diables
+0,0003256 NC ->  \magistrat
+0,0003256 NC ->  \bénéficiaires
+0,0003256 NC ->  \gloire
+0,0003256 NC ->  \faute
+0,0022794 NC ->  \parquet
+0,0003256 NC ->  \messieurs
+0,0003256 NC ->  \loyauté
+0,0003256 NC ->  \citoyens
+0,0003256 NC ->  \frère
+0,0003256 NC ->  \phases
+0,0003256 NC ->  \demi
+0,0006513 NC ->  \Bibliographie
+0,0003256 NC ->  \Avant-Scène
+0,0003256 NC ->  \dimension
+0,0003256 NC ->  \fusillé
+0,0026050 NC ->  \fin
+0,0019538 NC ->  \argent
+0,0006513 NC ->  \direction
+0,0003256 NC ->  \Convention
+0,0003256 NC ->  \coeur
+0,0006513 NC ->  \artillerie
+0,0003256 NC ->  \prise
+0,0003256 NC ->  \moyens
+0,0003256 NC ->  \conditions
+0,0003256 NC ->  \bifurcation
+0,0006513 NC ->  \emprisonnement
+0,0006513 NC ->  \Me
+0,0003256 NC ->  \caporal
+0,0006513 NC ->  \Champions
+0,0003256 NC ->  \rang
+0,0009769 NC ->  \proches
+0,0003256 NC ->  \attention
+0,0003256 NC ->  \ordonnateur
+0,0003256 NC ->  \écran
+
+0,0163934 VPR ->  \tenant
+0,0163934 VPR ->  \réalisant
+0,0163934 VPR ->  \appartenant
+0,0163934 VPR ->  \laïcisant
+0,0163934 VPR ->  \agissant
+0,0327869 VPR ->  \résidant
+0,0163934 VPR ->  \demandant
+0,0983607 VPR ->  \ayant
+0,0163934 VPR ->  \accompagnant
+0,0163934 VPR ->  \signalant
+0,0163934 VPR ->  \ramenant
+0,0163934 VPR ->  \préférant
+0,0163934 VPR ->  \affirmant
+0,0327869 VPR ->  \concernant
+0,0163934 VPR ->  \oubliant
+0,0163934 VPR ->  \provenant
+0,0163934 VPR ->  \pleurant
+0,0163934 VPR ->  \représentant
+0,0163934 VPR ->  \assurant
+0,0163934 VPR ->  \gênant
+0,0327869 VPR ->  \expliquant
+0,0163934 VPR ->  \paraissant
+0,0163934 VPR ->  \collectant
+0,0163934 VPR ->  \évoquant
+0,0163934 VPR ->  \impliquant
+0,0163934 VPR ->  \Évoquant
+0,0163934 VPR ->  \secouant
+0,0163934 VPR ->  \connaissant
+0,0163934 VPR ->  \heurtant
+0,0655738 VPR ->  \étant
+0,0163934 VPR ->  \passant
+0,0163934 VPR ->  \mettant
+0,0163934 VPR ->  \relevant
+0,0491803 VPR ->  \portant
+0,0163934 VPR ->  \traitant
+0,0163934 VPR ->  \mêlant
+0,0163934 VPR ->  \correspondant
+0,0163934 VPR ->  \recensant
+0,0163934 VPR ->  \allant
+0,0819672 VPR ->  \visant
+0,0163934 VPR ->  \dénonçant
+0,0163934 VPR ->  \doutant
+0,0163934 VPR ->  \Soulignant
+0,0163934 VPR ->  \relayant
+
+0,6000000 AdP ->  ADV ADV
+0,2000000 AdP ->  ADV Ssub
+0,2000000 AdP ->  NP ADV ADV
+
+0,0012019 ADJ ->  \jeunes
+0,0012019 ADJ ->  \intacts
+0,0048077 ADJ ->  \républicain
+0,0012019 ADJ ->  \chère
+0,0024038 ADJ ->  \1er
+0,0012019 ADJ ->  \emblématique
+0,0012019 ADJ ->  \immédiate
+0,0012019 ADJ ->  \certain
+0,0012019 ADJ ->  \judiciaires
+0,0012019 ADJ ->  \litigieuses
+0,0012019 ADJ ->  \supérieurs
+0,0012019 ADJ ->  \atomique
+0,0024038 ADJ ->  \fiscaux
+0,0024038 ADJ ->  \totale
+0,0012019 ADJ ->  \seconde
+0,0036058 ADJ ->  \parisiens
+0,0012019 ADJ ->  \commerciale
+0,0012019 ADJ ->  \supérieure
+0,0048077 ADJ ->  \12
+0,0072115 ADJ ->  \11
+0,0012019 ADJ ->  \préliminaire
+0,0048077 ADJ ->  \14
+0,0024038 ADJ ->  \13
+0,0048077 ADJ ->  \10
+0,0012019 ADJ ->  \digne
+0,0024038 ADJ ->  \grande
+0,0012019 ADJ ->  \farouche
+0,0012019 ADJ ->  \XVII
+0,0012019 ADJ ->  \tiers
+0,0012019 ADJ ->  \bruns
+0,0012019 ADJ ->  \pétrolier
+0,0012019 ADJ ->  \préalable
+0,0036058 ADJ ->  \municipales
+0,0012019 ADJ ->  \écologiste
+0,0012019 ADJ ->  \suffisants
+0,0024038 ADJ ->  \finale
+0,0012019 ADJ ->  \rapide
+0,0012019 ADJ ->  \multiples
+0,0012019 ADJ ->  \entier
+0,0012019 ADJ ->  \grands
+0,0012019 ADJ ->  \modeste
+0,0012019 ADJ ->  \barbouzarde
+0,0012019 ADJ ->  \fermée
+0,0012019 ADJ ->  \futurs
+0,0012019 ADJ ->  \XIXe
+0,0012019 ADJ ->  \individuel
+0,0012019 ADJ ->  \protecteur
+0,0024038 ADJ ->  \plein
+0,0012019 ADJ ->  \fameuse
+0,0012019 ADJ ->  \réaliste
+0,0012019 ADJ ->  \important
+0,0096154 ADJ ->  \financière
+0,0012019 ADJ ->  \subites
+0,0036058 ADJ ->  \importants
+0,0012019 ADJ ->  \technique
+0,0012019 ADJ ->  \républicaines
+0,0036058 ADJ ->  \occulte
+0,0024038 ADJ ->  \réactionnaires
+0,0012019 ADJ ->  \46
+0,0012019 ADJ ->  \symbolique
+0,0012019 ADJ ->  \internationales
+0,0012019 ADJ ->  \néfaste
+0,0012019 ADJ ->  \nationaliste
+0,0012019 ADJ ->  \2e
+0,0012019 ADJ ->  \aérienne
+0,0012019 ADJ ->  \irakiens
+0,0024038 ADJ ->  \Troisième
+0,0012019 ADJ ->  \toute
+0,0012019 ADJ ->  \déductibles
+0,0012019 ADJ ->  \chinoises
+0,0012019 ADJ ->  \moderne
+0,0012019 ADJ ->  \importante
+0,0348558 ADJ ->  \ancien
+0,0036058 ADJ ->  \dernier
+0,0024038 ADJ ->  \premiers
+0,0012019 ADJ ->  \noires
+0,0012019 ADJ ->  \présente
+0,0072115 ADJ ->  \3e
+0,0012019 ADJ ->  \intermédiaires
+0,0012019 ADJ ->  \indiscutable
+0,0012019 ADJ ->  \allemande
+0,0012019 ADJ ->  \mobilières
+0,0024038 ADJ ->  \20
+0,0036058 ADJ ->  \21
+0,0048077 ADJ ->  \24
+0,0036058 ADJ ->  \25
+0,0060096 ADJ ->  \22
+0,0036058 ADJ ->  \23
+0,0036058 ADJ ->  \18
+0,0048077 ADJ ->  \17
+0,0048077 ADJ ->  \16
+0,0036058 ADJ ->  \15
+0,0024038 ADJ ->  \légales
+0,0048077 ADJ ->  \19
+0,0012019 ADJ ->  \élevé
+0,0012019 ADJ ->  \divers
+0,0012019 ADJ ->  \probable
+0,0012019 ADJ ->  \hostile
+0,0012019 ADJ ->  \maçonnique
+0,0024038 ADJ ->  \international
+0,0012019 ADJ ->  \Désireux
+0,0012019 ADJ ->  \31
+0,0012019 ADJ ->  \propres
+0,0012019 ADJ ->  \fiduciaire
+0,0012019 ADJ ->  \incompétent
+0,0060096 ADJ ->  \suisse
+0,0036058 ADJ ->  \27
+0,0024038 ADJ ->  \26
+0,0024038 ADJ ->  \29
+0,0024038 ADJ ->  \28
+0,0012019 ADJ ->  \allemands
+0,0012019 ADJ ->  \relative
+0,0036058 ADJ ->  \ferme
+0,0012019 ADJ ->  \Française
+0,0012019 ADJ ->  \forcés
+0,0012019 ADJ ->  \actif
+0,0036058 ADJ ->  \françaises
+0,0012019 ADJ ->  \vieille
+0,0012019 ADJ ->  \invisible
+0,0012019 ADJ ->  \indépendant
+0,0012019 ADJ ->  \traditionalistes
+0,0024038 ADJ ->  \toutes
+0,0012019 ADJ ->  \permanents
+0,0024038 ADJ ->  \tous
+0,0048077 ADJ ->  \premier
+0,0012019 ADJ ->  \externe
+0,0012019 ADJ ->  \républicains
+0,0024038 ADJ ->  \exécutif
+0,0012019 ADJ ->  \violent
+0,0012019 ADJ ->  \secrète
+0,0012019 ADJ ->  \Nouvel
+0,0024038 ADJ ->  \coupables
+0,0024038 ADJ ->  \personnelle
+0,0012019 ADJ ->  \républicaine
+0,0024038 ADJ ->  \derniers
+0,0036058 ADJ ->  \externes
+0,0012019 ADJ ->  \connexes
+0,0012019 ADJ ->  \médical
+0,0012019 ADJ ->  \familiale
+0,0012019 ADJ ->  \insignifiant
+0,0012019 ADJ ->  \étroits
+0,0012019 ADJ ->  \médiatique
+0,0012019 ADJ ->  \incontestables
+0,0012019 ADJ ->  \seules
+0,0012019 ADJ ->  \volumineux
+0,0012019 ADJ ->  \annuel
+0,0012019 ADJ ->  \importantes
+0,0012019 ADJ ->  \pénal
+0,0060096 ADJ ->  \occultes
+0,0108173 ADJ ->  \judiciaire
+0,0012019 ADJ ->  \démocratique
+0,0012019 ADJ ->  \2ème
+0,0012019 ADJ ->  \naval
+0,0012019 ADJ ->  \malheureuses
+0,0012019 ADJ ->  \morales
+0,0012019 ADJ ->  \troublantes
+0,0024038 ADJ ->  \anciens
+0,0024038 ADJ ->  \proche
+0,0036058 ADJ ->  \suisses
+0,0012019 ADJ ->  \normale
+0,0036058 ADJ ->  \communiste
+0,0012019 ADJ ->  \rogatoire
+0,0012019 ADJ ->  \prématuré
+0,0012019 ADJ ->  \diplomatiques
+0,0012019 ADJ ->  \grosse
+0,0012019 ADJ ->  \civiles
+0,0024038 ADJ ->  \public
+0,0012019 ADJ ->  \semblables
+0,0012019 ADJ ->  \intelligente
+0,0012019 ADJ ->  \délicat
+0,0024038 ADJ ->  \hypothétique
+0,0012019 ADJ ->  \illégale
+0,0012019 ADJ ->  \honoraire
+0,0024038 ADJ ->  \taïwanaise
+0,0036058 ADJ ->  \sportive
+0,0012019 ADJ ->  \jeune
+0,0012019 ADJ ->  \taillés
+0,0012019 ADJ ->  \désireuse
+0,0012019 ADJ ->  \éventuelles
+0,0012019 ADJ ->  \conservateur
+0,0036058 ADJ ->  \mondiale
+0,0024038 ADJ ->  \suivant
+0,0012019 ADJ ->  \utile
+0,0192308 ADJ ->  \français
+0,0012019 ADJ ->  \Obscure
+0,0012019 ADJ ->  \électorales
+0,0060096 ADJ ->  \publique
+0,0012019 ADJ ->  \illégales
+0,0012019 ADJ ->  \Officiel
+0,0012019 ADJ ->  \neuf_cent_vingt
+0,0012019 ADJ ->  \explicites
+0,0012019 ADJ ->  \arbitraire
+0,0012019 ADJ ->  \noire
+0,0012019 ADJ ->  \libanaise
+0,0012019 ADJ ->  \supplétif
+0,0012019 ADJ ->  \en_question
+0,0012019 ADJ ->  \spéciale
+0,0012019 ADJ ->  \Dominicaine
+0,0012019 ADJ ->  \froid
+0,0036058 ADJ ->  \Grand
+0,0012019 ADJ ->  \précédente
+0,0012019 ADJ ->  \gros
+0,0012019 ADJ ->  \vingt
+0,0012019 ADJ ->  \pénale
+0,0012019 ADJ ->  \électriques
+0,0012019 ADJ ->  \municipal
+0,0012019 ADJ ->  \précédents
+0,0012019 ADJ ->  \algérienne
+0,0012019 ADJ ->  \paisibles
+0,0012019 ADJ ->  \flagrant
+0,0012019 ADJ ->  \corrézien
+0,0024038 ADJ ->  \deuxième
+0,0012019 ADJ ->  \Grande
+0,0084135 ADJ ->  \publics
+0,0012019 ADJ ->  \ridicule
+0,0012019 ADJ ->  \bibliographiques
+0,0012019 ADJ ->  \écologistes
+0,0036058 ADJ ->  \nombreux
+0,0012019 ADJ ->  \Quatrième
+0,0132212 ADJ ->  \politiques
+0,0012019 ADJ ->  \diverses
+0,0036058 ADJ ->  \droit
+0,0012019 ADJ ->  \cléricaux
+0,0012019 ADJ ->  \reconnaissable
+0,0012019 ADJ ->  \véritable
+0,0012019 ADJ ->  \correspondantes
+0,0012019 ADJ ->  \compréhensible
+0,0024038 ADJ ->  \simple
+0,0012019 ADJ ->  \internet
+0,0024038 ADJ ->  \internes
+0,0012019 ADJ ->  \banale
+0,0024038 ADJ ->  \étrangers
+0,0012019 ADJ ->  \vaste
+0,0012019 ADJ ->  \indigne
+0,0012019 ADJ ->  \maudites
+0,0012019 ADJ ->  \islamique
+0,0024038 ADJ ->  \secrets
+0,0012019 ADJ ->  \frauduleuse
+0,0012019 ADJ ->  \principal
+0,0096154 ADJ ->  \correctionnel
+0,0024038 ADJ ->  \parlementaire
+0,0012019 ADJ ->  \sensible
+0,0012019 ADJ ->  \ultrasophistiqué
+0,0012019 ADJ ->  \tragique
+0,0012019 ADJ ->  \subversif
+0,0036058 ADJ ->  \libanais
+0,0012019 ADJ ->  \fortunée
+0,0072115 ADJ ->  \nationale
+0,0012019 ADJ ->  \telles
+0,0012019 ADJ ->  \propre
+0,0024038 ADJ ->  \britannique
+0,0012019 ADJ ->  \italien
+0,0012019 ADJ ->  \présidentielles
+0,0012019 ADJ ->  \catholiques
+0,0012019 ADJ ->  \336e
+0,0012019 ADJ ->  \civils
+0,0012019 ADJ ->  \originales
+0,0012019 ADJ ->  \XVIII
+0,0012019 ADJ ->  \civile
+0,0024038 ADJ ->  \seule
+0,0024038 ADJ ->  \nouvelles
+0,0024038 ADJ ->  \quatrième
+0,0012019 ADJ ->  \extensive
+0,0012019 ADJ ->  \inattendue
+0,0024038 ADJ ->  \seuls
+0,0048077 ADJ ->  \générale
+0,0024038 ADJ ->  \iranienne
+0,0084135 ADJ ->  \même
+0,0012019 ADJ ->  \sophistiqué
+0,0072115 ADJ ->  \sociaux
+0,0012019 ADJ ->  \frauduleuses
+0,0012019 ADJ ->  \américains
+0,0012019 ADJ ->  \IIIème
+0,0012019 ADJ ->  \censé
+0,0012019 ADJ ->  \personnel
+0,0012019 ADJ ->  \violents
+0,0036058 ADJ ->  \adjoint
+0,0072115 ADJ ->  \fictifs
+0,0012019 ADJ ->  \différentes
+0,0012019 ADJ ->  \officielle
+0,0024038 ADJ ->  \possible
+0,0024038 ADJ ->  \juridique
+0,0012019 ADJ ->  \civil
+0,0060096 ADJ ->  \deux
+0,0012019 ADJ ->  \petits
+0,0012019 ADJ ->  \fluviale
+0,0012019 ADJ ->  \téléphoniques
+0,0024038 ADJ ->  \mêmes
+0,0012019 ADJ ->  \privé
+0,0024038 ADJ ->  \Dernier
+0,0012019 ADJ ->  \prétendu
+0,0012019 ADJ ->  \habituelle
+0,0012019 ADJ ->  \panaméenne
+0,0024038 ADJ ->  \longue
+0,0024038 ADJ ->  \issus
+0,0012019 ADJ ->  \cléricalisant
+0,0012019 ADJ ->  \énorme
+0,0216346 ADJ ->  \française
+0,0024038 ADJ ->  \noir
+0,0024038 ADJ ->  \autre
+0,0012019 ADJ ->  \tel
+0,0036058 ADJ ->  \taïwanais
+0,0024038 ADJ ->  \monétaire
+0,0012019 ADJ ->  \terroristes
+0,0012019 ADJ ->  \fortes
+0,0024038 ADJ ->  \financiers
+0,0012019 ADJ ->  \supérieur
+0,0012019 ADJ ->  \70_000
+0,0012019 ADJ ->  \21e
+0,0096154 ADJ ->  \autres
+0,0108173 ADJ ->  \général
+0,0012019 ADJ ->  \troisième
+0,0012019 ADJ ->  \intime
+0,0012019 ADJ ->  \Premier
+0,0012019 ADJ ->  \départemental
+0,0012019 ADJ ->  \11e
+0,0012019 ADJ ->  \off-shore
+0,0012019 ADJ ->  \similaire
+0,0036058 ADJ ->  \central
+0,0012019 ADJ ->  \vietnamien
+0,0024038 ADJ ->  \bancaire
+0,0024038 ADJ ->  \parisienne
+0,0012019 ADJ ->  \Seuls
+0,0012019 ADJ ->  \posthumes
+0,0024038 ADJ ->  \consultative
+0,0012019 ADJ ->  \laïques
+0,0012019 ADJ ->  \Ancien
+0,0024038 ADJ ->  \internationale
+0,0012019 ADJ ->  \brutal
+0,0012019 ADJ ->  \spéciaux
+0,0012019 ADJ ->  \municipale
+0,0012019 ADJ ->  \Civique
+0,0012019 ADJ ->  \surprenant
+0,0012019 ADJ ->  \réel
+0,0012019 ADJ ->  \douteux
+0,0012019 ADJ ->  \60e
+0,0012019 ADJ ->  \particulier
+0,0012019 ADJ ->  \fanatiques
+0,0012019 ADJ ->  \fournisseurs
+0,0012019 ADJ ->  \factuels
+0,0024038 ADJ ->  \US
+0,0012019 ADJ ->  \collective
+0,0012019 ADJ ->  \documentaire
+0,0012019 ADJ ->  \militaires
+0,0012019 ADJ ->  \bon
+0,0012019 ADJ ->  \officieuse
+0,0024038 ADJ ->  \bonne
+0,0012019 ADJ ->  \originaires
+0,0012019 ADJ ->  \douanière
+0,0060096 ADJ ->  \fausses
+0,0036058 ADJ ->  \socialiste
+0,0012019 ADJ ->  \congolaise
+0,0012019 ADJ ->  \Tous
+0,0012019 ADJ ->  \Tout
+0,0012019 ADJ ->  \sensibles
+0,0012019 ADJ ->  \privée
+0,0024038 ADJ ->  \occidentales
+0,0024038 ADJ ->  \haut
+0,0012019 ADJ ->  \médiocres
+0,0012019 ADJ ->  \dominicaine
+0,0012019 ADJ ->  \sérieux
+0,0036058 ADJ ->  \américain
+0,0060096 ADJ ->  \grand
+0,0012019 ADJ ->  \méprisant
+0,0036058 ADJ ->  \financier
+0,0048077 ADJ ->  \chinois
+0,0012019 ADJ ->  \pareil
+0,0012019 ADJ ->  \olympique
+0,0012019 ADJ ->  \nécessaires
+0,0012019 ADJ ->  \actuelle
+0,0012019 ADJ ->  \exceptionnels
+0,0012019 ADJ ->  \secrètes
+0,0012019 ADJ ->  \ardent
+0,0012019 ADJ ->  \vingts
+0,0024038 ADJ ->  \allemandes
+0,0156250 ADJ ->  \politique
+0,0012019 ADJ ->  \officiel
+0,0012019 ADJ ->  \intégriste
+0,0012019 ADJ ->  \associés
+0,0012019 ADJ ->  \informatiques
+0,0024038 ADJ ->  \fermes
+0,0012019 ADJ ->  \électorale
+0,0060096 ADJ ->  \faux
+0,0012019 ADJ ->  \distincte
+0,0012019 ADJ ->  \favorable
+0,0012019 ADJ ->  \régional
+0,0012019 ADJ ->  \francaise
+0,0012019 ADJ ->  \richissime
+0,0012019 ADJ ->  \commercial
+0,0012019 ADJ ->  \coupable
+0,0024038 ADJ ->  \trois
+0,0036058 ADJ ->  \Première
+0,0012019 ADJ ->  \principaux
+0,0012019 ADJ ->  \dissident
+0,0012019 ADJ ->  \thérapeutiques
+0,0012019 ADJ ->  \amnistiable
+0,0012019 ADJ ->  \17e
+0,0012019 ADJ ->  \parisien
+0,0024038 ADJ ->  \national
+0,0012019 ADJ ->  \garnis
+0,0012019 ADJ ->  \civiques
+0,0060096 ADJ ->  \étrangères
+0,0012019 ADJ ->  \célèbres
+0,0012019 ADJ ->  \accusateur
+0,0012019 ADJ ->  \nombreuses
+0,0012019 ADJ ->  \modérés
+0,0012019 ADJ ->  \16e
+0,0012019 ADJ ->  \accidentelle
+0,0012019 ADJ ->  \discrète
+0,0024038 ADJ ->  \extrême
+0,0048077 ADJ ->  \seul
+0,0012019 ADJ ->  \arbitrale
+0,0012019 ADJ ->  \israélien
+0,0060096 ADJ ->  \première
+0,0012019 ADJ ->  \africain
+0,0012019 ADJ ->  \ponctuelle
+0,0012019 ADJ ->  \exotique
+0,0012019 ADJ ->  \catholique
+0,0012019 ADJ ->  \récente
+0,0012019 ADJ ->  \supplémentaires
+0,0012019 ADJ ->  \financières
+0,0012019 ADJ ->  \scrupuleuse
+0,0024038 ADJ ->  \originaire
+0,0012019 ADJ ->  \Universitaires
+0,0012019 ADJ ->  \iraniens
+0,0012019 ADJ ->  \fusillé
+0,0012019 ADJ ->  \électoral
+0,0012019 ADJ ->  \physiques
+0,0024038 ADJ ->  \italienne
+0,0012019 ADJ ->  \pur-sang
+0,0012019 ADJ ->  \insignifiante
+0,0060096 ADJ ->  \3
+0,0036058 ADJ ->  \2
+0,0036058 ADJ ->  \suivante
+0,0072115 ADJ ->  \illégal
+0,0060096 ADJ ->  \7
+0,0024038 ADJ ->  \6
+0,0084135 ADJ ->  \5
+0,0072115 ADJ ->  \4
+0,0012019 ADJ ->  \fédérale
+0,0012019 ADJ ->  \arabe
+0,0048077 ADJ ->  \9
+0,0036058 ADJ ->  \8
+
+0,6000000 CLO ->  \y
+0,4000000 CLO ->  \en
+
+0,0495868 PROREL ->  \où
+0,6280992 PROREL ->  \qui
+0,0661157 PROREL ->  \qu'
+0,0247934 PROREL ->  \laquelle
+0,0743802 PROREL ->  \que
+0,1570248 PROREL ->  \dont
+
+0,0454545 CLS-SUJ ->  \ils
+0,0090909 CLS-SUJ ->  \Elles
+0,0363636 CLS-SUJ ->  \Elle
+0,2454545 CLS-SUJ ->  \il
+0,0181818 CLS-SUJ ->  \l'_on
+0,1727273 CLS-SUJ ->  \Il
+0,0363636 CLS-SUJ ->  \je
+0,0727273 CLS-SUJ ->  \c'
+0,0090909 CLS-SUJ ->  \nous
+0,0181818 CLS-SUJ ->  \j'
+0,0181818 CLS-SUJ ->  \-on
+0,0090909 CLS-SUJ ->  \vous
+0,0272727 CLS-SUJ ->  \J'
+0,0545455 CLS-SUJ ->  \C'
+0,0727273 CLS-SUJ ->  \Ils
+0,0090909 CLS-SUJ ->  \Je
+0,0545455 CLS-SUJ ->  \on
+0,0090909 CLS-SUJ ->  \Ce
+0,0090909 CLS-SUJ ->  \ce
+0,0545455 CLS-SUJ ->  \elle
+0,0090909 CLS-SUJ ->  \elles
+0,0090909 CLS-SUJ ->  \On
+
+0,6363636 CLR-OBJ ->  \se
+0,3636364 CLR-OBJ ->  \s'
+
+0,0188679 Sint ->  PONCT VN NP PONCT
+0,0188679 Sint ->  PONCT VN NP PP PP PONCT
+0,0188679 Sint ->  PONCT VN ADV PP PONCT
+0,0188679 Sint ->  Ssub PONCT VN NP
+0,0188679 Sint ->  NP PONCT VN PP COORD
+0,0188679 Sint ->  NP VN ADV PP
+0,0188679 Sint ->  NP PONCT VN PP
+0,0188679 Sint ->  PP PONCT VN NP
+0,0188679 Sint ->  VPinf
+0,0188679 Sint ->  NP VN PP PONCT VPpart
+0,0377358 Sint ->  VN NP COORD
+0,0188679 Sint ->  VPpart PONCT VN AdP NP
+0,0188679 Sint ->  VN NP NP Srel
+0,0188679 Sint ->  VN PP Srel
+0,0188679 Sint ->  PONCT VN PP PP PONCT
+0,0188679 Sint ->  PONCT VN NP
+0,0188679 Sint ->  VN PP PP PONCT COORD
+0,0188679 Sint ->  PP PONCT NP VN ADV AP
+0,0188679 Sint ->  VN ADV COORD
+0,0943396 Sint ->  VN NP
+0,0754717 Sint ->  NP VN
+0,0188679 Sint ->  PP PONCT NP VN VPinf
+0,0188679 Sint ->  NP PONCT VN PP VPinf
+0,0188679 Sint ->  NP VN ADV NP
+0,0188679 Sint ->  NP ADV VN NP
+0,0566038 Sint ->  NP VN VPinf
+0,0377358 Sint ->  PONCT VN PP PONCT
+0,0188679 Sint ->  NP VN ADV NP Ssub
+0,0188679 Sint ->  NP VN PONCT NP PONCT VPinf
+0,0754717 Sint ->  PONCT VN NP PP PONCT
+0,0377358 Sint ->  VN PP
+0,0188679 Sint ->  CC NP VN Ssub
+0,0188679 Sint ->  NP VN AP
+0,0188679 Sint ->  VN NP PP PONCT PP
+0,0377358 Sint ->  VN VPinf
+0,0377358 Sint ->  NP VN NP
+
+0,0019455 AP ->  AdP ADJ
+0,0311284 AP ->  ADV ADJ
+0,0155642 AP ->  PREF ADJ
+0,0389105 AP ->  ADJ PP
+0,0019455 AP ->  PONCT ADV ADJ PONCT COORD
+0,0194553 AP ->  ADJ COORD
+0,8677043 AP ->  ADJ
+0,0097276 AP ->  PONCT ADJ PONCT
+0,0116732 AP ->  ADJ VPinf
+0,0019455 AP ->  NC
+
+0,7500000 ADV-P_OBJ ->  \en_cause
+0,2500000 ADV-P_OBJ ->  \en_place
+
+0,0054348 VINF ->  \rendre
+0,0054348 VINF ->  \mener
+0,0054348 VINF ->  \assurer
+0,0054348 VINF ->  \atteindre
+0,0054348 VINF ->  \signer
+0,0108696 VINF ->  \garder
+0,0054348 VINF ->  \subir
+0,0054348 VINF ->  \vouloir
+0,0054348 VINF ->  \prouver
+0,0054348 VINF ->  \sourire
+0,0054348 VINF ->  \pilonner
+0,0054348 VINF ->  \fournir
+0,0108696 VINF ->  \éviter
+0,0054348 VINF ->  \instruire
+0,0923913 VINF ->  \avoir
+0,0054348 VINF ->  \bondir
+0,0054348 VINF ->  \renvoyer
+0,0054348 VINF ->  \laisser
+0,0054348 VINF ->  \filmer
+0,0108696 VINF ->  \croire
+0,0163043 VINF ->  \passer
+0,0054348 VINF ->  \utiliser
+0,0054348 VINF ->  \amadouer
+0,0054348 VINF ->  \orienter
+0,0054348 VINF ->  \représenter
+0,0054348 VINF ->  \exprimer
+0,0054348 VINF ->  \entraîner
+0,0054348 VINF ->  \manifester
+0,0108696 VINF ->  \examiner
+0,0054348 VINF ->  \lancer
+0,0054348 VINF ->  \identifier
+0,0054348 VINF ->  \préparer
+0,0108696 VINF ->  \envisager
+0,0054348 VINF ->  \accorder
+0,0054348 VINF ->  \tenir
+0,0054348 VINF ->  \peser
+0,0054348 VINF ->  \donner
+0,0054348 VINF ->  \déstabiliser
+0,0108696 VINF ->  \cf.
+0,0108696 VINF ->  \reverser
+0,0054348 VINF ->  \convaincre
+0,0108696 VINF ->  \mourir
+0,0054348 VINF ->  \constituer
+0,0054348 VINF ->  \écarter
+0,0054348 VINF ->  \fréquenter
+0,0054348 VINF ->  \obliger
+0,0108696 VINF ->  \remettre
+0,0054348 VINF ->  \retracer
+0,0054348 VINF ->  \attribuer
+0,0054348 VINF ->  \éliminer
+0,0054348 VINF ->  \réévaluer
+0,0217391 VINF ->  \payer
+0,0054348 VINF ->  \jouer
+0,0054348 VINF ->  \noter
+0,0054348 VINF ->  \atterrir
+0,0054348 VINF ->  \transporter
+0,0054348 VINF ->  \dialoguer
+0,0163043 VINF ->  \voir
+0,0054348 VINF ->  \égarer
+0,0108696 VINF ->  \demander
+0,0054348 VINF ->  \empocher
+0,0054348 VINF ->  \rembourser
+0,0054348 VINF ->  \surveiller
+0,0054348 VINF ->  \gonfler
+0,0054348 VINF ->  \retirer
+0,0217391 VINF ->  \obtenir
+0,0054348 VINF ->  \promouvoir
+0,0054348 VINF ->  \durer
+0,0054348 VINF ->  \traiter
+0,0054348 VINF ->  \juger
+0,0054348 VINF ->  \fouiller
+0,0108696 VINF ->  \parler
+0,0489130 VINF ->  \être
+0,0054348 VINF ->  \valoir
+0,0054348 VINF ->  \comprendre
+0,0054348 VINF ->  \décourager
+0,0054348 VINF ->  \servir
+0,0054348 VINF ->  \susciter
+0,0054348 VINF ->  \justifier
+0,0054348 VINF ->  \valider
+0,0054348 VINF ->  \rapporter
+0,0054348 VINF ->  \échapper
+0,0054348 VINF ->  \acheter
+0,0054348 VINF ->  \secouer
+0,0054348 VINF ->  \parvenir
+0,0054348 VINF ->  \affirmer
+0,0054348 VINF ->  \auditionner
+0,0054348 VINF ->  \transmettre
+0,0543478 VINF ->  \Voir
+0,0054348 VINF ->  \verser
+0,0054348 VINF ->  \prélever
+0,0054348 VINF ->  \conclure
+0,0054348 VINF ->  \républicaniser
+0,0054348 VINF ->  \étaler
+0,0380435 VINF ->  \faire
+0,0054348 VINF ->  \incarner
+0,0054348 VINF ->  \négocier
+0,0054348 VINF ->  \estimer
+0,0054348 VINF ->  \trouver
+0,0163043 VINF ->  \établir
+0,0217391 VINF ->  \sortir
+0,0108696 VINF ->  \témoigner
+0,0054348 VINF ->  \soutenir
+0,0054348 VINF ->  \patrouiller
+0,0054348 VINF ->  \compter
+0,0054348 VINF ->  \effectuer
+0,0054348 VINF ->  \ramener
+0,0054348 VINF ->  \racheter
+0,0054348 VINF ->  \dire
+0,0054348 VINF ->  \entrer
+0,0054348 VINF ->  \accueillir
+0,0054348 VINF ->  \dérouler
+0,0054348 VINF ->  \condamner
+0,0054348 VINF ->  \conduire
+0,0054348 VINF ->  \visiter
+0,0054348 VINF ->  \attendre
+0,0054348 VINF ->  \chercher
+0,0054348 VINF ->  \défendre
+
+0,0022727 VN ->  CLR-OBJ V VPP
+0,0011364 VN ->  CLO-A_OBJ V VPP
+0,0011364 VN ->  CLS-SUJ ADV PONCT V
+0,0045455 VN ->  CLR-OBJ V
+0,0011364 VN ->  CLS-SUJ ADV V ADV VPP
+0,0011364 VN ->  VS
+0,0011364 VN ->  ADV CLO-A_OBJ V
+0,0011364 VN ->  CLR VPR
+0,0227273 VN ->  V ADV VPP
+0,0045455 VN ->  ADV V VPP
+0,0022727 VN ->  VINF VINF
+0,0011364 VN ->  PONCT VPR PONCT
+0,0011364 VN ->  ADV CLO-ATS V
+0,0011364 VN ->  ADV CLO-P_OBJ VPR
+0,0068182 VN ->  CLS-SUJ CLR V
+0,0034091 VN ->  CLR-OBJ VINF
+0,0545455 VN ->  VPR
+0,0659091 VN ->  CLS-SUJ V
+0,0022727 VN ->  CLS-SUJ CLO-A_OBJ V
+0,0011364 VN ->  V CLS-SUJ
+0,0022727 VN ->  VPR ADV VPP
+0,0022727 VN ->  CLS-SUJ V VPP VPP
+0,0011364 VN ->  CLO-OBJ VINF VPP
+0,0022727 VN ->  CLO-OBJ VPR
+0,0022727 VN ->  V PONCT PP PONCT VPP
+0,0011364 VN ->  ADV CLO V
+0,0056818 VN ->  CLR VINF
+0,0068182 VN ->  CLR V VPP
+0,0136364 VN ->  CLR V
+0,0068182 VN ->  ADV V ADV VPP
+0,1465909 VN ->  V VPP
+0,0011364 VN ->  V VPP NP VPP
+0,0011364 VN ->  V PP VPP
+0,0022727 VN ->  CLO-OBJ V VPP
+0,0022727 VN ->  V VINF
+0,0011364 VN ->  CLS-SUJ CLO-OBJ V
+0,0011364 VN ->  CLO VINF
+0,0011364 VN ->  CLO-A_OBJ VINF
+0,0011364 VN ->  CLR-OBJ VINF VINF
+0,0034091 VN ->  V PONCT VPP
+0,0022727 VN ->  VS VPP
+0,0011364 VN ->  ADV CLR-OBJ V
+0,0011364 VN ->  VINF PONCT ADV VPP
+0,0227273 VN ->  CLS-SUJ V VPP
+0,0011364 VN ->  V VPP ADV VPP
+0,0022727 VN ->  V ADV VPP VPP
+0,0045455 VN ->  ADV CLR V
+0,0034091 VN ->  CLO-A_OBJ V
+0,0011364 VN ->  CLO-MOD V CLS-SUJ
+0,0011364 VN ->  V VPP VPP VPP
+0,0011364 VN ->  CLS-SUJ ADV CLO V VPP
+0,0011364 VN ->  ADV VS VPP VPP
+0,2920455 VN ->  V
+0,0011364 VN ->  ADV VS ADV VPP
+0,0011364 VN ->  CLS-SUJ CLO V
+0,0011364 VN ->  ADV VINF ADV VPP
+0,0011364 VN ->  ADV VPR
+0,0011364 VN ->  CLS-SUJ VS
+0,0011364 VN ->  CLR VINF VPP
+0,1545455 VN ->  VINF
+0,0034091 VN ->  CLS-SUJ V ADV VPP
+0,0011364 VN ->  ADV VPR ADV
+0,0136364 VN ->  ADV V
+0,0011364 VN ->  VINF VPP VPP
+0,0011364 VN ->  CLS-SUJ ADV CLO V ADV VPP
+0,0045455 VN ->  CLO-OBJ VINF
+0,0034091 VN ->  CLO-OBJ V
+0,0409091 VN ->  V VPP VPP
+0,0022727 VN ->  V NP VPP
+0,0011364 VN ->  CLS-SUJ CLO-A_OBJ V VPP
+0,0011364 VN ->  PONCT CLO-A_OBJ PONCT V VPP VPP
+0,0011364 VN ->  CLS-SUJ VS ADV VPP
+0,0011364 VN ->  CLS-SUJ VS VPP VPP
+0,0011364 VN ->  VINF PONCT VPP
+0,0011364 VN ->  CLO-DE_OBJ V
+0,0022727 VN ->  ADV V ADV VPP VPP
+0,0011364 VN ->  CLO-OBJ V VINF
+0,0011364 VN ->  CLR CLO-A_OBJ V
+0,0056818 VN ->  CLS-SUJ ADV V
+0,0204545 VN ->  VINF VPP
+0,0045455 VN ->  VPR VPP
+0,0022727 VN ->  CLS-SUJ ADV V ADV ADV VPP
+0,0011364 VN ->  V VPP VINF
+
+0,3888889 CLR ->  \se
+0,6111111 CLR ->  \s'
+
+1,0000000 ADVWH-MOD ->  \comment
+
+0,0113636 ET ->  \Little
+0,0113636 ET ->  \August
+0,0113636 ET ->  \Bank
+0,0113636 ET ->  \manipulation
+0,0113636 ET ->  \La
+0,0227273 ET ->  \the
+0,0113636 ET ->  \Forkum
+0,0113636 ET ->  \doctor
+0,0113636 ET ->  \disinformation
+0,0113636 ET ->  \lie
+0,0113636 ET ->  \take
+0,0113636 ET ->  \Media
+0,0113636 ET ->  \Lies
+0,0227273 ET ->  \admits
+0,0113636 ET ->  \of
+0,0113636 ET ->  \lies
+0,0113636 ET ->  \time
+0,0113636 ET ->  \accessed
+0,0113636 ET ->  \drops
+0,0113636 ET ->  \Lessons
+0,0113636 ET ->  \Makeover
+0,0113636 ET ->  \Politics
+0,0113636 ET ->  \provided
+0,0113636 ET ->  \Daily
+0,0227273 ET ->  \more
+0,0227273 ET ->  \in
+0,0113636 ET ->  \by
+0,0113636 ET ->  \no
+0,0113636 ET ->  \photographer
+0,0113636 ET ->  \scared
+0,0113636 ET ->  \Home
+0,0113636 ET ->  \calls
+0,0113636 ET ->  \Digital
+0,0454545 ET ->  \en
+0,0113636 ET ->  \how
+0,0113636 ET ->  \Drinking
+0,0113636 ET ->  \withdraws
+0,0227273 ET ->  \freelance
+0,0113636 ET ->  \Sera
+0,0227273 ET ->  \and
+0,0113636 ET ->  \Sport
+0,0113636 ET ->  \I
+0,0113636 ET ->  \damn
+0,0113636 ET ->  \Tampering
+0,0113636 ET ->  \date
+0,0113636 ET ->  \precise
+0,0113636 ET ->  \dession
+0,0113636 ET ->  \about
+0,0113636 ET ->  \dello
+0,0113636 ET ->  \Il
+0,0113636 ET ->  \From
+0,0113636 ET ->  \Chartered
+0,0113636 ET ->  \Law
+0,0227273 ET ->  \Lebanese
+0,0568182 ET ->  \Van
+0,0113636 ET ->  \over
+0,0113636 ET ->  \image
+0,0113636 ET ->  \This
+0,0113636 ET ->  \altering
+0,0227273 ET ->  \to
+0,0113636 ET ->  \war
+0,0113636 ET ->  \devils
+0,0113636 ET ->  \della
+0,0113636 ET ->  \van
+0,0113636 ET ->  \all
+0,0113636 ET ->  \campaign
+0,0681818 ET ->  \The
+0,0113636 ET ->  \Stop
+
+0,0015432 PONCT ->  \?
+0,1296296 PONCT ->  \"
+0,0005144 PONCT ->  \!
+0,0015432 PONCT ->  \..
+0,0015432 PONCT ->  \'
+0,0406379 PONCT ->  \-RRB-
+0,0056584 PONCT ->  \^
+0,0056584 PONCT ->  \]
+0,0005144 PONCT ->  \/
+0,2289095 PONCT ->  \.
+0,0910494 PONCT ->  \-
+0,3955761 PONCT ->  \,
+0,0406379 PONCT ->  \-LRB-
+0,0015432 PONCT ->  \...
+0,0020576 PONCT ->  \;
+0,0468107 PONCT ->  \:
+0,0061728 PONCT ->  \[
+
+0,0016340 SENT ->  VPpart PONCT
+0,0016340 SENT ->  PONCT NP VN PP PONCT NP PONCT NP NC
+0,0016340 SENT ->  NP VN AP PONCT VPpart PONCT
+0,0016340 SENT ->  PP PONCT NP VN NP PP COORD PONCT
+0,0016340 SENT ->  NP VN PP PONCT PP PONCT NP PONCT COORD PONCT
+0,0016340 SENT ->  VPpart PONCT NP VN NP PONCT Sint PONCT
+0,0016340 SENT ->  NP VN AP PONCT NP PONCT
+0,0016340 SENT ->  PP PONCT NP VN Ssub PONCT VPpart PONCT
+0,0016340 SENT ->  ADV PONCT NP VN NP PONCT PP PONCT
+0,0016340 SENT ->  PP PONCT PP PONCT NP VN PP PONCT
+0,0016340 SENT ->  PONCT NP PONCT VN PP PP PP PONCT
+0,0016340 SENT ->  VN PONCT PP PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT VN PP PONCT
+0,0016340 SENT ->  NP PONCT VN PONCT PP PONCT NP PONCT
+0,0032680 SENT ->  PP PONCT NP VN PP PP PONCT
+0,0016340 SENT ->  PONCT Ssub PONCT NP VN NP VPinf PONCT
+0,0016340 SENT ->  VN NP PONCT NP PONCT Ssub PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN Ssub PONCT
+0,0016340 SENT ->  NP VN NP COORD PONCT
+0,0032680 SENT ->  NP VN ADV NP COORD PONCT
+0,0016340 SENT ->  PP PONCT NP VN NP PONCT Sint PONCT
+0,0049020 SENT ->  NP VN PONCT
+0,0098039 SENT ->  VN NP PONCT
+0,0016340 SENT ->  PONCT PONCT NP PONCT ET NP PONCT
+0,0016340 SENT ->  NP VN COORD PONCT
+0,0049020 SENT ->  VN NP COORD PONCT
+0,0016340 SENT ->  PP PONCT PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  PONCT PP PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  NP VN PONCT PP PONCT VPinf PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT VN VPinf PONCT
+0,0016340 SENT ->  NP PONCT VN PONCT Sint PONCT
+0,0016340 SENT ->  PONCT NP VN PONCT NP PONCT
+0,0032680 SENT ->  PONCT NP PONCT VN NP PONCT
+0,0032680 SENT ->  PP PONCT VN VPinf PONCT
+0,0016340 SENT ->  Ssub PONCT VN VPinf PONCT PONCT
+0,0016340 SENT ->  NP PONCT VN ADV PP PONCT
+0,0016340 SENT ->  NP PONCT VN ADV NP PONCT PONCT VPinf PONCT
+0,0016340 SENT ->  PONCT VN PONCT PP PONCT NP PONCT Sint PONCT
+0,0032680 SENT ->  PONCT PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT VPpart PONCT NP VN NP PP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN NP PP PONCT VPpart PONCT
+0,0032680 SENT ->  NP PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  PP PONCT VN NP PONCT ADV PONCT PP PONCT
+0,0016340 SENT ->  NP VN NP NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN PP NP PP PONCT VPinf PONCT
+0,0016340 SENT ->  NP NP COORD PONCT
+0,0016340 SENT ->  PONCT PP PONCT VN NP PONCT Srel PONCT
+0,0016340 SENT ->  PONCT NP VN PONCT
+0,0016340 SENT ->  PONCT VN NP PONCT
+0,0032680 SENT ->  PP PONCT NP VN ADV NP PONCT
+0,0016340 SENT ->  NP VN ADV AP Ssub PONCT
+0,0032680 SENT ->  PP PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  VPinf PONCT NP VN PP PONCT
+0,0016340 SENT ->  NP VN AP NP PONCT VPpart PONCT
+0,0016340 SENT ->  NP PONCT VN ADV VPpart PONCT
+0,0016340 SENT ->  PP PONCT VN PP PP PONCT
+0,0016340 SENT ->  VN PP PP PONCT
+0,0016340 SENT ->  NP VN NP PP PONCT Ssub PONCT
+0,0016340 SENT ->  AP PONCT NP PONCT VN PP PP VPinf PONCT PP PONCT
+0,0016340 SENT ->  NP VN NP PP VPinf PONCT
+0,0016340 SENT ->  NP VN PP NP VPinf PONCT
+0,0016340 SENT ->  NP VN PONCT VPpart PONCT
+0,0016340 SENT ->  VN NP PP PONCT Sint PONCT
+0,0032680 SENT ->  NP VN PP PONCT Sint PONCT
+0,0032680 SENT ->  PONCT PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT
+0,0098039 SENT ->  VN PP PONCT
+0,0016340 SENT ->  PP PONCT VN ADV NP PONCT NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP
+0,0016340 SENT ->  PONCT PONCT NP PONCT
+0,0016340 SENT ->  VN NP PONCT NP PONCT VPpart PONCT
+0,0016340 SENT ->  NP PONCT VN NP PONCT VPpart PONCT
+0,0016340 SENT ->  PONCT PONCT NP PONCT PONCT NP PONCT NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  NP VN ADV AP PONCT
+0,0196078 SENT ->  NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP NP NP PONCT
+0,0392157 SENT ->  PONCT NP
+0,0016340 SENT ->  NP PONCT NP VN PP NP PONCT
+0,0016340 SENT ->  NP VN ADV NP VPinf PONCT
+0,0016340 SENT ->  NP VN PP PONCT PP PONCT COORD PONCT
+0,0016340 SENT ->  NP VN PP PONCT PP PONCT VPinf PONCT
+0,0016340 SENT ->  PONCT PONCT NP
+0,0016340 SENT ->  PP PONCT NP VN VPinf PONCT PP PONCT
+0,0016340 SENT ->  PP PONCT PP PONCT NP VN VPinf PONCT
+0,0098039 SENT ->  PONCT NP PONCT
+0,0032680 SENT ->  VPpart PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  PONCT NP PONCT PONCT NP PONCT NP PONCT NP PONCT NP PONCT PONCT NP PONCT NP NP NP PONCT
+0,0016340 SENT ->  ADV ADV PONCT VN ADV VPinf PONCT
+0,0163399 SENT ->  PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  VPpart PONCT NP VN PP PP PONCT
+0,0016340 SENT ->  NP VN NP PONCT PONCT
+0,0049020 SENT ->  NP PONCT VN NP PONCT
+0,0032680 SENT ->  PONCT NP VN NP PONCT
+0,0016340 SENT ->  NP VN PONCT COORD PONCT
+0,0016340 SENT ->  PONCT PP PONCT NP PONCT NP
+0,0016340 SENT ->  PONCT NP PP PONCT NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP PONCT PP
+0,0016340 SENT ->  PONCT PONCT NP PONCT NP PP PONCT NP
+0,0016340 SENT ->  PONCT PP PONCT NP PONCT NP NP PONCT
+0,0016340 SENT ->  PONCT PP PONCT NP PONCT NP PONCT NP
+0,0016340 SENT ->  ADV PONCT PP PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  NP VN ADV PP VPinf PONCT
+0,0016340 SENT ->  NP VN NP PP PP PONCT
+0,0016340 SENT ->  VN PP Ssub VPpart PONCT
+0,0016340 SENT ->  ADV PONCT NP NP VN NP PONCT
+0,0032680 SENT ->  VN Ssub PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT NP PONCT NP PONCT NP VN PP PONCT
+0,0016340 SENT ->  ADV PONCT NP PONCT VPinf PONCT VN NP PP COORD PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN ADV-P_OBJ PP PONCT VN ADV PP PONCT
+0,0016340 SENT ->  ADV PONCT Srel PONCT
+0,0016340 SENT ->  ADV PONCT NP VN NP COORD PONCT
+0,0016340 SENT ->  PP
+0,0016340 SENT ->  VN NP Srel PONCT
+0,0016340 SENT ->  NP PONCT PP PONCT VN PP VPinf Ssub PONCT
+0,0016340 SENT ->  NP VN COORD PONCT PP PONCT
+0,0016340 SENT ->  PP PONCT NP VN COORD PONCT
+0,0049020 SENT ->  NP VN PP PP PONCT
+0,0032680 SENT ->  NP VN PP PONCT COORD PONCT
+0,0016340 SENT ->  VN ADV NP PONCT Sint PONCT
+0,0016340 SENT ->  PONCT PONCT PONCT
+0,0032680 SENT ->  VN ADV PP PONCT
+0,0016340 SENT ->  NP VN NP Ssub PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP PONCT NP PONCT VPpart PONCT
+0,0016340 SENT ->  PP PONCT VN PP PP PONCT PP PONCT
+0,0016340 SENT ->  VN PP PONCT Sint PONCT
+0,0016340 SENT ->  ADV PONCT PP PONCT NP PONCT VN COORD PONCT NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT VN PP Ssub PONCT
+0,0016340 SENT ->  PP PONCT NP VN ADV-P_OBJ NP PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT NP VN PP PONCT Sint PONCT PONCT
+0,0147059 SENT ->  VPinf
+0,0016340 SENT ->  NP PONCT NP PONCT VN PONCT Ssub PONCT
+0,0016340 SENT ->  NP VN AP PONCT COORD PONCT
+0,0016340 SENT ->  PP PONCT VN PP PONCT
+0,0016340 SENT ->  Ssub PONCT NP VN PP COORD PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT VN PONCT
+0,0016340 SENT ->  NP VN ADV NP PP PONCT
+0,0032680 SENT ->  PONCT NP PONCT NP VN NP PONCT
+0,0016340 SENT ->  NP PONCT VN PP PP PONCT COORD COORD PONCT
+0,0016340 SENT ->  NP VN PP PONCT COORD PP PONCT COORD PONCT
+0,0016340 SENT ->  NP VN VPinf PONCT COORD PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP VN NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN PONCT NP PONCT NP
+0,0016340 SENT ->  NP VN ADV ADV ADV PP Ssub PONCT
+0,0016340 SENT ->  NP PONCT VN NP PP PP Sint PONCT
+0,0016340 SENT ->  PONCT NP PONCT VN VPinf PONCT COORD PONCT
+0,0016340 SENT ->  PONCT NP VN NP PONCT NP PONCT NP
+0,0016340 SENT ->  PONCT NP VN PP PP PP
+0,0016340 SENT ->  PONCT NP PONCT NP VN NP PP VPpart PONCT
+0,0016340 SENT ->  ADV PONCT NP PONCT VN PONCT NP PONCT VPinf PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT NP VN VPpart PONCT
+0,0016340 SENT ->  NP PONCT VN PP NP PONCT VPpart PONCT
+0,0016340 SENT ->  VN NP Ssub PONCT
+0,0016340 SENT ->  ADV NP PONCT NP VN NP NP PONCT VPpart PONCT
+0,0098039 SENT ->  NP VN Ssub PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT PONCT NP PONCT PONCT PP
+0,0016340 SENT ->  NP VN NP PP PONCT VPpart PONCT
+0,0016340 SENT ->  PONCT PONCT NP PONCT NP PP PONCT NP PONCT NP
+0,0016340 SENT ->  NP VN PP COORD NP PONCT
+0,0032680 SENT ->  NP VN NP PP COORD PONCT
+0,0016340 SENT ->  NP PONCT NP VN PP PONCT NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN NP PONCT PP PONCT
+0,0016340 SENT ->  NP VN PP PONCT Sint PONCT PONCT
+0,0032680 SENT ->  NP VN ADV PP PONCT
+0,0016340 SENT ->  PP VN ADV NP PONCT
+0,0032680 SENT ->  PONCT NP PONCT PP PONCT NP VN NP PONCT
+0,0016340 SENT ->  PONCT NP PONCT PP PONCT NP PONCT NP PONCT NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN ADV-P_OBJ NP PP PP PONCT
+0,0016340 SENT ->  NP VN ADV AP PP PONCT VPpart PONCT
+0,0016340 SENT ->  NP PONCT VN Ssub PONCT
+0,0016340 SENT ->  PONCT NP VN Ssub PONCT
+0,0016340 SENT ->  PP VN NP PONCT
+0,0016340 SENT ->  VN NP PP PONCT
+0,0326797 SENT ->  NP VN PP PONCT
+0,0016340 SENT ->  NP PONCT NP VN PP COORD PONCT
+0,0016340 SENT ->  NP VN NP PP PONCT COORD PONCT
+0,0016340 SENT ->  NP VN NP PONCT PP COORD PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT VN Ssub PONCT PP PONCT VPpart PONCT PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT VN Ssub PONCT
+0,0032680 SENT ->  VN AP Ssub PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN NP PP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN PP NP PONCT
+0,0016340 SENT ->  NP VN PP PONCT PP PONCT NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN PP PONCT PP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT VN PP PP PONCT
+0,0049020 SENT ->  PP PONCT NP VN Ssub PONCT
+0,0032680 SENT ->  NP VN PP NP PONCT
+0,0130719 SENT ->  NP VN NP PP PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN PONCT Sint PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN ADV PP VPpart PONCT
+0,0016340 SENT ->  PP PONCT NP VN ADV NP PONCT VPpart PONCT
+0,0016340 SENT ->  NP VN AdP PONCT
+0,0016340 SENT ->  NP VN ADV VPinf Ssub PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT VN VPinf COORD PONCT
+0,0016340 SENT ->  NC
+0,0016340 SENT ->  NP VN AP PONCT
+0,0016340 SENT ->  PONCT PP PONCT NP VN PONCT PP PONCT
+0,0016340 SENT ->  PP PONCT PONCT NP PONCT VN NP VPinf PONCT
+0,0049020 SENT ->  NP VN PP COORD PONCT
+0,0016340 SENT ->  NP PONCT NP VN PONCT PP PONCT VPinf PONCT
+0,0016340 SENT ->  VN NP PP COORD PONCT
+0,0032680 SENT ->  VN VPinf PONCT
+0,1437908 SENT ->  NP
+0,0032680 SENT ->  VN ADV VPinf PONCT
+0,0016340 SENT ->  NP VN ADV NP PONCT Sint PONCT Sint PONCT NP PONCT Sint PONCT Sint PONCT Sint PONCT AP PONCT Sint PONCT Sint PONCT Sint PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP VN PP VPinf PONCT
+0,0016340 SENT ->  PP PONCT VN PP PONCT VPpart PONCT
+0,0032680 SENT ->  PONCT NP PONCT NP VN NP PP PP PONCT
+0,0016340 SENT ->  PONCT PONCT PONCT NP VN PP PONCT
+0,0016340 SENT ->  VPpart PONCT VN Ssub PONCT
+0,0016340 SENT ->  NP VN ADV ADV PP PONCT COORD PONCT
+0,0032680 SENT ->  NP VN PP PONCT VPpart PONCT
+0,0049020 SENT ->  NP VN ADV NP PONCT
+0,0016340 SENT ->  PONCT PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT PONCT NP PONCT
+0,0032680 SENT ->  PONCT NP PONCT NP VN PP PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT VN NP PONCT
+0,0016340 SENT ->  PP PONCT VN ADV PP NP PONCT
+0,0016340 SENT ->  PONCT VPpart PONCT NP VN VPinf PONCT COORD PONCT
+0,0049020 SENT ->  PONCT PONCT NP PONCT NP PONCT NP PONCT NP PONCT
+0,0114379 SENT ->  PONCT NP PONCT NP PONCT NP PONCT NP PONCT PONCT
+0,0016340 SENT ->  ADV PONCT PP PONCT VN NP Srel PONCT
+0,0016340 SENT ->  PP PONCT NP VN PP Ssub PONCT
+0,0016340 SENT ->  NP VN PP COORD COORD PONCT
+0,0016340 SENT ->  PONCT VN NP PONCT PONCT
+0,0016340 SENT ->  NP PONCT NP PONCT PP PONCT NP VN PP PONCT
+0,0016340 SENT ->  PONCT NP PONCT PP PONCT NP VN PP NP PONCT
+0,0016340 SENT ->  NP VN ADV VPinf PONCT
+0,0016340 SENT ->  NP PONCT NP VN NP PP PONCT NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT VN NP PP NP PONCT
+0,0016340 SENT ->  NP VN VPinf COORD PONCT
+0,0326797 SENT ->  NP VN NP PONCT
+0,0147059 SENT ->  NP VN VPinf PONCT
+0,0016340 SENT ->  VPpart PONCT NP VN NP PONCT
+0,0065359 SENT ->  COORD PONCT
+0,0016340 SENT ->  NP PONCT VN VPinf PONCT COORD PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT PP PONCT
+0,0016340 SENT ->  PONCT PONCT PONCT Ssub VN NP VPinf PONCT
+0,0016340 SENT ->  PP PONCT NP VN PP COORD PONCT
+0,0016340 SENT ->  PP PONCT
+0,0016340 SENT ->  NP PONCT NP VN NP PONCT
+0,0016340 SENT ->  PONCT NP VN NP PONCT NP
+0,0016340 SENT ->  NP PONCT VN PP NP PONCT
+0,0081699 SENT ->  PP PONCT NP VN NP PONCT
+0,0032680 SENT ->  NP PONCT NP VN PP PONCT
+0,0016340 SENT ->  PP PONCT NP VN PONCT
+0,0016340 SENT ->  PP PONCT NP VN PP PP COORD
+0,0163399 SENT ->  PONCT NP VN PP PONCT
+0,0016340 SENT ->  PONCT PP VN NP PONCT
+0,0016340 SENT ->  NP PONCT VN NP PP PP PONCT
+0,0016340 SENT ->  NP VN NP PP PONCT PP PONCT
+0,0016340 SENT ->  NP PONCT NP VN PP PP PONCT
+0,0032680 SENT ->  PP PONCT NP VN NP PP PONCT
+0,0016340 SENT ->  VPpart PONCT NP VN Ssub PONCT
+0,0016340 SENT ->  PONCT NP VN AP PONCT COORD PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT VN NP COORD PONCT
+0,0016340 SENT ->  VN VPinf COORD PONCT
+0,0065359 SENT ->  PP PONCT NP VN PP PONCT
+0,0016340 SENT ->  ADV PONCT NP VN NP PP PONCT PP PONCT Sint PONCT
+0,0016340 SENT ->  NP PONCT VN PP PP PONCT
+0,0032680 SENT ->  PONCT NP VN PP PP PONCT
+0,0016340 SENT ->  NP PONCT PP PONCT NP VN PP PONCT
+0,0065359 SENT ->  PONCT NP PONCT NP VN PP PP PONCT
+0,0016340 SENT ->  PP PONCT PP PONCT NP VN NP PONCT
+0,0032680 SENT ->  PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  PONCT VPpart PONCT NP PONCT VN Ssub PONCT
+0,0016340 SENT ->  PP PONCT NP PONCT VN VPinf ADV PP PONCT PONCT Sint PONCT
+0,0016340 SENT ->  NP PONCT NP VN PP NP PP PONCT
+0,0016340 SENT ->  NP VN Ssub PONCT Sint PONCT
+0,0016340 SENT ->  NP PONCT NP VN NP PP PP PONCT
+0,0016340 SENT ->  NP PONCT VN VPinf PONCT
+0,0016340 SENT ->  VN NP VPinf PONCT PONCT
+0,0016340 SENT ->  PONCT NP VN VPinf PONCT
+0,0016340 SENT ->  NP PONCT PP PONCT NP
+0,0016340 SENT ->  PONCT NP PONCT NP PP
+0,0016340 SENT ->  NP PONCT VN ADV VPinf PONCT Sint PONCT PONCT
+0,0049020 SENT ->  NP VN NP VPinf PONCT
+0,0016340 SENT ->  ADV PONCT NP VN ADV VPinf PONCT
+0,0081699 SENT ->  PONCT NP PONCT NP
+0,0147059 SENT ->  NP PONCT NP PONCT
+0,0016340 SENT ->  NP PONCT PP PONCT VPpart PONCT VN ADV NP PONCT
+0,0032680 SENT ->  PONCT NP NP PONCT
+0,0016340 SENT ->  NP PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  PONCT PONCT NP PONCT NP NP
+0,0065359 SENT ->  PONCT NP PONCT NP PONCT NP
+0,0016340 SENT ->  PONCT NP PONCT PP PONCT NP VN PP PONCT PP PONCT
+0,0016340 SENT ->  NP PONCT VN PP PONCT ADV PP PONCT COORD PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  PONCT NP NP PONCT NP PONCT PONCT
+0,0016340 SENT ->  NP PONCT NP PONCT NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP NP PONCT PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  NP PONCT NP PONCT VN PONCT PP PONCT Ssub PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT VN PP PONCT Ssub PONCT
+0,0032680 SENT ->  PONCT PONCT PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT
+0,0016340 SENT ->  VPinf PONCT
+0,0016340 SENT ->  NP PONCT VN PP NP VPinf PONCT
+0,0032680 SENT ->  PONCT PONCT VPinf PONCT NP PONCT NP
+0,0016340 SENT ->  NP NP PONCT
+0,0032680 SENT ->  NP PONCT NP
+0,0016340 SENT ->  PP PONCT NP VN NP PP PP PONCT
+0,0016340 SENT ->  ADV PONCT NP PONCT PP PONCT VN PP PONCT COORD PONCT
+0,0016340 SENT ->  VPpart PONCT VPpart PONCT Sint PONCT PONCT NP VN ADV NP PONCT Ssub PONCT
+0,0016340 SENT ->  VPpart PONCT NP VN ADV NP PP PONCT COORD PONCT
+0,0016340 SENT ->  VN NP PP PONCT NP PP PONCT NP PP PONCT Sint PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP PONCT NP
+0,0016340 SENT ->  PONCT VN ADV PP Srel PONCT PONCT Sint PONCT
+0,0016340 SENT ->  PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT
+
+0,0714286 CLO-OBJ ->  \lui
+0,2142857 CLO-OBJ ->  \le
+0,2142857 CLO-OBJ ->  \l'
+0,2857143 CLO-OBJ ->  \la
+0,0714286 CLO-OBJ ->  \m'
+0,1428571 CLO-OBJ ->  \les
+
+0,0138889 CS ->  \après_que
+0,0138889 CS ->  \en_même_temps_qu'
+0,0138889 CS ->  \bien_qu'
+0,1944444 CS ->  \qu'
+0,0138889 CS ->  \comme
+0,5000000 CS ->  \que
+0,0138889 CS ->  \après_qu'
+0,0277778 CS ->  \avant_que
+0,0138889 CS ->  \si
+0,0138889 CS ->  \tandis_que
+0,0138889 CS ->  \Comme
+0,0138889 CS ->  \Pendant_que
+0,0138889 CS ->  \puisqu'
+0,0138889 CS ->  \pour_que
+0,0138889 CS ->  \au_moment_où
+0,0138889 CS ->  \bien_que
+0,0138889 CS ->  \quand
+0,0138889 CS ->  \alors_que
+0,0138889 CS ->  \jusqu'_à_ce_qu'
+0,0138889 CS ->  \parce_que
+0,0138889 CS ->  \lorsqu'
+0,0277778 CS ->  \Si
+
+1,0000000 PROWH ->  \qui
+
+0,0007663 NPP ->  \Salam
+0,0015326 NPP ->  \Koweït
+0,0007663 NPP ->  \Vergès
+0,0007663 NPP ->  \Caen
+0,0015326 NPP ->  \Roger
+0,0007663 NPP ->  \Prévost-Desprez
+0,0007663 NPP ->  \Cour
+0,0015326 NPP ->  \Italie
+0,0007663 NPP ->  \Lille
+0,0015326 NPP ->  \Amiens
+0,0007663 NPP ->  \Ferré
+0,0007663 NPP ->  \Alègre
+0,0007663 NPP ->  \Roumanie
+0,0007663 NPP ->  \Villiers
+0,0007663 NPP ->  \Toubon
+0,0007663 NPP ->  \Essonne
+0,0022989 NPP ->  \Beyrouth
+0,0007663 NPP ->  \Blainville
+0,0007663 NPP ->  \Claude
+0,0022989 NPP ->  \Grandier
+0,0007663 NPP ->  \Orsay
+0,0007663 NPP ->  \Grasset
+0,0007663 NPP ->  \CFA
+0,0007663 NPP ->  \Zuchowicz
+0,0007663 NPP ->  \Laffont
+0,0015326 NPP ->  \Liu
+0,0007663 NPP ->  \Montbrial
+0,0015326 NPP ->  \Thanh
+0,0007663 NPP ->  \Cresson
+0,0030651 NPP ->  \Pasqua
+0,0007663 NPP ->  \Matra
+0,0007663 NPP ->  \CFP
+0,0015326 NPP ->  \Humanité
+0,0007663 NPP ->  \Mei-Kuei
+0,0045977 NPP ->  \Clearstream
+0,0022989 NPP ->  \SAR
+0,0007663 NPP ->  \Iraq
+0,0007663 NPP ->  \Mayer
+0,0015326 NPP ->  \Iran
+0,0007663 NPP ->  \Equilbey
+0,0015326 NPP ->  \Brochand
+0,0007663 NPP ->  \Russell
+0,0022989 NPP ->  \Irak
+0,0007663 NPP ->  \Léo
+0,0007663 NPP ->  \Cambodge
+0,0038314 NPP ->  \Eric
+0,0007663 NPP ->  \Bao
+0,0007663 NPP ->  \Lafayette
+0,0007663 NPP ->  \Manhattan
+0,0030651 NPP ->  \Paul
+0,0015326 NPP ->  \Casetta
+0,0030651 NPP ->  \Thales
+0,0022989 NPP ->  \Ligue
+0,0007663 NPP ->  \Thibault
+0,0007663 NPP ->  \Chen-Feng
+0,0030651 NPP ->  \Briand
+0,0007663 NPP ->  \Taipeh
+0,0007663 NPP ->  \Villeurbanne
+0,0015326 NPP ->  \Lucien
+0,0022989 NPP ->  \Portelli
+0,0007663 NPP ->  \Kross
+0,0015326 NPP ->  \Lily
+0,0007663 NPP ->  \Ronald
+0,0015326 NPP ->  \Laisné
+0,0007663 NPP ->  \Sassou
+0,0007663 NPP ->  \CIO
+0,0007663 NPP ->  \Observateur
+0,0007663 NPP ->  \Ameen
+0,0007663 NPP ->  \Calciopoli
+0,0007663 NPP ->  \Himalaya
+0,0007663 NPP ->  \Perraudin
+0,0007663 NPP ->  \Cornéa
+0,0007663 NPP ->  \Poto-Poto
+0,0038314 NPP ->  \OPAC
+0,0007663 NPP ->  \VGE
+0,0007663 NPP ->  \Nogent-sur-Marne
+0,0007663 NPP ->  \Bollaert
+0,0007663 NPP ->  \Centrafrique
+0,0007663 NPP ->  \Loïk
+0,0061303 NPP ->  \Andrew
+0,0007663 NPP ->  \Bianco
+0,0030651 NPP ->  \Guerre
+0,0007663 NPP ->  \Bazire
+0,0007663 NPP ->  \Lee
+0,0007663 NPP ->  \Asie
+0,0007663 NPP ->  \Ken
+0,0030651 NPP ->  \Balladur
+0,0007663 NPP ->  \Ménage
+0,0007663 NPP ->  \Burgelin
+0,0007663 NPP ->  \Galzin
+0,0053640 NPP ->  \Armand
+0,0007663 NPP ->  \CGE
+0,0007663 NPP ->  \Moggiopoli
+0,0007663 NPP ->  \Golfe
+0,0007663 NPP ->  \Pocket
+0,0015326 NPP ->  \Créteil
+0,0007663 NPP ->  \Pierre-Alain
+0,0007663 NPP ->  \Damnés
+0,0007663 NPP ->  \Manche
+0,0022989 NPP ->  \Afrique
+0,0030651 NPP ->  \Thomas
+0,0068966 NPP ->  \Indochine
+0,0015326 NPP ->  \Levallois-Perret
+0,0007663 NPP ->  \Théâtre
+0,0007663 NPP ->  \Sutton
+0,0053640 NPP ->  \Blanche
+0,0007663 NPP ->  \Japon
+0,0007663 NPP ->  \Stefano
+0,0015326 NPP ->  \Reagan
+0,0038314 NPP ->  \Jean-Paul
+0,0007663 NPP ->  \Edition
+0,0015326 NPP ->  \Vuong
+0,0007663 NPP ->  \Leiris
+0,0007663 NPP ->  \conseils
+0,0007663 NPP ->  \Djihad
+0,0061303 NPP ->  \Deviers-Joncour
+0,0007663 NPP ->  \Girard
+0,0015326 NPP ->  \Viêtnam
+0,0007663 NPP ->  \Murat
+0,0076628 NPP ->  \Roland
+0,0007663 NPP ->  \Richard
+0,0038314 NPP ->  \Souain
+0,0007663 NPP ->  \Union
+0,0015326 NPP ->  \Liban
+0,0015326 NPP ->  \James
+0,0022989 NPP ->  \Giscard
+0,0007663 NPP ->  \Édith
+0,0007663 NPP ->  \Aurel
+0,0007663 NPP ->  \Mast
+0,0007663 NPP ->  \Wikipédia
+0,0007663 NPP ->  \Emile
+0,0007663 NPP ->  \Tissot
+0,0015326 NPP ->  \Carton
+0,0007663 NPP ->  \Sepp
+0,0007663 NPP ->  \Bréhal
+0,0007663 NPP ->  \ai
+0,0007663 NPP ->  \HCR
+0,0022989 NPP ->  \Estaing
+0,0015326 NPP ->  \Serge
+0,0015326 NPP ->  \CND
+0,0007663 NPP ->  \Daher
+0,0007663 NPP ->  \Xavière
+0,0007663 NPP ->  \Sentiers
+0,0007663 NPP ->  \Chemins
+0,0053640 NPP ->  \Poullain
+0,0022989 NPP ->  \Luciano
+0,0007663 NPP ->  \Limited
+0,0007663 NPP ->  \AFP
+0,0007663 NPP ->  \Cox
+0,0007663 NPP ->  \Rome
+0,0007663 NPP ->  \Clémenceau
+0,0007663 NPP ->  \Revers
+0,0015326 NPP ->  \Observer
+0,0091954 NPP ->  \Reuters
+0,0007663 NPP ->  \Lafon
+0,0007663 NPP ->  \Comité
+0,0022989 NPP ->  \Brazzaville
+0,0030651 NPP ->  \Jean
+0,0007663 NPP ->  \Jack-Yves
+0,0084291 NPP ->  \Éric
+0,0015326 NPP ->  \Joly
+0,0007663 NPP ->  \Védrine
+0,0007663 NPP ->  \Knightley
+0,0007663 NPP ->  \Dintilhac
+0,0084291 NPP ->  \Maupas
+0,0007663 NPP ->  \Gosselin
+0,0015326 NPP ->  \Ciolina
+0,0007663 NPP ->  \Bernard
+0,0007663 NPP ->  \Ivoire
+0,0007663 NPP ->  \Doumer
+0,0007663 NPP ->  \AP
+0,0007663 NPP ->  \UDF-RPR
+0,0015326 NPP ->  \Naftalski
+0,0022989 NPP ->  \Europe
+0,0022989 NPP ->  \DGSE
+0,0122605 NPP ->  \Michel
+0,0007663 NPP ->  \Baudy
+0,0045977 NPP ->  \Taiwan
+0,0007663 NPP ->  \Élysée
+0,0007663 NPP ->  \Fabius
+0,0007663 NPP ->  \Réau
+0,0007663 NPP ->  \Saint-Vincent-de-Paul
+0,0007663 NPP ->  \Merle
+0,0007663 NPP ->  \Conseils
+0,0007663 NPP ->  \Haulage
+0,0022989 NPP ->  \Pierre
+0,0007663 NPP ->  \Lazio
+0,0007663 NPP ->  \Corinthe
+0,0007663 NPP ->  \Taxil
+0,0015326 NPP ->  \Albessard
+0,0099617 NPP ->  \Didier
+0,0122605 NPP ->  \Halphen
+0,0045977 NPP ->  \Canard
+0,0015326 NPP ->  \Compagnie
+0,0007663 NPP ->  \Laos
+0,0007663 NPP ->  \Citibank
+0,0022989 NPP ->  \Bokassa
+0,0015326 NPP ->  \Réveilhac
+0,0015326 NPP ->  \Suisse
+0,0007663 NPP ->  \Vivendi
+0,0015326 NPP ->  \Schuller-Maréchal
+0,0015326 NPP ->  \Beirut
+0,0030651 NPP ->  \Moggi
+0,0007663 NPP ->  \Nanterre
+0,0007663 NPP ->  \Percy
+0,0007663 NPP ->  \Szpiner
+0,0015326 NPP ->  \Ernest
+0,0015326 NPP ->  \Corse
+0,0007663 NPP ->  \Révélation
+0,0007663 NPP ->  \Morisson
+0,0015326 NPP ->  \Safa
+0,0030651 NPP ->  \Nicolas
+0,0007663 NPP ->  \Simeoni
+0,0030651 NPP ->  \Chine
+0,0015326 NPP ->  \Talancé
+0,0015326 NPP ->  \Imbot
+0,0007663 NPP ->  \Bot
+0,0007663 NPP ->  \Hezbollah
+0,0007663 NPP ->  \Brian
+0,0007663 NPP ->  \Footballs
+0,0015326 NPP ->  \Kauffmann
+0,0022989 NPP ->  \Théophile
+0,0061303 NPP ->  \CSF
+0,0007663 NPP ->  \Jospin
+0,0007663 NPP ->  \Brossault
+0,0007663 NPP ->  \Isoète
+0,0015326 NPP ->  \Desmure
+0,0007663 NPP ->  \Monclain
+0,0007663 NPP ->  \Fiorentina
+0,0015326 NPP ->  \Hussein
+0,0022989 NPP ->  \Gomez
+0,0015326 NPP ->  \AC
+0,0015326 NPP ->  \Dreyfus
+0,0007663 NPP ->  \Gilles
+0,0007663 NPP ->  \Maggie
+0,0007663 NPP ->  \Carthage
+0,0076628 NPP ->  \Sirven
+0,0015326 NPP ->  \Fusillés
+0,0007663 NPP ->  \Farid
+0,0007663 NPP ->  \Laske
+0,0022989 NPP ->  \Dominique
+0,0022989 NPP ->  \Charasse
+0,0007663 NPP ->  \Rose-Croix
+0,0007663 NPP ->  \Madeleine
+0,0007663 NPP ->  \Elifas
+0,0007663 NPP ->  \Express
+0,0007663 NPP ->  \Donzel
+0,0007663 NPP ->  \Palazzi
+0,0022989 NPP ->  \Société
+0,0015326 NPP ->  \Schimpf
+0,0007663 NPP ->  \Isabelle
+0,0007663 NPP ->  \Boite
+0,0007663 NPP ->  \Longuet
+0,0007663 NPP ->  \Qatar
+0,0030651 NPP ->  \République
+0,0007663 NPP ->  \Lorient
+0,0007663 NPP ->  \Bonnet
+0,0007663 NPP ->  \Le
+0,0068966 NPP ->  \Monde
+0,0022989 NPP ->  \Banque
+0,0007663 NPP ->  \Thiollet
+0,0068966 NPP ->  \Francis
+0,0015326 NPP ->  \Juppé
+0,0030651 NPP ->  \Charles
+0,0038314 NPP ->  \Balkany
+0,0007663 NPP ->  \Jacob
+0,0007663 NPP ->  \Félix
+0,0007663 NPP ->  \Théo
+0,0007663 NPP ->  \Caraïbes
+0,0084291 NPP ->  \Méry
+0,0007663 NPP ->  \Sri
+0,0107280 NPP ->  \Jean-Claude
+0,0007663 NPP ->  \Legris
+0,0007663 NPP ->  \Rocher
+0,0030651 NPP ->  \Tiberi
+0,0007663 NPP ->  \PCF
+0,0022989 NPP ->  \Pékin
+0,0007663 NPP ->  \Inde
+0,0007663 NPP ->  \Assemblée
+0,0022989 NPP ->  \André
+0,0015326 NPP ->  \Équipe
+0,0007663 NPP ->  \Ceausescu
+0,0007663 NPP ->  \Combes
+0,0022989 NPP ->  \Louis
+0,0007663 NPP ->  \Rémy
+0,0030651 NPP ->  \Marcel
+0,0015326 NPP ->  \Iskandar
+0,0015326 NPP ->  \Orient
+0,0015326 NPP ->  \René
+0,0007663 NPP ->  \Floch-Prigent
+0,0007663 NPP ->  \Chantal
+0,0015326 NPP ->  \Lefoulon
+0,0007663 NPP ->  \Verdict
+0,0007663 NPP ->  \Karl
+0,0007663 NPP ->  \L'
+0,0053640 NPP ->  \Loudun
+0,0015326 NPP ->  \Milan
+0,0107280 NPP ->  \Dumas
+0,0076628 NPP ->  \Alfred
+0,0007663 NPP ->  \lu
+0,0007663 NPP ->  \Casque
+0,0007663 NPP ->  \Dumay
+0,0030651 NPP ->  \Adnan
+0,0030651 NPP ->  \Gérard
+0,0007663 NPP ->  \Lorin
+0,0038314 NPP ->  \Renaud
+0,0007663 NPP ->  \OCDE
+0,0007663 NPP ->  \Peybernès
+0,0015326 NPP ->  \Louise-Yvonne
+0,0007663 NPP ->  \Contassot
+0,0007663 NPP ->  \bravo
+0,0007663 NPP ->  \Juventus
+0,0030651 NPP ->  \Laurent
+0,0030651 NPP ->  \Kwan
+0,0045977 NPP ->  \Ruymbeke
+0,0007663 NPP ->  \CCSDN
+0,0007663 NPP ->  \Alan
+0,0007663 NPP ->  \Lorentz
+0,0007663 NPP ->  \Mirror
+0,0007663 NPP ->  \Gazzetta
+0,0007663 NPP ->  \Geay
+0,0007663 NPP ->  \Conseil
+0,0007663 NPP ->  \J.
+0,0007663 NPP ->  \Dieu
+0,0061303 NPP ->  \Christine
+0,0007663 NPP ->  \Hervé
+0,0007663 NPP ->  \Brazzaville-Kinshasa
+0,0007663 NPP ->  \FIFA
+0,0007663 NPP ->  \Izzadeen
+0,0007663 NPP ->  \Chefresne
+0,0007663 NPP ->  \Antenne
+0,0015326 NPP ->  \Sarkozy
+0,0007663 NPP ->  \Taïpeh
+0,0007663 NPP ->  \Halbwax
+0,0007663 NPP ->  \Bank
+0,0007663 NPP ->  \Jean-Michel
+0,0007663 NPP ->  \Pau
+0,0007663 NPP ->  \J'
+0,0015326 NPP ->  \Giraud
+0,0022989 NPP ->  \Urbain
+0,0007663 NPP ->  \Valente
+0,0007663 NPP ->  \Mercure
+0,0084291 NPP ->  \Roussin
+0,0007663 NPP ->  \USA
+0,0038314 NPP ->  \Mitterrand
+0,0015326 NPP ->  \Kuo
+0,0007663 NPP ->  \Hubert
+0,0061303 NPP ->  \François
+0,0015326 NPP ->  \Backes
+0,0375479 NPP ->  \Paris
+0,0007663 NPP ->  \Deschanel
+0,0045977 NPP ->  \Jean-François
+0,0007663 NPP ->  \Stanley
+0,0007663 NPP ->  \Blatter
+0,0007663 NPP ->  \Eulalie
+0,0007663 NPP ->  \Ursulines
+0,0007663 NPP ->  \Nordez
+0,0015326 NPP ->  \Eva
+0,0007663 NPP ->  \Édouard
+0,0022989 NPP ->  \Guy
+0,0007663 NPP ->  \Cadet
+0,0007663 NPP ->  \GO
+0,0030651 NPP ->  \Robert
+0,0015326 NPP ->  \H.
+0,0007663 NPP ->  \Seatib
+0,0015326 NPP ->  \Ynetnews
+0,0007663 NPP ->  \Korkos
+0,0015326 NPP ->  \Guardian
+0,0007663 NPP ->  \Huy
+0,0007663 NPP ->  \Journal
+0,0007663 NPP ->  \Sartilly
+0,0007663 NPP ->  \Desjeux
+0,0007663 NPP ->  \Maréchal
+0,0015326 NPP ->  \Cedel
+0,0022989 NPP ->  \Yves
+0,0015326 NPP ->  \Beach
+0,0007663 NPP ->  \Green
+0,0007663 NPP ->  \Stock
+0,0007663 NPP ->  \Claude-Annick
+0,0007663 NPP ->  \Hany
+0,0015326 NPP ->  \Fribourg
+0,0007663 NPP ->  \Vindé
+0,0007663 NPP ->  \Clichois
+0,0022989 NPP ->  \Thierry
+0,0007663 NPP ->  \Corriere
+0,0022989 NPP ->  \Vert
+0,0007663 NPP ->  \Bangui
+0,0015326 NPP ->  \Timisoara
+0,0007663 NPP ->  \Chase
+0,0022989 NPP ->  \Figaro
+0,0022989 NPP ->  \Vandingenen
+0,0015326 NPP ->  \Bidegain
+0,0061303 NPP ->  \Alain
+0,0007663 NPP ->  \Pardini
+0,0022989 NPP ->  \Jacqueline
+0,0007663 NPP ->  \F.L.
+0,0007663 NPP ->  \Raymond
+0,0015326 NPP ->  \Pérol
+0,0007663 NPP ->  \Anagramme
+0,0007663 NPP ->  \Gergorin
+0,0007663 NPP ->  \Quai
+0,0015326 NPP ->  \Joël
+0,0007663 NPP ->  \Otis
+0,0099617 NPP ->  \Schuller
+0,0007663 NPP ->  \enchaîné
+0,0007663 NPP ->  \Poincaré
+0,0007663 NPP ->  \caporaux
+0,0015326 NPP ->  \Saddam
+0,0068966 NPP ->  \Dominati
+0,0007663 NPP ->  \R.-G.
+0,0053640 NPP ->  \Riberolles
+0,0007663 NPP ->  \O'Kane
+0,0007663 NPP ->  \Bahamas
+0,0045977 NPP ->  \Patrick
+0,0015326 NPP ->  \Calcio
+0,0007663 NPP ->  \Pons
+0,0007663 NPP ->  \Joffre
+0,0022989 NPP ->  \Richelieu
+0,0015326 NPP ->  \Tardi
+0,0015326 NPP ->  \Bucher
+0,0007663 NPP ->  \Juve
+0,0007663 NPP ->  \Offenstadt
+0,0237548 NPP ->  \Jacques
+0,0007663 NPP ->  \Neuilly
+0,0007663 NPP ->  \Henry
+0,0015326 NPP ->  \Somatem
+0,0030651 NPP ->  \Edmond
+0,0007663 NPP ->  \Despuech
+0,0007663 NPP ->  \Algérie
+0,0076628 NPP ->  \Wang
+0,0007663 NPP ->  \Congo
+0,0038314 NPP ->  \Île-de-France
+0,0015326 NPP ->  \Ajaccio
+0,0015326 NPP ->  \Georges
+0,0015326 NPP ->  \CG2A
+0,0007663 NPP ->  \Henri
+0,0015326 NPP ->  \Edouard
+0,0007663 NPP ->  \journal
+0,0007663 NPP ->  \Bourget
+0,0007663 NPP ->  \Connection
+0,0007663 NPP ->  \OIC
+0,0007663 NPP ->  \Croix
+0,0099617 NPP ->  \France
+0,0022989 NPP ->  \Yin
+0,0007663 NPP ->  \Dai
+0,0007663 NPP ->  \Fauvet
+0,0007663 NPP ->  \Farrad
+0,0015326 NPP ->  \Luxembourg
+0,0007663 NPP ->  \Duché
+0,0007663 NPP ->  \Naples
+0,0007663 NPP ->  \DCN
+0,0015326 NPP ->  \Pandraud
+0,0007663 NPP ->  \Silco
+0,0007663 NPP ->  \Eno
+0,0183908 NPP ->  \RPR
+0,0007663 NPP ->  \Rassemblement
+0,0015326 NPP ->  \Fontaine
+0,0007663 NPP ->  \Massachusetts
+0,0015326 NPP ->  \Copperman
+0,0015326 NPP ->  \Jean-Louis
+0,0007663 NPP ->  \Bodard
+0,0007663 NPP ->  \Téhéran
+0,0007663 NPP ->  \Bousquet
+0,0007663 NPP ->  \Progrès
+0,0015326 NPP ->  \Daniel
+0,0038314 NPP ->  \Bravo
+0,0007663 NPP ->  \Saint-Siège
+0,0007663 NPP ->  \Vitré
+0,0007663 NPP ->  \Giaccobi
+0,0007663 NPP ->  \Ouest
+0,0007663 NPP ->  \Travlane
+0,0007663 NPP ->  \Montacié
+0,0007663 NPP ->  \Ile-de-France
+0,0022989 NPP ->  \Koweit
+0,0007663 NPP ->  \Phillip
+0,0015326 NPP ->  \Chin-Feun
+0,0007663 NPP ->  \Kubrick
+0,0038314 NPP ->  \Hajj
+0,0015326 NPP ->  \Drut
+0,0030651 NPP ->  \Thomson-CSF
+0,0007663 NPP ->  \PR
+0,0007663 NPP ->  \Lanka
+0,0022989 NPP ->  \PS
+0,0183908 NPP ->  \Taïwan
+0,0007663 NPP ->  \Villacoublay
+0,0007663 NPP ->  \parti
+0,0015326 NPP ->  \Elysée
+0,0007663 NPP ->  \Lyonnaise
+0,0015326 NPP ->  \Fusillé
+0,0007663 NPP ->  \Gattegno
+0,0061303 NPP ->  \Jean-Pierre
+0,0007663 NPP ->  \Chevènement
+0,0099617 NPP ->  \Elf
+0,0007663 NPP ->  \Denoël
+0,0076628 NPP ->  \Hauts-de-Seine
+0,0007663 NPP ->  \Nayirah
+0,0007663 NPP ->  \Bohbot
+0,0007663 NPP ->  \UMP
+0,0045977 NPP ->  \Philippe
+0,0007663 NPP ->  \Ranque
+0,0030651 NPP ->  \Parti
+0,0099617 NPP ->  \Thomson
+0,0015326 NPP ->  \MR
+0,0206897 NPP ->  \Chirac
+0,0022989 NPP ->  \Libération
+0,0007663 NPP ->  \Asie-Pacifique
+0,0022989 NPP ->  \Valéry
+0,0007663 NPP ->  \Auque
+0,0007663 NPP ->  \Odile
+0,0022989 NPP ->  \Mazères
+0,0022989 NPP ->  \Lechat
+0,0007663 NPP ->  \crimes
+0,0007663 NPP ->  \Génération
+0,0007663 NPP ->  \Alliance
+0,0022989 NPP ->  \Denis
+0,0007663 NPP ->  \Normandin
+0,0007663 NPP ->  \Kissinger
+0,0007663 NPP ->  \Euroclear
+
+0,0015773 V ->  \verrait
+0,0015773 V ->  \refusent
+0,0015773 V ->  \devenait
+0,0015773 V ->  \font
+0,0015773 V ->  \vend
+0,0015773 V ->  \déstabilise
+0,0063091 V ->  \serait
+0,0015773 V ->  \adonnèrent
+0,0015773 V ->  \écrase
+0,0015773 V ->  \fournit
+0,0015773 V ->  \démissionne
+0,0410095 V ->  \sont
+0,0015773 V ->  \rapportent
+0,0015773 V ->  \rétorquent
+0,0015773 V ->  \possède
+0,0015773 V ->  \représentent
+0,0015773 V ->  \donne
+0,0015773 V ->  \désigne
+0,0015773 V ->  \deviendrait
+0,0078864 V ->  \fait
+0,0015773 V ->  \perquisitionnent
+0,0015773 V ->  \rétablirait
+0,0015773 V ->  \reprend
+0,0015773 V ->  \dessaisit
+0,0015773 V ->  \souhaitait
+0,1261830 V ->  \est
+0,0031546 V ->  \demande
+0,0015773 V ->  \cherche
+0,0078864 V ->  \pourrait
+0,0015773 V ->  \reçurent
+0,0015773 V ->  \disait
+0,0015773 V ->  \soupçonne
+0,0015773 V ->  \passent
+0,0015773 V ->  \annule
+0,0015773 V ->  \suivent
+0,0015773 V ->  \reproche
+0,0031546 V ->  \estiment
+0,0015773 V ->  \reprendront
+0,0015773 V ->  \revoit
+0,0031546 V ->  \envoie
+0,0047319 V ->  \comparaissent
+0,0015773 V ->  \votent
+0,0015773 V ->  \retrouverait
+0,0015773 V ->  \arrive
+0,0015773 V ->  \remettent
+0,0015773 V ->  \peuvent
+0,0015773 V ->  \confie
+0,0015773 V ->  \annonce
+0,0031546 V ->  \exige
+0,0015773 V ->  \accepte
+0,0015773 V ->  \avoisinent
+0,0015773 V ->  \renvoie
+0,0015773 V ->  \confirme
+0,0015773 V ->  \existaient
+0,0015773 V ->  \travaille
+0,0047319 V ->  \devait
+0,0173502 V ->  \fut
+0,0015773 V ->  \tentait
+0,0015773 V ->  \place
+0,0015773 V ->  \reçoit
+0,0015773 V ->  \siégeaient
+0,0047319 V ->  \eut
+0,0015773 V ->  \excédait
+0,0015773 V ->  \signe
+0,0015773 V ->  \arrivent
+0,0015773 V ->  \titre
+0,0015773 V ->  \crie
+0,0063091 V ->  \étaient
+0,0015773 V ->  \impose
+0,0015773 V ->  \pense
+0,0031546 V ->  \déclare
+0,0015773 V ->  \étonne
+0,0015773 V ->  \donnera
+0,0015773 V ->  \représente
+0,0015773 V ->  \disposent
+0,0015773 V ->  \rachèterait
+0,0015773 V ->  \acquiert
+0,0015773 V ->  \couvrait
+0,0141956 V ->  \avaient
+0,0015773 V ->  \pourraient
+0,0031546 V ->  \enquête
+0,0015773 V ->  \appartenaient
+0,0015773 V ->  \attarde
+0,0015773 V ->  \remonte
+0,0015773 V ->  \vont
+0,0015773 V ->  \clôt
+0,0141956 V ->  \aurait
+0,0015773 V ->  \imposa
+0,0015773 V ->  \interdisait
+0,0015773 V ->  \éclatera
+0,0015773 V ->  \reviens
+0,0015773 V ->  \amena
+0,0015773 V ->  \reconnaîtra
+0,0015773 V ->  \effectue
+0,0031546 V ->  \précisait
+0,0031546 V ->  \affirme
+0,0015773 V ->  \déclarera
+0,0015773 V ->  \exerçait
+0,0031546 V ->  \Va
+0,0015773 V ->  \existe
+0,0425868 V ->  \avait
+0,0015773 V ->  \décida
+0,0031546 V ->  \centralisait
+0,0015773 V ->  \devaient
+0,0015773 V ->  \attire
+0,0015773 V ->  \expliquait
+0,0031546 V ->  \décide
+0,0015773 V ->  \profite
+0,0031546 V ->  \travaillait
+0,0015773 V ->  \pensais
+0,0063091 V ->  \concerne
+0,0015773 V ->  \entama
+0,0031546 V ->  \opposait
+0,0015773 V ->  \parle
+0,0015773 V ->  \bénéficiait
+0,0015773 V ->  \chassent
+0,0031546 V ->  \provoque
+0,0015773 V ->  \faisaient
+0,0015773 V ->  \Vit
+0,0015773 V ->  \fallait
+0,0015773 V ->  \écrit
+0,0031546 V ->  \reste
+0,0015773 V ->  \demandait
+0,0047319 V ->  \porte
+0,0031546 V ->  \agissait
+0,0015773 V ->  \arrivera
+0,0047319 V ->  \pouvait
+0,0031546 V ->  \furent
+0,0015773 V ->  \pouvais
+0,0015773 V ->  \bénéficie
+0,0015773 V ->  \vivait
+0,0015773 V ->  \contestera
+0,0031546 V ->  \explique
+0,0015773 V ->  \reçut
+0,0015773 V ->  \continue
+0,0063091 V ->  \ai
+0,0015773 V ->  \déposent
+0,0015773 V ->  \retrace
+0,0630915 V ->  \ont
+0,0015773 V ->  \risque
+0,0015773 V ->  \occupa
+0,0015773 V ->  \envisage
+0,0015773 V ->  \il_y_a
+0,0015773 V ->  \Reçoit
+0,0015773 V ->  \préconise
+0,0031546 V ->  \semblent
+0,0047319 V ->  \doit
+0,0015773 V ->  \accuse
+0,0015773 V ->  \propose
+0,0031546 V ->  \fera
+0,0015773 V ->  \disposaient
+0,0015773 V ->  \éclate
+0,0031546 V ->  \rend
+0,0015773 V ->  \adresse
+0,0126183 V ->  \sera
+0,0015773 V ->  \déploraient
+0,0015773 V ->  \lira
+0,0015773 V ->  \fallut
+0,1151420 V ->  \a
+0,0015773 V ->  \perd
+0,0015773 V ->  \réunissait
+0,0015773 V ->  \penchera
+0,0015773 V ->  \retrouvera
+0,0015773 V ->  \viendront
+0,0015773 V ->  \rentre
+0,0015773 V ->  \vient
+0,0015773 V ->  \étais
+0,0378549 V ->  \était
+0,0015773 V ->  \cherchent
+0,0015773 V ->  \contentent
+0,0015773 V ->  \procéda
+0,0015773 V ->  \remportent
+0,0015773 V ->  \travaillions
+0,0015773 V ->  \limiteront
+0,0015773 V ->  \laboure
+0,0015773 V ->  \prenait
+0,0015773 V ->  \accorde
+0,0015773 V ->  \figurent
+0,0015773 V ->  \trouvent
+0,0015773 V ->  \vais
+0,0015773 V ->  \reprendra
+0,0015773 V ->  \encourent
+0,0015773 V ->  \révolte
+0,0047319 V ->  \seront
+0,0015773 V ->  \publie
+0,0015773 V ->  \créait
+0,0015773 V ->  \perquisitionne
+0,0015773 V ->  \provient
+0,0047319 V ->  \apparaît
+0,0015773 V ->  \constituaient
+0,0015773 V ->  \repose
+0,0015773 V ->  \dura
+0,0015773 V ->  \comprenait
+0,0015773 V ->  \raconte
+0,0015773 V ->  \demandez
+0,0015773 V ->  \détaille
+0,0015773 V ->  \reconnaît
+0,0015773 V ->  \affirmèrent
+0,0015773 V ->  \apprêtait
+0,0015773 V ->  \témoignent
+0,0015773 V ->  \expliquent
+0,0015773 V ->  \mit
+0,0015773 V ->  \défendait
+0,0031546 V ->  \agit
+0,0015773 V ->  \interdit
+0,0015773 V ->  \reprochera
+0,0015773 V ->  \prit
+0,0015773 V ->  \donnait
+0,0015773 V ->  \suspend
+0,0015773 V ->  \décidait
+0,0015773 V ->  \démissionnera
+0,0015773 V ->  \pourront
+0,0015773 V ->  \comprend
+0,0015773 V ->  \versait
+0,0015773 V ->  \trouve
+0,0015773 V ->  \notait
+0,0015773 V ->  \revint
+0,0015773 V ->  \requiert
+0,0015773 V ->  \intéressent
+0,0015773 V ->  \découvre
+0,0015773 V ->  \dispensait
+0,0078864 V ->  \auraient
+0,0015773 V ->  \étions
+0,0015773 V ->  \engage
+0,0015773 V ->  \refuse
+0,0015773 V ->  \concourent
+0,0047319 V ->  \A
+0,0015773 V ->  \défend
+0,0015773 V ->  \voyaient
+0,0015773 V ->  \voulait
+0,0015773 V ->  \Suit
+0,0015773 V ->  \situe
+0,0031546 V ->  \comporte
+0,0015773 V ->  \menacent
+0,0015773 V ->  \exigent
+0,0015773 V ->  \peut
+0,0015773 V ->  \participera
+0,0015773 V ->  \précise
+0,0015773 V ->  \conçut
+0,0015773 V ->  \devrait
+0,0015773 V ->  \portent
+0,0015773 V ->  \changèrent
+0,0015773 V ->  \qualifie
+0,0015773 V ->  \avoue
+0,0015773 V ->  \préfère
+0,0031546 V ->  \appelle
+0,0015773 V ->  \acquitte
+0,0015773 V ->  \considérera
+0,0015773 V ->  \plaide
+0,0078864 V ->  \met
+0,0015773 V ->  \lève
+0,0015773 V ->  \passe
+0,0031546 V ->  \prend
+0,0015773 V ->  \dit
+0,0015773 V ->  \rebondit
+0,0015773 V ->  \évalue
+0,0015773 V ->  \rembourse
+0,0031546 V ->  \réclame
+0,0015773 V ->  \enlisera
+0,0015773 V ->  \commuait
+0,0015773 V ->  \rejette
+0,0015773 V ->  \restent
+0,0015773 V ->  \indique
+0,0015773 V ->  \entrait
+0,0015773 V ->  \rattache
+
+0,0018587 VPP ->  \remboursé
+0,0018587 VPP ->  \limogée
+0,0018587 VPP ->  \conduites
+0,0037175 VPP ->  \bénéficié
+0,0018587 VPP ->  \diffusées
+0,0111524 VPP ->  \condamné
+0,0074349 VPP ->  \requis
+0,0018587 VPP ->  \faits
+0,0018587 VPP ->  \dispensés
+0,0018587 VPP ->  \interpellées
+0,0037175 VPP ->  \fusillés
+0,0018587 VPP ->  \publiée
+0,0018587 VPP ->  \désorganisé
+0,0055762 VPP ->  \trouvé
+0,0037175 VPP ->  \lié
+0,0018587 VPP ->  \exigée
+0,0018587 VPP ->  \livrées
+0,0018587 VPP ->  \fournis
+0,0018587 VPP ->  \mentionné
+0,0018587 VPP ->  \interrogé
+0,0018587 VPP ->  \datée
+0,0018587 VPP ->  \basées
+0,0018587 VPP ->  \pénalisé
+0,0018587 VPP ->  \initiée
+0,0018587 VPP ->  \lancé
+0,0018587 VPP ->  \interdites
+0,0018587 VPP ->  \retirées
+0,0037175 VPP ->  \motivé
+0,0018587 VPP ->  \vendus
+0,0018587 VPP ->  \localisé
+0,0037175 VPP ->  \appelé
+0,0037175 VPP ->  \parvenue
+0,0018587 VPP ->  \disjoint
+0,0018587 VPP ->  \datés
+0,0018587 VPP ->  \Convaincue
+0,0055762 VPP ->  \destinée
+0,0018587 VPP ->  \souligné
+0,0055762 VPP ->  \entendu
+0,0018587 VPP ->  \affirmé
+0,0018587 VPP ->  \plongé
+0,0018587 VPP ->  \distillées
+0,0092937 VPP ->  \fait
+0,0018587 VPP ->  \soulagé
+0,0018587 VPP ->  \entendus
+0,0018587 VPP ->  \mené
+0,0018587 VPP ->  \Révélée
+0,0018587 VPP ->  \nommées
+0,0018587 VPP ->  \évalué
+0,0018587 VPP ->  \brûlé
+0,0018587 VPP ->  \annoncés
+0,0018587 VPP ->  \destinées
+0,0018587 VPP ->  \incriminées
+0,0018587 VPP ->  \invitée
+0,0018587 VPP ->  \ramené
+0,0037175 VPP ->  \apparu
+0,0018587 VPP ->  \construites
+0,0018587 VPP ->  \réclamées
+0,0018587 VPP ->  \critiqué
+0,0018587 VPP ->  \démoralisés
+0,0018587 VPP ->  \arrêtés
+0,0037175 VPP ->  \vu
+0,0074349 VPP ->  \versés
+0,0018587 VPP ->  \prononcé
+0,0037175 VPP ->  \porté
+0,0018587 VPP ->  \requises
+0,0018587 VPP ->  \reléguées
+0,0037175 VPP ->  \subi
+0,0018587 VPP ->  \rémunéré
+0,0018587 VPP ->  \constituée
+0,0018587 VPP ->  \participé
+0,0018587 VPP ->  \cambriolé
+0,0037175 VPP ->  \défenestré
+0,0018587 VPP ->  \instaurée
+0,0018587 VPP ->  \laissé
+0,0092937 VPP ->  \ouverte
+0,0018587 VPP ->  \tiré
+0,0018587 VPP ->  \blanchi
+0,0018587 VPP ->  \censés
+0,0018587 VPP ->  \soutenue
+0,0018587 VPP ->  \versée
+0,0018587 VPP ->  \discrédités
+0,0018587 VPP ->  \corroborés
+0,0018587 VPP ->  \acquitté
+0,0018587 VPP ->  \développée
+0,0037175 VPP ->  \rejeté
+0,0018587 VPP ->  \introduite
+0,0018587 VPP ->  \accusé
+0,0018587 VPP ->  \liées
+0,0018587 VPP ->  \connue
+0,0018587 VPP ->  \ensevelis
+0,0018587 VPP ->  \mise
+0,0018587 VPP ->  \pourvu
+0,0018587 VPP ->  \composée
+0,0018587 VPP ->  \obligé
+0,0018587 VPP ->  \partagée
+0,0037175 VPP ->  \détruit
+0,0018587 VPP ->  \donné
+0,0018587 VPP ->  \promise
+0,0018587 VPP ->  \réalisées
+0,0018587 VPP ->  \distribuées
+0,0018587 VPP ->  \affirmée
+0,0037175 VPP ->  \retransmis
+0,0018587 VPP ->  \publiées
+0,0018587 VPP ->  \frappée
+0,0018587 VPP ->  \remplacé
+0,0018587 VPP ->  \impliqué
+0,0018587 VPP ->  \employé
+0,0018587 VPP ->  \acheminées
+0,0018587 VPP ->  \rallié
+0,0037175 VPP ->  \instruite
+0,0018587 VPP ->  \ensorcelées
+0,0018587 VPP ->  \parasitée
+0,0037175 VPP ->  \bloqués
+0,0055762 VPP ->  \eu
+0,0018587 VPP ->  \ému
+0,0018587 VPP ->  \entouré
+0,0018587 VPP ->  \adressé
+0,0037175 VPP ->  \payé
+0,0018587 VPP ->  \abouti
+0,0018587 VPP ->  \devenue
+0,0037175 VPP ->  \évoqué
+0,0018587 VPP ->  \Mis
+0,0037175 VPP ->  \versé
+0,0018587 VPP ->  \auditionné
+0,0018587 VPP ->  \libéré
+0,0018587 VPP ->  \rémunérée
+0,0037175 VPP ->  \polis
+0,0018587 VPP ->  \rajoutées
+0,0018587 VPP ->  \renoncé
+0,0074349 VPP ->  \reconnu
+0,0018587 VPP ->  \orchestré
+0,0018587 VPP ->  \distribué
+0,0055762 VPP ->  \dû
+0,0018587 VPP ->  \transmises
+0,0018587 VPP ->  \mises
+0,0018587 VPP ->  \cité
+0,0018587 VPP ->  \constituées
+0,0018587 VPP ->  \séquestrés
+0,0018587 VPP ->  \entreposés
+0,0018587 VPP ->  \détenue
+0,0018587 VPP ->  \progressé
+0,0018587 VPP ->  \inscrites
+0,0018587 VPP ->  \perdues
+0,0018587 VPP ->  \établie
+0,0018587 VPP ->  \suivi
+0,0055762 VPP ->  \publié
+0,0037175 VPP ->  \accordé
+0,0037175 VPP ->  \noyé
+0,0055762 VPP ->  \écrit
+0,0018587 VPP ->  \ordonné
+0,0018587 VPP ->  \annoncé
+0,0018587 VPP ->  \envoyé
+0,0018587 VPP ->  \reprises
+0,0055762 VPP ->  \dirigé
+0,0018587 VPP ->  \dénoncées
+0,0018587 VPP ->  \incarcérés
+0,0018587 VPP ->  \vendues
+0,0092937 VPP ->  \signé
+0,0018587 VPP ->  \jugés
+0,0018587 VPP ->  \contactée
+0,0018587 VPP ->  \prévus
+0,0018587 VPP ->  \publiés
+0,0018587 VPP ->  \inspiré
+0,0018587 VPP ->  \intentée
+0,0018587 VPP ->  \rémunérés
+0,0037175 VPP ->  \placé
+0,0018587 VPP ->  \incendié
+0,0018587 VPP ->  \confirmé
+0,0055762 VPP ->  \torturé
+0,0018587 VPP ->  \opposé
+0,0018587 VPP ->  \dites
+0,0018587 VPP ->  \sanctionné
+0,0018587 VPP ->  \Interrogé
+0,0018587 VPP ->  \assuré
+0,0018587 VPP ->  \suspectée
+0,0037175 VPP ->  \condamnée
+0,0018587 VPP ->  \prévu
+0,0018587 VPP ->  \épuré
+0,0018587 VPP ->  \relancé
+0,0018587 VPP ->  \consultés
+0,0037175 VPP ->  \condamnés
+0,0018587 VPP ->  \tombés
+0,0037175 VPP ->  \remis
+0,0018587 VPP ->  \transférée
+0,0018587 VPP ->  \élaboré
+0,0018587 VPP ->  \désolidarisée
+0,0074349 VPP ->  \enchaîné
+0,0018587 VPP ->  \réédité
+0,0018587 VPP ->  \associé
+0,0947955 VPP ->  \été
+0,0018587 VPP ->  \retenues
+0,0018587 VPP ->  \classés
+0,0018587 VPP ->  \contesté
+0,0018587 VPP ->  \signée
+0,0018587 VPP ->  \opposées
+0,0018587 VPP ->  \vidé
+0,0037175 VPP ->  \méprisé
+0,0018587 VPP ->  \ordonnées
+0,0018587 VPP ->  \habillée
+0,0018587 VPP ->  \imaginé
+0,0018587 VPP ->  \dite
+0,0018587 VPP ->  \montrées
+0,0037175 VPP ->  \assisté
+0,0037175 VPP ->  \dirigée
+0,0018587 VPP ->  \décédée
+0,0018587 VPP ->  \interdite
+0,0018587 VPP ->  \bloqué
+0,0018587 VPP ->  \facilité
+0,0018587 VPP ->  \instruit
+0,0018587 VPP ->  \renversé
+0,0018587 VPP ->  \relégué
+0,0018587 VPP ->  \né
+0,0018587 VPP ->  \survécu
+0,0018587 VPP ->  \privée
+0,0018587 VPP ->  \considérées
+0,0018587 VPP ->  \rétrogradée
+0,0037175 VPP ->  \suspendu
+0,0037175 VPP ->  \considéré
+0,0037175 VPP ->  \présidée
+0,0055762 VPP ->  \libérés
+0,0018587 VPP ->  \perçu
+0,0037175 VPP ->  \passées
+0,0018587 VPP ->  \lancées
+0,0018587 VPP ->  \suspendues
+0,0018587 VPP ->  \atteint
+0,0018587 VPP ->  \perdue
+0,0018587 VPP ->  \écartés
+0,0018587 VPP ->  \heurtée
+0,0037175 VPP ->  \organisés
+0,0018587 VPP ->  \éclairé
+0,0018587 VPP ->  \fondées
+0,0018587 VPP ->  \rejetée
+0,0055762 VPP ->  \retrouvé
+0,0018587 VPP ->  \choisis
+0,0018587 VPP ->  \close
+0,0018587 VPP ->  \ouvert
+0,0037175 VPP ->  \payés
+0,0018587 VPP ->  \Questionné
+0,0018587 VPP ->  \entretenu
+0,0018587 VPP ->  \réhabilités
+0,0018587 VPP ->  \vérifié
+0,0018587 VPP ->  \composé
+0,0037175 VPP ->  \intitulé
+0,0018587 VPP ->  \demandés
+0,0018587 VPP ->  \classée
+0,0018587 VPP ->  \épuisés
+0,0018587 VPP ->  \incarcéré
+0,0018587 VPP ->  \révélé
+0,0037175 VPP ->  \qualifié
+0,0074349 VPP ->  \expliqué
+0,0018587 VPP ->  \paru
+0,0018587 VPP ->  \revendiqués
+0,0018587 VPP ->  \centralisées
+0,0018587 VPP ->  \empêché
+0,0018587 VPP ->  \validé
+0,0018587 VPP ->  \saisies
+0,0037175 VPP ->  \demandée
+0,0018587 VPP ->  \détenu
+0,0018587 VPP ->  \interjeté
+0,0037175 VPP ->  \supposée
+0,0037175 VPP ->  \concernée
+0,0018587 VPP ->  \codée
+0,0018587 VPP ->  \jugé
+0,0018587 VPP ->  \recueilli
+0,0074349 VPP ->  \confiée
+0,0018587 VPP ->  \acheté
+0,0018587 VPP ->  \espérée
+0,0018587 VPP ->  \redistribué
+0,0018587 VPP ->  \accédé
+0,0018587 VPP ->  \tenu
+0,0018587 VPP ->  \secondé
+0,0018587 VPP ->  \voulu
+0,0018587 VPP ->  \éparpillés
+0,0260223 VPP ->  \mis
+0,0018587 VPP ->  \appelée
+0,0055762 VPP ->  \pris
+0,0055762 VPP ->  \estimé
+0,0018587 VPP ->  \déroulée
+0,0092937 VPP ->  \versées
+0,0018587 VPP ->  \rendue
+0,0055762 VPP ->  \reçu
+0,0018587 VPP ->  \gardé
+0,0018587 VPP ->  \allouée
+0,0018587 VPP ->  \enlevé
+0,0018587 VPP ->  \réservé
+0,0018587 VPP ->  \reconnue
+0,0037175 VPP ->  \créé
+0,0037175 VPP ->  \trouvés
+0,0018587 VPP ->  \due
+0,0018587 VPP ->  \servi
+0,0018587 VPP ->  \vue
+0,0018587 VPP ->  \blessé
+0,0018587 VPP ->  \conduit
+0,0018587 VPP ->  \jonché
+0,0018587 VPP ->  \déroulé
+0,0055762 VPP ->  \destiné
+0,0018587 VPP ->  \arrêté
+0,0018587 VPP ->  \spécialisée
+0,0037175 VPP ->  \menées
+0,0018587 VPP ->  \commenté
+0,0018587 VPP ->  \justifié
+0,0018587 VPP ->  \renvoyés
+0,0018587 VPP ->  \organisé
+0,0018587 VPP ->  \mort
+0,0018587 VPP ->  \Saisie
+0,0018587 VPP ->  \présidé
+0,0037175 VPP ->  \conclu
+0,0018587 VPP ->  \liée
+0,0130112 VPP ->  \pu
+0,0018587 VPP ->  \inculpée
+0,0018587 VPP ->  \renvoyé
+0,0018587 VPP ->  \autorisée
+0,0018587 VPP ->  \autorisé
+0,0037175 VPP ->  \dessaisi
+0,0018587 VPP ->  \soupçonné
+0,0018587 VPP ->  \décédé
+0,0037175 VPP ->  \annulée
+0,0018587 VPP ->  \sortie
+0,0074349 VPP ->  \permis
+0,0018587 VPP ->  \conservés
+0,0018587 VPP ->  \déclaré
+0,0055762 VPP ->  \considérés
+0,0018587 VPP ->  \attribué
+0,0018587 VPP ->  \dit
+0,0074349 VPP ->  \truqués
+0,0018587 VPP ->  \renvoyée
+0,0018587 VPP ->  \considérée
+0,0018587 VPP ->  \enseigné
+0,0018587 VPP ->  \accueillis
+0,0018587 VPP ->  \relevé
+0,0018587 VPP ->  \accompagné
+0,0074349 VPP ->  \demandé
+0,0018587 VPP ->  \enregistrées
+0,0018587 VPP ->  \assortie
+0,0018587 VPP ->  \confié
+0,0018587 VPP ->  \poursuivis
+0,0037175 VPP ->  \nourri
+0,0018587 VPP ->  \fonctionné
+0,0018587 VPP ->  \voué
+0,0055762 VPP ->  \chargé
+
+1,0000000 CLO-DE_OBJ ->  \en
+
+0,0909091 CLO-A_OBJ ->  \me
+0,4545455 CLO-A_OBJ ->  \lui
+0,0909091 CLO-A_OBJ ->  \leur
+0,2727273 CLO-A_OBJ ->  \y
+0,0909091 CLO-A_OBJ ->  \ui
+
+1,0000000 CLO-ATS ->  \l'
+
+0,0056497 VPinf ->  VN PP Ssub PONCT
+0,0169492 VPinf ->  P PONCT VN NP PONCT
+0,0056497 VPinf ->  P VN PP COORD
+0,0225989 VPinf ->  VN
+0,0169492 VPinf ->  P VN NP VPinf
+0,0056497 VPinf ->  P VN ADV NP Ssub
+0,0056497 VPinf ->  P VN ADV NP PONCT PP PONCT PP
+0,0056497 VPinf ->  VN VPinf COORD
+0,0225989 VPinf ->  P VN Ssub
+0,0056497 VPinf ->  P VN AP NP
+0,0056497 VPinf ->  P VN PONCT NP
+0,0056497 VPinf ->  P VN COORD
+0,0621469 VPinf ->  VN ADV
+0,0056497 VPinf ->  P VN NP PONCT PP PONCT PP
+0,0056497 VPinf ->  VN PP Ssub
+0,0056497 VPinf ->  VN NP PONCT
+0,0112994 VPinf ->  P VN PP NP
+0,0677966 VPinf ->  P VN NP PP
+0,0056497 VPinf ->  P VN PP VPinf
+0,0056497 VPinf ->  P VN AP PP
+0,1468927 VPinf ->  P VN NP
+0,0056497 VPinf ->  VN NP VPinf COORD
+0,0338983 VPinf ->  P VN
+0,0056497 VPinf ->  PONCT VN PONCT PP
+0,0056497 VPinf ->  P PONCT ADV PONCT P VN NP COORD
+0,0056497 VPinf ->  VN PONCT Sint PONCT
+0,0056497 VPinf ->  VN PP PP PONCT PP
+0,0056497 VPinf ->  VN NP PP PP
+0,0790960 VPinf ->  VN PP
+0,0903955 VPinf ->  P VN PP
+0,0112994 VPinf ->  P VN VPinf
+0,0056497 VPinf ->  P VN NP PP PONCT PP
+0,0056497 VPinf ->  P VN ADV NP PP PONCT
+0,0056497 VPinf ->  PONCT VN NP PONCT
+0,0056497 VPinf ->  VN PONCT NP PONCT
+0,0169492 VPinf ->  P VN NP PP PP
+0,0056497 VPinf ->  VN PP PONCT PP PONCT PP
+0,0056497 VPinf ->  P PONCT VN AP PONCT
+0,0056497 VPinf ->  P VN ADV PP PP
+0,0056497 VPinf ->  P PONCT VN NP PONCT PONCT NP PP
+0,0056497 VPinf ->  VN PP PONCT PP
+0,0056497 VPinf ->  VN PP PONCT PP PONCT
+0,0677966 VPinf ->  VN NP
+0,0056497 VPinf ->  NP VN
+0,0056497 VPinf ->  VN Ssub
+0,0056497 VPinf ->  VN PONCT PP
+0,0112994 VPinf ->  VN PP NP
+0,0677966 VPinf ->  VN NP PP
+0,0112994 VPinf ->  P VN ADV NP
+0,0112994 VPinf ->  P ADV VN NP
+0,0112994 VPinf ->  VN PP PP
+0,0282486 VPinf ->  VN VPinf
+0,0112994 VPinf ->  VN NP NP
+
+0,0005627 P ->  \afin
+0,0005627 P ->  \auprès_de
+0,0005627 P ->  \Lors_de
+0,0005627 P ->  \Parmi
+0,0005627 P ->  \au_lieu_de
+0,0033765 P ->  \lors_de
+0,0033765 P ->  \après
+0,0005627 P ->  \parmi
+0,0033765 P ->  \selon
+0,0028137 P ->  \avant
+0,1063590 P ->  \d'
+0,0067530 P ->  \devant
+0,0005627 P ->  \lors_du
+0,0033765 P ->  \dès
+0,0045020 P ->  \Selon
+0,0005627 P ->  \à_propos_du
+0,0005627 P ->  \au_profit_de
+0,0005627 P ->  \Comme
+0,0005627 P ->  \De
+0,0005627 P ->  \hors_des
+0,0016882 P ->  \au_sein_de
+0,0005627 P ->  \sous_couvert_d'
+0,0022510 P ->  \jusqu'_au
+0,0005627 P ->  \à_court_d'
+0,0005627 P ->  \Avant
+0,0005627 P ->  \autour_de
+0,0016882 P ->  \À
+0,0050647 P ->  \Dans
+0,0005627 P ->  \à_l'_occasion_du
+0,0045020 P ->  \entre
+0,0005627 P ->  \grâce_aux
+0,0016882 P ->  \Contre
+0,3680360 P ->  \de
+0,0005627 P ->  \vu
+0,0005627 P ->  \à_propos_de
+0,0011255 P ->  \suite_à
+0,0016882 P ->  \Depuis
+0,0016882 P ->  \avant_de
+0,0011255 P ->  \durant
+0,0033765 P ->  \chez
+0,0106922 P ->  \comme
+0,0016882 P ->  \jusqu'_à
+0,0005627 P ->  \face_au
+0,0005627 P ->  \au_sein_du
+0,0382667 P ->  \pour
+0,0005627 P ->  \par_le_biais_de
+0,0005627 P ->  \Dès
+0,0005627 P ->  \d'_après
+0,0590884 P ->  \par
+0,0208216 P ->  \avec
+0,0033765 P ->  \sans
+0,0005627 P ->  \en_dehors_de
+0,0028137 P ->  \Sur
+0,0011255 P ->  \Pendant
+0,0005627 P ->  \en_raison_de
+0,0005627 P ->  \en_deçà_des
+0,0005627 P ->  \au_titre_de
+0,0005627 P ->  \au_nom_de
+0,0011255 P ->  \d'_entre
+0,0005627 P ->  \à_l'_exception_de
+0,0016882 P ->  \auprès_des
+0,0039392 P ->  \vers
+0,0005627 P ->  \en_tant_que
+0,0005627 P ->  \au-delà_du
+0,0005627 P ->  \en_vertu_du
+0,0106922 P ->  \contre
+0,0005627 P ->  \Quant_aux
+0,0005627 P ->  \à_la_suite_d'
+0,0028137 P ->  \depuis
+0,0005627 P ->  \avant_d'
+0,0005627 P ->  \en_faveur_de
+0,0005627 P ->  \loin_de
+0,0005627 P ->  \à_l'_occasion_de
+0,0371412 P ->  \dans
+0,0005627 P ->  \suite_aux
+0,0005627 P ->  \Devant
+0,0776590 P ->  \en
+0,0005627 P ->  \par_le_biais_d'
+0,0011255 P ->  \à_travers
+0,0005627 P ->  \Chez
+0,0028137 P ->  \près_de
+0,0005627 P ->  \à_partir_de
+0,0005627 P ->  \A
+0,0371412 P ->  \sur
+0,0005627 P ->  \À_partir_de
+0,0005627 P ->  \à_partir_du
+0,0005627 P ->  \A_partir_de
+0,0078784 P ->  \En
+0,0028137 P ->  \Après
+0,0005627 P ->  \en_tant_qu'
+0,0005627 P ->  \au_détriment_d'
+0,0011255 P ->  \à_raison_de
+0,0005627 P ->  \en_présence_de
+0,0056275 P ->  \sous
+0,1046708 P ->  \à
+0,0005627 P ->  \contrairement_à
+0,0005627 P ->  \y_compris
+0,0005627 P ->  \D'_après
+0,0005627 P ->  \grâce_à
+0,0005627 P ->  \-
+0,0016882 P ->  \pendant
+0,0011255 P ->  \Pour
+0,0005627 P ->  \à_l'_encontre_de
+0,0005627 P ->  \de_la_part_d'
+
+0,1250000 VS ->  \puissent
+0,1250000 VS ->  \aient
+0,2500000 VS ->  \soit
+0,2500000 VS ->  \ait
+0,2500000 VS ->  \soient
+
+0,0002585 NP ->  DET ADJ NC PONCT NP PONCT VPpart
+0,0002585 NP ->  \capitaine
+0,0005169 NP ->  DET PRO PP
+0,0586715 NP ->  NC PP
+0,0002585 NP ->  NPP PP PP
+0,0002585 NP ->  NPP PONCT PONCT NP PONCT
+0,0002585 NP ->  PROWH
+0,0002585 NP ->  NC NPP PONCT Srel
+0,0005169 NP ->  PREF NC
+0,0002585 NP ->  DET NC PP PP PONCT NP
+0,0002585 NP ->  DET NC AP PP PONCT COORD
+0,0002585 NP ->  NC ET
+0,0007754 NP ->  DET NPP COORD
+0,0002585 NP ->  NPP NPP PONCT NP PONCT NP COORD COORD COORD
+0,0005169 NP ->  DET NC PP PP VPpart
+0,0002585 NP ->  NPP PONCT VPpart PONCT
+0,0002585 NP ->  DET PONCT ADJ PONCT NC
+0,0002585 NP ->  DET PONCT ADJ NC PONCT
+0,0002585 NP ->  ET NP
+0,0002585 NP ->  NC PP PONCT PP PONCT
+0,0010339 NP ->  ET
+0,0002585 NP ->  NPP NPP PONCT Srel COORD COORD
+0,0002585 NP ->  DET NC NPP COORD NPP
+0,0002585 NP ->  DET NC PONCT PP PONCT NP PP PONCT NP PP
+0,0002585 NP ->  DET NC NPP NPP COORD
+0,0002585 NP ->  ET NPP ET NPP NPP
+0,0002585 NP ->  ADJ NC NC COORD
+0,0002585 NP ->  PONCT PREF NC PONCT
+0,0002585 NP ->  DET NC PONCT NP PONCT
+0,0186095 NP ->  NC NC
+0,0010339 NP ->  NC NP
+0,0059447 NP ->  DET NC NPP NPP
+0,0002585 NP ->  DET DET NC PP
+0,0002585 NP ->  DET NC PONCT PP PONCT PP PP
+0,0005169 NP ->  NPP PONCT NP PONCT COORD
+0,0005169 NP ->  DET ADJ NC PP VPpart
+0,0005169 NP ->  DET ADJ NC COORD
+0,0005169 NP ->  DET NC VPpart PP
+0,0018093 NP ->  DET NC PP VPpart
+0,0002585 NP ->  NC PONCT ADV NP
+0,0002585 NP ->  DET ADJ NC PP PONCT PP
+0,0067201 NP ->  ADJ NC
+0,0018093 NP ->  NC ADJ
+0,0005169 NP ->  DET ADJ NC PP PP
+0,0002585 NP ->  DET NC NC PP PONCT VPpart
+0,0002585 NP ->  DET NC VPpart PONCT NP PONCT VPpart
+0,0002585 NP ->  DET ADJ ADJ
+0,0056862 NP ->  NC NPP
+0,0010339 NP ->  NPP NC
+0,0015508 NP ->  NPP NPP NPP
+0,0002585 NP ->  DET ADJ NC PP PONCT NP PONCT NP
+0,0007754 NP ->  NC AP Srel
+0,0002585 NP ->  PONCT DET NC PP PONCT PONCT PP PONCT
+0,0002585 NP ->  DET NC PP COORD COORD
+0,0002585 NP ->  NPP PONCT PP PONCT Srel
+0,0002585 NP ->  NC PP Srel PONCT Srel
+0,0002585 NP ->  PONCT NPP ET ET NC ET ET ET PONCT
+0,0002585 NP ->  PONCT NPP ET ET ET ET ET NC PONCT
+0,0005169 NP ->  ADJ NC AP PP
+0,0002585 NP ->  PREF NC AP PP PP
+0,0005169 NP ->  DET PRO
+0,0007754 NP ->  DET NPP VPpart
+0,0002585 NP ->  NPP NPP PONCT ADV NP
+0,0002585 NP ->  NC NPP PP PONCT NP
+0,0041354 NP ->  NC VPpart
+0,0005169 NP ->  ADV P DET NC PP PP
+0,0018093 NP ->  DET ADJ
+0,0002585 NP ->  PP NC PP
+0,0054278 NP ->  NC PP PP
+0,0002585 NP ->  PONCT NC PP
+0,0002585 NP ->  NC PP PONCT
+0,0002585 NP ->  DET NC PONCT PP PONCT
+0,0007754 NP ->  PONCT DET NC PP PONCT
+0,0002585 NP ->  PONCT DET NC PONCT PP
+0,0002585 NP ->  DET PONCT NC PONCT PP
+0,0005169 NP ->  DET PONCT NC PP PONCT
+0,0002585 NP ->  DET NC AP PP VPpart
+0,0002585 NP ->  DET NC PONCT NP PONCT PP NP
+0,0002585 NP ->  NC PP NP PONCT NP
+0,0005169 NP ->  PREF NC PP PP
+0,0005169 NP ->  DET NC Ssub
+0,0002585 NP ->  ADV DET NC PONCT PP
+0,0002585 NP ->  DET NC NPP PONCT NP COORD COORD
+0,0002585 NP ->  NC AP VPinf
+0,0002585 NP ->  DET ADJ NC AP PP VPpart
+0,0002585 NP ->  DET NC PP AP PONCT NP PONCT
+0,0005169 NP ->  DET NC AP PP PONCT NP PONCT
+0,0002585 NP ->  DET AP NC PONCT NP PONCT PP
+0,0002585 NP ->  DET PONCT NC AP PONCT VPpart
+0,0002585 NP ->  PONCT DET NC AP VPpart PONCT
+0,0005169 NP ->  DET NC PP PONCT NP PONCT PP
+0,0535022 NP ->  NPP NPP
+0,0002585 NP ->  ADJ DET NC VPinf
+0,0002585 NP ->  DET ADJ NC AP PONCT AP
+0,0002585 NP ->  NPP PONCT
+0,0002585 NP ->  PONCT ADJ PONCT NC
+0,0002585 NP ->  DET ADJ NC PP PP PP PP PONCT NP PONCT
+0,0002585 NP ->  DET NC AP VPinf
+0,0002585 NP ->  NC PONCT VPpart
+0,0015508 NP ->  DET NC AP Srel
+0,0002585 NP ->  NC PONCT
+0,0002585 NP ->  DET NC ADV PP PP
+0,0005169 NP ->  NC NC PONCT NC
+0,0002585 NP ->  NPP NPP VPpart
+0,0015508 NP ->  DET NC PP PONCT Srel
+0,0002585 NP ->  NPP PONCT COORD
+0,0002585 NP ->  NC NC PONCT NP PONCT NP PONCT NP PONCT NP
+0,0002585 NP ->  NC AP PONCT AP
+0,0002585 NP ->  NPP NPP PONCT NP PONCT Srel
+0,0002585 NP ->  PONCT NC AP PP
+0,0002585 NP ->  DET NC PP Srel PP PONCT COORD
+0,0005169 NP ->  DET NP
+0,0002585 NP ->  DET NC PP PONCT Srel PONCT COORD
+0,0002585 NP ->  DET PONCT NC PP
+0,0002585 NP ->  DET NC PONCT PP
+0,0002585 NP ->  DET NC PP PONCT
+0,1137245 NP ->  DET NC
+0,0002585 NP ->  DET AP NC PP Ssub
+0,0005169 NP ->  DET NC AP PONCT VPpart
+0,0002585 NP ->  DET PONCT NC NPP PONCT Srel PONCT
+0,0002585 NP ->  DET NC NPP NPP PONCT NP PONCT
+0,0046524 NP ->  DET ADJ NC PP
+0,0002585 NP ->  PREF NC VPpart
+0,0002585 NP ->  DET NC NP PONCT NP PONCT
+0,0002585 NP ->  DET NC PP PONCT COORD PONCT PP Srel PONCT
+0,0304988 NP ->  DET NC AP
+0,0005169 NP ->  DET NC AP PONCT Srel
+0,0015508 NP ->  PONCT NC PP PONCT
+0,0002585 NP ->  DET PREF NC AP PP NP
+0,0002585 NP ->  DET NC VPpart PONCT VPpart
+0,0010339 NP ->  NPP NPP PONCT VPpart
+0,0002585 NP ->  ADJ NPP PP
+0,0002585 NP ->  DET NC NPP Srel
+0,0002585 NP ->  DET ADJ NC PP PP VPpart
+0,0002585 NP ->  NPP VPpart
+0,0002585 NP ->  NC COORD COORD PP
+0,0002585 NP ->  NC PP COORD COORD
+0,1455156 NP ->  NC
+0,0002585 NP ->  DET PREF NC AP NPP PP NP COORD
+0,0002585 NP ->  NPP NPP PONCT VPpart PONCT
+0,0010339 NP ->  DET NPP AP
+0,0005169 NP ->  NC Srel
+0,0002585 NP ->  DET ADJ ADJ NC AP PP PONCT NP PONCT VPpart
+0,0002585 NP ->  DET NC NC AP PP
+0,0002585 NP ->  NC PP Srel
+0,0002585 NP ->  PREF NPP
+0,0007754 NP ->  NPP NPP PP
+0,0007754 NP ->  NP
+0,0002585 NP ->  DET ADJ PONCT NC AP PP PONCT AP
+0,0002585 NP ->  DET NC NPP PONCT Srel
+0,0041354 NP ->  DET NPP PP
+0,0002585 NP ->  DET COORD PONCT NC PONCT
+0,0002585 NP ->  DET NC AP NP PP
+0,0005169 NP ->  DET ADJ NPP AP
+0,0002585 NP ->  NC VPpart PONCT VPpart
+0,0002585 NP ->  DET ADJ NC PONCT VPpart PONCT PONCT VPpart
+0,0007754 NP ->  DET NC PP PP COORD COORD
+0,0002585 NP ->  NPP PONCT PP PP PONCT
+0,0002585 NP ->  DET NC PP PONCT COORD PONCT VPpart
+0,0002585 NP ->  ADJ NC AP AP PP
+0,0028431 NP ->  DET NC PP Srel
+0,0002585 NP ->  DET NPP PP COORD
+0,0036185 NP ->  NPP NPP COORD
+0,0002585 NP ->  NPP COORD NPP
+0,0012923 NP ->  ET NPP
+0,0002585 NP ->  PONCT NPP ET ET ET ET ET PONCT
+0,0005169 NP ->  DET ADJ NC Ssub
+0,0002585 NP ->  ADJ NPP AP
+0,0010339 NP ->  NPP NPP COORD COORD
+0,0002585 NP ->  NC PONCT Srel
+0,0002585 NP ->  NC AP PONCT NP PONCT NP PONCT NP PONCT
+0,0002585 NP ->  NC AP PP PP
+0,0002585 NP ->  DET NC AP NC PP PONCT NP PONCT
+0,0077539 NP ->  NPP NPP PONCT NP
+0,0002585 NP ->  DET PONCT NC PONCT
+0,0015508 NP ->  DET PREF NC
+0,0002585 NP ->  NC NPP NPP PONCT Srel
+0,0025846 NP ->  NPP PP
+0,0007754 NP ->  NPP NPP PONCT Srel
+0,0012923 NP ->  DET NPP PONCT NP
+0,0002585 NP ->  DET NC PP PP PONCT Srel
+0,0002585 NP ->  DET NPP NPP PONCT VPpart
+0,0002585 NP ->  DET ADJ NC AP PP NP
+0,0263634 NP ->  PROREL
+0,0069785 NP ->  DET ADJ NC NC
+0,0002585 NP ->  DET ADJ NC VPpart Srel
+0,0002585 NP ->  ADJ NC PP COORD
+0,0002585 NP ->  NC PP NP
+0,0002585 NP ->  NC NP PP
+0,0002585 NP ->  DET PREF NC PP NP COORD COORD
+0,0002585 NP ->  ADJ NC PP PONCT COORD
+0,0015508 NP ->  NC PP VPpart
+0,0007754 NP ->  NC VPpart PP
+0,0002585 NP ->  DET COORD NC
+0,0007754 NP ->  DET NC PONCT VPpart
+0,0033600 NP ->  DET NC COORD
+0,0002585 NP ->  DET NC ADV Ssub
+0,0007754 NP ->  DET ADJ NC AP
+0,0002585 NP ->  DET NC NPP NC PONCT COORD PONCT
+0,0002585 NP ->  ET ET ET PONCT NC ET
+0,0005169 NP ->  DET NC VPpart VPpart
+0,0002585 NP ->  DET NPP PONCT NP COORD PONCT COORD
+0,0005169 NP ->  DET NC PP PONCT PP
+0,0002585 NP ->  DET NC AP PP COORD
+0,0002585 NP ->  DET PONCT NC AP PONCT PONCT VPpart
+0,0152494 NP ->  DET NPP
+0,0005169 NP ->  ADJ NC AP PP PP
+0,0002585 NP ->  NC PP PP PP PP PONCT NP
+0,0007754 NP ->  DET AP
+0,0002585 NP ->  ADJ NC AP AP PP PP
+0,0007754 NP ->  P DET NC PP
+0,0002585 NP ->  NPP NP
+0,0002585 NP ->  DET NC PP PONCT NP PONCT Srel
+0,0005169 NP ->  DET ADJ NC NP
+0,0002585 NP ->  DET ET ET Srel
+0,0002585 NP ->  DET NC PP NPP NPP PONCT NP
+0,0002585 NP ->  DET PONCT NC PP VPpart PONCT
+0,0002585 NP ->  DET PREF ADJ NPP NPP
+0,0002585 NP ->  DET PONCT NC PONCT VPpart
+0,0018093 NP ->  NPP COORD
+0,0002585 NP ->  DET ADJ NC AP PP COORD PONCT NP
+0,0002585 NP ->  ET NPP ET ET COORD
+0,0002585 NP ->  DET PREF NC PP NP
+0,0002585 NP ->  ADV P NP
+0,0002585 NP ->  ADJ PRO
+0,0002585 NP ->  NPP NPP PONCT NP PONCT VPpart
+0,0002585 NP ->  DET ADJ ADJ NC NPP NPP
+0,0002585 NP ->  ADJ DET ADJ NC PONCT NP
+0,0015508 NP ->  NC NPP NPP
+0,0002585 NP ->  DET NC AP PP NP PONCT ADV AP PONCT
+0,0020677 NP ->  DET NC AP VPpart
+0,0002585 NP ->  NPP PONCT PP
+0,0002585 NP ->  DET PREF NPP AP PP PONCT NP PONCT VPpart PONCT
+0,0095632 NP ->  DET NC PP PP
+0,0002585 NP ->  NC NC PONCT NP PONCT NP PONCT NP
+0,0010339 NP ->  ADV DET NC PP
+0,0002585 NP ->  DET NC ADV PP
+0,0005169 NP ->  DET NPP NPP
+0,0002585 NP ->  DET NPP AP PP PONCT Srel
+0,0002585 NP ->  ET NPP NPP
+0,0012923 NP ->  NPP ET NPP
+0,0002585 NP ->  NPP NPP PONCT NP PONCT PONCT NP COORD
+0,0002585 NP ->  NPP PP PONCT NP
+0,0002585 NP ->  DET PONCT NC PP PP PONCT VPpart PONCT PP
+0,0002585 NP ->  DET NC PP AP PP PP
+0,0002585 NP ->  ADJ NC AP AP PONCT NP PONCT NP PONCT NP PONCT NP PONCT VPpart
+0,0002585 NP ->  DET ADJ NC PONCT PP
+0,0007754 NP ->  NC COORD PP
+0,0015508 NP ->  NC PP COORD
+0,0002585 NP ->  NC COORD Srel
+0,0002585 NP ->  DET ADJ NC AP PP PP PONCT NP PONCT VPpart
+0,0002585 NP ->  NC PP AP Srel
+0,0002585 NP ->  DET NC PP NPP
+0,0002585 NP ->  DET NC NPP PP
+0,0002585 NP ->  DET NC PP AP NPP NPP
+0,0007754 NP ->  DET NC PP PP PP
+0,0002585 NP ->  DET NC AP AP NPP
+0,0002585 NP ->  DET NC NP NPP NPP COORD
+0,0036185 NP ->  NPP AP
+0,0002585 NP ->  NC PP COORD PP
+0,0002585 NP ->  ADJ PONCT NC NPP PONCT PONCT Srel
+0,0002585 NP ->  NC PP PONCT NP
+0,0002585 NP ->  NC VPpart VPinf
+0,0002585 NP ->  PONCT NC VPinf PONCT
+0,0007754 NP ->  DET NC PONCT NP
+0,0002585 NP ->  DET NC NP PONCT NP
+0,0002585 NP ->  PONCT ADJ NC AP PONCT
+0,0010339 NP ->  NC AP VPpart
+0,0002585 NP ->  DET NC PONCT VPpart PONCT NP PONCT Srel
+0,0002585 NP ->  DET NPP NPP NPP
+0,0002585 NP ->  PONCT DET NC PP ADV PONCT
+0,0002585 NP ->  DET NC PP NP
+0,0005169 NP ->  PONCT NC NPP PONCT
+0,0002585 NP ->  DET ADJ NC PP PONCT NP
+0,0002585 NP ->  NC AP PP NP
+0,0002585 NP ->  ADV P NC
+0,0002585 NP ->  NPP NPP PONCT PP
+0,0002585 NP ->  ADJ PRO PP PONCT
+0,0002585 NP ->  NPP PP COORD
+0,0005169 NP ->  PRO VPinf
+0,0002585 NP ->  PRO PP VPpart
+0,0002585 NP ->  DET ADJ NC PP PONCT NP PONCT COORD PONCT COORD
+0,0790902 NP ->  NPP
+0,0002585 NP ->  DET NC VPpart Srel
+0,0002585 NP ->  NC PP PONCT VPpart PONCT Srel
+0,0002585 NP ->  NC PONCT NP PONCT NP PONCT NP PONCT
+0,0002585 NP ->  ADJ NC NPP COORD
+0,0002585 NP ->  ADV NC PP
+0,0005169 NP ->  NC ADV PP
+0,0002585 NP ->  NPP NPP AP PONCT NP PONCT NP
+0,0007754 NP ->  ET ET ET
+0,0002585 NP ->  NPP NPP PONCT NP COORD
+0,0002585 NP ->  ADV NC
+0,0002585 NP ->  ET ET AP
+0,0020677 NP ->  DET NC NC
+0,0002585 NP ->  NC DET NC
+0,0002585 NP ->  NC NPP NPP PONCT NP
+0,0007754 NP ->  DET NC PONCT Srel
+0,0002585 NP ->  DET NC AP AP PONCT VPpart
+0,0002585 NP ->  DET NPP PP PP VPpart
+0,0002585 NP ->  NC NPP NPP COORD
+0,0002585 NP ->  DET ADJ NC VPpart PONCT NP
+0,0005169 NP ->  DET NC PP PONCT NP PONCT
+0,0002585 NP ->  DET NC AP PP PONCT Srel
+0,0018093 NP ->  DET NC PP AP
+0,0105971 NP ->  DET NC AP PP
+0,0010339 NP ->  DET NC AP PP PP
+0,0005169 NP ->  DET ADJ NC AP PP
+0,0002585 NP ->  ET NC PONCT NC
+0,0002585 NP ->  DET NC AP AP PP Srel
+0,0007754 NP ->  ADJ DET NC
+0,0111140 NP ->  DET ADJ NC
+0,0002585 NP ->  DET NC ADJ
+0,0002585 NP ->  DET NC NPP PONCT VPpart
+0,0002585 NP ->  DET NC AP PONCT NP PONCT NP
+0,0002585 NP ->  NPP NPP PP PONCT NP PONCT
+0,0010339 NP ->  ADJ NC PP PP
+0,0002585 NP ->  NPP PONCT COORD PONCT Srel
+0,0005169 NP ->  NPP Srel
+0,0005169 NP ->  DET NC PP NPP NPP
+0,0002585 NP ->  DET NC NPP NPP Srel
+0,0007754 NP ->  PREF NC AP PP
+0,0002585 NP ->  NPP NPP PONCT NP COORD PONCT COORD
+0,0005169 NP ->  NPP NPP PONCT NP PONCT COORD
+0,0002585 NP ->  PREF NC PP
+0,0005169 NP ->  NC PP NPP NPP
+0,0002585 NP ->  PP
+0,0041354 NP ->  DET NC Srel
+0,0002585 NP ->  ADJ
+0,0020677 NP ->  DET NC NP
+0,0002585 NP ->  NC NPP PP
+0,0002585 NP ->  NC PONCT NC AP AP
+0,0909796 NP ->  DET NC PP
+0,0010339 NP ->  DET NC VPinf
+0,0002585 NP ->  DET NPP COORD VPpart
+0,0010339 NP ->  ADJ NPP
+0,0002585 NP ->  NPP ADJ
+0,0002585 NP ->  DET NC NPP COORD
+0,0002585 NP ->  DET NC AP PONCT
+0,0002585 NP ->  DET NC NPP NC PONCT Srel
+0,0005169 NP ->  PONCT NC AP PONCT
+0,0002585 NP ->  DET NC AP NPP
+0,0002585 NP ->  DET ADJ NC NPP NPP
+0,0002585 NP ->  ADJ ADJ NC PP
+0,0005169 NP ->  NC VPinf
+0,0002585 NP ->  DET NC PP PONCT VPpart PONCT Srel
+0,0002585 NP ->  NPP NPP PONCT NP PONCT NP PONCT AP VPpart
+0,0015508 NP ->  PRO Srel
+0,0007754 NP ->  PRO AP
+0,0002585 NP ->  PONCT NC AP PONCT PP
+0,0002585 NP ->  PONCT NC AP PP PONCT
+0,0103386 NP ->  DET NC VPpart
+0,0002585 NP ->  DET VPpart NC
+0,0002585 NP ->  DET NPP ADV PP
+0,0059447 NP ->  DET NC NPP
+0,0002585 NP ->  DET NPP NC
+0,0018093 NP ->  DET NC PP COORD
+0,0012923 NP ->  DET NC COORD PP
+0,0002585 NP ->  DET PONCT COORD NC PP
+0,0002585 NP ->  DET NC PP PONCT COORD
+0,0005169 NP ->  NC AP AP PP
+0,0005169 NP ->  NC NC PP
+0,0051693 NP ->  ADJ NC PP
+0,0005169 NP ->  DET ADJ NC AP PP PONCT NP
+0,0002585 NP ->  NPP COORD COORD
+0,0005169 NP ->  DET NC PONCT Srel PONCT
+0,0002585 NP ->  ADJ ADJ NC
+0,0002585 NP ->  ET ET
+0,0005169 NP ->  DET NC NPP NPP PONCT Srel
+0,0002585 NP ->  DET ADJ NC PP COORD
+0,0002585 NP ->  NC AP PP PONCT PP
+0,0005169 NP ->  DET NC PP PP PONCT COORD
+0,0002585 NP ->  NPP PONCT NP PONCT
+0,0002585 NP ->  DET ADJ NC AP PP PONCT NP PONCT
+0,0002585 NP ->  NPP ET ET ET
+0,0002585 NP ->  ET NPP ET ET
+0,0002585 NP ->  DET NC VPpart PONCT Srel
+0,0002585 NP ->  DET PONCT NC AP PONCT PP Srel
+0,0002585 NP ->  NC AP NPP
+0,0012923 NP ->  DET NC AP AP
+0,0002585 NP ->  ADJ NC NC PP
+0,0142156 NP ->  ADJ NC NC
+0,0002585 NP ->  NPP PP PONCT PP
+0,0002585 NP ->  NC PONCT NP PONCT
+0,0002585 NP ->  NPP PONCT VPpart
+0,0010339 NP ->  DET NPP AP PP
+0,0002585 NP ->  NPP AP AP PONCT NP PONCT
+0,0002585 NP ->  DET NC AP AP NPP NPP
+0,0012923 NP ->  PONCT NC PONCT
+0,0012923 NP ->  DET NC NC PP
+0,0002585 NP ->  NC DET NC PP
+0,0005169 NP ->  NPP NPP PONCT NP PONCT NP
+0,0002585 NP ->  DET NC PP PP PONCT NC PONCT
+0,0002585 NP ->  NPP NPP PONCT COORD PONCT
+0,0002585 NP ->  DET NC VPpart PP VPpart
+0,0010339 NP ->  DET NC ADV
+0,0012923 NP ->  DET ADJ NC VPpart
+0,0002585 NP ->  PRO VPinf COORD
+0,0002585 NP ->  NPP PONCT Srel
+0,0005169 NP ->  DET ADJ NC PP PONCT VPpart
+0,0002585 NP ->  ADJ COORD
+0,0002585 NP ->  PONCT NPP ET ET NPP NC PONCT
+0,0002585 NP ->  DET NC AP NPP NPP
+0,0002585 NP ->  ET PONCT ET ET ET ET
+0,0002585 NP ->  PONCT NC NC PONCT PP
+0,0012923 NP ->  DET NC PP PONCT NP
+0,0002585 NP ->  DET NC PP PONCT DET NPP
+0,0002585 NP ->  DET NC VPpart PONCT PP
+0,0020677 NP ->  DET NC PP PONCT VPpart
+0,0002585 NP ->  ADJ DET NPP
+0,0002585 NP ->  DET ADJ NPP
+0,0069785 NP ->  PRO
+0,0002585 NP ->  DET NC VPpart PONCT NP PONCT
+0,0002585 NP ->  DET NC PP PONCT NP PONCT PONCT VPpart
+0,0002585 NP ->  NPP NPP Srel
+0,0002585 NP ->  DET NC PP PP COORD VPpart
+0,0005169 NP ->  DET ADJ NC PONCT NP
+0,0015508 NP ->  PRO PP
+0,0007754 NP ->  PRO ADV
+0,0002585 NP ->  DET NPP PONCT NP COORD
+0,0002585 NP ->  DET NC AP NPP NPP PONCT PP
+0,0002585 NP ->  NPP NPP PONCT NP VPpart
+0,0002585 NP ->  DET NC VPpart COORD
+0,0002585 NP ->  NC COORD NC
+0,0005169 NP ->  NC PONCT NP
+0,0002585 NP ->  DET ADJ NPP PP
+0,0002585 NP ->  DET NC ADJ NC NC
+0,0002585 NP ->  NPP NPP PONCT COORD
+0,0002585 NP ->  DET ADJ NPP NPP COORD
+0,0005169 NP ->  DET NC AP PONCT NP PONCT Srel
+0,0002585 NP ->  PONCT ADJ NC PP PONCT
+0,0005169 NP ->  ADJ PP
+0,0002585 NP ->  PONCT NC PONCT PP COORD
+0,0005169 NP ->  PONCT NC PP COORD PONCT
+0,0002585 NP ->  PONCT NC PP PONCT COORD
+0,0002585 NP ->  DET ADJ NC PP PP PONCT VPpart
+0,0002585 NP ->  DET NC AP PP PONCT VPpart Srel
+0,0002585 NP ->  ADJ NC VPpart PP
+0,0005169 NP ->  ET ET ET ET ET
+0,0002585 NP ->  PONCT NC PP COORD COORD PONCT
+0,0005169 NP ->  DET NC PP PP COORD
+0,0005169 NP ->  DET NC NPP PONCT NP
+0,0002585 NP ->  DET ADJ PONCT NC PONCT AP PONCT VPpart PONCT NP PONCT
+0,0002585 NP ->  DET NC PONCT PONCT PONCT PP
+0,0002585 NP ->  ET ET ET ET ET ET NPP
+0,0002585 NP ->  NPP DET NPP PONCT NP PONCT
+0,0002585 NP ->  NP COORD
+0,0002585 NP ->  DET NC AP PONCT NP PONCT
+0,0002585 NP ->  DET NC NPP NPP PONCT NP
+0,0002585 NP ->  NC PONCT NP PONCT NP PONCT NP
+0,0002585 NP ->  AP NC PP
+0,0103386 NP ->  NC AP PP
+0,0005169 NP ->  NC PP AP
+0,0175756 NP ->  NC AP
+0,0002585 NP ->  AP NC
+0,0002585 NP ->  NC ADJ NC NC
+0,0002585 NP ->  NC NC PONCT NP PONCT PP Srel
+0,0018093 NP ->  NPP NPP PONCT NP PONCT
+0,0002585 NP ->  DET NC AP COORD
+0,0002585 NP ->  DET PONCT NC AP PONCT
+0,0002585 NP ->  DET NC PONCT AP PONCT
+0,0002585 NP ->  DET PONCT NC PONCT AP
+0,0025846 NP ->  NC AP AP
+0,0025846 NP ->  NC COORD
+0,0005169 NP ->  DET ADJ NC Srel
+0,0002585 NP ->  DET PONCT NC PONCT VPpart PONCT VPpart
+0,0002585 NP ->  DET NC ET NPP COORD
+0,0002585 NP ->  DET ADJ NC PONCT NP PONCT
+0,0002585 NP ->  DET ADJ NC PP Srel PONCT
+0,0002585 NP ->  DET PONCT NC PP PONCT PP
+
+0,0350877 PRO ->  \Celle-ci
+0,0175439 PRO ->  \lui-même
+0,0175439 PRO ->  \certains
+0,0175439 PRO ->  \trois
+0,0526316 PRO ->  \deux
+0,0175439 PRO ->  \celui-ci
+0,0175439 PRO ->  \41
+0,0350877 PRO ->  \moi
+0,0175439 PRO ->  \toutes
+0,0175439 PRO ->  \aucun
+0,0350877 PRO ->  \ça
+0,0877193 PRO ->  \un
+0,0350877 PRO ->  \tous
+0,0175439 PRO ->  \tout
+0,0175439 PRO ->  \une
+0,0175439 PRO ->  \elle
+0,0526316 PRO ->  \rien
+0,0175439 PRO ->  \elles
+0,0175439 PRO ->  \14
+0,0175439 PRO ->  \celle-ci
+0,0175439 PRO ->  \autre
+0,0175439 PRO ->  \Certains
+0,1052632 PRO ->  \lui
+0,0175439 PRO ->  \2
+0,0175439 PRO ->  \ceux
+0,0175439 PRO ->  \6
+0,1228070 PRO ->  \ce
+0,0175439 PRO ->  \5
+0,0877193 PRO ->  \eux
+0,0175439 PRO ->  \chacun
+
+0,0136986 Ssub ->  CS NP VN PP COORD
+0,0273973 Ssub ->  CS VN NP Srel
+0,0136986 Ssub ->  CS NP VN AP
+0,0136986 Ssub ->  CS NP VN ADV PONCT PP PONCT PP PONCT
+0,0136986 Ssub ->  CS VN NP VPinf
+0,1095890 Ssub ->  CS NP VN VPinf
+0,0136986 Ssub ->  CS VN ADV VPinf
+0,0136986 Ssub ->  CS NP VN VPinf COORD
+0,0136986 Ssub ->  CS PONCT NP VN NP COORD PONCT
+0,0136986 Ssub ->  ADVWH-MOD NP VN PP NP
+0,0136986 Ssub ->  CS NP VN ADV PONCT VPpart PONCT
+0,0136986 Ssub ->  CS VN
+0,0547945 Ssub ->  CS VN PP
+0,0136986 Ssub ->  CS PP NP VN PP PONCT VPinf PONCT PP PONCT
+0,0136986 Ssub ->  CS NP VN VPinf PONCT
+0,0136986 Ssub ->  CS Ssub PONCT VN AP VPinf
+0,0273973 Ssub ->  CS NP VN NP PP
+0,0136986 Ssub ->  CS NP VN ADV VPinf
+0,0273973 Ssub ->  CS NP VN
+0,0684932 Ssub ->  CS VN NP
+0,0547945 Ssub ->  CS NP VN NP
+0,0136986 Ssub ->  CS VN PP NP
+0,0958904 Ssub ->  CS NP VN PP
+0,0136986 Ssub ->  CS NP VN ADV NP PP
+0,0136986 Ssub ->  PONCT CS NP VN NP PONCT
+0,0136986 Ssub ->  CS PONCT COORD COORD VN PP PONCT
+0,0136986 Ssub ->  CS NP PONCT VN NP PP
+0,0136986 Ssub ->  CS NP VN NP COORD
+0,0136986 Ssub ->  CS PONCT NP PONCT VN VPinf PONCT PONCT
+0,0136986 Ssub ->  CS VN ADV PONCT
+0,0136986 Ssub ->  CS VPpart
+0,0136986 Ssub ->  CS PONCT NP VN VPinf PONCT
+0,0136986 Ssub ->  CS NP PONCT VN PP
+0,0136986 Ssub ->  CS AP
+0,0136986 Ssub ->  CS NP VN PP PP PONCT COORD
+0,0410959 Ssub ->  CS NP
+0,0136986 Ssub ->  CS VN ADV AP
+0,0136986 Ssub ->  CS VN ADV ADV PP VPinf
+0,0273973 Ssub ->  CS PP
+0,0136986 Ssub ->  CS NP VN ADV PP
+0,0136986 Ssub ->  CS NP PONCT PP PONCT VN PP
+0,0136986 Ssub ->  CS NP VN PP PONCT PP PONCT
+0,0136986 Ssub ->  CS NP VN NP VPinf
+0,0136986 Ssub ->  CS ADV PONCT NP VN NP
+
+0,0053540 DET ->  \Cette
+0,0011898 DET ->  \10_000
+0,0083284 DET ->  \plusieurs
+0,0011898 DET ->  \notre
+0,0095181 DET ->  \sa
+0,0469958 DET ->  \Le
+0,0011898 DET ->  \Trois
+0,0017847 DET ->  \Quelques
+0,0023795 DET ->  \certains
+0,0124926 DET ->  \La
+0,0910173 DET ->  \les
+0,0017847 DET ->  \50_000
+0,0005949 DET ->  \Onze
+0,0005949 DET ->  \tous
+0,0005949 DET ->  \100_000
+0,0017847 DET ->  \tout
+0,0023795 DET ->  \Ce
+0,0017847 DET ->  \d'
+0,0005949 DET ->  \cent
+0,0011898 DET ->  \12
+0,1320642 DET ->  \l'
+0,0005949 DET ->  \10
+0,0011898 DET ->  \Sa
+0,0011898 DET ->  \2_000
+0,0005949 DET ->  \Deux
+0,0005949 DET ->  \600
+0,0005949 DET ->  \Tout
+0,0005949 DET ->  \De
+0,0154670 DET ->  \ce
+0,0005949 DET ->  \140
+0,0005949 DET ->  \Aucun
+0,0059488 DET ->  \leurs
+0,0005949 DET ->  \170
+0,0005949 DET ->  \quelque
+0,0005949 DET ->  \Leur
+0,0005949 DET ->  \D'_autres
+0,0261749 DET ->  \L'
+0,0011898 DET ->  \sept
+0,0005949 DET ->  \3_092
+0,0005949 DET ->  \Quatre
+0,0017847 DET ->  \quinze
+0,0535396 DET ->  \un
+0,0035693 DET ->  \500
+0,0005949 DET ->  \Affaires
+0,0005949 DET ->  \nos
+0,0095181 DET ->  \de
+0,0023795 DET ->  \Son
+0,0005949 DET ->  \400
+0,0380726 DET ->  \des
+0,0005949 DET ->  \1_500
+0,1088638 DET ->  \le
+0,1635931 DET ->  \la
+0,0005949 DET ->  \160
+0,0005949 DET ->  \cet
+0,0005949 DET ->  \Huit
+0,0053540 DET ->  \ces
+0,0005949 DET ->  \six
+0,0005949 DET ->  \1500
+0,0154670 DET ->  \cette
+0,0005949 DET ->  \80
+0,0005949 DET ->  \différentes
+0,0005949 DET ->  \46
+0,0005949 DET ->  \47
+0,0011898 DET ->  \aucune
+0,0053540 DET ->  \Un
+0,0005949 DET ->  \43
+0,0041642 DET ->  \trois
+0,0005949 DET ->  \4_000
+0,0011898 DET ->  \40
+0,0071386 DET ->  \deux
+0,0005949 DET ->  \aucun
+0,0011898 DET ->  \5.000
+0,0035693 DET ->  \cinq
+0,0017847 DET ->  \toute
+0,0255800 DET ->  \Les
+0,0005949 DET ->  \d'_autres
+0,0005949 DET ->  \17_600
+0,0011898 DET ->  \Plusieurs
+0,0005949 DET ->  \7_000
+0,0005949 DET ->  \100
+0,0005949 DET ->  \Ses
+0,0011898 DET ->  \49
+0,0005949 DET ->  \180
+0,0071386 DET ->  \Une
+0,0023795 DET ->  \Ces
+0,0249851 DET ->  \son
+0,0005949 DET ->  \Cet
+0,0005949 DET ->  \2,5
+0,0011898 DET ->  \20
+0,0005949 DET ->  \mon
+0,0005949 DET ->  \2,2
+0,0005949 DET ->  \vingt
+0,0005949 DET ->  \Des
+0,0005949 DET ->  \22
+0,0005949 DET ->  \23
+0,0005949 DET ->  \18
+0,0005949 DET ->  \17
+0,0071386 DET ->  \leur
+0,0005949 DET ->  \16
+0,0017847 DET ->  \15
+0,0011898 DET ->  \huit
+0,0011898 DET ->  \quatre
+0,0011898 DET ->  \divers
+0,0541344 DET ->  \une
+0,0005949 DET ->  \douze
+0,0124926 DET ->  \ses
+0,0029744 DET ->  \quelques
+0,0017847 DET ->  \dix
+0,0035693 DET ->  \30
+0,0005949 DET ->  \15_000
+0,0005949 DET ->  \Ma
+0,0005949 DET ->  \Aucune
+0,0005949 DET ->  \28
+0,0005949 DET ->  \mes
+0,0011898 DET ->  \3
+0,0011898 DET ->  \2
+0,0011898 DET ->  \1
+0,0011898 DET ->  \2,8
+0,0011898 DET ->  \458
+0,0011898 DET ->  \7
+0,0005949 DET ->  \1,2
+0,0005949 DET ->  \150.000
+0,0005949 DET ->  \111_547
+0,0011898 DET ->  \6
+0,0017847 DET ->  \5
+0,0011898 DET ->  \4
+0,0005949 DET ->  \1,5
+0,0005949 DET ->  \599
+
+1,0000000 CLO-P_OBJ ->  \y
+
+0,2187500 PREF ->  \politico-
+0,1250000 PREF ->  \non-
+0,0312500 PREF ->  \Ex-
+0,0312500 PREF ->  \sino-
+0,1250000 PREF ->  \rétro-
+0,0312500 PREF ->  \sportivo-
+0,4375000 PREF ->  \ex-
+
+0,0103448 CC ->  \puis
+0,0034483 CC ->  \plus
+0,0482759 CC ->  \mais
+0,0068966 CC ->  \&
+0,0068966 CC ->  \Mais
+0,0724138 CC ->  \ou
+0,7965517 CC ->  \et
+0,0172414 CC ->  \ainsi_que
+0,0034483 CC ->  \soit
+0,0068966 CC ->  \Et
+0,0034483 CC ->  \ainsi_qu'
+0,0068966 CC ->  \voire
+0,0068966 CC ->  \car
+0,0103448 CC ->  \ni
+
+1,0000000 CLO-MOD ->  \y
+
+0,0038314 VPpart ->  ADV ADJ PP
+0,0114943 VPpart ->  VPP COORD
+0,0076628 VPpart ->  VN
+0,0038314 VPpart ->  VPP ADV PP
+0,0229885 VPpart ->  ADV VPP PP
+0,0038314 VPpart ->  VPP PP PONCT
+0,0038314 VPpart ->  VPP PP PONCT PP
+0,0038314 VPpart ->  VPP PONCT NP PONCT
+0,0076628 VPpart ->  ADV VPP NP
+0,0038314 VPpart ->  NP VN ADV PP
+0,0038314 VPpart ->  VN ADV PP Ssub
+0,0038314 VPpart ->  NP VN NP PP ADV
+0,0076628 VPpart ->  VN NP PONCT PP
+0,0038314 VPpart ->  VN ADV
+0,1149425 VPpart ->  VPP
+0,0038314 VPpart ->  VPP COORD PP
+0,0191571 VPpart ->  VPP PP COORD
+0,0038314 VPpart ->  VPP PP COORD PONCT Srel
+0,0038314 VPpart ->  ADV VPP PONCT COORD
+0,0038314 VPpart ->  VPP NP PP PP
+0,0038314 VPpart ->  VN ADV PONCT PP PONCT NP
+0,0038314 VPpart ->  NP VN VPinf
+0,0038314 VPpart ->  VPP PP COORD PONCT COORD
+0,0498084 VPpart ->  VN PP
+0,0038314 VPpart ->  ADJ
+0,0038314 VPpart ->  VN ADV NP
+0,0268199 VPpart ->  VPP NP
+0,0038314 VPpart ->  NP VN ADV PP NP COORD
+0,3601533 VPpart ->  VPP PP
+0,0038314 VPpart ->  VN PP PONCT PP PONCT NP
+0,0076628 VPpart ->  VN ADV VPinf
+0,0038314 VPpart ->  ADV VPP PONCT COORD COORD
+0,0229885 VPpart ->  VPP VPinf
+0,0191571 VPpart ->  ADV VPP
+0,0038314 VPpart ->  VPP Ssub
+0,0038314 VPpart ->  ADV VPP PP NP
+0,0038314 VPpart ->  VN ADV-P_OBJ NP
+0,0038314 VPpart ->  VPP PP NP
+0,0076628 VPpart ->  VPP NP PP
+0,0038314 VPpart ->  PONCT VPP PP PONCT
+0,0038314 VPpart ->  VPP PP AdP
+0,0651341 VPpart ->  VN NP
+0,0038314 VPpart ->  NP VN
+0,0114943 VPpart ->  VN Ssub
+0,0153257 VPpart ->  VN PP NP
+0,0038314 VPpart ->  NP VN PP
+0,0076628 VPpart ->  VN NP PP
+0,0114943 VPpart ->  VPP PP PP PP
+0,0613027 VPpart ->  VPP PP PP
+0,0038314 VPpart ->  ADV VN PP
+0,0038314 VPpart ->  NPP
+0,0038314 VPpart ->  ADV VPP VPinf
+0,0076628 VPpart ->  VPP PP PP PONCT PP
+0,0076628 VPpart ->  VN VPinf
+0,0038314 VPpart ->  NP VN NP
+
+0,0009443 PP ->  P PONCT NP PONCT
+0,0009443 PP ->  PONCT P NP PONCT
+0,0004721 PP ->  P VPpart PONCT COORD
+0,0004721 PP ->  P PONCT AP PONCT
+0,0004721 PP ->  P NP COORD PONCT VPpart PONCT PP
+0,7568461 PP ->  P NP
+0,0004721 PP ->  ADV P VPpart
+0,0004721 PP ->  P NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT PONCT Sint PONCT
+0,0009443 PP ->  P+D NP PONCT COORD
+0,0004721 PP ->  ADV P NP PONCT COORD
+0,0037771 PP ->  P VPpart
+0,0004721 PP ->  P NC PP
+0,1912181 PP ->  P+D NP
+0,0004721 PP ->  P NP COORD COORD
+0,0004721 PP ->  PONCT P+D NP PONCT
+0,0009443 PP ->  P AP
+0,0004721 PP ->  P+D NP COORD PP
+0,0075543 PP ->  P NP COORD
+0,0004721 PP ->  P PONCT PP PONCT NP
+0,0089707 PP ->  PROREL
+0,0004721 PP ->  P NP PONCT
+0,0004721 PP ->  PONCT P NP
+0,0004721 PP ->  P PONCT NP
+0,0004721 PP ->  P PRO
+0,0023607 PP ->  P NP PP
+0,0004721 PP ->  P PP NP
+0,0004721 PP ->  P ADV
+0,0023607 PP ->  P NP PONCT COORD
+0,0009443 PP ->  P Sint
+0,0004721 PP ->  ADV ADV P+D NP
+0,0004721 PP ->  P+D NP PONCT NP PONCT VPpart
+0,0004721 PP ->  P ADV NP
+0,0037771 PP ->  ADV P NP
+0,0009443 PP ->  P NP ADV
+0,0004721 PP ->  ADV P NP COORD
+0,0004721 PP ->  P+D AP
+0,0066100 PP ->  P+D NP COORD
+0,0004721 PP ->  P PP
+
+0,0081967 Srel ->  PP NP VN VPinf
+0,0081967 Srel ->  NP PP VN VPinf
+0,0081967 Srel ->  NP VN PP VPinf
+0,0081967 Srel ->  NP PONCT PP PONCT VN PP
+0,0081967 Srel ->  NP AdP PONCT NP VN NP
+0,0081967 Srel ->  PP NP VN PONCT COORD
+0,0081967 Srel ->  NP VN PP PP NP
+0,0081967 Srel ->  NP NP VN PP PP PONCT VPinf
+0,0081967 Srel ->  NP VN PP NP PP
+0,0081967 Srel ->  NP VN PP COORD
+0,0081967 Srel ->  NP PONCT VPpart PONCT VN PP PONCT NP PONCT VPinf
+0,0081967 Srel ->  NP PP VN PP PP
+0,0081967 Srel ->  PP NP VN PP PP
+0,0327869 Srel ->  NP VN ADV PP
+0,0081967 Srel ->  NP PONCT Ssub PONCT VN ADV PP
+0,0081967 Srel ->  NP NP VN ADV PP
+0,0081967 Srel ->  NP VN ADV NP PP
+0,0081967 Srel ->  NP VN NP VPpart
+0,0081967 Srel ->  NP VN VPpart
+0,0081967 Srel ->  NP VN AP COORD
+0,0081967 Srel ->  NP VN NP VPinf
+0,0081967 Srel ->  NP VN VPinf NP
+0,0655738 Srel ->  PP NP
+0,0081967 Srel ->  NP VN Ssub
+0,0081967 Srel ->  NP VN ADV PP PONCT PP
+0,0081967 Srel ->  NP VN NP PP PP PP
+0,0409836 Srel ->  NP VN
+0,0081967 Srel ->  NP VN NP PONCT PP
+0,0081967 Srel ->  NP VN AP NP
+0,1639344 Srel ->  NP VN PP
+0,0245902 Srel ->  PP VN NP
+0,0081967 Srel ->  NP PONCT ADV PONCT VN ADV
+0,0491803 Srel ->  NP VN VPinf
+0,0163934 Srel ->  NP NP VN PP
+0,0409836 Srel ->  PP NP VN NP
+0,0245902 Srel 
