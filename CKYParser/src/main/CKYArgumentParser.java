@@ -74,7 +74,7 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	private void parseAprioriProb(String argv[], int idx)
 			throws NumberFormatException, MissingArgumentException
 	{
-		this._apriori_unknown_prob = ArgumentParser0.parsePositiveProb(argv, idx);
+		this._apriori_unknown_prob = parsePositiveProb(argv, idx);
 		Messages.info(String.format("For every morpho-syntactic category the apriori probability of getting an unknown word is set to = %f",
 				this._apriori_unknown_prob));
 	}
