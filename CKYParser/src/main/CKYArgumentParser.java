@@ -30,6 +30,22 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	
 	private BufferedReader 	_input_grammar = null;
 	
+	public int getKBest() {
+		return this._k;
+	}
+	
+	public boolean getLogMode() {
+		return this._mode_log;
+	}
+	
+	public double getAprioriUnknownProb() {
+		return _apriori_unknown_prob;
+	}
+	
+	public String getUnknownLabel() {
+		return this._unknown_label;
+	}
+	
 	public BufferedReader getGrammarBufferedReader() {
 		return this._input_grammar;
 	}
