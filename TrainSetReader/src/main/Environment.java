@@ -1,16 +1,27 @@
 package main;
 
+import java.io.PrintWriter;
+
 public abstract class Environment
 {	
 	private static int			_precision = 10;
 	private static int			_nThreads = 4;
 	private static Integer		_unknownThreshold = null;
-	private static String		_unknownLabel = "UNK";
+	private static String		_unknownLabel = "**UNKNOWN**";
 	private static boolean		_lexical = false;
+	private static	PrintWriter 	_out = null;
+	
+	public static void setOutputStream(PrintWriter p) {
+		Environment._out = p;
+	}
 	
 	public static boolean isAltMode()
 	{
 		return (Environment._unknownThreshold != null);
+	}
+	
+	public static PrintWriter getOutputStream() {
+		return Environment._out;
 	}
 	
 	public static int getPrecision()

@@ -2,6 +2,7 @@ package main;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class CKYArgumentParser extends ArgumentParser0 {
 	
@@ -29,6 +30,16 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	private String 	_unknown_label;
 	
 	private BufferedReader 	_input_grammar = null;
+	
+	private PrintWriter 	_output_stream = null;
+	
+	public PrintWriter getOutputFile() {
+		return this._output_stream;
+	}
+	
+	private void setDefaultOutputStream() {
+		this._output_stream = new PrintWriter(System.out, true);
+	}
 	
 	public int getKBest() {
 		if (this._get_k_best) {
@@ -96,10 +107,18 @@ public class CKYArgumentParser extends ArgumentParser0 {
 				checkArgumentPresence(argv, i);
 				this._input_grammar = ArgumentParser0.openFile(argv[i+1]);
 				i++;
+			} else if (argv[i].equals("-o") || argv[i].equals("--output_file"))
+			{
+				checkArgumentPresence(argv, i);
+				this._output_stream = ArgumentParser0.openOutputFile(argv[i+1]);
+				i++;
 			}
 			i++;
 		}
 		checkPresenceOfObligatoryArgs();
+		if (this._output_stream == null) {
+			setDefaultOutputStream();
+		}
 	}
 	
 	private void parseKBest(String argv[], int idx)

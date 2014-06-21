@@ -3,7 +3,7 @@ package main;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.LinkedList;
-
+import java.io.PrintWriter;
 
 public final class Main
 {
@@ -31,21 +31,22 @@ public final class Main
 			parser = new CKY(G, new Symbol(ap.getUnknownLabel(), true), log_mode);		
 		}
 		
-		BufferedReader stdin = ArgumentParser0. openStandardInput();
+		BufferedReader stdin = ArgumentParser0.openStandardInput();
+		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
 		LinkedList<Tree> k_best_parses;
 			while ((line = stdin.readLine()) != null) {
 				try {
 					line_number++;
-					System.out.println("**" + line_number + "**  " + line);
+					out.println("**" + line_number + "**  " + line);
 					k_best_parses = parser.parse(Symbol.ListSymbols(line.split(" ")), k_best);
 					boolean print_probas = false;
 					if(k_best > 1) {
 						print_probas = true;
 					}
 					for (int i = 0; i < k_best_parses.size(); i++) {
-						System.out.println(k_best_parses.get(i).treeToString(print_probas));						
+						out.println(k_best_parses.get(i).treeToString(print_probas));						
 					}
 				} catch (UnknownWordException e) {
 					// no parses were obtained, nothing is printed 

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 
@@ -30,49 +31,26 @@ public class ArgumentParser
 	public ArgumentParser(String argv[])
 	{
 		this._fds = new LinkedList<BufferedReader>();
-		for (int i = 0; i < argv.length; i++)
+		try {
+		int i = 0;
+		// changed loop to "while", because otherwise there was an i++ inside a "for" loop
+		while (i < argv.length)
 		{
 			if (argv[i].equals("-p") || argv[i].equals("--precision"))
 			{
-				try
-				{
 					ArgumentParser.parsePrecision(argv, i);
 					i++;
-				}
-				catch (NumberFormatException e)
-				{
-					Messages.warning(String.format(
-							"invalid precision argument: %s",
-							argv[i + 1]));
-				}
+				
 			}
 			else if (argv[i].equals("-t") || argv[i].equals("--nthreads"))
 			{
-				try
-				{
 					ArgumentParser.parseNThreads(argv, i);
 					i++;
-				}
-				catch (NumberFormatException e)
-				{
-					Messages.warning(String.format(
-							"invalid nthreads argument: %s",
-							argv[i + 1]));
-				}
 			}
 			else if (argv[i].equals("-u") || argv[i].equals("--unknown-threshold"))
 			{
-				try
-				{
 					ArgumentParser.parseUnknownThreshold(argv, i);
 					i++;
-				}
-				catch (NumberFormatException e)
-				{
-					Messages.warning(String.format(
-							"invalid unknown threshold argument: %s",
-							argv[i + 1]));
-				}
 			}
 			else if (argv[i].equals("-s") || argv[i].equals("--unknown-label"))
 			{
@@ -83,12 +61,17 @@ public class ArgumentParser
 			{
 				Messages.info("reader set to track lexical rules.");
 				Environment.setLexical(true);
+			} else if (argv[i].equals("-o") || argv[i].equals("--output_file"))
+			{
+				ArgumentParser0.checkArgumentPresence(argv, i);
+				Environment.setOutputStream(ArgumentParser0.openOutputFile(argv[i+1]));
+				i++;
 			}
 			else
 			{
 				try
 				{
-					this._fds.addLast(this.openFile(argv[i]));
+					this._fds.addLast(ArgumentParser0.openFile(argv[i]));
 					Messages.info(String.format("%s: opened succesfully.",
 							argv[i]));
 				}
@@ -98,8 +81,16 @@ public class ArgumentParser
 					continue ;
 				}
 			}
+			i++;
 		}
 		this.setDefaultValues();
+		} catch (NumberFormatException e) {
+			Messages.warning(e.getMessage());
+		} catch (MissingArgumentValueException e1) {
+			Messages.warning(e1.getMessage());
+		} catch (FileNotFoundException e2) {
+			Messages.warning(e2.getMessage());
+		}
 	}
 	
 	/**
@@ -112,23 +103,6 @@ public class ArgumentParser
 	{
 		return (this._fds.pollFirst());
 	}
-
-	private BufferedReader openFile(String filename)
-			throws FileNotFoundException
-	{
-		FileInputStream		f;
-		
-		f = new FileInputStream(filename);
-		try
-		{
-			return (new BufferedReader(new InputStreamReader(f, "UTF-8")));
-		}
-		catch (UnsupportedEncodingException e)
-		{
-			Messages.warning(e.getMessage());
-			return (new BufferedReader(new InputStreamReader(f)));
-		}
-	}
 	
 	private void setDefaultValues()
 	{
@@ -136,91 +110,45 @@ public class ArgumentParser
 		{
 			Messages.info("no valid input files provided.");
 			Messages.info("reading from standard input.");
-			this._fds.addLast(ArgumentParser.openStandardInput());
+			this._fds.addLast(ArgumentParser0.openStandardInput());
+		}
+		if (Environment.getOutputStream() == null) {
+			Environment.setOutputStream(new PrintWriter(System.out, true));
 		}
 	}
-	
-	private static BufferedReader openStandardInput()
-	{
-		try
-		{
-			return (new BufferedReader(
-					new InputStreamReader(System.in, "UTF-8")));
-		}
-		catch (UnsupportedEncodingException e)
-		{
-			Messages.warning(e.getMessage());
-			return (new BufferedReader(new InputStreamReader(System.in)));
-		}
-	}	
+		
 	private static void parseNThreads(String argv[], int idx)
-			throws NumberFormatException
+			throws NumberFormatException, MissingArgumentValueException
 	{
 		int		res;
-
-		if ((idx + 1) >= argv.length)
-		{
-			Messages.warning("missing threads argument.");
-			return ;
-		}
-		res = Integer.parseInt(argv[idx + 1]);
-		if (res <= 0)
-			throw new NumberFormatException(String.format(
-					"%d (must be non-negative)",
-					res));
+		res = ArgumentParser0.parsePositiveInt(argv, idx);
 		Messages.info(String.format("multi-threading set to: %d threads.",
 				res));
 		Environment.setNThreads(res);
 	}
 
 	private static void parsePrecision(String argv[], int idx)
-		throws NumberFormatException
+		throws NumberFormatException, MissingArgumentValueException
 	{
 		int		res;
-
-		if ((idx + 1) >= argv.length)
-		{
-			Messages.warning("missing precision argument.");
-			return ;
-		}
-		res = Integer.parseInt(argv[idx + 1]);
-		if (res < 0)
-			throw new NumberFormatException(String.format(
-					"%d (must be non-negative)",
-					res));
-		Messages.info(String.format("precision set to: %d digits.",
-				res));
+		res = ArgumentParser0.parsePositiveInt(argv, idx);
 		Environment.setPrecision(res);
 	}
 	
 	private static void parseUnknownThreshold(String argv[], int idx)
-			throws NumberFormatException
+			throws NumberFormatException, MissingArgumentValueException
 	{
 		int		res;
-
-		if ((idx + 1) >= argv.length)
-		{
-			Messages.warning("missing unknown threshold argument.");
-			return ;
-		}
-		res = Integer.parseInt(argv[idx + 1]);
-		if (res < 0)
-			throw new NumberFormatException(String.format(
-					"%d (must be non-negative)",
-					res));
+		res = ArgumentParser0.parseNonNegativeInt(argv, idx);
 		Messages.info(String.format("unknown threshold set to: %d.",
 				res));
 		Environment.setUnknownThreshold(res);
 	}
 
 	private static void parseUnknownLabel(String argv[], int idx)
-			throws NumberFormatException
+			throws NumberFormatException, MissingArgumentValueException
 	{
-		if ((idx + 1) >= argv.length)
-		{
-			Messages.warning("missing unknown label argument.");
-			return ;
-		}
+		ArgumentParser0.checkArgumentPresence(argv,  idx);
 		Messages.info(String.format("unknown label set to: %s.",
 				argv[idx + 1]));
 		Environment.setUnknownLabel(argv[idx + 1]);
