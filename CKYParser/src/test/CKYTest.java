@@ -10,10 +10,11 @@ import main.CKY;
 import main.ReverseGrammar;
 import main.Symbol;
 import main.Tree;
+import main.UnknownWordException;
 public class CKYTest {
 
 	@Test
-	public void testParser() {
+	public void testParser() throws UnknownWordException {
 		
 		// create grammar and add non-lexical rules
 		ReverseGrammar g = new ReverseGrammar(new Symbol("S"));
@@ -57,7 +58,7 @@ public class CKYTest {
 	}
 	
 	@Test
-	public void testParserApriori() {
+	public void testParserApriori() throws UnknownWordException {
 		
 		// create grammar and add non-lexical rules
 		ReverseGrammar g = new ReverseGrammar(new Symbol("S"));
@@ -99,7 +100,7 @@ public class CKYTest {
 	}
 	
 	@Test
-	public void testParserUnk() {
+	public void testParserUnk() throws UnknownWordException {
 		
 		// create grammar and add non-lexical rules
 		ReverseGrammar g = new ReverseGrammar(new Symbol("S"));
@@ -145,7 +146,7 @@ public class CKYTest {
 	}
 	
 	@Test
-	public void testParserLog() {
+	public void testParserLog() throws UnknownWordException {
 		
 		// create grammar and add non-lexical rules
 		ReverseGrammar g = new ReverseGrammar(new Symbol("S"));
@@ -190,7 +191,7 @@ public class CKYTest {
 	}
 	
 	@Test
-	public void testParserAprioriLog() {
+	public void testParserAprioriLog() throws UnknownWordException {
 		
 		// create grammar and add non-lexical rules
 		ReverseGrammar g = new ReverseGrammar(new Symbol("S"));
@@ -233,7 +234,7 @@ public class CKYTest {
 	}
 	
 	@Test
-	public void testParserUnkLog() {
+	public void testParserUnkLog() throws UnknownWordException {
 		
 		// create grammar and add non-lexical rules
 		ReverseGrammar g = new ReverseGrammar(new Symbol("S"));
