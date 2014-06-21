@@ -80,7 +80,7 @@ public class ArgumentParser
 		this.setDefaultValues();
 		} catch (NumberFormatException e) {
 			Messages.warning(e.getMessage());
-		} catch (MissingArgumentException e1) {
+		} catch (MissingArgumentValueException e1) {
 			Messages.warning(e1.getMessage());
 		}
 	}
@@ -107,7 +107,7 @@ public class ArgumentParser
 	}
 		
 	private static void parseNThreads(String argv[], int idx)
-			throws NumberFormatException, MissingArgumentException
+			throws NumberFormatException, MissingArgumentValueException
 	{
 		int		res;
 		res = ArgumentParser0.parsePositiveInt(argv, idx);
@@ -117,7 +117,7 @@ public class ArgumentParser
 	}
 
 	private static void parsePrecision(String argv[], int idx)
-		throws NumberFormatException, MissingArgumentException
+		throws NumberFormatException, MissingArgumentValueException
 	{
 		int		res;
 		res = ArgumentParser0.parsePositiveInt(argv, idx);
@@ -125,7 +125,7 @@ public class ArgumentParser
 	}
 	
 	private static void parseUnknownThreshold(String argv[], int idx)
-			throws NumberFormatException, MissingArgumentException
+			throws NumberFormatException, MissingArgumentValueException
 	{
 		int		res;
 		res = ArgumentParser0.parseNonNegativeInt(argv, idx);
@@ -135,7 +135,7 @@ public class ArgumentParser
 	}
 
 	private static void parseUnknownLabel(String argv[], int idx)
-			throws NumberFormatException, MissingArgumentException
+			throws NumberFormatException, MissingArgumentValueException
 	{
 		ArgumentParser0.checkArgumentPresence(argv,  idx);
 		Messages.info(String.format("unknown label set to: %s.",
