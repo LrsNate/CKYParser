@@ -3,6 +3,8 @@ package main;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.HashMap;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 /**
  * A reversed grammar.
@@ -63,6 +65,23 @@ public class ReverseGrammar extends Grammar0 {
 	public void addRule(String new_rule)
 	{
 		addRule(new RewrRuleProb(new_rule));
+	}
+	
+	/**
+	 * Reads the grammar from the input stream
+	 * Format of the input stream:
+	 * one rewriting rule per line 
+	 * @param fd: the input stream that contains the grammar
+	 */
+	public void readGrammar(BufferedReader fd) throws ReadingGrammarException {
+			String		line;
+			try {
+			while ((line = fd.readLine()) != null) {
+				this.addRule(line);
+			}
+			} catch (IOException e) {
+				throw new ReadingGrammarException("Error while reading the grammar.");
+			}
 	}
 
 	/** 

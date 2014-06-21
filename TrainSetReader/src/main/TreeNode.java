@@ -49,7 +49,7 @@ public class TreeNode
 			this._value = new Symbol(tab[0]);
 			this._children = new LinkedList<TreeNode>();
 			if (tab.length > 1) {
-				// ??? this is the lexical entry...
+				// this is the lexical entry
 				// this._children.addLast(new TreeNode(tab[1])); 
 				// new Symbol(value = tab[1], is_terminal = true)
 				this._children.addLast(new TreeNode(new Symbol(tab[1], true))); 
@@ -86,10 +86,11 @@ public class TreeNode
 		String				tmp;
 		
 		lst = new LinkedList<String>();
-		if (this._value.IsTerminal())
-			lst.add(this._value.toString());
 		for (TreeNode c : this._children)
 		{
+			if (c.getValue().IsTerminal()) {
+				lst.add(c.getValue().toString() + "/" + this._value.toString());
+			}
 			if ((tmp = c.getBarePhrase()) != "")
 				lst.add(tmp);
 		}
