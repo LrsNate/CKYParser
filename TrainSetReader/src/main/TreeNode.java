@@ -112,7 +112,6 @@ public class TreeNode
 	public String getTaggingOnly()
 	{
 		LinkedList<String>	lst;
-		StringBuffer		res;
 		String				tmp;
 		
 		lst = new LinkedList<String>();
@@ -124,7 +123,8 @@ public class TreeNode
 			if ((tmp = c.getTaggingOnly()) != "")
 				lst.add(tmp);
 		}
-		return strippedPhrase(lst);
+		String res = strippedPhrase(lst);
+		return res;
 	}
 	
 	public String getBarePhrase()
