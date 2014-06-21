@@ -116,6 +116,9 @@ class CNFConvert:
             ### parse standard input
             n_lines_in_stdin += 1
             line = line.strip('\r').strip('\n')
+            ## if the line does not contain "->", than this line is ignored !
+            if (not ("->" in line)):
+                continue;
             regle = line.split()
             # p: the (conditional) probability of the rewriting rule P(RHS | LHS)
             if (self.is_prob):
