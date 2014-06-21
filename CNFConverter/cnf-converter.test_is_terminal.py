@@ -157,6 +157,9 @@ class CNFConvert:
 # =============================================
 input_stream = sys.stdin
 C = CNFConvert(is_prob)
-term_droite = True
-C.convert(input_stream, term_droite)
+line = input_stream.readline() 
+while line:
+    line = line.strip('\r').strip('\n');
+    print line + " " + str(C.is_terminal(line));
+    line = input_stream.readline()
 
