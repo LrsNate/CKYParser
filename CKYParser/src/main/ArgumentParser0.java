@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.io.PrintWriter;
+import java.io.File;
 
 public abstract class ArgumentParser0 {
 	
@@ -67,6 +69,21 @@ public abstract class ArgumentParser0 {
 		{
 			Messages.warning(e.getMessage());
 			return (new BufferedReader(new InputStreamReader(f)));
+		}
+	}
+	
+	public static PrintWriter openOutputFile(String filename)
+			throws FileNotFoundException
+	{
+		File f = new File(filename);
+		try
+		{
+			return (new PrintWriter(f, "UTF-8"));
+		}
+		catch (UnsupportedEncodingException e)
+		{
+			Messages.warning(e.getMessage());
+			return (new PrintWriter(f));
 		}
 	}
 
