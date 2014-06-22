@@ -185,6 +185,7 @@ public class CKY {
 					rule_to_insert.probTakeLog();
 				}
 				chart[i][i].add(new Tree(rule_to_insert));
+				//System.out.println(chart[i][i]);
 			}
 			if(rules.isEmpty()) { // unknown word!
 				if (this.deal_with_unknown.equals(DealWithUnknown.IGNORE)) {

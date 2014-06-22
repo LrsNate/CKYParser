@@ -39,5 +39,16 @@ public class Cell {
 	public LinkedList<Tree> getTrees(Symbol s) {
 		return this.smb.get(s);
 	}
+	
+	@Override
+	public String toString() {
+		String res = "";
+		for (Symbol lhs : this.smb.keySet()) {
+			for (Tree t : this.smb.get(lhs)) {
+				res = res + " " + lhs + " : " + t.treeToString(false) + "\n";
+			}
+		}
+		return res;
+	}
 
 }

@@ -1,7 +1,6 @@
 package main;
 
 import java.io.BufferedReader;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -33,18 +32,27 @@ public final class Main
 			parser = new CKY(G, new Symbol(ap.getUnknownLabel(), true), log_mode); break;
 		}
 		
-		//BufferedReader stdin = ArgumentParser0.openStandardInput();
-		BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.bare_phrases.txt");
+		BufferedReader stdin = ArgumentParser0.openStandardInput();
+		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.bare_phrases--test.txt");
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
 		LinkedList<Tree> k_best_parses;
+		//try {
+			//LinkedList<Tree> restt = parser.parse(Symbol.ListSymbols((" Affaire des caporaux de Souain").trim().split(" "), true), 5);
+			//String tree = restt.getFirst().treeToString();
+			//System.out.println(tree);
+		//} catch (UnknownWordException e) {
+			// no parses were obtained, nothing is printed 
+			// just pass on to the next phrase
+		//}
+		//LinkedList<RewrRuleProb> rules = G.getRules(new RHS(new Symbol("Affaire", true)));
 			while ((line = stdin.readLine()) != null) {
 				try {
 					if (!line.isEmpty()) { 
 						line_number++;
 						out.println("**" + line_number + "**  " + line);
-						k_best_parses = parser.parse(Symbol.ListSymbols(line.split(" "), true), k_best);
+						k_best_parses = parser.parse(Symbol.ListSymbols(line.trim().split(" "), true), k_best);
 						boolean print_probas = false;
 						if(k_best > 1) {
 							print_probas = true;

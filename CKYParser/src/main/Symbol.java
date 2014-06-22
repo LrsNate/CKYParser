@@ -89,12 +89,18 @@ public class Symbol {
 	}
 	
 	/**
-	 * convert a list of strings into a list of terminal or non-terminal symbols
+	 * convert a list of strings into a list of symbols
+	 * whether each symbol is terminal or not is being determined from the string itself 
+	 * (based on the slash conventions)
 	 * @param list_words: list of strings
 	 * @return: list of symbols (produced by calls to the constructor Symbol(String))
 	 */
 	public static LinkedList<Symbol> ListSymbols(String[] list_words) {
-		return ListSymbols(list_words, false);
+		LinkedList<Symbol> list_symbols = new LinkedList<Symbol>();
+		for (String word : list_words) {
+			list_symbols.add(new Symbol(word));
+		}
+		return list_symbols;
 	}
 	
 	/**
