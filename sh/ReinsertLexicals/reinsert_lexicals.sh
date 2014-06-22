@@ -49,5 +49,5 @@ function get_lexical_terminal() {
   }
   print res;
 }
-' | sed 's/ )/)/g'
+' | sed 's/ )/)/g' | sed -e 's/^ *//'
 
