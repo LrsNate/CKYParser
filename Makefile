@@ -5,7 +5,7 @@ RM = rm -rf
 .SUFFIXES:
 .PHONY: all CKYParser TrainSetReader BackConverter AnnotationStripper clean fclean
 
-all: CKYParser TrainSetReader BackConverter AnnotationStripper clean
+all: CKYParser TrainSetReader BackConverter AnnotationStripper
 
 CKYParser:
 	cd CKYParser/src;\
