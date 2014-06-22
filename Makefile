@@ -9,6 +9,7 @@ all: CKYParser TrainSetReader BackConverter AnnotationStripper
 
 CKYParser:
 	cd CKYParser/src;\
+	mkdir -p ../bin;\
 	$(JC) $(JFLAGS) main/*.java;\
 	cd ../bin;\
 	echo "Main-Class: main.Main" > MANIFEST.MF;\
@@ -17,6 +18,7 @@ CKYParser:
 
 TrainSetReader:
 	cd TrainSetReader/src;\
+	mkdir -p ../bin;\
 	$(JC) $(JFLAGS) main/*.java;\
 	cd ../bin;\
 	echo "Main-Class: main.Main" > MANIFEST.MF;\
@@ -25,6 +27,7 @@ TrainSetReader:
 
 BackConverter:
 	cd TrainSetReader/src;\
+	mkdir -p ../bin;\
 	$(JC) $(JFLAGS) main/*.java;\
 	cd ../bin;\
 	echo "Main-Class: main.MainBackConversion" > MANIFEST.MF;\
@@ -33,6 +36,7 @@ BackConverter:
 
 AnnotationStripper:
 	cd TrainSetReader/src;\
+	mkdir -p ../bin;\
 	$(JC) $(JFLAGS) main/*.java;\
 	cd ../bin;\
 	echo "Main-Class: main.MainAnnotationStripper" > MANIFEST.MF;\
