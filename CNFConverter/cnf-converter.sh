@@ -1,3 +1,5 @@
 
-cat /dev/stdin | awk '($0 != "")' | python ./cnf-converter.py -t -p
+dir=$(dirname $0)
+
+cat /dev/stdin | awk '($0 != "")' | python "$dir""/cnf-converter.py" -t -p
 

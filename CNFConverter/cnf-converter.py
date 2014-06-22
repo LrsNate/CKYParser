@@ -118,6 +118,7 @@ class CNFConvert:
             line = line.strip('\r').strip('\n')
             ## if the line does not contain "->", than this line is ignored !
             if (not ("->" in line)):
+                line = input_stream.readline();
                 continue;
             regle = line.split()
             # p: the (conditional) probability of the rewriting rule P(RHS | LHS)
