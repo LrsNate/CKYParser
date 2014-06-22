@@ -94,7 +94,6 @@ public class TreeNode
 	public String getTaggedPhrase()
 	{
 		LinkedList<String>	lst;
-		StringBuffer		res;
 		String				tmp;
 		
 		lst = new LinkedList<String>();
@@ -130,7 +129,6 @@ public class TreeNode
 	public String getBarePhrase()
 	{
 		LinkedList<String>	lst;
-		StringBuffer		res;
 		String				tmp;
 		
 		lst = new LinkedList<String>();		
