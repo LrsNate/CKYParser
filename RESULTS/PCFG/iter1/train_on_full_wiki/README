@@ -1,0 +1,2 @@
+Grammars trained on the whole Sequoia Wiki Tree bank (no splitting into train/dev/test)
+Training file = frwiki_50.1000+fct.mrg_strict
