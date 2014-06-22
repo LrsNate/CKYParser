@@ -284,6 +284,9 @@ public class CKY {
 		}
 		
 		res = chart[0][n-1].getTrees(this.G.getAxiom());
+		
+		if (res == null) { return null; }
+		
 		if (!(res.size() > 0)) {
 			res = null;
 			return res;

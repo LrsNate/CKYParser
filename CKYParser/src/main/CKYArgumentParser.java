@@ -39,6 +39,10 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	
 	private PrintWriter 	_output_stream = null;
 	
+	public void closeOutput() {
+		this._output_stream.close();
+	}
+	
 	public boolean getInputIsLexical() {
 		return this._input_is_lexical;
 	}
