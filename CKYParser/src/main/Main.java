@@ -16,7 +16,7 @@ public final class Main
 		try {
 			
 		ap = new CKYArgumentParser(argv);
-		Symbol axiom = new Symbol("S");
+		Symbol axiom = new Symbol("SENT");
 		ReverseGrammar G = new ReverseGrammar(axiom);
 		G.readGrammar(ap.getGrammarBufferedReader());
 		
@@ -32,8 +32,8 @@ public final class Main
 			parser = new CKY(G, new Symbol(ap.getUnknownLabel(), true), log_mode); break;
 		}
 		
-		//BufferedReader stdin = ArgumentParser0.openStandardInput();
-		BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.tagging_only--test.txt");
+		BufferedReader stdin = ArgumentParser0.openStandardInput();
+		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.bare_phrases.txt");
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
