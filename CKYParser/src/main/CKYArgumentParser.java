@@ -29,9 +29,19 @@ public class CKYArgumentParser extends ArgumentParser0 {
 	private double 	_apriori_unknown_prob;
 	private String 	_unknown_label;
 	
+	/**
+	 * set to true if each input phrase consists of terminal symbols only,
+	 * set to false if each input phrase consists of non-terminal symbols only
+	 */
+	private boolean 	_input_is_lexical = true;
+	
 	private BufferedReader 	_input_grammar = null;
 	
 	private PrintWriter 	_output_stream = null;
+	
+	public boolean getInputIsLexical() {
+		return this._input_is_lexical;
+	}
 	
 	public PrintWriter getOutputFile() {
 		return this._output_stream;
@@ -112,6 +122,9 @@ public class CKYArgumentParser extends ArgumentParser0 {
 				checkArgumentPresence(argv, i);
 				this._output_stream = ArgumentParser0.openOutputFile(argv[i+1]);
 				i++;
+			} else if (argv[i].equals("-n") || argv[i].equals("--non_lexical_input"))
+			{
+				this._input_is_lexical = false;
 			}
 			i++;
 		}

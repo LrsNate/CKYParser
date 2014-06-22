@@ -33,7 +33,7 @@ public final class Main
 		}
 		
 		BufferedReader stdin = ArgumentParser0.openStandardInput();
-		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.bare_phrases--test.txt");
+		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.tagging_only--test.txt");
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
@@ -52,7 +52,7 @@ public final class Main
 					if (!line.isEmpty()) { 
 						line_number++;
 						out.println("**" + line_number + "**  " + line);
-						k_best_parses = parser.parse(Symbol.ListSymbols(line.trim().split(" "), true), k_best);
+						k_best_parses = parser.parse(Symbol.ListSymbols(line.trim().split(" "), ap.getInputIsLexical()), k_best);
 						boolean print_probas = false;
 						if(k_best > 1) {
 							print_probas = true;
