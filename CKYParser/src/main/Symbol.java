@@ -75,16 +75,26 @@ public class Symbol {
 	}
 	
 	/**
-	 * convert a list of strings into a list of symbols
+	 * convert a list of strings into a list of terminal or non-terminal symbols
+	 * @param list_words: list of strings
+	 * @param are_terminal: set to true if all the symbols are terminal, false if all of them are non-terminal
+	 * @return: list of symbols (produced by calls to the constructor Symbol(String))
+	 */
+	public static LinkedList<Symbol> ListSymbols(String[] list_words, boolean are_terminal) {
+		LinkedList<Symbol> list_symbols = new LinkedList<Symbol>();
+		for (String word : list_words) {
+			list_symbols.add(new Symbol(word, are_terminal));
+		}
+		return list_symbols;
+	}
+	
+	/**
+	 * convert a list of strings into a list of terminal or non-terminal symbols
 	 * @param list_words: list of strings
 	 * @return: list of symbols (produced by calls to the constructor Symbol(String))
 	 */
 	public static LinkedList<Symbol> ListSymbols(String[] list_words) {
-		LinkedList<Symbol> list_symbols = new LinkedList<Symbol>();
-		for (String word : list_words) {
-			list_symbols.add(new Symbol(word));
-		}
-		return list_symbols;
+		return ListSymbols(list_words, false);
 	}
 	
 	/**

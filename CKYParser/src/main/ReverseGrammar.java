@@ -77,7 +77,7 @@ public class ReverseGrammar extends Grammar0 {
 			String		line;
 			try {
 			while ((line = fd.readLine()) != null) {
-				this.addRule(line);
+				if (!line.isEmpty()) { this.addRule(line); }
 			}
 			} catch (IOException e) {
 				throw new ReadingGrammarException("Error while reading the grammar.");

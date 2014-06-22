@@ -1,6 +1,8 @@
 package main;
 
 import java.io.BufferedReader;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.io.PrintWriter;
@@ -31,32 +33,40 @@ public final class Main
 			parser = new CKY(G, new Symbol(ap.getUnknownLabel(), true), log_mode); break;
 		}
 		
-		BufferedReader stdin = ArgumentParser0.openStandardInput();
-		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.bare_phrases.txt");
+		//BufferedReader stdin = ArgumentParser0.openStandardInput();
+		BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.bare_phrases.txt");
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
 		LinkedList<Tree> k_best_parses;
 			while ((line = stdin.readLine()) != null) {
 				try {
-					line_number++;
-					out.println("**" + line_number + "**  " + line);
-					k_best_parses = parser.parse(Symbol.ListSymbols(line.split(" ")), k_best);
-					boolean print_probas = false;
-					if(k_best > 1) {
-						print_probas = true;
-					}
-					for (int i = 0; i < k_best_parses.size(); i++) {
-						out.println(k_best_parses.get(i).treeToString(print_probas));						
+					if (!line.isEmpty()) { 
+						line_number++;
+						out.println("**" + line_number + "**  " + line);
+						k_best_parses = parser.parse(Symbol.ListSymbols(line.split(" "), true), k_best);
+						boolean print_probas = false;
+						if(k_best > 1) {
+							print_probas = true;
+						}
+						for (int i = 0; i < k_best_parses.size(); i++) {
+							out.println(k_best_parses.get(i).treeToString(print_probas));						
+						}
 					}
 				} catch (UnknownWordException e) {
 					// no parses were obtained, nothing is printed 
 					// just pass on to the next phrase
 				}
 			}
-		} catch (Exception e) {
+		} catch (MissingObligatoryArgException e) {
 			Messages.error(e.getMessage());			
-		}		
+		}	catch (FileNotFoundException e) {
+			Messages.error(e.getMessage());			
+		}	catch (IOException e) {
+			Messages.error(e.getMessage());			
+		}	catch (MissingArgumentValueException e) {
+			Messages.error(e.getMessage());			
+		}
 	}
 
 }
