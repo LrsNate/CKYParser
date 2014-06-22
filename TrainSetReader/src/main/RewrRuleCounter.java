@@ -42,12 +42,14 @@ public class RewrRuleCounter
 		this._lhs = lhs;
 		this._lho = 1;
 		this._rhs = new HashMap<RHS, AtomicInteger>();
+		if ((rhs.size() == 1) && lhs.equals(rhs.get(0))) { return; }
 		this._rhs.put(rhs, new AtomicInteger(1));
 		checkHasLexical(rhs);
 	}
 	
 	public void addRule(RHS rhs)
 	{
+		if ((rhs.size() == 1) && this._lhs.equals(rhs.get(0))) { return; }
 		this._lho++;
 		if (this._rhs.containsKey(rhs))
 			this._rhs.get(rhs).incrementAndGet();
