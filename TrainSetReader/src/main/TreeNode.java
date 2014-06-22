@@ -42,18 +42,15 @@ public class TreeNode
 			&& !v.matches("^\\S+( *\\(.+\\))+$"))
 			throw new IllegalArgumentException(
 					"\"" + v + "\" " + TreeNode._errorMessage);
-		else if (!v.matches("^\\S+( *\\(.+\\))+$")
-			&& Environment.hasLexical())
+		else if (!v.matches("^\\S+( *\\(.+\\))+$"))
 		{
 			tab = v.split(" ");
 			this._value = new Symbol(tab[0]);
 			this._children = new LinkedList<TreeNode>();
-			if (tab.length > 1) {
-				// this is the lexical entry
-				// this._children.addLast(new TreeNode(tab[1])); 
-				// new Symbol(value = tab[1], is_terminal = true)
+			if (Environment.hasLexical())
+				this._children.addLast(new TreeNode(new Symbol(tab[1], true))); 
+			else
 				this._children.addLast(new TreeNode(new Symbol(tab[0], true))); 
-			}
 			return ;
 		}
 		end = 0;
