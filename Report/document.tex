@@ -10,13 +10,14 @@
 \usepackage{srcltx}
 \usepackage{enumitem}
 \usepackage{graphicx,enumerate}
+\usepackage{gb4e}
 
 \begin{document}
 
 \section{Pr\'esentation du probl\`eme}
 
 Le pr\'esent projet s'inscrit dans le cadre du domaine de Traitement Automatique
-des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs d'extraire de l'information des textes en langages naturels en minimisant l'implication des humains. G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
+des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs  \`a extraire de l'information des textes en langage naturel en minimisant l'implication des humains. G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
 \begin{enumerate}
 \item D\'ecoupage du texte en phrases.
 \item (Tok\'enisation) D\'ecoupage du texte en mot-occurrences (tokens).
@@ -25,7 +26,7 @@ des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordi
 \item Analyse s\'emantique.
 \end{enumerate}
 
-Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on a envie de se rapprocher de la situation r\'eelle et donc travailler avec des textes brutes, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. Par contre, le dernier \'etape list\'e ci-dessus ne fait pas partie de notre travail...
+Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on souhaite se rapprocher des situations r\'eelles et donc travailler avec des textes bruts, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. La derni\`ere \'etape list\'ee ci-dessus ne fait en revanche pas partie de notre travail...
 
 \subsection{Analyse syntaxique en constituants}
  On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain langage $L_0$. Le but est de trouver l'arbre syntaxique de la phrase repr\'esent\'ee par cette s\'equence dans une grammaire donn\'ee.
@@ -42,52 +43,62 @@ phrase.
 
 D\'efinition d'une grammaire formelle.
 
-\subsection{Ambiguit\'e syntaxique et grammaires probabilistes}
+\subsection{ambig\"uit\'e syntaxique et grammaires probabilistes}
 
 Une des propri\'et\'es les plus distinctives des langages naturels qui les
-oppose aux langages de programmation, par exemple, est leur ambiguit\'e inh\'erente. L'ambiguit\'e peut se pr\'esenter sur des niveaux de l'analyse diff\'erents:
+oppose aux langages de programmation, par exemple, est leur ambig\"uit\'e inh\'erente. L'ambig\"uit\'e peut se pr\'esenter sur des niveaux d'analyse diff\'erents:
 \begin{enumerate}
-\item Ambiguit\'e de d\'ecoupage en mot-formes:
+\item ambig\"uit\'e de d\'ecoupage en mot-formes:
 //
 EXEMPLE ... d'accord d'+accord ...
-\item Ambiguit\'e morpho-syntaxique:
+\item ambig\"uit\'e morpho-syntaxique:
 //
 EXEMPLE ... la belle porte le voile ...
-\item Ambiguit\'e syntaxique:
+\item ambig\"uit\'e syntaxique:
 EXEMPLE ... la description de l'occupation d'Ath\`enes par les Turcs ottomans ... 
 \end{enumerate}
 
-En parlant de l'ambiguit\'e il est important d'en distinguer deux types, le
-premier \'etant l'ambiguit\'e r\'eelle qui correspond au cas quand l'ambiguit\'e
+Il est important de distinguer deux types d'ambig\"uit\'e, le
+premier \'etant l'ambig\"uit\'e r\'eelle qui correspond au cas quand l'ambig\"uit\'e
 ne peut pas \^etre enlev\'ee par des humains eux-m\^emes en absence de contexte,
-le deuxi\`eme \'etant l'ambiguit\'e artificielle qui ne se pr\'esente que pour des machines, tandis que pour les humains il n'existe qu'une seule variante d'analyse possible.
+et le deuxi\`eme \'etant l'ambig\"uit\'e artificielle qui ne se pr\'esente que pour des machines --- pour les humains il n'existe dans ces cas de figure qu'une seule variante d'analyse possible.
 
-On note ici que m\^eme si les deux types d'ambiguit\'e sont pr\'esents sur tous les niveaux de l'analyse, l'ambiguit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
-rel\`eve largement d'ambiguit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus de l'ambiguit\'e syntaxique r\'eelle on peut mentionner l'ambiguit\'e de rattachement pr\'epositionnel
-EXEMPLE ... la fille voit le professeur avec un t\'elescope ... 
-et l'ambiguit\'e de structures de coordination
-EXEMPLE  ... elle ne mange que des gateaux et des glaces au chocolat  ... 
+On note ici que m\^eme si les deux types d'ambig\"uit\'e sont pr\'esents sur tous les niveaux d'analyse, l'ambig\"uit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
+rel\`eve largement d'ambig\"uit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus de l'ambig\"uit\'e syntaxique r\'eelle on peut mentionner l'ambig\"uit\'e de rattachement pr\'epositionnel : 
 
-Ce constat nous am\`ene \`a conclure que l'un des points principaux d'une
-analyse syntaxique consiste en traitement de l'ambiguit\'e. Deux solutions sont
+\begin{exe}
+\ex La fille voit le professeur avec un t\'elescope.
+\end{exe}
+
+Et l'ambig\"uit\'e de structures de coordination :
+
+\begin{exe}
+\ex Elle ne mange que des gateaux et des glaces au chocolat.
+\end{exe}
+
+Ce constat nous am\`ene \`a conclure que l'un des piliers d'une
+analyse syntaxique est le traitement de l'ambig\"uit\'e. Deux solutions sont
 envisageables vis \`a vis de ce probl\`eme. On pourrait choisir de ne garder
 qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant
-donn\'e l'abondance d'ambiguit\'e r\'eelle susmentionn\'ee. L'option de
+donn\'ee l'abondance d'ambig\"uit\'e r\'eelle susmentionn\'ee. L'option de
 g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase se pr\'esente comme
-plus avantageuse dans le cadre de ce travail. Dans les cas d'ambiguit\'e
+plus avantageuse dans le cadre de ce travail. Dans les cas d'ambig\"uit\'e
 r\'eelle, c'est l'humain qui choisit le bon analyse en se basant sur le
 contexte.
-EXEMPLE ... fish people fish tanks ...
+
+\begin{exe}
+\ex Fish people fish tanks
+\end{exe}
 
 Une grammaire probabiliste hors contexte (Probabilistic context-free grammar,
 PCFG) est une grammaire hors contexte dans laquelle une probabilit\'e est
 attribu\'ee \`a chaque r\`egle. La somme des toutes les probabilit\'es des
 productions \`a partir d'une m\^eme partie gauche est \'egale \`a un. 
-En cas d'ambiguit\'e, les probabilit\'es associ\'ees aux productions permettent
-de choisir la derivation la plus probable de la phrase. On appelle la
-probabilit\'e d'une derivation le produit des probabilit\'es des r\`egles de
-production qui ont men\'e \`a cette derivation. Il faut noter que la
-probabilit\'e maximale de la derivation de la phrase n'est pas toujours obtenu
+En cas d'ambig\"uit\'e, les probabilit\'es associ\'ees aux productions permettent
+de choisir la d\'erivation la plus probable de la phrase. On appelle la
+probabilit\'e d'une d\'erivation le produit des probabilit\'es des r\`egles de
+production qui ont men\'e \`a cette d\'erivation. Il faut noter que la
+probabilit\'e maximale de la d\'erivation de la phrase n'est pas toujours obtenue
 en appliquant les r\`egles avec les probabilit\'es maximales.
 
 
@@ -95,7 +106,7 @@ en appliquant les r\`egles avec les probabilit\'es maximales.
 
 \subsection{Deux strat\'egies d'analyse}
 
-Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjoint $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
+Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjointe $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
 \begin{itemize}
 \item des r\`egles lexicales
 $$\mathscr{R}_{LEX} = \left\{ A \rightarrow a \mid
@@ -109,7 +120,7 @@ qui ne contiennent pas de symboles terminaux.
 
 Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e puisque
 chaque grammaire hors-contexte peut \^etre transform\'ee en forme susdite sans
-que son langage engendr\'e soit chang\'e. En m\^eme temps, en adoptant cette
+que son langage engendr\'e ne soit chang\'e. En m\^eme temps, en adoptant cette
 approche, on peut envisager deux strat\'egies de conception de notre outil de
 l'analyse syntaxique.
 

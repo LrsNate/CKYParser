@@ -229,7 +229,6 @@ public class CKY {
 		this.init_chart(phrase);
 		
 		int begin, end, split;
-		
 		for (int i = 1; i < n; i++) {
 			for(int j = 0; j < (n-i); j++) {
 				begin = j;
@@ -311,53 +310,56 @@ public class CKY {
 	
 	public void handleSingleProds(int i, int j) {
 		boolean added = true;
-		while(added) {
+		int loop = 0;
+		LinkedList<Tree> addedTrees = new LinkedList<Tree>();
+		Set<Symbol> symbols = chart[i][j].getSymbols();
+		while(added)
+		{
 			added = false;
-			LinkedList<Tree> addedTrees = new LinkedList<Tree>();	
-			Set<Symbol> symbols = chart[i][j].getSymbols();
-			for(Symbol singleRhs : symbols) {
+			for(Symbol singleRhs : symbols)
+			{
 				LinkedList<RewrRuleProb> rules = G.getRules(new RHS(singleRhs));
-				if(rules.size() > 0) {
-					for (RewrRuleProb rule : rules) {
-						double prob = rule.getProbability();
-						Symbol lhs = rule.getLHS();
-						for (Tree tree : chart[i][j].getTrees(singleRhs)) {
-							double new_tree_prob = calculateProbability(prob, tree.getProb());
-							Tree t = new Tree(lhs, new_tree_prob, tree);
-							boolean ruleExists = false;
-							if (chart[i][j].getSymbols().contains(lhs)) {
-
-								for (Tree sP : chart[i][j].getTrees(lhs)) {
-									if((t.equals(sP))) {
-										
-										ruleExists = true;
-									}
-								}
-							}
-							
-							for (Tree singleP : addedTrees) {
-								if((t.equals(singleP))) {
-							
+				for (RewrRuleProb rule : rules)
+				{
+					double prob = rule.getProbability();
+					Symbol lhs = rule.getLHS();
+					for (Tree tree : chart[i][j].getTrees(singleRhs))
+					{
+						double new_tree_prob = calculateProbability(prob, tree.getProb());
+						Tree t = new Tree(lhs, new_tree_prob, tree);
+						boolean ruleExists = false;
+						if (chart[i][j].getSymbols().contains(lhs))
+						{
+							for (Tree sP : chart[i][j].getTrees(lhs))
+							{
+								if((t.equals(sP)))
+								{
 									ruleExists = true;
+									break ;
 								}
 							}
-							
-							if(!ruleExists) {
-								addedTrees.add(t);
-								added = true;
-							}
+						}
+						
+						for (Tree singleP : addedTrees)
+						{
+							if((t.equals(singleP)))
+								ruleExists = true;
+							if (ruleExists)
+								break ;
+						}
+						
+						if(ruleExists == false) {
+							addedTrees.add(t);
+							added = true;
+						}
 					}
-					
 				}
 			}
-			
-			
 		}
 		for (Tree addedT : addedTrees) {
 
 			chart[i][j].add(addedT);
 		}
-	}
 	}
 
 }
