@@ -35,5 +35,7 @@ public final class Main
 		Messages.info(t.lap());
 		g.display(Environment.getPrecision());
 		Messages.info(t.lap());
+		
+		Environment.closeOutput();
 	}
 }
