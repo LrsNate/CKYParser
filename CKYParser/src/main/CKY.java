@@ -229,7 +229,9 @@ public class CKY {
 		this.init_chart(phrase);
 		
 		int begin, end, split;
-		for (int i = 1; i < n; i++) {
+		int i_beg = 1;
+		if (phrase.size() == 1) { i_beg = 0; }
+		for (int i = i_beg; i < n; i++) {
 			for(int j = 0; j < (n-i); j++) {
 				begin = j;
 				end = j+i;
@@ -238,6 +240,9 @@ public class CKY {
 				for(split=begin; split < end; split++) {
 					Cell cell1 = chart[begin][split];
 					Cell cell2 = chart[split+1][end];
+					
+					//System.out.println("==== (" + begin + "," + split + "," + end + ") ====");
+					//System.out.println(cell1.getSymbols().size() * cell2.getSymbols().size());
 					
 					for (Symbol smb1 : cell1.getSymbols()) {
 						for (Symbol smb2 : cell2.getSymbols()) {
@@ -277,8 +282,9 @@ public class CKY {
 						}
 					}
 				}
+				//System.out.println("(" + begin + " " + end + ")" + " start handleSingleProds ");
 				this.handleSingleProds(begin,end);
-				
+				//System.out.println("(" + begin + " " + end + ")" + " end handleSingleProds ");				
 			}
 		}
 		
