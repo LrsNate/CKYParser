@@ -24,14 +24,15 @@ public final class Main
 		
 		switch (ap.getModeTreatUnknown()) {
 		case IGNORE:
-			parser = new CKY(G, log_mode);
+			parser = new CKY(G, log_mode); break;
 		case APRIORI_PROB:
-			parser = new CKY(G, ap.getAprioriUnknownProb(), log_mode);
+			parser = new CKY(G, ap.getAprioriUnknownProb(), log_mode); break;
 		case RARE:
-			parser = new CKY(G, new Symbol(ap.getUnknownLabel(), true), log_mode);		
+			parser = new CKY(G, new Symbol(ap.getUnknownLabel(), true), log_mode); break;
 		}
 		
 		BufferedReader stdin = ArgumentParser0.openStandardInput();
+		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\corpus.bare_phrases.txt");
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
