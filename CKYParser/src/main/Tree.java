@@ -114,9 +114,9 @@ public class Tree implements Comparable<Tree>
 		}
 		if (this._right == null) {
 			if (this._left == null) {
-				return ((this._value.equals(t._value)) && (this._prob == t._prob));
+				return ((this._value.equals(t._value)) && (!(Math.abs(this._prob - t._prob) > 0)));
 			}
-			else return ((this._value.equals(t._value)) && (this._prob == t._prob) && (this._left.equals(t._left)));
+			else return ((this._value.equals(t._value)) && (!(Math.abs(this._prob - t._prob) > 0)) && (this._left.equals(t._left)));
 		}
 		return ((this._value.equals(t._value)) && (!(Math.abs(this._prob - t._prob) > 0)) && (this._left.equals(t._left)) && (this._right.equals(t._right)));
 	}
