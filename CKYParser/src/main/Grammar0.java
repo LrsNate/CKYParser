@@ -4,50 +4,56 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-
+/**
+ * Abstract class representing a context-free grammar.
+ * 
+ */
 public abstract class Grammar0 {
 	/**
-	 * the axiom
+	 * The axiom of the grammar.
 	 */
 	protected final Symbol axiom;
 	
+	/**
+	 * Default constructor.
+	 * @param axiom The axiom of the grammar.
+	 */
 	public Grammar0(Symbol axiom) {
 		this.axiom = axiom;
 	}
 	
 	/**
-	 * 
-	 * @return: the Symbol that is the axiom of the grammar
+	 * Getter for the axiom field.
+	 * @return The symbol that is the axiom of the grammar.
 	 */
 	public Symbol getAxiom() {
 		return axiom;
 	}
 	
 	/**
-	 * 
-	 * @param: smb  
-	 * @return: true if the Symbol smb is the axiom of the grammar
+	 * Set to true if the given symbol is the axiom of the grammar.
+	 * @param smb A symbol.
+	 * @return True if the symbol is the axiom of the grammar.
 	 */
 	public boolean isAxiom(Symbol smb) {
 		return axiom.equals(smb);
 	}
 	
 	/**
-	 * initialize the container that actually stores the grammar
+	 * Initialize the container that actually stores the grammar.
 	 */
 	protected abstract void init();
 
 	/**
-	 * add a new production rule to the grammar
-	 * @param new_rule: the production rule (in String format) to be added to the grammar
+	 * Add a new production rule to the grammar.
+	 * @param new_rule The production rule (in String format) to be added to the grammar.
 	 */
 	protected abstract void addRule(String new_rule);
 	
 	/**
-	 * Load a grammar from a file
-	 * @param grammar_file: the first line contains the name of the axiom \
-	 * for all the other lines in the file: \
-	 * each line contains exactly one rewriting rule
+	 * Load a grammar from a file.
+	 * @param grammar_file The file containing a CFG. The first line contains the name of the axiom.
+	 * For all the other lines in the file, each line contains exactly one rewriting rule.
 	 * @throws InvalidGrammarFormatException
 	 * @throws FileNotFoundException
 	 */
@@ -69,11 +75,11 @@ public abstract class Grammar0 {
 	}
 	
 	/**
-	 * load additional rules into the grammar
+	 * Load additional rules into the grammar
 	 * (this might be desirable for the purposes of 
-	 * loading lexical and non-lexical rules separately (from potentially different sources)) 
-	 * @param file: the text-file that contains the list of rules to be added to the grammar \
-	 * (one rewriting rule per line)
+	 * loading lexical and non-lexical rules separately (from potentially different sources)).
+	 * @param sc The scanner reading the input that contains the list of rules to be added to the grammar
+	 * (one rewriting rule per line).
 	 */
 	public void LoadRules(Scanner sc) throws InvalidGrammarFormatException {
 		while (sc.hasNext()) {

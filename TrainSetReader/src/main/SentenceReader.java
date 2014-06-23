@@ -1,10 +1,18 @@
 package main;
-
+/**
+ * The class that reads a parsed sentence from the training set and adds the extracted rules to the grammar.
+ *
+ */
 public class SentenceReader implements Runnable
 {
 	private final String		_line;
 	private final Grammar		_grammar;
 	
+	/**
+	 * Default constructor.
+	 * @param line A sentence read from the corpus.
+	 * @param g The PCFG being constructed.
+	 */
 	public SentenceReader(String line, Grammar g)
 	{
 		this._line = line;

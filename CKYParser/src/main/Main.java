@@ -35,9 +35,10 @@ public final class Main
 			parser = new CKY(G, false);
 		}
 		
-		//BufferedReader stdin = ArgumentParser0.openStandardInput();
-		BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\for_testing.txt");
-		//BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\for_testing.txt");
+		
+
+		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;

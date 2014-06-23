@@ -7,22 +7,25 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 /**
- * A reversed grammar.
- * @author Antoine LAFOUASSE
+ * A reversed context-free grammar (grouping the rules by their RHS and not their LHS). 
  */
 public class ReverseGrammar extends Grammar0 {
+	/**
+	 * The container that actually stores he grammar. 
+	 * A map from a right-hand side of a rule to all the rewriting rules that have this right-hand side.
+	 */
 	private HashMap<RHS, LinkedList<RewrRuleProb>> _map;
 	
 	/**
-	 * initialize the container that actually stores the grammar
+	 * Initialize the container that actually stores the grammar.
 	 */
 	protected void init() {
 		this._map = new HashMap<RHS, LinkedList<RewrRuleProb>>();
 	}
 	
 	/**
-	 * create a new grammar with the given axiom
-	 * @param axiom: the axiom of the grammar
+	 * Create a new grammar with the given axiom.
+	 * @param axiom The axiom of the grammar.
 	 */
 	public ReverseGrammar(Symbol axiom) {
 		super(axiom);
@@ -30,8 +33,8 @@ public class ReverseGrammar extends Grammar0 {
 	}
 	
 	/**
-	 * add a new rewriting rule to the grammar
-	 * @param r: the rewriting rule to add to the grammar
+	 * Add a new rewriting rule to the grammar.
+	 * @param r The rewriting rule to add to the grammar.
 	 */
 	public void addRule(RewrRuleProb r)
 	{
@@ -48,8 +51,7 @@ public class ReverseGrammar extends Grammar0 {
 		else if (!this._map.get(rhs).contains(r))
 		{
 			this._map.get(rhs).add(r);
-			// fait en sorte que les productions sont toujours ordonnees 
-			// par ordre decroissant de probabilites
+			// the rules are always sorted by descending probability
 			Collections.sort(this._map.get(rhs),
 					Collections.reverseOrder());
 		}
@@ -59,8 +61,8 @@ public class ReverseGrammar extends Grammar0 {
 	}
 	
 	/**
-	 * create a new rewriting rule from a string and add it to the grammar
-	 * @param new_rul: the rewriting rule to add to the grammar
+	 * Create a new rewriting rule from a string and add it to the grammar.
+	 * @param new_rule The rewriting rule to add to the grammar.
 	 */
 	public void addRule(String new_rule)
 	{
@@ -68,10 +70,9 @@ public class ReverseGrammar extends Grammar0 {
 	}
 	
 	/**
-	 * Reads the grammar from the input stream
-	 * Format of the input stream:
-	 * one rewriting rule per line 
-	 * @param fd: the input stream that contains the grammar
+	 * Reads the grammar from the input stream.
+	 * Format of the input stream: one rewriting rule per line.
+	 * @param fd The input stream that contains the grammar.
 	 */
 	public void readGrammar(BufferedReader fd) throws ReadingGrammarException {
 			String		line;
@@ -85,9 +86,9 @@ public class ReverseGrammar extends Grammar0 {
 	}
 
 	/** 
-	 * get all rules with a given right-hand side
-	 * @param rhs right-hand side of the rule
-	 * @return all the rules with that RHS
+	 * Get all rules with a given right-hand side.
+	 * @param rhs Right-hand side of a rule.
+	 * @return All the rules with that RHS.
 	 */
 	public LinkedList<RewrRuleProb> getRules(RHS rhs)
 	{
@@ -100,11 +101,11 @@ public class ReverseGrammar extends Grammar0 {
 	
 	/**
 	 * 1. Modifies the probabilities of all the productions of the form 
-	 * ( Non-ternminal symbol -> Terminal symbol )
-	 * by multiplying their probability by (1-alpha)
+	 * ( Non-terminal symbol -> Terminal symbol )
+	 * by multiplying their probability by (1-alpha).
 	 * 2. Gives all final (lexical) non-terminals.
-	 * @param: alpha = P(UNKNOWN | CAT) / for every CAT that is capable of producing a lexical (known) symbol /
-	 * @return a list of all non-terminals that can generate a terminal
+	 * @param alpha = P(UNKNOWN | CAT) for every CAT that is capable of producing a lexical (known) symbol.
+	 * @return A list of all non-terminals that can generate a terminal.
 	 */
 	public LinkedList<Symbol> modifyLexicalRules(double alpha) {
 		LinkedList<Symbol> lexNonterms = new LinkedList<Symbol>();		

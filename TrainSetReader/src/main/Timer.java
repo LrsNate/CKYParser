@@ -2,7 +2,6 @@ package main;
 
 /**
  * A simple timer in milliseconds.
- * @author Antoine LAFOUASSE
  *
  */
 public class Timer

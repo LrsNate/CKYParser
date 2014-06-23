@@ -14,11 +14,13 @@ import java.util.LinkedList;
  * This class then loads BufferedReader instances and delivers them one by one.
  * If no valid files are provided, a BufferedReader pointing to standard input
  * is loaded.
- * @author Antoine LAFOUASSE
  * @see java.io.BufferedReader
  */
 public class ArgumentParser
 {
+	/**
+	 * A list of input files.
+	 */
 	private final LinkedList<BufferedReader>	_fds;
 
 	/**
@@ -30,7 +32,6 @@ public class ArgumentParser
 		this._fds = new LinkedList<BufferedReader>();
 		try {
 		int i = 0;
-		// changed loop to "while", because otherwise there was an i++ inside a "for" loop
 		while (i < argv.length)
 		{
 			if (argv[i].equals("-p") || argv[i].equals("--precision"))
@@ -102,7 +103,7 @@ public class ArgumentParser
 	/**
 	 * Returns and removes a file descriptor from the list parsed from the
 	 * command line arguments.
-	 * @return a BufferedReader instance or null if there are no file
+	 * @return A BufferedReader instance or null if there are no file
 	 * descriptors left.
 	 */
 	public BufferedReader getNextFile()
@@ -110,6 +111,10 @@ public class ArgumentParser
 		return (this._fds.pollFirst());
 	}
 	
+	/**
+	 * Set default configuration (if no input files are provided, read from standard input. If no output files are provided, 
+	 * print to standard output).
+	 */
 	private void setDefaultValues()
 	{
 		if (this._fds.isEmpty())
@@ -122,7 +127,14 @@ public class ArgumentParser
 			Environment.setOutputStream(new PrintWriter(System.out, true));
 		}
 	}
-		
+	
+	/**
+	 * Read the number of threads from the command-line option.
+	 * @param argv The command line arguments.
+	 * @param idx The position of the --nthread argument.
+	 * @throws NumberFormatException
+	 * @throws MissingArgumentValueException
+	 */
 	private static void parseNThreads(String argv[], int idx)
 			throws NumberFormatException, MissingArgumentValueException
 	{
@@ -133,6 +145,13 @@ public class ArgumentParser
 		Environment.setNThreads(res);
 	}
 
+	/**
+	 * Read the precision of printing numbers like probabilities.
+	 * @param argv The command line arguments.
+	 * @param idx The position of the --precision argument.
+	 * @throws NumberFormatException
+	 * @throws MissingArgumentValueException
+	 */
 	private static void parsePrecision(String argv[], int idx)
 		throws NumberFormatException, MissingArgumentValueException
 	{
@@ -141,6 +160,15 @@ public class ArgumentParser
 		Environment.setPrecision(res);
 	}
 	
+	/**
+	 * Read the threshold for rare words. If the number of times the word is found in the training set
+	 * is inferior to this threshold, the word is considered rare, and its probability is counted
+	 * in the probability of producing an unknown word.
+	 * @param argv The command line arguments.
+	 * @param idx The position of the --unknown-threshold argument.
+	 * @throws NumberFormatException
+	 * @throws MissingArgumentValueException
+	 */
 	private static void parseUnknownThreshold(String argv[], int idx)
 			throws NumberFormatException, MissingArgumentValueException
 	{
@@ -151,6 +179,13 @@ public class ArgumentParser
 		Environment.setUnknownThreshold(res);
 	}
 
+	/**
+	 * Read the label for unknown words.
+	 * @param argv The command line arguments.
+	 * @param idx The position of the --unknown-label argument.
+	 * @throws NumberFormatException
+	 * @throws MissingArgumentValueException
+	 */
 	private static void parseUnknownLabel(String argv[], int idx)
 			throws NumberFormatException, MissingArgumentValueException
 	{

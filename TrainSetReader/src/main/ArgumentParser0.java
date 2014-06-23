@@ -8,8 +8,18 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
+/**
+ * Abstract class for parsing command-line arguments (i.e. options).
+ * 
+ */
 public abstract class ArgumentParser0 {
 	
+	/**
+	 * Check if there is an argument in a given position in the argument list.
+	 * @param argv List of command-line arguments.
+	 * @param idx Index of the argument being checked.
+	 * @throws MissingArgumentValueException
+	 */
 	protected static void checkArgumentPresence(String[] argv, int idx) throws MissingArgumentValueException {
 		if ((idx + 1) >= argv.length)
 		{
@@ -21,6 +31,14 @@ public abstract class ArgumentParser0 {
 		}
 	}
 
+	/**
+	 * Check if the argument in a given position is a positive integer (>0) and returns it, if it is.
+	 * @param argv List of command-line arguments.
+	 * @param idx Index of the argument being checked.
+	 * @return The value of the positive integer in the given position.
+	 * @throws MissingArgumentValueException
+	 * @throws NumberFormatException
+	 */
 	protected static int parsePositiveInt(String[] argv, int idx) throws MissingArgumentValueException, NumberFormatException {
 		checkArgumentPresence(argv,idx);
 		int res = Integer.parseInt(argv[idx + 1]);
@@ -31,6 +49,14 @@ public abstract class ArgumentParser0 {
 		return res;
 	}
 	
+	/**
+	 * Check if the argument in a given position is a non-negative integer (>=0) and returns it, if it is.
+	 * @param argv List of command-line arguments.
+	 * @param idx Index of the argument being checked.
+	 * @return The value of the non-negative integer in the given position.
+	 * @throws MissingArgumentValueException
+	 * @throws NumberFormatException
+	 */
 	protected static int parseNonNegativeInt(String[] argv, int idx) throws MissingArgumentValueException, NumberFormatException {
 		checkArgumentPresence(argv,idx);
 		int res = Integer.parseInt(argv[idx + 1]);
@@ -41,6 +67,10 @@ public abstract class ArgumentParser0 {
 		return res;
 	}
 	
+	/**
+	 * Create a BufferedReader from standard input.
+	 * @return A new BufferedReader from standard input.
+	 */
 	public static BufferedReader openStandardInput()
 	{
 		try
@@ -55,6 +85,12 @@ public abstract class ArgumentParser0 {
 		}
 	}	
 	
+	/**
+	 * Create a BufferedReader from a given input file.
+	 * @param filename The name of the file to open.
+	 * @return A new BufferedReader from file.
+	 * @throws FileNotFoundException
+	 */
 	public static BufferedReader openFile(String filename)
 			throws FileNotFoundException
 	{
@@ -72,6 +108,12 @@ public abstract class ArgumentParser0 {
 		}
 	}
 	
+	/**
+	 * Create a PrintWriter to a given output file.
+	 * @param filename The name of the file to open.
+	 * @return A new PrintWriter to file.
+	 * @throws FileNotFoundException
+	 */
 	public static PrintWriter openOutputFile(String filename)
 			throws FileNotFoundException
 	{

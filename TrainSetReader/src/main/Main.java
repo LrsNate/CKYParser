@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 
 /**
  * The program's entry point.
- * @author Antoine LAFOUASSE
- *
  */
 public final class Main
 {

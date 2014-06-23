@@ -6,26 +6,36 @@ import java.util.HashMap;
 import java.util.Set;
 
 /**
- * une case de la chart de CKY
- * @author yuliya
- *
+ * A cell of the CKY chart.
+ * 
  */
 public class Cell {
 	
 	/**
-	 * smb stores all the symbols this cell contains,
-	 * each symbol points to a list of trees it can produce (usually one)
+	 * A HashMap that stores all the left-hand-side symbols the cell contains,
+	 * each symbol points to a list of trees it can produce (usually one).
 	 */
 	private HashMap<Symbol, LinkedList<Tree>> smb;
 
+	/**
+	 * Default constructor.
+	 */
 	public Cell() {
 		this.smb = new HashMap<Symbol, LinkedList<Tree>>();
 	}
 	
+	/**
+	 * Get all the left-hand-side symbols (tree roots) that the cell contains.
+	 * @return A Set of symbols the cell contains.
+	 */
 	public Set<Symbol> getSymbols() {
 		return this.smb.keySet();
 	}
 	
+	/**
+	 * Add a derivation tree to the cell.
+	 * @param t The tree to store in the cell.
+	 */
 	public void add(Tree t) {
 		Symbol root = t.getRoot();
 		if (!this.smb.containsKey(root)) {
@@ -36,6 +46,11 @@ public class Cell {
 		Collections.sort(trees, Collections.reverseOrder());
 	}
 	
+	/**
+	 * Get all the trees having a given symbol as root.
+	 * @param s The left-hand-symbol being the tree root.
+	 * @return All the trees the cell contains that have the given symbol as root.
+	 */
 	public LinkedList<Tree> getTrees(Symbol s) {
 		return this.smb.get(s);
 	}

@@ -5,24 +5,23 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 /**
- * A (context-free) production (rewriting rule)
- * @author yuliya
+ * A (context-free) production (rewriting rule).
  *
  */
 public class RewrRule {
 	/**
-	 * the left-hand side of the production
+	 * The left-hand side of the production.
 	 */
 	protected final Symbol _lhs;
 	/**
-	 * the right-hand side of the production
+	 * The right-hand side of the production.
 	 */
 	protected final RHS _rhs;
 	
 	/**
-	 * construct a production rule
-	 * @param lhs: left-hand side
-	 * @param rhs: right-hand side
+	 * Construct a production rule.
+	 * @param lhs Left-hand side.
+	 * @param rhs Right-hand side.
 	 */
 	public RewrRule(Symbol lhs, LinkedList<Symbol> rhs) {
 		if (lhs.IsTerminal()) {
@@ -33,9 +32,9 @@ public class RewrRule {
 	}
 	
 	/**
-	 * construct a production rule
-	 * @param lhs: left-hand side
-	 * @param rhs: right-hand side
+	 * Construct a production rule.
+	 * @param lhs Left-hand side.
+	 * @param rhs Right-hand side.
 	 */
 	public RewrRule(Symbol lhs, RHS rhs) {
 		if (lhs.IsTerminal()) {
@@ -46,9 +45,9 @@ public class RewrRule {
 	}
 	
 	/**
-	 * construct a production rule
-	 * @param lhs: left-hand side
-	 * @param rhs_smb: right-hand side
+	 * Construct a single production rule.
+	 * @param lhs Left-hand side.
+	 * @param rhs_smb Right-hand side containing one symbol.
 	 */
 	public RewrRule(Symbol lhs, Symbol rhs_smb) {
 		if (lhs.IsTerminal()) {
@@ -59,10 +58,10 @@ public class RewrRule {
 	}
 	
 	/**
-	 * construct a production rule from a string
-	 * @param str_rule: a string of the form "Abc -> beta", \
-	 * where Abc is a name of a single non-terminal symbol, \
-	 * beta is a string with several names of symbols separated by white-spaces 
+	 * Construct a production rule from a string.
+	 * @param str_rule A string of the form "Abc -> beta", 
+	 * where Abc is a name of a single non-terminal symbol,
+	 * and beta is a string with several names of symbols separated by white-spaces.
 	 */
 	public RewrRule(String str_rule) {
 		LinkedList<String> list_words = new LinkedList<String>( Arrays.asList(str_rule.split(" ")) );		
@@ -85,9 +84,9 @@ public class RewrRule {
 	}
 	
 	/**
-	 * construct a production rule
-	 * @param lhs_str: a string representing the left-hand side (a single name of a non-terminal)
-	 * @param rhs_str: a string representing the right-hand side (several names of symbols separated by white-spaces)
+	 * Construct a production rule.
+	 * @param lhs_str A string representing the left-hand side (a single name of a non-terminal).
+	 * @param rhs_str A string representing the right-hand side (several names of symbols separated by white-spaces).
 	 */
 	public RewrRule(String lhs_str, String rhs_str) {
 		// the left-hand side of the rule
@@ -102,24 +101,24 @@ public class RewrRule {
 	}
 	
 	/**
-	 * get the number of symbols in the right-hand side of the rule
-	 * @return: the number of symbols in the right-hand side of the rule
+	 * Get the number of symbols in the right-hand side of the rule.
+	 * @return The number of symbols in the right-hand side of the rule.
 	 */
 	public int RhsSize() {
 		return _rhs.size();
 	}
 	
 	/**
-	 * get the left-hand side of the rule
-	 * @return: the symbol in the left-hand side of the rule
+	 * Get the left-hand side of the rule.
+	 * @return The symbol in the left-hand side of the rule.
 	 */
 	public Symbol getLHS() {
 		return _lhs;
 	}
 	
 	/**
-	 * get the right-hand side of the rule
-	 * @return: the symbol in the left-hand side of the rule
+	 * Get the right-hand side of the rule.
+	 * @return The right-hand side of the rule.
 	 */
 	public RHS getRHS() {
 		return _rhs;
