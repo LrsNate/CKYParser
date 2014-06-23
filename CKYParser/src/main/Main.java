@@ -60,7 +60,7 @@ public final class Main
 						out.println("**" + line_number + "**  " + line);
 						k_best_parses = parser.parse(Symbol.ListSymbols(line.trim().split(" "), ap.getInputIsLexical()), k_best);
 						if (k_best_parses == null) { 
-							out.println("(NULL null)");
+							out.println("(==NULL== null)");
 							continue; 
 						}
 						boolean print_probas = false;
@@ -76,6 +76,7 @@ public final class Main
 					// no parses were obtained, nothing is printed 
 					// just pass on to the next phrase
 					//System.err.println(e.getMessage());
+					out.println("(==UNK== unk)");
 				}
 			}
 			

@@ -1,0 +1,2 @@
+**74**   PONCT DET ADJ NC V P NC P NPP P DET NC P NC P+D NC CC P+D NC ADJ ADJ PONCT
+(SENT (PONCT \ponct) (Z207 (NP (DET \det) (Z1327 (ADJ \adj) (NC \nc))) (Z69 (VN (V \v)) (Z49 (PP (P \p) (NP (NC \nc) (PP (P \p) (NP (NPP \npp))))) (Z26 (PP (P \p) (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (NC \nc) (PP (P+D \p+d) (Z62 (NP (NC \nc)) (COORD (CC \cc) (PP (P+D \p+d) (NP (NC \nc) (Z23 (AP (ADJ \adj)) (AP (ADJ \adj))))))))))))) (PONCT \ponct))))))

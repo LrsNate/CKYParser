@@ -1,0 +1,1120 @@
+field 1 = **1**
+numero = 1
+str_parse = (SENT (NP (NC \nc) (PP (P+D \p+d) (NP (NC \nc) (PP (P \p) (NP (NPP \npp)))))))
+is_terminal = \nc
+( 1 5)
+is_terminal = \p+d
+( 2 5)
+is_terminal = \nc
+( 3 5)
+is_terminal = \p
+( 4 5)
+is_terminal = \npp
+( 5 5)
+(SENT (NP (NC Affaire) (PP (P+D des) (NP (NC caporaux) (PP (P de) (NP (NPP Souain)))))))
+field 1 = **2**
+numero = 2
+str_parse = (SENT (NP (DET \det) (Z958 (NC \nc) (Z60 (PP (P+D \p+d) (NP (NC \nc) (PP (P \p) (NP (NPP \npp))))) (Z59 (PONCT \ponct) (VPpart (VPP \vpp) (PP (P \p) (NP (DET \det) (NC \nc)))))))) (Z751 (PONCT \ponct) (Z51 (VN (V \v)) (Z50 (NP (PRO \pro)) (Z49 (PP (P+D \p+d) (Z62 (NP (NC \nc) (PP (P \p) (NP (DET \det) (AP (ADV \adv) (ADJ \adj))))) (COORD (CC \cc) (NP (DET \det) (AP (ADV \adv) (ADJ \adj)))))) (Z26 (PP (P \p) (NP (DET \det) (Z989 (NC \nc) (Z869 (AP (ADJ \adj)) (PP (P \p) (NP (DET \det) (Z1162 (ADJ \adj) (Z1077 (NC \nc) (AP (ADJ \adj)))))))))) (PONCT \ponct)))))))
+is_terminal = \det
+( 1 34)
+is_terminal = \nc
+( 2 34)
+is_terminal = \p+d
+( 3 34)
+is_terminal = \nc
+( 4 34)
+is_terminal = \p
+( 5 34)
+is_terminal = \npp
+( 6 34)
+is_terminal = \ponct
+( 7 34)
+is_terminal = \vpp
+( 8 34)
+is_terminal = \p
+( 9 34)
+is_terminal = \det
+( 10 34)
+is_terminal = \nc
+( 11 34)
+is_terminal = \ponct
+( 12 34)
+is_terminal = \v
+( 13 34)
+is_terminal = \pro
+( 14 34)
+is_terminal = \p+d
+( 15 34)
+is_terminal = \nc
+( 16 34)
+is_terminal = \p
+( 17 34)
+is_terminal = \det
+( 18 34)
+is_terminal = \adv
+( 19 34)
+is_terminal = \adj
+( 20 34)
+is_terminal = \cc
+( 21 34)
+is_terminal = \det
+( 22 34)
+is_terminal = \adv
+( 23 34)
+is_terminal = \adj
+( 24 34)
+is_terminal = \p
+( 25 34)
+is_terminal = \det
+( 26 34)
+is_terminal = \nc
+( 27 34)
+is_terminal = \adj
+( 28 34)
+is_terminal = \p
+( 29 34)
+is_terminal = \det
+( 30 34)
+is_terminal = \adj
+( 31 34)
+is_terminal = \nc
+( 32 34)
+is_terminal = \adj
+( 33 34)
+is_terminal = \ponct
+( 34 34)
+(SENT (NP (DET L') (Z958 (NC affaire) (Z60 (PP (P+D des) (NP (NC caporaux) (PP (P de) (NP (NPP Souain))))) (Z59 (PONCT ,) (VPpart (VPP fusillés) (PP (P pour) (NP (DET l') (NC exemple)))))))) (Z751 (PONCT ,) (Z51 (VN (V est)) (Z50 (NP (PRO un)) (Z49 (PP (P+D des) (Z62 (NP (NC cas) (PP (P parmi) (NP (DET les) (AP (ADV plus) (ADJ flagrants))))) (COORD (CC et) (NP (DET les) (AP (ADV plus) (ADJ médiatisés)))))) (Z26 (PP (P de) (NP (DET l') (Z989 (NC injustice) (Z869 (AP (ADJ militaire)) (PP (P durant) (NP (DET la) (Z1162 (ADJ Première) (Z1077 (NC Guerre) (AP (ADJ mondiale)))))))))) (PONCT .)))))))
+field 1 = **3**
+numero = 3
+str_parse = (SENT (NP (DET \det) (Z1149 (ADJ \adj) (Z1148 (NC \nc) (NC \nc)))) (Z236 (PONCT \ponct) (Z235 (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (DET \det) (NC \nc))))) (Z234 (VN (V \v)) (Z209 (VPinf (P \p) (Z24 (VN (VINF \vinf)) (NP (DET \det) (NC \nc)))) (PONCT \ponct))))))
+is_terminal = \det
+( 1 16)
+is_terminal = \adj
+( 2 16)
+is_terminal = \nc
+( 3 16)
+is_terminal = \nc
+( 4 16)
+is_terminal = \ponct
+( 5 16)
+is_terminal = \det
+( 6 16)
+is_terminal = \nc
+( 7 16)
+is_terminal = \p
+( 8 16)
+is_terminal = \det
+( 9 16)
+is_terminal = \nc
+( 10 16)
+is_terminal = \v
+( 11 16)
+is_terminal = \p
+( 12 16)
+is_terminal = \vinf
+( 13 16)
+is_terminal = \det
+( 14 16)
+is_terminal = \nc
+( 15 16)
+is_terminal = \ponct
+( 16 16)
+(SENT (NP (DET Le) (Z1149 (ADJ 11) (Z1148 (NC avril) (NC 1920)))) (Z236 (PONCT ,) (Z235 (NP (DET le) (Z940 (NC ministère) (PP (P de) (NP (DET la) (NC justice))))) (Z234 (VN (V refusait)) (Z209 (VPinf (P d') (Z24 (VN (VINF examiner)) (NP (DET le) (NC dossier)))) (PONCT .))))))
+field 1 = **4**
+numero = 4
+str_parse = (SENT (NP (DET \det) (Z1360 (NC \nc) (NPP \npp))) (Z369 (VN (V \v) (VPP \vpp)) (Z368 (PP (P+D \p+d) (NP (NC \nc) (PP (P+D \p+d) (NP (NPP \npp))))) (Z15 (NP (DET \det) (Z1149 (ADJ \adj) (Z1148 (NC \nc) (NC \nc)))) (PONCT \ponct)))))
+is_terminal = \det
+( 1 14)
+is_terminal = \nc
+( 2 14)
+is_terminal = \npp
+( 3 14)
+is_terminal = \v
+( 4 14)
+is_terminal = \vpp
+( 5 14)
+is_terminal = \p+d
+( 6 14)
+is_terminal = \nc
+( 7 14)
+is_terminal = \p+d
+( 8 14)
+is_terminal = \npp
+( 9 14)
+is_terminal = \det
+( 10 14)
+is_terminal = \adj
+( 11 14)
+is_terminal = \nc
+( 12 14)
+is_terminal = \nc
+( 13 14)
+is_terminal = \ponct
+( 14 14)
+(SENT (NP (DET Le) (Z1360 (NC caporal) (NPP Lechat))) (Z369 (VN (V fut) (VPP ré-inhumé)) (Z368 (PP (P+D au) (NP (NC cimetière) (PP (P+D du) (NP (NPP Ferré))))) (Z15 (NP (DET le) (Z1149 (ADJ 16) (Z1148 (NC octobre) (NC 1924)))) (PONCT .)))))
+field 1 = **5**
+numero = 5
+str_parse = (SENT (NP (DET \det) (Z1077 (NC \nc) (AP (ADJ \adj) (COORD (CC \cc) (AP (ADJ \adj)))))) (Z644 (VN (ADV \adv) (V \v)) (Z643 (VPinf (P \p) (Z56 (VN (VINF \vinf)) (Z55 (PP (P \p) (NP (DET \det) (NC \nc))) (COORD (CC \cc) (Srel (NP (DET \det) (NC \nc)) (Z36 (VN (V \v)) (PP (P \p) (NP (NC \nc) (PP (P \p) (NP (NC \nc) (PP (P \p) (NP (NC \nc) (PP (P \p) (NP (NC \nc))))))))))))))) (Z157 (COORD (CC \cc) (PP (P \p) (NP (ADJ \adj) (NC \nc)))) (PONCT \ponct)))))
+is_terminal = \det
+( 1 29)
+is_terminal = \nc
+( 2 29)
+is_terminal = \adj
+( 3 29)
+is_terminal = \cc
+( 4 29)
+is_terminal = \adj
+( 5 29)
+is_terminal = \adv
+( 6 29)
+is_terminal = \v
+( 7 29)
+is_terminal = \p
+( 8 29)
+is_terminal = \vinf
+( 9 29)
+is_terminal = \p
+( 10 29)
+is_terminal = \det
+( 11 29)
+is_terminal = \nc
+( 12 29)
+is_terminal = \cc
+( 13 29)
+is_terminal = \det
+( 14 29)
+is_terminal = \nc
+( 15 29)
+is_terminal = \v
+( 16 29)
+is_terminal = \p
+( 17 29)
+is_terminal = \nc
+( 18 29)
+is_terminal = \p
+( 19 29)
+is_terminal = \nc
+( 20 29)
+is_terminal = \p
+( 21 29)
+is_terminal = \nc
+( 22 29)
+is_terminal = \p
+( 23 29)
+is_terminal = \nc
+( 24 29)
+is_terminal = \cc
+( 25 29)
+is_terminal = \p
+( 26 29)
+is_terminal = \adj
+( 27 29)
+is_terminal = \nc
+( 28 29)
+is_terminal = \ponct
+( 29 29)
+(SENT (NP (DET la) (Z1077 (NC presse) (AP (ADJ régionale) (COORD (CC et) (AP (ADJ nationale)))))) (Z644 (VN (ADV ne) (V cessa)) (Z643 (VPinf (P de) (Z56 (VN (VINF parler)) (Z55 (PP (P de) (NP (DET l') (NC affaire))) (COORD (CC et) (Srel (NP (DET les) (NC soutiens)) (Z36 (VN (V affluèrent)) (PP (P de) (NP (NC dizaines) (PP (P d') (NP (NC associations) (PP (P de) (NP (NC mutilés) (PP (P de) (NP (NC guerre))))))))))))))) (Z157 (COORD (CC et) (PP (P d') (NP (ADJ anciens) (NC combattants)))) (PONCT .)))))
+field 1 = **6**
+numero = 6
+str_parse = (SENT (PONCT \ponct) (Z713 (NP (NC \nc) (Z1191 (NPP \npp) (Z1141 (NPP \npp) (Z37 (PONCT \ponct) (NP (NPP \npp) (PP (P \p) (NP (DET \det) (NC \nc)))))))) (Z586 (PONCT \ponct) (Z585 (NP (NC \nc)) (Z355 (PONCT \ponct) (Z338 (NP (NC \nc) (NPP \npp)) (Z337 (PONCT \ponct) (Z336 (NP (NC \nc)) (Z252 (PONCT \ponct) (PONCT \ponct))))))))))
+is_terminal = \ponct
+( 1 18)
+is_terminal = \nc
+( 2 18)
+is_terminal = \npp
+( 3 18)
+is_terminal = \npp
+( 4 18)
+is_terminal = \ponct
+( 5 18)
+is_terminal = \npp
+( 6 18)
+is_terminal = \p
+( 7 18)
+is_terminal = \det
+( 8 18)
+is_terminal = \nc
+( 9 18)
+is_terminal = \ponct
+( 10 18)
+is_terminal = \nc
+( 11 18)
+is_terminal = \ponct
+( 12 18)
+is_terminal = \nc
+( 13 18)
+is_terminal = \npp
+( 14 18)
+is_terminal = \ponct
+( 15 18)
+is_terminal = \nc
+( 16 18)
+is_terminal = \ponct
+( 17 18)
+is_terminal = \ponct
+( 18 18)
+(SENT (PONCT -) (Z713 (NP (NC Général) (Z1191 (NPP André) (Z1141 (NPP Bach) (Z37 (PONCT ,) (NP (NPP Fusillés) (PP (P pour) (NP (DET l') (NC exemple)))))))) (Z586 (PONCT -) (Z585 (NP (NC 1914-1915)) (Z355 (PONCT ,) (Z338 (NP (NC Éditions) (NPP Tallandier)) (Z337 (PONCT ,) (Z336 (NP (NC 2003)) (Z252 (PONCT -RRB-) (PONCT .))))))))))
+field 1 = **7**
+numero = 7
+str_parse = (SENT (NP (NC \nc)))
+is_terminal = \nc
+( 1 1)
+(SENT (NP (NC Affaire)))
+field 1 = **8**
+numero = 8
+str_parse = (SENT (VN (CLS-SUJ \cls-suj) (Z103 (V \v) (Z102 (ADV \adv) (VPP \vpp)))) (Z26 (PP (P \p) (NP (DET \det) (Z1047 (NC \nc) (Z972 (PP (P+D \p+d) (NP (NC \nc) (PP (P \p) (NP (PRO \pro))))) (Z895 (PONCT \ponct) (Srel (NP (PRO \pro)) (Z31 (VN (VPR \vpr)) (Z30 (NP (DET \det) (Z940 (NC \nc) (PP (P+D \p+d) (NP (NC \nc))))) (VPinf (P \p) (VN (CLO-OBJ \clo-obj) (VPR \vpr))))))))))) (PONCT \ponct)))
+is_terminal = \cls-suj
+( 1 22)
+is_terminal = \v
+( 2 22)
+is_terminal = \adv
+( 3 22)
+is_terminal = \vpp
+( 4 22)
+is_terminal = \p
+( 5 22)
+is_terminal = \det
+( 6 22)
+is_terminal = \nc
+( 7 22)
+is_terminal = \p+d
+( 8 22)
+is_terminal = \nc
+( 9 22)
+is_terminal = \p
+( 10 22)
+is_terminal = \pro
+( 11 22)
+is_terminal = \ponct
+( 12 22)
+is_terminal = \pro
+( 13 22)
+is_terminal = \vpr
+( 14 22)
+is_terminal = \det
+( 15 22)
+is_terminal = \nc
+( 16 22)
+is_terminal = \p+d
+( 17 22)
+is_terminal = \nc
+( 18 22)
+is_terminal = \p
+( 19 22)
+is_terminal = \clo-obj
+( 20 22)
+is_terminal = \vpr
+( 21 22)
+is_terminal = \ponct
+( 22 22)
+(SENT (VN (CLS-SUJ Elle) (Z103 (V semble) (Z102 (ADV essentiellement) (VPP due)))) (Z26 (PP (P à) (NP (DET une) (Z1047 (NC compétition) (Z972 (PP (P+D des) (NP (NC médias) (PP (P entre) (NP (PRO eux))))) (Z895 (PONCT ,) (Srel (NP (PRO chacun)) (Z31 (VN (VPR reprenant)) (Z30 (NP (DET l') (Z940 (NC information) (PP (P+D du) (NP (NC concurrent))))) (VPinf (P en) (VN (CLO-OBJ l') (VPR amplifiant))))))))))) (PONCT .)))
+field 1 = **9**
+numero = 9
+str_parse = (SENT (ADV \adv) (Z291 (PONCT \ponct) (Z290 (Srel (NP (DET \det) (NC \nc)) (Z1511 (VN (V \v)) (Z1510 (ADV \adv) (Z32 (NP (DET \det) (Z1372 (NC \nc) (Z72 (PP (P \p) (NP (NC \nc))) (Z71 (PP (P \p) (NP (ADJ \adj) (Z1404 (DET \det) (NPP \npp)))) (Z70 (PONCT \ponct) (COORD (CC \cc) (Z17 (ADV \adv) (PP (P \p) (NP (PRO \pro) (Srel (PP (P \p) (Z1580 (NP (NPP \npp) (PONCT \ponct)) (ADV \adv))) (NP (PRO \pro)))))))))))) (PP (P \p) (NP (DET \det) (Z1281 (NC \nc) (Z360 (AP (ADJ \adj)) (PONCT \ponct))))))))) (PONCT \ponct))))
+is_terminal = \adv
+( 1 30)
+is_terminal = \ponct
+( 2 30)
+is_terminal = \det
+( 3 30)
+is_terminal = \nc
+( 4 30)
+is_terminal = \v
+( 5 30)
+is_terminal = \adv
+( 6 30)
+is_terminal = \det
+( 7 30)
+is_terminal = \nc
+( 8 30)
+is_terminal = \p
+( 9 30)
+is_terminal = \nc
+( 10 30)
+is_terminal = \p
+( 11 30)
+is_terminal = \adj
+( 12 30)
+is_terminal = \det
+( 13 30)
+is_terminal = \npp
+( 14 30)
+is_terminal = \ponct
+( 15 30)
+is_terminal = \cc
+( 16 30)
+is_terminal = \adv
+( 17 30)
+is_terminal = \p
+( 18 30)
+is_terminal = \pro
+( 19 30)
+is_terminal = \p
+( 20 30)
+is_terminal = \npp
+( 21 30)
+is_terminal = \ponct
+( 22 30)
+is_terminal = \adv
+( 23 30)
+is_terminal = \pro
+( 24 30)
+is_terminal = \p
+( 25 30)
+is_terminal = \det
+( 26 30)
+is_terminal = \nc
+( 27 30)
+is_terminal = \adj
+( 28 30)
+is_terminal = \ponct
+( 29 30)
+is_terminal = \ponct
+( 30 30)
+(SENT (ADV En_fait) (Z291 (PONCT ,) (Z290 (Srel (NP (DET l') (NC histoire)) (Z1511 (VN (V retient)) (Z1510 (ADV aujourd'_hui) (Z32 (NP (DET quelques) (Z1372 (NC centaines) (Z72 (PP (P de) (NP (NC morts))) (Z71 (PP (P dans) (NP (ADJ toute) (Z1404 (DET la) (NPP Roumanie)))) (Z70 (PONCT ,) (COORD (CC et) (Z17 (ADV moins) (PP (P de) (NP (PRO 200) (Srel (PP (P à) (Z1580 (NP (NPP Timisoara) (PONCT -LRB-)) (ADV seulement))) (NP (PRO 96)))))))))))) (PP (P selon) (NP (DET les) (Z1281 (NC décomptes) (Z360 (AP (ADJ officiels)) (PONCT -RRB-))))))))) (PONCT .))))
+field 1 = **10**
+numero = 10
+str_parse = (SENT (NP (DET \det) (Z1368 (NC \nc) (Z291 (PONCT \ponct) (Z290 (Srel (PP (PROREL \prorel)) (Z1508 (NP (DET \det) (NC \nc)) (Z24 (VN (V \v) (VPP \vpp)) (NP (DET \det) (Z940 (NC \nc) (PP (P+D \p+d) (NP (NC \nc)))))))) (PONCT \ponct))))) (Z83 (VN (V \v) (Z125 (ADV \adv) (Z110 (VPP \vpp) (VPP \vpp)))) (Z26 (PP (P \p) (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (DET \det) (Z1077 (NC \nc) (AP (ADJ \adj)))))))) (PONCT \ponct))))
+is_terminal = \det
+( 1 25)
+is_terminal = \nc
+( 2 25)
+is_terminal = \ponct
+( 3 25)
+is_terminal = \prorel
+( 4 25)
+is_terminal = \det
+( 5 25)
+is_terminal = \nc
+( 6 25)
+is_terminal = \v
+( 7 25)
+is_terminal = \vpp
+( 8 25)
+is_terminal = \det
+( 9 25)
+is_terminal = \nc
+( 10 25)
+is_terminal = \p+d
+( 11 25)
+is_terminal = \nc
+( 12 25)
+is_terminal = \ponct
+( 13 25)
+is_terminal = \v
+( 14 25)
+is_terminal = \adv
+( 15 25)
+is_terminal = \vpp
+( 16 25)
+is_terminal = \vpp
+( 17 25)
+is_terminal = \p
+( 18 25)
+is_terminal = \det
+( 19 25)
+is_terminal = \nc
+( 20 25)
+is_terminal = \p
+( 21 25)
+is_terminal = \det
+( 22 25)
+is_terminal = \nc
+( 23 25)
+is_terminal = \adj
+( 24 25)
+is_terminal = \ponct
+( 25 25)
+(SENT (NP (DET Les) (Z1368 (NC cadavres) (Z291 (PONCT ,) (Z290 (Srel (PP (PROREL dont)) (Z1508 (NP (DET les) (NC images)) (Z24 (VN (V avaient) (VPP fait)) (NP (DET le) (Z940 (NC tour) (PP (P+D du) (NP (NC monde)))))))) (PONCT ,))))) (Z83 (VN (V avaient) (Z125 (ADV en_réalité) (Z110 (VPP été) (VPP sortis)))) (Z26 (PP (P de) (NP (DET la) (Z940 (NC morgue) (PP (P d') (NP (DET un) (Z1077 (NC hôpital) (AP (ADJ local)))))))) (PONCT ;))))
+field 1 = **11**
+numero = 11
+str_parse = (SENT (PONCT \ponct) (NP (NPP \npp)))
+is_terminal = \ponct
+( 1 2)
+is_terminal = \npp
+( 2 2)
+(SENT (PONCT -) (NP (NPP Ceausescu)))
+field 1 = **12**
+numero = 12
+str_parse = (SENT (NP (NC \nc)) (Z196 (PONCT \ponct) (Z195 (NP (NPP \npp)) (Z16 (PONCT \ponct) (Z15 (NP (NC \nc) (NPP \npp)) (PONCT \ponct))))))
+is_terminal = \nc
+( 1 7)
+is_terminal = \ponct
+( 2 7)
+is_terminal = \npp
+( 3 7)
+is_terminal = \ponct
+( 4 7)
+is_terminal = \nc
+( 5 7)
+is_terminal = \npp
+( 6 7)
+is_terminal = \ponct
+( 7 7)
+(SENT (NP (NC Catégories)) (Z196 (PONCT :) (Z195 (NP (NPP Wikipédia)) (Z16 (PONCT :) (Z15 (NP (NC ébauche) (NPP Roumanie)) (PONCT .))))))
+field 1 = **13**
+numero = 13
+str_parse = (SENT (NP (NC \nc)) (PONCT \ponct))
+is_terminal = \nc
+( 1 2)
+is_terminal = \ponct
+( 2 2)
+(SENT (NP (NC Désinformation)) (PONCT .))
+field 1 = **14**
+numero = 14
+str_parse = (SENT (NP (NC \nc)) (PONCT \ponct))
+is_terminal = \nc
+( 1 2)
+is_terminal = \ponct
+( 2 2)
+(SENT (NP (NC Médias)) (PONCT .))
+field 1 = **15**
+numero = 15
+str_parse = (SENT (ADV \adv) (Z291 (PONCT \ponct) (Z290 (Srel (NP (DET \det) (NC \nc)) (Z94 (VN (V \v)) (AP (ADV \adv) (ADJ \adj)))) (PONCT \ponct))))
+is_terminal = \adv
+( 1 8)
+is_terminal = \ponct
+( 2 8)
+is_terminal = \det
+( 3 8)
+is_terminal = \nc
+( 4 8)
+is_terminal = \v
+( 5 8)
+is_terminal = \adv
+( 6 8)
+is_terminal = \adj
+( 7 8)
+is_terminal = \ponct
+( 8 8)
+(SENT (ADV En_fait) (Z291 (PONCT ,) (Z290 (Srel (NP (DET ce) (NC témoignage)) (Z94 (VN (V était)) (AP (ADV entièrement) (ADJ faux)))) (PONCT .))))
+field 1 = **16**
+numero = 16
+str_parse = (SENT (NP (DET \det) (Z1327 (ADJ \adj) (NC \nc))) (Z92 (VN (V \v)) (Z91 (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (DET \det) (Z940 (NC \nc) (PP (P+D \p+d) (NP (NPP \npp)))))))) (Z26 (PP (P \p) (NP (NPP \npp))) (PONCT \ponct)))))
+is_terminal = \det
+( 1 14)
+is_terminal = \adj
+( 2 14)
+is_terminal = \nc
+( 3 14)
+is_terminal = \v
+( 4 14)
+is_terminal = \det
+( 5 14)
+is_terminal = \nc
+( 6 14)
+is_terminal = \p
+( 7 14)
+is_terminal = \det
+( 8 14)
+is_terminal = \nc
+( 9 14)
+is_terminal = \p+d
+( 10 14)
+is_terminal = \npp
+( 11 14)
+is_terminal = \p
+( 12 14)
+is_terminal = \npp
+( 13 14)
+is_terminal = \ponct
+( 14 14)
+(SENT (NP (DET La) (Z1327 (ADJ jeune) (NC fille))) (Z92 (VN (V était)) (Z91 (NP (DET la) (Z940 (NC fille) (PP (P de) (NP (DET l') (Z940 (NC ambassadeur) (PP (P+D du) (NP (NPP Koweït)))))))) (Z26 (PP (P à) (NP (NPP Washington))) (PONCT .)))))
+field 1 = **17**
+numero = 17
+str_parse = (SENT (NP (DET \det) (Z1069 (NC \nc) (VPpart (VN (V \v) (VPP \vpp)) (PP (P \p) (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (NPP \npp) (NPP \npp))))))))) (Z730 (PONCT \ponct) (Z729 (NP (PROREL \prorel)) (Z728 (VN (V \v) (VPP \vpp)) (Z727 (NP (DET \det) (Z1011 (NC \nc) (Ssub (CS \cs) (Z80 (NP (DET \det) (NC \nc)) (Z29 (VN (ADV \adv) (Z103 (V \v) (Z102 (ADV \adv) (VPP \vpp)))) (VPinf (P \p) (Z24 (VN (VINF \vinf)) (NP (DET \det) (NC \nc))))))))) (Z577 (PP (P \p) (NP (DET \det) (Z1327 (ADJ \adj) (NC \nc)))) (Z337 (PONCT \ponct) (Z336 (NP (NC \nc)) (Z252 (PONCT \ponct) (PONCT \ponct))))))))))
+is_terminal = \det
+( 1 35)
+is_terminal = \nc
+( 2 35)
+is_terminal = \v
+( 3 35)
+is_terminal = \vpp
+( 4 35)
+is_terminal = \p
+( 5 35)
+is_terminal = \det
+( 6 35)
+is_terminal = \nc
+( 7 35)
+is_terminal = \p
+( 8 35)
+is_terminal = \npp
+( 9 35)
+is_terminal = \npp
+( 10 35)
+is_terminal = \ponct
+( 11 35)
+is_terminal = \prorel
+( 12 35)
+is_terminal = \v
+( 13 35)
+is_terminal = \vpp
+( 14 35)
+is_terminal = \det
+( 15 35)
+is_terminal = \nc
+( 16 35)
+is_terminal = \cs
+( 17 35)
+is_terminal = \det
+( 18 35)
+is_terminal = \nc
+( 19 35)
+is_terminal = \adv
+( 20 35)
+is_terminal = \v
+( 21 35)
+is_terminal = \adv
+( 22 35)
+is_terminal = \vpp
+( 23 35)
+is_terminal = \p
+( 24 35)
+is_terminal = \vinf
+( 25 35)
+is_terminal = \det
+( 26 35)
+is_terminal = \nc
+( 27 35)
+is_terminal = \p
+( 28 35)
+is_terminal = \det
+( 29 35)
+is_terminal = \adj
+( 30 35)
+is_terminal = \nc
+( 31 35)
+is_terminal = \ponct
+( 32 35)
+is_terminal = \nc
+( 33 35)
+is_terminal = \ponct
+( 34 35)
+is_terminal = \ponct
+( 35 35)
+(SENT (NP (DET La) (Z1069 (NC machination) (VPpart (VN (V a) (VPP fonctionné)) (PP (P grâce_à) (NP (DET l') (Z940 (NC intervention) (PP (P de) (NP (NPP Lauri) (NPP Fitz-Pegado))))))))) (Z730 (PONCT ,) (Z729 (NP (PROREL qui)) (Z728 (VN (V a) (VPP convaincu)) (Z727 (NP (DET les) (Z1011 (NC députés) (Ssub (CS que) (Z80 (NP (DET l') (NC identité)) (Z29 (VN (ADV n') (Z103 (V était) (Z102 (ADV pas) (VPP révélée)))) (VPinf (P pour) (Z24 (VN (VINF protéger)) (NP (DET la) (NC famille))))))))) (Z577 (PP (P de) (NP (DET la) (Z1327 (ADJ jeune) (NC femme)))) (Z337 (PONCT [) (Z336 (NP (NC 2)) (Z252 (PONCT ]) (PONCT .))))))))))
+field 1 = **18**
+numero = 18
+str_parse = (SENT (NP (NPP \npp) (NPP \npp)) (Z619 (VN (V \v) (VPP \vpp)) (Z618 (PP (P \p) (NP (DET \det) (Z1393 (NC \nc) (ADV \adv)))) (Z617 (PONCT \ponct) (Z577 (PP (P \p) (NP (DET \det) (Z1086 (NPP \npp) (PP (P \p) (NP (DET \det) (NC \nc)))))) (Z337 (PONCT \ponct) (Z336 (NP (NC \nc)) (Z252 (PONCT \ponct) (PONCT \ponct)))))))))
+is_terminal = \npp
+( 1 19)
+is_terminal = \npp
+( 2 19)
+is_terminal = \v
+( 3 19)
+is_terminal = \vpp
+( 4 19)
+is_terminal = \p
+( 5 19)
+is_terminal = \det
+( 6 19)
+is_terminal = \nc
+( 7 19)
+is_terminal = \adv
+( 8 19)
+is_terminal = \ponct
+( 9 19)
+is_terminal = \p
+( 10 19)
+is_terminal = \det
+( 11 19)
+is_terminal = \npp
+( 12 19)
+is_terminal = \p
+( 13 19)
+is_terminal = \det
+( 14 19)
+is_terminal = \nc
+( 15 19)
+is_terminal = \ponct
+( 16 19)
+is_terminal = \nc
+( 17 19)
+is_terminal = \ponct
+( 18 19)
+is_terminal = \ponct
+( 19 19)
+(SENT (NP (NPP Lauri) (NPP Fitz-Pegado)) (Z619 (VN (V avait) (VPP travaillé)) (Z618 (PP (P pour) (NP (DET le) (Z1393 (NC gouvernement) (ADV auparavant)))) (Z617 (PONCT ,) (Z577 (PP (P dans) (NP (DET l') (Z1086 (NPP Agence) (PP (P de) (NP (DET l') (NC Information)))))) (Z337 (PONCT [) (Z336 (NP (NC 3)) (Z252 (PONCT ]) (PONCT .)))))))))
+field 1 = **19**
+numero = 19
+str_parse = (SENT (ADV \adv) (Z291 (PONCT \ponct) (Z290 (Srel (NP (DET \det) (Z1077 (NC \nc) (AP (ADJ \adj)))) (Z31 (VN (V \v) (Z119 (PP (P \p) (NP (DET \det) (Z938 (NC \nc) (Z16 (PONCT \ponct) (Z15 (NP (NC \nc)) (PONCT \ponct)))))) (VPP \vpp))) (Z30 (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (NC \nc) (PP (P \p) (NP (DET \det) (NC \nc))))))) (VPinf (P \p) (Z29 (VN (CLO-OBJ \clo-obj) (Z112 (VINF \vinf) (VPP \vpp))) (VPinf (P \p) (Z43 (VN (VINF \vinf)) (Z32 (NP (DET \det) (Z940 (NC \nc) (PP (P+D \p+d) (NP (NPP \npp))))) (PP (P \p) (NP (DET \det) (Z989 (NC \nc) (Z869 (AP (ADJ \adj)) (PP (P \p) (NP (DET \det) (Z1077 (NC \nc) (AP (ADJ \adj))))))))))))))))) (PONCT \ponct))))
+is_terminal = \adv
+( 1 39)
+is_terminal = \ponct
+( 2 39)
+is_terminal = \det
+( 3 39)
+is_terminal = \nc
+( 4 39)
+is_terminal = \adj
+( 5 39)
+is_terminal = \v
+( 6 39)
+is_terminal = \p
+( 7 39)
+is_terminal = \det
+( 8 39)
+is_terminal = \nc
+( 9 39)
+is_terminal = \ponct
+( 10 39)
+is_terminal = \nc
+( 11 39)
+is_terminal = \ponct
+( 12 39)
+is_terminal = \vpp
+( 13 39)
+is_terminal = \det
+( 14 39)
+is_terminal = \nc
+( 15 39)
+is_terminal = \p
+( 16 39)
+is_terminal = \nc
+( 17 39)
+is_terminal = \p
+( 18 39)
+is_terminal = \det
+( 19 39)
+is_terminal = \nc
+( 20 39)
+is_terminal = \p
+( 21 39)
+is_terminal = \clo-obj
+( 22 39)
+is_terminal = \vinf
+( 23 39)
+is_terminal = \vpp
+( 24 39)
+is_terminal = \p
+( 25 39)
+is_terminal = \vinf
+( 26 39)
+is_terminal = \det
+( 27 39)
+is_terminal = \nc
+( 28 39)
+is_terminal = \p+d
+( 29 39)
+is_terminal = \npp
+( 30 39)
+is_terminal = \p
+( 31 39)
+is_terminal = \det
+( 32 39)
+is_terminal = \nc
+( 33 39)
+is_terminal = \adj
+( 34 39)
+is_terminal = \p
+( 35 39)
+is_terminal = \det
+( 36 39)
+is_terminal = \nc
+( 37 39)
+is_terminal = \adj
+( 38 39)
+is_terminal = \ponct
+( 39 39)
+(SENT (ADV Par_ailleurs) (Z291 (PONCT ,) (Z290 (Srel (NP (DET le) (Z1077 (NC gouvernement) (AP (ADJ américain)))) (Z31 (VN (V aurait) (Z119 (PP (P selon) (NP (DET plusieurs) (Z938 (NC sources) (Z16 (PONCT [) (Z15 (NP (NC 4)) (PONCT ])))))) (VPP payé))) (Z30 (NP (DET 14) (Z940 (NC millions) (PP (P de) (NP (NC dollars) (PP (P à) (NP (DET cette) (NC compagnie))))))) (VPinf (P pour) (Z29 (VN (CLO-OBJ l') (Z112 (VINF avoir) (VPP aidée))) (VPinf (P à) (Z43 (VN (VINF médiatiser)) (Z32 (NP (DET la) (Z940 (NC guerre) (PP (P+D du) (NP (NPP Golfe))))) (PP (P sous) (NP (DET un) (Z989 (NC jour) (Z869 (AP (ADJ favorable)) (PP (P à) (NP (DET l') (Z1077 (NC intervention) (AP (ADJ occidentale))))))))))))))))) (PONCT .))))
+field 1 = **20**
+numero = 20
+str_parse = (SENT (PONCT \ponct) (Z335 (PONCT \ponct) (Z334 (NP (ET \et)) (Z333 (PONCT \ponct) (Z332 (NP (NPP \npp) (NPP \npp)) (Z331 (PONCT \ponct) (Z330 (NP (NPP \npp) (NP (ET \et) (NP (ET \et) (Z1401 (ET \et) (Z1374 (ET \et) (Z1309 (ET \et) (ET \et))))))) (Z196 (PONCT \ponct) (Z195 (NP (NPP \npp) (NPP \npp)) (Z16 (PONCT \ponct) (Z15 (NP (NC \nc) (Z1046 (NC \nc) (Z912 (PONCT \ponct) (NC \nc)))) (PONCT \ponct))))))))))))
+is_terminal = \ponct
+( 1 23)
+is_terminal = \ponct
+( 2 23)
+is_terminal = \et
+( 3 23)
+is_terminal = \ponct
+( 4 23)
+is_terminal = \npp
+( 5 23)
+is_terminal = \npp
+( 6 23)
+is_terminal = \ponct
+( 7 23)
+is_terminal = \npp
+( 8 23)
+is_terminal = \et
+( 9 23)
+is_terminal = \et
+( 10 23)
+is_terminal = \et
+( 11 23)
+is_terminal = \et
+( 12 23)
+is_terminal = \et
+( 13 23)
+is_terminal = \et
+( 14 23)
+is_terminal = \ponct
+( 15 23)
+is_terminal = \npp
+( 16 23)
+is_terminal = \npp
+( 17 23)
+is_terminal = \ponct
+( 18 23)
+is_terminal = \nc
+( 19 23)
+is_terminal = \nc
+( 20 23)
+is_terminal = \ponct
+( 21 23)
+is_terminal = \nc
+( 22 23)
+is_terminal = \ponct
+( 23 23)
+(SENT (PONCT -) (Z335 (PONCT -LRB-) (Z334 (NP (ET en)) (Z333 (PONCT -RRB-) (Z332 (NP (NPP Ian) (NPP Urbina)) (Z331 (PONCT ,) (Z330 (NP (NPP HBO) (NP (ET adds) (NP (ET disclaimer) (Z1401 (ET to) (Z1374 (ET Gulf) (Z1309 (ET War) (ET movie))))))) (Z196 (PONCT ,) (Z195 (NP (NPP Asia) (NPP Times)) (Z16 (PONCT ,) (Z15 (NP (NC Nov) (Z1046 (NC 13) (Z912 (PONCT ,) (NC 2002)))) (PONCT .))))))))))))
+field 1 = **21**
+numero = 21
+str_parse = (SENT (PONCT \ponct) (Z195 (NP (NC \nc) (PP (P+D \p+d) (NP (NPP \npp)))) (Z16 (PONCT \ponct) (Z15 (NP (NC \nc)) (PONCT \ponct)))))
+is_terminal = \ponct
+( 1 7)
+is_terminal = \nc
+( 2 7)
+is_terminal = \p+d
+( 3 7)
+is_terminal = \npp
+( 4 7)
+is_terminal = \ponct
+( 5 7)
+is_terminal = \nc
+( 6 7)
+is_terminal = \ponct
+( 7 7)
+(SENT (PONCT -) (Z195 (NP (NC Guerre) (PP (P+D du) (NP (NPP Koweït)))) (Z16 (PONCT -LRB-) (Z15 (NP (NC 1990-1991)) (PONCT -RRB-)))))
+field 1 = **22**
+numero = 22
+str_parse = (SENT (PP (P \p) (NP (NC \nc))) (Z554 (PONCT \ponct) (Z553 (NP (NPP \npp) (Z1331 (NPP \npp) (Z203 (PP (P \p) (NP (NPP \npp) (Z895 (PONCT \ponct) (Srel (NP (NC \nc) (PP (P+D \p+d) (NP (NC \nc) (PP (P \p) (NP (NPP \npp) (NPP \npp)))))) (Z42 (VN (V \v)) (Z41 (PP (P+D \p+d) (NP (NC \nc) (PP (P \p) (NP (NC \nc) (AP (ADJ \adj)))))) (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (NC \nc) (AP (ADJ \adj)))))))))))) (Z16 (PONCT \ponct) (Z15 (NP (DET \det) (Z1322 (NC \nc) (Z1321 (PP (P \p) (NP (ADJ \adj) (NC \nc))) (AP (ADJ \adj))))) (PONCT \ponct)))))) (Z552 (PONCT \ponct) (Z551 (NP (NC \nc) (PP (P \p) (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (NC \nc) (PP (P \p) (NP (NC \nc) (PP (PROREL \prorel))))))))))))) (Z550 (VN (CLS-SUJ \cls-suj) (V \v)) (Z153 (VPpart (VPP \vpp) (PP (P \p) (NP (NPP \npp)))) (PONCT \ponct))))))))
+is_terminal = \p
+( 1 52)
+is_terminal = \nc
+( 2 52)
+is_terminal = \ponct
+( 3 52)
+is_terminal = \npp
+( 4 52)
+is_terminal = \npp
+( 5 52)
+is_terminal = \p
+( 6 52)
+is_terminal = \npp
+( 7 52)
+is_terminal = \ponct
+( 8 52)
+is_terminal = \nc
+( 9 52)
+is_terminal = \p+d
+( 10 52)
+is_terminal = \nc
+( 11 52)
+is_terminal = \p
+( 12 52)
+is_terminal = \npp
+( 13 52)
+is_terminal = \npp
+( 14 52)
+is_terminal = \v
+( 15 52)
+is_terminal = \p+d
+( 16 52)
+is_terminal = \nc
+( 17 52)
+is_terminal = \p
+( 18 52)
+is_terminal = \nc
+( 19 52)
+is_terminal = \adj
+( 20 52)
+is_terminal = \det
+( 21 52)
+is_terminal = \nc
+( 22 52)
+is_terminal = \p
+( 23 52)
+is_terminal = \nc
+( 24 52)
+is_terminal = \adj
+( 25 52)
+is_terminal = \ponct
+( 26 52)
+is_terminal = \det
+( 27 52)
+is_terminal = \nc
+( 28 52)
+is_terminal = \p
+( 29 52)
+is_terminal = \adj
+( 30 52)
+is_terminal = \nc
+( 31 52)
+is_terminal = \adj
+( 32 52)
+is_terminal = \ponct
+( 33 52)
+is_terminal = \ponct
+( 34 52)
+is_terminal = \nc
+( 35 52)
+is_terminal = \p
+( 36 52)
+is_terminal = \det
+( 37 52)
+is_terminal = \nc
+( 38 52)
+is_terminal = \p
+( 39 52)
+is_terminal = \det
+( 40 52)
+is_terminal = \nc
+( 41 52)
+is_terminal = \p
+( 42 52)
+is_terminal = \nc
+( 43 52)
+is_terminal = \p
+( 44 52)
+is_terminal = \nc
+( 45 52)
+is_terminal = \prorel
+( 46 52)
+is_terminal = \cls-suj
+( 47 52)
+is_terminal = \v
+( 48 52)
+is_terminal = \vpp
+( 49 52)
+is_terminal = \p
+( 50 52)
+is_terminal = \npp
+( 51 52)
+is_terminal = \ponct
+( 52 52)
+(SENT (PP (P En) (NP (NC 1973))) (Z554 (PONCT ,) (Z553 (NP (NPP Valéry) (Z1331 (NPP Giscard) (Z203 (PP (P d') (NP (NPP Estaing) (Z895 (PONCT ,) (Srel (NP (NC ministre) (PP (P+D des) (NP (NC Finances) (PP (P de) (NP (NPP Georges) (NPP Pompidou)))))) (Z42 (VN (V reçoit)) (Z41 (PP (P+D du) (NP (NC chef) (PP (P d') (NP (NC État) (AP (ADJ centrafricain)))))) (NP (DET une) (Z940 (NC plaquette) (PP (P de) (NP (NC diamants) (AP (ADJ africains)))))))))))) (Z16 (PONCT -LRB-) (Z15 (NP (DET deux) (Z1322 (NC étoiles) (Z1321 (PP (P de) (NP (ADJ petites) (NC pierres))) (AP (ADJ fines))))) (PONCT -RRB-)))))) (Z552 (PONCT ,) (Z551 (NP (NC échantillon) (PP (P de) (NP (DET la) (Z940 (NC production) (PP (P de) (NP (DET l') (Z940 (NC école) (PP (P de) (NP (NC taille) (PP (P de) (NP (NC pierre) (PP (PROREL qu'))))))))))))) (Z550 (VN (CLS-SUJ il) (V avait)) (Z153 (VPpart (VPP créée) (PP (P à) (NP (NPP Bangui)))) (PONCT .))))))))
+field 1 = **23**
+numero = 23
+str_parse = **24**   DET NC V ADV VPP P DET NC CC DET NC P NC PONCT
+**24** DET NC V ADV VPP P DET NC CC DET NC P NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **25**   DET NC P+D NC DET NPP V PRO P+D NC VPP P DET NPP VPP CC DET NPP PROREL V ADV P DET NC PROREL CLR V VINF DET NC PONCT ADV VPP P DET NC NPP NPP PONCT ADJ NC P NPP NPP PROREL CLS-SUJ V DET NC PONCT CLS-SUJ V VPP P DET NPP P DET NC P DET NC P NPP PONCT PONCT NC PONCT PONCT
+**25** DET NC P+D NC DET NPP V PRO P+D NC VPP P DET NPP VPP CC DET NPP PROREL V ADV P DET NC PROREL CLR V VINF DET NC PONCT ADV VPP P DET NC NPP NPP PONCT ADJ NC P NPP NPP PROREL CLS-SUJ V DET NC PONCT CLS-SUJ V VPP P DET NPP P DET NC P DET NC P NPP PONCT PONCT NC PONCT PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **26**   DET NC P+D NC P DET NC V VPP P+D NC P NPP P DET NPP P NPP CS DET NC PONCT DET NC PONCT V VPP P DET NC ADJ P+D NC PONCT
+**26** DET NC P+D NC P DET NC V VPP P+D NC P NPP P DET NPP P NPP CS DET NC PONCT DET NC PONCT V VPP P DET NC ADJ P+D NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **27**   PONCT PONCT NPP NPP P NPP PONCT DET NC CC DET NC PONCT
+**27** PONCT PONCT NPP NPP P NPP PONCT DET NC CC DET NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **28**   DET NC PONCT NC NC PONCT NC PONCT
+**28** DET NC PONCT NC NC PONCT NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **29**   PONCT PONCT NPP NPP V ADV DET NC P+D NC DET NC P+D NC NPP NPP PONCT NC PONCT
+**29** PONCT PONCT NPP NPP V ADV DET NC P+D NC DET NC P+D NC NPP NPP PONCT NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **30**   NC PONCT NC PREF ADJ ADJ
+**30** NC PONCT NC PREF ADJ ADJ
+field 1 = (SENT
+numero = (SENT
+str_parse = **31**   DET NC P+D NC P+D NPP V DET NC ADJ P DET NC P NPP NPP PONCT
+**31** DET NC P+D NC P+D NPP V DET NC ADJ P DET NC P NPP NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **32**   CLS-SUJ V DET NC P DET NC ADJ P+D NPP CC DET NPP P DET NC P+D NC PROREL V VPP DET NC ADJ P CLR VPR P NPP PONCT
+**32** CLS-SUJ V DET NC P DET NC ADJ P+D NPP CC DET NPP P DET NC P+D NC PROREL V VPP DET NC ADJ P CLR VPR P NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **33**   DET NC V P NC VPP ADJ P DET NC PONCT PROREL V VPP VPP CC VPP P DET NC PONCT
+**33** DET NC V P NC VPP ADJ P DET NC PONCT PROREL V VPP VPP CC VPP P DET NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **34**   P NPP
+**34** P NPP
+field 1 = (SENT
+numero = (SENT
+str_parse = **35**   DET NC VPP P NPP CLR V P DET NC PONCT
+**35** DET NC VPP P NPP CLR V P DET NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **36**   NPP PONCT NC NC PONCT
+**36** NPP PONCT NC NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **37**   NC
+**37** NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **38**   NC PONCT NPP PONCT NC NC P NPP
+**38** NC PONCT NPP PONCT NC NC P NPP
+field 1 = (SENT
+numero = (SENT
+str_parse = **39**   NC P+D NC ADJ P DET NC P NPP
+**39** NC P+D NC ADJ P DET NC P NPP
+field 1 = (SENT
+numero = (SENT
+str_parse = **40**   DET NPP V DET NC ADJ VPP P NPP NPP PONCT CC PROREL CLS-SUJ V P DET NC DET NC PONCT CS CLS-SUJ V DET NC P NC P NPP PONCT
+**40** DET NPP V DET NC ADJ VPP P NPP NPP PONCT CC PROREL CLS-SUJ V P DET NC DET NC PONCT CS CLS-SUJ V DET NC P NC P NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **41**   NPP NPP V VPP P DET NC P DET NC P NC ADJ CC NC PONCT
+**41** NPP NPP V VPP P DET NC P DET NC P NC ADJ CC NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **42**   NC P DET NC
+**42** NC P DET NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **43**   PONCT NC ADJ NC NC PONCT DET NC ADJ P NPP V VPP DET NC P NC P DET NC PONCT
+**43** PONCT NC ADJ NC NC PONCT DET NC ADJ P NPP V VPP DET NC P NC P DET NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **44**   PONCT NC P+D ADJ VPP P NC
+**44** PONCT NC P+D ADJ VPP P NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **45**   NC P+D ADJ VPP P NC
+**45** NC P+D ADJ VPP P NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **46**   DET NC P+D ADJ VPP P NC P+D NC P+D NC P NPP V DET NC P NC ADJ ADJ P+D ADJ NC PREF ADJ P DET NC P NPP CC P+D NC ADJ P+D NPP PONCT
+**46** DET NC P+D ADJ VPP P NC P+D NC P+D NC P NPP V DET NC P NC ADJ ADJ P+D ADJ NC PREF ADJ P DET NC P NPP CC P+D NC ADJ P+D NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **47**   P DET NC PONCT NPP NPP PONCT ADJ NC NPP P DET NC PONCT PONCT NPP NPP PONCT NC P+D NC P+D NPP ADJ NPP NPP PONCT CC ADV DET NC P NPP NPP PONCT DET ADJ NC NC P NPP ADJ PONCT NPP PONCT PONCT
+**47** P DET NC PONCT NPP NPP PONCT ADJ NC NPP P DET NC PONCT PONCT NPP NPP PONCT NC P+D NC P+D NPP ADJ NPP NPP PONCT CC ADV DET NC P NPP NPP PONCT DET ADJ NC NC P NPP ADJ PONCT NPP PONCT PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **48**   NPP PONCT
+**48** NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **49**   DET NC NPP NPP CLR V VINF DET NC P DET NC PONCT
+**49** DET NC NPP NPP CLR V VINF DET NC P DET NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **50**   PONCT ADJ NC NC PONCT DET ADJ NC ADJ V VPP P NPP P DET NC NPP NPP PONCT
+**50** PONCT ADJ NC NC PONCT DET ADJ NC ADJ V VPP P NPP P DET NC NPP NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **51**   PONCT ADJ NC NC PONCT DET NC VPP P NPP NPP P NPP NPP PONCT NPP PONCT CC NPP NPP PONCT NPP PONCT P DET NPP ADJ V VPP CS DET NC P DET NC P DET NC ADJ VPP P DET ADJ NC P DET NC ADJ P NC ADV V ADV DET PONCT NC PONCT PONCT
+**51** PONCT ADJ NC NC PONCT DET NC VPP P NPP NPP P NPP NPP PONCT NPP PONCT CC NPP NPP PONCT NPP PONCT P DET NPP ADJ V VPP CS DET NC P DET NC P DET NC ADJ VPP P DET ADJ NC P DET NC ADJ P NC ADV V ADV DET PONCT NC PONCT PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **52**   PONCT ADJ NC NC PONCT DET ADJ NC P NC NPP NPP CC NPP NPP V P NC DET PREF NC CC PREF NC P+D ADJ NC PONCT VPP P VINF VPP DET NC ADJ PONCT ADJ CC ADJ P VINF ADV P DET NC ADJ DET NC ADJ PONCT
+**52** PONCT ADJ NC NC PONCT DET ADJ NC P NC NPP NPP CC NPP NPP V P NC DET PREF NC CC PREF NC P+D ADJ NC PONCT VPP P VINF VPP DET NC ADJ PONCT ADJ CC ADJ P VINF ADV P DET NC ADJ DET NC ADJ PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **53**   DET NC PROREL V VPP P NC CC P NC P NC PONCT
+**53** DET NC PROREL V VPP P NC CC P NC P NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **54**   PONCT ADJ NC NC PONCT DET NC P DET NC V VPP P+D DET NC VPP P NC PONCT
+**54** PONCT ADJ NC NC PONCT DET NC P DET NC V VPP P+D DET NC VPP P NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **55**   DET NC V P PONCT NC ADJ PONCT P NC ADJ P NC CC NC PONCT
+**55** DET NC V P PONCT NC ADJ PONCT P NC ADJ P NC CC NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **56**   DET NPP V VINF P PONCT NC ADJ PONCT VPR PONCT VPP NC P DET NC PONCT P+D NC ADJ P NC CC NC PONCT
+**56** DET NPP V VINF P PONCT NC ADJ PONCT VPR PONCT VPP NC P DET NC PONCT P+D NC ADJ P NC CC NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **57**   NPP NPP V VPP P DET NC P VINF DET NC P NC PROREL V VPP NC P DET NC ADJ PONCT VPR CS DET NC V VPP PONCT
+**57** NPP NPP V VPP P DET NC P VINF DET NC P NC PROREL V VPP NC P DET NC ADJ PONCT VPR CS DET NC V VPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **58**   DET NC P+D NC PONCT ADV VPP NC P+D NC PONCT V DET NC CC DET NC ADJ CC ADJ VPP P DET NC ADJ P+D NC P+D ADJ NC PONCT
+**58** DET NC P+D NC PONCT ADV VPP NC P+D NC PONCT V DET NC CC DET NC ADJ CC ADJ VPP P DET NC ADJ P+D NC P+D ADJ NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **59**   P DET NC PONCT DET NC NPP PONCT NC P DET NC P NPP PONCT VPP P DET NC P DET NC CC DET NC ADJ CC ADJ PONCT V VPP P VINF P+D NC P DET NC CC NC PONCT CC ADV ADV P VINF DET NC PONCT NPP PONCT PONCT DET NC P NC PONCT ADV ADV ADJ PONCT P+D NPP P PROREL V CC V VPP DET NC ADJ ADJ P NC ADV ADJ P NPP NPP CC DET NC NPP PONCT
+**59** P DET NC PONCT DET NC NPP PONCT NC P DET NC P NPP PONCT VPP P DET NC P DET NC CC DET NC ADJ CC ADJ PONCT V VPP P VINF P+D NC P DET NC CC NC PONCT CC ADV ADV P VINF DET NC PONCT NPP PONCT PONCT DET NC P NC PONCT ADV ADV ADJ PONCT P+D NPP P PROREL V CC V VPP DET NC ADJ ADJ P NC ADV ADJ P NPP NPP CC DET NC NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **60**   NC
+**60** NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **61**   NC P+D NC P NPP
+**61** NC P+D NC P NPP
+field 1 = (SENT
+numero = (SENT
+str_parse = **62**   DET ADJ NC P DET NC
+**62** DET ADJ NC P DET NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **63**   NPP NPP V VPP DET NC P NC P VINF VINF DET NC PONCT DET NC NC V NPP CC V VPP P NPP NPP PONCT DET NC NC V DET NPP ADJ CC DET NC NC PONCT VPP P NPP NPP CC NPP NPP PONCT PROREL V NPP CC DET NPP PONCT
+**63** NPP NPP V VPP DET NC P NC P VINF VINF DET NC PONCT DET NC NC V NPP CC V VPP P NPP NPP PONCT DET NC NC V DET NPP ADJ CC DET NC NC PONCT VPP P NPP NPP CC NPP NPP PONCT PROREL V NPP CC DET NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **64**   DET ADJ NC V P DET NC P NC ADJ P NPP NPP VPP P DET NC ADJ P NC PONCT
+**64** DET ADJ NC V P DET NC P NC ADJ P NPP NPP VPP P DET NC ADJ P NC PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **65**   DET NC PONCT VPP PONCT NC ADJ PONCT PONCT V VINF DET NC CC DET NC ADJ PONCT
+**65** DET NC PONCT VPP PONCT NC ADJ PONCT PONCT V VINF DET NC CC DET NC ADJ PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **66**   NC
+**66** NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **67**   PONCT P DET NC P+D NC P NPP PONCT NPP PONCT ADJ NC NC
+**67** PONCT P DET NC P+D NC P NPP PONCT NPP PONCT ADJ NC NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **68**   NC NC PONCT NPP NPP PONCT
+**68** NC NC PONCT NPP NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **69**   DET NC V CS PONCT PONCT P NC P NC NC P NPP PONCT DET NC ADJ V VPP VPP P+D NC ADJ VPP P DET NC ADJ P P NPP PONCT PONCT
+**69** DET NC V CS PONCT PONCT P NC P NC NC P NPP PONCT DET NC ADJ V VPP VPP P+D NC ADJ VPP P DET NC ADJ P P NPP PONCT PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **70**   NC
+**70** NC
+field 1 = (SENT
+numero = (SENT
+str_parse = **71**   CC CS CLS-SUJ V NPP NPP PONCT NPP NPP V VPP P DET NC P+D NC VPP P NPP NPP PONCT ADV P DET NC P DET NC P+D NC ADJ NPP NPP PONCT
+**71** CC CS CLS-SUJ V NPP NPP PONCT NPP NPP V VPP P DET NC P+D NC VPP P NPP NPP PONCT ADV P DET NC P DET NC P+D NC ADJ NPP NPP PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **72**   ADV P VINF DET NC PONCT P NC ADJ P DET NC PONCT NPP NPP V DET NC P+D NC NC PONCT P PROREL CLS-SUJ V PONCT DET NC P DET NC ADJ PONCT PONCT PRO PROREL DET PRO P DET NC PONCT NPP NPP PONCT V P DET NC P DET PONCT NC P+D NPP PONCT PONCT DET NPP ADJ ADJ PONCT
+**72** ADV P VINF DET NC PONCT P NC ADJ P DET NC PONCT NPP NPP V DET NC P+D NC NC PONCT P PROREL CLS-SUJ V PONCT DET NC P DET NC ADJ PONCT PONCT PRO PROREL DET PRO P DET NC PONCT NPP NPP PONCT V P DET NC P DET PONCT NC P+D NPP PONCT PONCT DET NPP ADJ ADJ PONCT
+field 1 = (SENT
+numero = (SENT
+str_parse = **73**   PRO ADV V ADVWH-P_OBJ DET NC V ADV PONCT
+**73** PRO ADV V ADVWH-P_OBJ DET NC V ADV PONCT
+field 1 = **74**
+numero = 74
+str_parse = (SENT (PONCT \ponct) (Z207 (NP (DET \det) (Z1327 (ADJ \adj) (NC \nc))) (Z69 (VN (V \v)) (Z49 (PP (P \p) (NP (NC \nc) (PP (P \p) (NP (NPP \npp))))) (Z26 (PP (P \p) (NP (DET \det) (Z940 (NC \nc) (PP (P \p) (NP (NC \nc) (PP (P+D \p+d) (Z62 (NP (NC \nc)) (COORD (CC \cc) (PP (P+D \p+d) (NP (NC \nc) (Z23 (AP (ADJ \adj)) (AP (ADJ \adj))))))))))))) (PONCT \ponct))))))
+is_terminal = \ponct
+( 1 9)
+is_terminal = \det
+( 2 9)
+is_terminal = \adj
+( 3 9)
+is_terminal = \nc
+( 4 9)
+is_terminal = \v
+( 5 9)
+is_terminal = \p
+( 6 9)
+is_terminal = \nc
+( 7 9)
+is_terminal = \p
+( 8 9)
+is_terminal = \npp
+( 9 9)
+is_terminal = \p
+( 10 9)
+ERROR: length mismatch between the non-lexical parse and the tagged phrase

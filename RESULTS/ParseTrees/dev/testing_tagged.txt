@@ -1,0 +1,1 @@
+ -/PONCT Une/DET autre/ADJ enquête/NC est/V en/P cours/NC à/P Taiwan/NPP pour/P les/DET actes/NC de/P corruption/NC des/P+D fonctionnaires/NC et/CC des/P+D personnalités/NC politiques/ADJ taïwanaises/ADJ ./PONCT
