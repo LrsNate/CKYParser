@@ -17,66 +17,83 @@
 \title{Analyse syntaxique en constituants}
 \author{Yulia MATVEEVA, Antoine LAFOUASSE, Kira KIRANOVA\\
 M1 Linguistique Informatique\\
-Université Paris 7 - Paris Diderot}
+Universit\'e Paris 7 - Paris Diderot}
 \date{}
 \maketitle
 
-\section{Présentation du problème}
+\section{Pr\'esentation du probl\`eme}
 
 Le pr\'esent projet s'inscrit dans le cadre du domaine de Traitement Automatique
 des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs  \`a extraire de l'information des textes en langage naturel en minimisant l'implication des humains. G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
+
 \begin{enumerate}
-\item Découpage du texte en phrases.
-\item (Tokénisation) Découpage du texte en mot-occurrences (tokens).
-\item (Tagging) Identification de la catégorie morpho-syntaxique de chaque
+\item D\'ecoupage du texte en phrases.
+\item (Tok\'enisation) D\'ecoupage du texte en mot-occurrences (tokens).
+\item (Tagging) Identification de la cat\'egorie morpho-syntaxique de chaque
 mot-occurrence.
 \item (Parsing) Analyse syntaxique.
-\item Analyse sémantique.
+\item Analyse s\'emantique.
 \end{enumerate}
 
+<<<<<<< Upstream, based on origin/master
 Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on souhaite se rapprocher des situations r\'eelles et donc travailler avec des textes bruts, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. La derni\`ere \'etape list\'ee ci-dessus ne fait en revanche pas partie de notre travail...
+=======
+Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es
+lors que pour l'\'evaluation de notre outil on a envie de se rapprocher de la
+situation r\'eelle et donc travailler avec des textes brutes, on passe
+in\'evitablement par les trois premi\`eres \'etapes aussi. Par contre, le dernier
+\'etape list\'e ci-dessus ne fait pas partie de notre travail.
+>>>>>>> 0adef2f qqs changements
 
 \subsection{Analyse syntaxique en constituants}
- On suppose qu'en entrée on a une séquence de mots provenant d'un certain
+ On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain
  langage $L_0$. Le but est de trouver l'arbre syntaxique de la phrase
- représentée par cette séquence dans une grammaire donnée.
+ repr\'esent\'ee par cette s\'equence dans une grammaire donn\'ee.
 
-\subsection{Le but (l'utilité) de l'analyse syntaxique}
+\subsection{Le but (l'utilit\'e) de l'analyse syntaxique}
 
 Il faut avouer que l'analyse syntaxique en soi est rarement le but d'un outil de
-TAL quelconque. Par contre, c'est une étape qui s'avère cruciale pour la
-possibilité d'une analyse sémantique effective, car toute description
-sémantique se base en partie sur les relations entre les parties d'une
+TAL quelconque. Par contre, c'est une \'etape qui s'av\`ere cruciale pour la
+possibilit\'e d'une analyse s\'emantique effective, car toute description
+s\'emantique se base en partie sur les relations entre les parties d'une
 phrase.
 
 \subsection{La grammaire}
 
 Une grammaire formelle hors contexte (Context-Free Grammar, CFG) est un
-quadruplet $\langle \Sigma, V, S, R \rangle$, où :
+quadruplet $\langle \Sigma, V, S, R \rangle$, o\`u :
 \begin{itemize}
 \item $\Sigma$ est un ensemble fini des symboles terminaux (l'alphabet)
 \item V est un ensemble fini des symboles non-terminaux
-\item S est l'axiome (le symbole de départ de la grammaire), $S \in V$
-\item R est un ensemble fini des règles de production de la forme $A
-\rightarrow \alpha$, où $A \in V$ et $\alpha \in (\Sigma \cup V)$
+\item S est l'axiome (le symbole de d\'epart de la grammaire), $S \in V$
+\item R est un ensemble fini des r\`egles de production de la forme $A
+\rightarrow \alpha$, o\`u $A \in V$ et $\alpha \in (\Sigma \cup V)$
 \end{itemize}
 
-Chaque grammaire formelle correspond à un langage formel (un ensemble de mots).
-Cela veut dire que tous les mots du langage peuvent être engendrés par cette
-grammaire. Les mots du langage sont constitués des symboles de l'alphabet
+Chaque grammaire formelle correspond \`a un langage formel (un ensemble de mots).
+Cela veut dire que tous les mots du langage peuvent \^etre engendr\'es par cette
+grammaire. Les mots du langage sont constitu\'es des symboles de l'alphabet
 $\Sigma$.\\
 
-Dans notre projet, les éléments de l'alphabet sont des mots français, donc les
+Dans notre projet, les \'el\'ements de l'alphabet sont des mots français, donc les
 mots du langage sont des phrases en français. Le but du projet est de construire
-une grammaire formelle à partir des données linguistiques (un corpus des phrases
-déjà parsées et annotées) afin de pouvoir utiliser cette grammaire pour trouver
+une grammaire formelle \`a partir des donn\'ees linguistiques (un corpus des phrases
+d\'ej\`a pars\'ees et annot\'ees) afin de pouvoir utiliser cette grammaire pour trouver
 la structure syntaxique de n'importe quelle phrase en français.
 
 \subsection{ambig\"uit\'e syntaxique et grammaires probabilistes}
 
+<<<<<<< Upstream, based on origin/master
 Une des propri\'et\'es les plus distinctives des langages naturels qui les
 oppose aux langages de programmation, par exemple, est leur ambig\"uit\'e inh\'erente. L'ambig\"uit\'e peut se pr\'esenter sur des niveaux d'analyse diff\'erents:
+=======
+Une des propri\'et\'es les plus distinctives des langages naturels, qui les
+oppose aux langages de programmation, par exemple, est leur ambiguit\'e
+inh\'erente. L'ambiguit\'e peut se pr\'esenter sur des niveaux de l'analyse
+diff\'erents:
+>>>>>>> 0adef2f qqs changements
 \begin{enumerate}
+<<<<<<< Upstream, based on origin/master
 \item ambig\"uit\'e de d\'ecoupage en mot-formes:
 //
 EXEMPLE ... d'accord d'+accord ...
@@ -85,6 +102,15 @@ EXEMPLE ... d'accord d'+accord ...
 EXEMPLE ... la belle porte le voile ...
 \item ambig\"uit\'e syntaxique:
 EXEMPLE ... la description de l'occupation d'Ath\`enes par les Turcs ottomans ... 
+=======
+\item Ambiguit\'e de d\'ecoupage en mot-formes :\\
+\centerline{\textit{d'accord - d'+accord}}\\
+\item Ambiguit\'e morpho-syntaxique :\\
+\centerline{\textit{la belle porte le voile}}
+\item Ambiguit\'e syntaxique :\\
+\centerline{\textit{la description de l'occupation d'Ath\`enes par les Turcs
+ottomans}}
+>>>>>>> 0adef2f qqs changements
 \end{enumerate}
 
 Il est important de distinguer deux types d'ambig\"uit\'e, le
@@ -95,16 +121,40 @@ et le deuxi\`eme \'etant l'ambig\"uit\'e artificielle qui ne se pr\'esente que p
 On note ici que m\^eme si les deux types d'ambig\"uit\'e sont pr\'esents sur tous les niveaux d'analyse, l'ambig\"uit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
 rel\`eve largement d'ambig\"uit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus de l'ambig\"uit\'e syntaxique r\'eelle on peut mentionner l'ambig\"uit\'e de rattachement pr\'epositionnel : 
 
+<<<<<<< Upstream, based on origin/master
 \begin{exe}
 \ex La fille voit le professeur avec un t\'elescope.
 \end{exe}
+=======
+En parlant de l'ambiguit\'e, il est important d'en distinguer deux types :
+\begin{itemize}
+  \item l'ambiguit\'e \emph{r\'eelle}, qui correspond au cas quand l'ambiguit\'e
+ne peut pas \^etre enlev\'ee par des humains eux-m\^emes en absence de contexte
+\item l'ambiguit\'e \emph{artificielle}, qui ne se pr\'esente que pour des machines,
+tandis que pour les humains il n'existe qu'une seule variante d'analyse possible
+\end{itemize} 
+>>>>>>> 0adef2f qqs changements
 
+<<<<<<< Upstream, based on origin/master
 Et l'ambig\"uit\'e de structures de coordination :
+=======
+On note ici que m\^eme si les deux types d'ambiguit\'e sont pr\'esents sur tous
+les niveaux de l'analyse, l'ambiguit\'e r\'eelle est relativement rare en
+tok\'enisation et tagging, tandis que l'analyse syntaxique rel\`eve largement
+d'ambiguit\'e r\'eelle aussi bien qu'artificielle. \\
+>>>>>>> 0adef2f qqs changements
 
+<<<<<<< Upstream, based on origin/master
 \begin{exe}
 \ex Elle ne mange que des gateaux et des glaces au chocolat.
 \end{exe}
+=======
+Parmi les cas les plus r\'epandus de l'ambiguit\'e syntaxique r\'eelle on peut
+mentionner l'ambiguit\'e de rattachement pr\'epositionnel : \\
+\centerline{\textit{la fille voit le professeur avec un t\'elescope}}\\
+>>>>>>> 0adef2f qqs changements
 
+<<<<<<< Upstream, based on origin/master
 Ce constat nous am\`ene \`a conclure que l'un des piliers d'une
 analyse syntaxique est le traitement de l'ambig\"uit\'e. Deux solutions sont
 envisageables vis \`a vis de ce probl\`eme. On pourrait choisir de ne garder
@@ -114,14 +164,42 @@ g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase se pr\'esente comme
 plus avantageuse dans le cadre de ce travail. Dans les cas d'ambig\"uit\'e
 r\'eelle, c'est l'humain qui choisit le bon analyse en se basant sur le
 contexte.
+=======
+et l'ambiguit\'e de structures de coordination : \\
+\centerline{\textit{elle ne mange que des gateaux et des glaces au chocolat}}\\
+>>>>>>> 0adef2f qqs changements
 
+<<<<<<< Upstream, based on origin/master
 \begin{exe}
 \ex Fish people fish tanks
 \end{exe}
+=======
+Ce constat nous am\`ene \`a conclure que l'un des points principaux d'une
+analyse syntaxique consiste en traitement de l'ambiguit\'e. Deux solutions sont
+envisageables vis \`a vis de ce probl\`eme. 
+\\
+
+On pourrait choisir de ne garder
+qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant
+donn\'e l'abondance d'ambiguit\'e r\'eelle susmentionn\'ee (dans cette m\^eme phrase, le
+lecteur peut remarquer la pr\'esence d'ambiguit\'e r\'eelle li\'ee au rattachement du
+participe \emph{susmentionn\'ee}). \\
+
+Une autre option est de g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase.
+Cette option se pr\'esente comme plus avantageuse dans le cadre de ce travail.
+Dans les cas d'ambiguit\'e r\'eelle, c'est l'humain qui choisit le bon analyse en
+se basant sur le contexte. \\
+
+Un petit exemple (en anglais) qui demontre le large
+choix d'analyses pour une phrase ambiguë et la n\'ecessit\'e de pouvoir garder plusieurs analyses par phrase :
+\\
+\centerline{\textit{fish people fish tanks}}\\
+>>>>>>> 0adef2f qqs changements
 
 Une grammaire probabiliste hors contexte (Probabilistic context-free grammar,
 PCFG) est une grammaire hors contexte dans laquelle une probabilit\'e est
 attribu\'ee \`a chaque r\`egle. La somme des toutes les probabilit\'es des
+<<<<<<< Upstream, based on origin/master
 productions \`a partir d'une m\^eme partie gauche est \'egale \`a un. 
 En cas d'ambig\"uit\'e, les probabilit\'es associ\'ees aux productions permettent
 de choisir la d\'erivation la plus probable de la phrase. On appelle la
@@ -129,274 +207,296 @@ probabilit\'e d'une d\'erivation le produit des probabilit\'es des r\`egles de
 production qui ont men\'e \`a cette d\'erivation. Il faut noter que la
 probabilit\'e maximale de la d\'erivation de la phrase n'est pas toujours obtenue
 en appliquant les r\`egles avec les probabilit\'es maximales.
+=======
+productions \`a partir d'une m\^eme partie gauche de r\`egle est \'egale \`a un. \\
+
+En cas d'ambiguit\'e, les probabilit\'es associ\'ees aux productions permettent
+de choisir la d\'erivation la plus probable de la phrase. On appelle \textbf{la
+probabilit\'e d'une derivation} le produit des probabilit\'es des r\`egles de
+production qui ont "particip\'e" \`a cette d\'erivation. Il faut noter que la
+probabilit\'e maximale de la d\'erivation de la phrase n'est pas toujours obtenue
+en appliquant \`a chaque \'etape de la d\'erivation les r\`egles avec les probabilit\'es
+maximales.
+>>>>>>> 0adef2f qqs changements
 
 
 \section{Choix de m\'ethodologie et d'impl\'ementation}
 
 \subsection{Deux strat\'egies d'analyse}
 
+<<<<<<< Upstream, based on origin/master
 Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjointe $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
+=======
+Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S,
+\mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjoint $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
+>>>>>>> 0adef2f qqs changements
 \begin{itemize}
-\item des règles lexicales
+\item des r\`egles lexicales
 $$\mathscr{R}_{LEX} = \left\{ A \rightarrow a \mid
         A \in \mathscr{V}, \, a \in \Sigma \right\}$$
-qui sont des appariements de mot-formes et de leurs catégories syntaxiques
-\item des règles non-lexicales
+qui sont des appariements de mot-formes et de leurs cat\'egories syntaxiques
+\item des r\`egles non-lexicales
 $$\mathscr{R}_{NL} = \left\{ A \rightarrow \beta \mid
      A \in \mathscr{V}, \beta \in \mathscr{V}^* \right\},$$
 qui ne contiennent pas de symboles terminaux
 \end{itemize}
 
+<<<<<<< Upstream, based on origin/master
 Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e puisque
 chaque grammaire hors-contexte peut \^etre transform\'ee en forme susdite sans
 que son langage engendr\'e ne soit chang\'e. En m\^eme temps, en adoptant cette
+=======
+Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e, puisque
+chaque grammaire hors-contexte peut \^etre transform\'ee en forme susdite sans
+que son langage engendr\'e soit chang\'e. En m\^eme temps, en adoptant cette
+>>>>>>> 0adef2f qqs changements
 approche, on peut envisager deux strat\'egies de conception de notre outil de
 l'analyse syntaxique.
 
-Les deux stratégies proposées dans le projet sont les suivantes :
+Les deux strat\'egies propos\'ees dans le projet sont les suivantes :
 \begin{enumerate}
-  \item L'étiquétage morpho-syntaxique (tagging) et l'analyse syntaxique
-  (parsing) sont éffectués par le même module (le parseur). Le
-  parseur reçoit en entrée une phrase qui consiste des mots (des symboles terminaux (lexicaux)).
-  Dans le cadre de cette stratégie, les règles de production lexicales sont
-  incluses dans la grammaire utilisée par le parseur.
-  \item L'étiquetage morpho-syntaxique est éfféctué par un module séparé du
-  parseur, par exemple, par un logiciel externe. Le parseur reçoit en entrée la
-  phrase étiquétée privée des symboles terminaux (mots), donc une séquence de
-  catégories morpho-syntaxiques. Dans le cadre de cette deuxième stratégie, le
-  parseur n'a pas besoin d'avoir des règles lexicales dans la grammaire sur
+  \item L'\'etiqu\'etage morpho-syntaxique (tagging) et l'analyse syntaxique
+  (parsing) sont \'effectu\'es par le m\^eme module (le parseur). Le
+  parseur reçoit en entr\'ee une phrase qui consiste des mots (des symboles terminaux (lexicaux)).
+  Dans le cadre de cette strat\'egie, les r\`egles de production lexicales sont
+  incluses dans la grammaire utilis\'ee par le parseur.
+  \item L'\'etiquetage morpho-syntaxique est \'eff\'ectu\'e par un module s\'epar\'e du
+  parseur, par exemple, par un logiciel externe. Le parseur reçoit en entr\'ee la
+  phrase \'etiqu\'et\'ee priv\'ee des symboles terminaux (mots), donc une s\'equence de
+  cat\'egories morpho-syntaxiques. Dans le cadre de cette deuxi\`eme strat\'egie, le
+  parseur n'a pas besoin d'avoir des r\`egles lexicales dans la grammaire sur
   laquelle il se base.
 \end{enumerate}
 
-\subsection{Corpus d'apprentissage, de développement et de test}
+\subsection{Corpus d'apprentissage, de d\'eveloppement et de test}
 
-Pour pouvoir construire une grammaire assez représentative pour le parseur, il
-faut apprendre cette grammaire sur un corpus avec des phrases déjà étiquétées et
-analysées syntaxiquement (corpus arboré, tree bank). Pour notre projet, nous
-avons choisi d'entraîner et d'évaluer le parseur sur le corpus arboré de la
+Pour pouvoir construire une grammaire assez repr\'esentative pour le parseur, il
+faut apprendre cette grammaire sur un corpus avec des phrases d\'ej\`a \'etiqu\'et\'ees et
+analys\'ees syntaxiquement (corpus arbor\'e, tree bank). Pour notre projet, nous
+avons choisi d'entra\^iner et d'\'evaluer le parseur sur le corpus arbor\'e de la
 langue française Sequoia Tree Bank \cite{Sequoia}. Ce corpus contient des
 phrases en français avec une annotation morpho-syntaxique.\\
 
-Pour pouvoir évaluer la qualité de l'extraction de la grammaire et la qualité du
+Pour pouvoir \'evaluer la qualit\'e de l'extraction de la grammaire et la qualit\'e du
 parsing, nous divisons le corpus en trois parties :
 \begin{itemize}
-  \item le corpus d'apprentissage (training set), qui est utilisé pour analyser
-  les arbres syntaxiques des phrases du corpus et en construire des règles de la
+  \item le corpus d'apprentissage (training set), qui est utilis\'e pour analyser
+  les arbres syntaxiques des phrases du corpus et en construire des r\`egles de la
   grammaire;
-  \item le corpus de développement (development set), qui est utilisé pour
-  essayer de lancer le parseur avec des différentes options et considérer les
-  résultats;
-  \item le corpus de test (test set), qui est utilisé pour l'évaluation :
+  \item le corpus de d\'eveloppement (development set), qui est utilis\'e pour
+  essayer de lancer le parseur avec des diff\'erentes options et consid\'erer les
+  r\'esultats;
+  \item le corpus de test (test set), qui est utilis\'e pour l'\'evaluation :
   il faut lancer le parseur, comparer les arbres obtenus avec les "vrais" arbres
-  pour les mêmes phrases dans le corpus (les analyses gold, gold parses) et
-  calculer le pourcentage des phrases bien analysées.
+  pour les m\^emes phrases dans le corpus (les analyses gold, gold parses) et
+  calculer le pourcentage des phrases bien analys\'ees.
 \end{itemize}
 
-Afin d'avoir la grammaire la plus complète possible, nous avons fait le choix
+Afin d'avoir la grammaire la plus compl\`ete possible, nous avons fait le choix
 d'utiliser la plus grande partie du corpus (60\% de toutes les phrases du
-corpus) pour l'apprentissage. Le reste est divisé également entre les deux
-autres parties, donc le corpus de développement et le corpus de test consistent
-chacun de 20\% de la totalité des phrases. \\
+corpus) pour l'apprentissage. Le reste est divis\'e \'egalement entre les deux
+autres parties, donc le corpus de d\'eveloppement et le corpus de test consistent
+chacun de 20\% de la totalit\'e des phrases. \\
 
-Pour être sûrs que les résultats de l'évaluation ne dépendent pas de la manière
-dont le corpus est divisé en parties, nous choisissons à chaque fois au hasard
-la repartition des phrases entre les trois corpus (en gardant les proportions mentionnées
+Pour \^etre sûrs que les r\'esultats de l'\'evaluation ne d\'ependent pas de la mani\`ere
+dont le corpus est divis\'e en parties, nous choisissons \`a chaque fois au hasard
+la repartition des phrases entre les trois corpus (en gardant les proportions mentionn\'ees
 ci-dessus).
 
 
 \subsection{Apprentissage de la grammaire probabiliste}
 
-En général, l'estimation des probabilités des règles d'une grammaire
-hors-contexte probabiliste (PCFG) se fait par fréquences relatives:
+En g\'en\'eral, l'estimation des probabilit\'es des r\`egles d'une grammaire
+hors-contexte probabiliste (PCFG) se fait par fr\'equences relatives:
 \begin{eqnarray}
 P(A \rightarrow \beta) = \frac{ct(A \rightarrow \beta)}{\sum\limits_{\gamma \in (\Sigma \cup \mathcal{V})^*}{ct(A \rightarrow \gamma)}},
 \end{eqnarray}
 $ct(A \rightarrow \beta)$ --- le nombre de fois que le non-terminal $A$ se
-réécrit en $\beta$ dans le corpus d'apprentissage.
+r\'e\'ecrit en $\beta$ dans le corpus d'apprentissage.
 
-Il est important de noter ici que le problème d'estimation des probabilités
-d'une PCFG vient du fait que le corpus d'entraînement, aussi grand soit-il,
+Il est important de noter ici que le probl\`eme d'estimation des probabilit\'es
+d'une PCFG vient du fait que le corpus d'entra\^inement, aussi grand soit-il,
 n'est jamais complet, donc il y a toujours des mots-formes qui ne sont pas
-présents dans la grammaire et dont la catégorie lexicale et la
-probabilité d'émission sont donc inconnues. Pour déterminer la catégorie
-lexicale il est possible d'avoir recours à un dictionnaire externe. Mais il
-n'existe pas de solution por connaître la probabilité de la production de ce
-mot inconnu, donc des méthodes artificielles sont utilisées pour estimer
-cette probabilité.\\
+pr\'esents dans la grammaire et dont la cat\'egorie lexicale et la
+probabilit\'e d'\'emission sont donc inconnues. Pour d\'eterminer la cat\'egorie
+lexicale il est possible d'avoir recours \`a un dictionnaire externe. Mais il
+n'existe pas de solution por conna\^itre la probabilit\'e de la production de ce
+mot inconnu, donc des m\'ethodes artificielles sont utilis\'ees pour estimer
+cette probabilit\'e.\\
 
-Dans leur article de 1998 Chi et Geman ont prouvé qu'une PCFG estimée par
-fréquences relatives sur un corpus annoté est toujours consistente
-\cite{proper_PCFG_estimation}. Cela veut dire qu'aucune probabilité positive
-n'est assignée aux arbres infinis.
+Dans leur article de 1998 Chi et Geman ont prouv\'e qu'une PCFG estim\'ee par
+fr\'equences relatives sur un corpus annot\'e est toujours consistente
+\cite{proper_PCFG_estimation}. Cela veut dire qu'aucune probabilit\'e positive
+n'est assign\'ee aux arbres infinis.
 
-\subsection{Tokénisation et analyse morpho-syntaxique}
+\subsection{Tok\'enisation et analyse morpho-syntaxique}
 
-Comme mentionné ci-dessus, il est possible d'utiliser deux stratégies
-différentes pour l'étiquetage morpho-syntaxique : soit utiliser le parseur
-lui-même, soit utiliser un logiciel externe. Dans ce deuxième cas, le taggeur
-(étiqueteur) MElt \cite{MElt} peut être utilisé pour étiqueter (eventuellement
-en tokénisant d'abord) la phrase donnée. Le principe de l'étiqueteur MElt est
-basé sur les modèles de Markov (Maximum-Entropy Markov Models). 
-Nous pouvons alors comparer l'éfficacité des deux stratégies de tagging.
+Comme mentionn\'e ci-dessus, il est possible d'utiliser deux strat\'egies
+diff\'erentes pour l'\'etiquetage morpho-syntaxique : soit utiliser le parseur
+lui-m\^eme, soit utiliser un logiciel externe. Dans ce deuxi\`eme cas, le taggeur
+(\'etiqueteur) MElt \cite{MElt} peut \^etre utilis\'e pour \'etiqueter (eventuellement
+en tok\'enisant d'abord) la phrase donn\'ee. Le principe de l'\'etiqueteur MElt est
+bas\'e sur les mod\`eles de Markov (Maximum-Entropy Markov Models). 
+Nous pouvons alors comparer l'\'efficacit\'e des deux strat\'egies de tagging.
 
 \subsection{Le parseur tabulaire de Cocke, Younger et Kasami (CKY)}
 
-L'algorithme utilisé pour le parseur dans notre projet est l'algorithme de
-Cocke, Younger et Kasami (CKY, parfois noté CYK). C'est un algorithme d'analyse
-ascendante (bottom-up parsing), c'est-à-dire qu'il part de la phrase tokénisée
-et remonte vers l'axiome de la grammaire pour recréer en ordre inverse toutes les règles de la grammaire qu'il
-aurait fallu appliquer pour engendrer cette phrase. La comléxité de cet
+L'algorithme utilis\'e pour le parseur dans notre projet est l'algorithme de
+Cocke, Younger et Kasami (CKY, parfois not\'e CYK). C'est un algorithme d'analyse
+ascendante (bottom-up parsing), c'est-\`a-dire qu'il part de la phrase tok\'enis\'ee
+et remonte vers l'axiome de la grammaire pour recr\'eer en ordre inverse toutes les r\`egles de la grammaire qu'il
+aurait fallu appliquer pour engendrer cette phrase. La coml\'exit\'e de cet
 algorithme est de $O(n^3)$. \\
 
-Le parseur basé sur l'algorithm CKY attend en entrée une grammaire sous forme
-normale de Chomsky et une phrase (tokénisée) à analyser. La phrase peut être
-déjà étiquetée, dans ce cas c'est une séquence de catégories lexicales qui est
-passée à l'algorithme.
+Le parseur bas\'e sur l'algorithm CKY attend en entr\'ee une grammaire sous forme
+normale de Chomsky et une phrase (tok\'enis\'ee) \`a analyser. La phrase peut \^etre
+d\'ej\`a \'etiquet\'ee, dans ce cas c'est une s\'equence de cat\'egories lexicales qui est
+pass\'ee \`a l'algorithme.
 
 \subsubsection{L'algorithme standard}
 Dans la version classique de l'algorithme CKY, l'algorithme parcourt la phrase
-donnée en analysant toutes ses sous-chaînes possibles, en commençant par les
+donn\'ee en analysant toutes ses sous-cha\^ines possibles, en commençant par les
 sous-chaines de longueur 1 (donc des mots de la phrase) et en remontant vers la
-plus grande sous-chaîne qui est la phrase elle-même. L'algorithme
-part toujours de la partie droite de la règle et cherche dand la
+plus grande sous-cha\^ine qui est la phrase elle-m\^eme. L'algorithme
+part toujours de la partie droite de la r\`egle et cherche dand la
 grammaire toutes les parties gauches correspondantes. \\
 
 L'algorithme CKY peut
-être graphiquement représentée par un tableau bidimensionnel carré avec la longueur de côté égale à la longueur de la phrase (également appellé la charte CKY (CKY chart)).
-Seule une moitié des cases du tableau est utilisée. Chaque case du tableau correspond à une sous-chaîne de la phrase.
-L'algorithme écrit dans chaque case les règles de la grammaire qui pourraient
-engendrer cette sous-chaîne. En remontant vers la case qui correspond à la
-phrase entière, on obtient ainsi tous les arbres de dérivation possibles. Si
-dans cette dernière case il existe une dérivation possible à partir de l'axiome
-de la grammaire, cela veut dire que cette phrase appartient au langage engendré
+\^etre graphiquement repr\'esent\'ee par un tableau bidimensionnel carr\'e avec la longueur de côt\'e \'egale \`a la longueur de la phrase (\'egalement appell\'e la charte CKY (CKY chart)).
+Seule une moiti\'e des cases du tableau est utilis\'ee. Chaque case du tableau correspond \`a une sous-cha\^ine de la phrase.
+L'algorithme \'ecrit dans chaque case les r\`egles de la grammaire qui pourraient
+engendrer cette sous-cha\^ine. En remontant vers la case qui correspond \`a la
+phrase enti\`ere, on obtient ainsi tous les arbres de d\'erivation possibles. Si
+dans cette derni\`ere case il existe une d\'erivation possible \`a partir de l'axiome
+de la grammaire, cela veut dire que cette phrase appartient au langage engendr\'e
 par cette grammaire.\\
 
-La grammaire utilisée par l'algorithme CKY doit obligatoirement être sous forme
-normale de Chomsky (flexible), c'est-à-dire que la partie droite des règles de
-dérivation consiste soit d'un terminal, soit de deux non-terminaux. Les productions
-singulières (les productions de la forme $A \rightarrow B$, où $A,B \in V$) sont
-autorisées aussi dans la forme flexible. Cette obligation est
-due au fait que pour chaque case, l'algorithme parcourt toutes les divisions possibles de la sous-chaîne
+La grammaire utilis\'ee par l'algorithme CKY doit obligatoirement \^etre sous forme
+normale de Chomsky (flexible), c'est-\`a-dire que la partie droite des r\`egles de
+d\'erivation consiste soit d'un terminal, soit de deux non-terminaux. Les productions
+singuli\`eres (les productions de la forme $A \rightarrow B$, o\`u $A,B \in V$) sont
+autoris\'ees aussi dans la forme flexible. Cette obligation est
+due au fait que pour chaque case, l'algorithme parcourt toutes les divisions possibles de la sous-cha\^ine
 correspondante en deux parties. \\
 
-En cas de productions singulières, plusieurs règles sont gardées dans la case
-correspondante. Dans notre projet, nous avons implémenté les règles dans les
-cases du tableau CKY sous la forme des arbres de dérivation : dans chaque case
-nous avons tous les arbres de dérivation de la sous-chaîne correspondante. Cela
-permet de pouvoir garde la trace de toute la dérivation de n'importe quelle
-sous-chaîne en même temps que les règles correspondantes. 
+En cas de productions singuli\`eres, plusieurs r\`egles sont gard\'ees dans la case
+correspondante. Dans notre projet, nous avons impl\'ement\'e les r\`egles dans les
+cases du tableau CKY sous la forme des arbres de d\'erivation : dans chaque case
+nous avons tous les arbres de d\'erivation de la sous-cha\^ine correspondante. Cela
+permet de pouvoir garde la trace de toute la d\'erivation de n'importe quelle
+sous-cha\^ine en m\^eme temps que les r\`egles correspondantes. 
 
-\subsubsection{L'injection des probabilités dans l'algorithme}
+\subsubsection{L'injection des probabilit\'es dans l'algorithme}
 
 La version probabiliste de l'algorithme CKY est une extension de la version
-classique. La seule différence consiste du fait qu'une probabilité est attribuée
-à chaque règle de la grammaire et donc à chaque arbre de dérivation. La
-probabilité d'un arbre de dérivation est calculée comme suit : 
+classique. La seule diff\'erence consiste du fait qu'une probabilit\'e est attribu\'ee
+\`a chaque r\`egle de la grammaire et donc \`a chaque arbre de d\'erivation. La
+probabilit\'e d'un arbre de d\'erivation est calcul\'ee comme suit : 
 $$P(tree) = P(rule) * P(left subtree) * P(right subtree)$$
 
-Si la règle correspondante est une production singulière ou une règle lexicale
-(production d'un terminal), les probabilités des sous-arbres manquants sont mis
-à 1. \\
+Si la r\`egle correspondante est une production singuli\`ere ou une r\`egle lexicale
+(production d'un terminal), les probabilit\'es des sous-arbres manquants sont mis
+\`a 1. \\
 
-L'injection des probabilités dans l'algorithme CKY permet de désambiguiser le
-parsing en trouvant les dérivations les plus probables. En remontant dans la
-charte CKY des mots séparés vers la phrase en entier, les probabilités des
-règles se multiplient, et les plus hautes probabilités donnent des plus lourds
+L'injection des probabilit\'es dans l'algorithme CKY permet de d\'esambiguiser le
+parsing en trouvant les d\'erivations les plus probables. En remontant dans la
+charte CKY des mots s\'epar\'es vers la phrase en entier, les probabilit\'es des
+r\`egles se multiplient, et les plus hautes probabilit\'es donnent des plus lourds
 poids aux arbres correspondants. \\
 
-Il faut noter que si à un bas niveau de
-dérivation un arbre a plus de poids qu'un autre, ce ne sera pas forcément
-l'arbre le plus "lourd"  qui sera inclus dans l'arbre de dérivation le plus
-lourd sur un niveau supérieur. Par exemple, si dans la même case il y a un arbre
-avec la règle $NP \rightarrow X$ à la racine, avec une haute probabilité, et un
-autre arbre avec $VP \rightarrow X$, avec une probabilité plus basse, alors que
-dans une case plus haute de la charte il y a deux règles correspondantes : $S
-\rightarrow NP Y$ et $S \rightarrow VP Y$, la probabilité de la deuxième règle
-ètant beaucoup plus haute que celle de la première, la différence de poids entre
-les deux arbres peut être neutralisée par ces deux règles. Cela justifie qu'il
-faut garder toutes les dérivations possibles dans chaque case de la charte, au
+Il faut noter que si \`a un bas niveau de
+d\'erivation un arbre a plus de poids qu'un autre, ce ne sera pas forc\'ement
+l'arbre le plus "lourd"  qui sera inclus dans l'arbre de d\'erivation le plus
+lourd sur un niveau sup\'erieur. Par exemple, si dans la m\^eme case il y a un arbre
+avec la r\`egle $NP \rightarrow X$ \`a la racine, avec une haute probabilit\'e, et un
+autre arbre avec $VP \rightarrow X$, avec une probabilit\'e plus basse, alors que
+dans une case plus haute de la charte il y a deux r\`egles correspondantes : $S
+\rightarrow NP Y$ et $S \rightarrow VP Y$, la probabilit\'e de la deuxi\`eme r\`egle
+\`etant beaucoup plus haute que celle de la premi\`ere, la diff\'erence de poids entre
+les deux arbres peut \^etre neutralis\'ee par ces deux r\`egles. Cela justifie qu'il
+faut garder toutes les d\'erivations possibles dans chaque case de la charte, au
 lieu d'en garder seulement la meilleure. \\
 
-Dans la case au coin du tableau (la case qui correspond à la phrase entière) on
-obtient alors toutes les dérivations possibles de la phrase (une seule si la
-phrase n'est pas ambiguë). En triant les arbres obtenus par ordre décroissant de
-probabilité, on obtient l'analyse syntaxique le plus probable (le plus
+Dans la case au coin du tableau (la case qui correspond \`a la phrase enti\`ere) on
+obtient alors toutes les d\'erivations possibles de la phrase (une seule si la
+phrase n'est pas ambiguë). En triant les arbres obtenus par ordre d\'ecroissant de
+probabilit\'e, on obtient l'analyse syntaxique le plus probable (le plus
 probablement choisie par un humain). Les k analyses avec les plus hautes
-probabilités (appelées k-best parses) peuvent être renvoyées afin qu'un humain
+probabilit\'es (appel\'ees k-best parses) peuvent \^etre renvoy\'ees afin qu'un humain
 puisse en choisir la bonne.
 
 
 \subsection{La transformation de la grammaire probabiliste en forme normale de Chomsky flexible}
 
-Comme dit ci-dessus, la grammaire doit être en forme normale de Chomsky
-(Chomsky Normal form, CNF) pour pouvoir être utilisée par le parseur CKY. Toute
-grammaire hors contexte peut être transformée en CNF. \\
+Comme dit ci-dessus, la grammaire doit \^etre en forme normale de Chomsky
+(Chomsky Normal form, CNF) pour pouvoir \^etre utilis\'ee par le parseur CKY. Toute
+grammaire hors contexte peut \^etre transform\'ee en CNF. \\
 
 Dans une grammaire en
-CNF, toutes le règles ont la forme $$A \rightarrow BC$$ ou $$A \rightarrow
-\alpha$$, où $A,B,C \in V$ et $\alpha \in \Sigma$. \\
+CNF, toutes le r\`egles ont la forme $$A \rightarrow BC$$ ou $$A \rightarrow
+\alpha$$, o\`u $A,B,C \in V$ et $\alpha \in \Sigma$. \\
 
 Une grammaire en CNF peut
-aussi engendrer le mot vide : $$S \rightarrow \epsilon$$, où S est l'axiome de
+aussi engendrer le mot vide : $$S \rightarrow \epsilon$$, o\`u S est l'axiome de
 la grammaire.
 Dans notre projet, nous avons besoin de transformer la grammaire en forme
 normale de Chomsky flexible (flexible CNF), qui autorise les productions
-singulières de la forme $$A \rightarrow B$$. \\
+singuli\`eres de la forme $$A \rightarrow B$$. \\
 
-Nous avons implémenté la transformation d'une grammaire hors-contexte en CNF en
-module séparé, qui est utilisé en pré-traitement de la grammaire avant
+Nous avons impl\'ement\'e la transformation d'une grammaire hors-contexte en CNF en
+module s\'epar\'e, qui est utilis\'e en pr\'e-traitement de la grammaire avant
 de la passer au parseur. 
 
 \subsection{Le traitement des mots inconnus}
 
-Si on adopte la deuxième stratégie de l'analyse syntaxique, alors le
-traitement des mots inconnus est laissé au taggeur externe.
-Le taggeur MElt résout ce problème en se basant sur des lexiques externes tels
-que Lefff \cite{Lefff}. Un mot qui n'a jamais été rencontré dans le corpus
-d'entraînement est recherché dans les lexiques. Donc une des solutions est
-d'utiliser un dictionnaire externe (dans ce cas il faut tout de même prevoir
-une manière supplémentaire de gérer les mots inconnus au cas où le mot n'existe
-pas dans les lexiques utilisés).\\
+Si on adopte la deuxi\`eme strat\'egie de l'analyse syntaxique, alors le
+traitement des mots inconnus est laiss\'e au taggeur externe.
+Le taggeur MElt r\'esout ce probl\`eme en se basant sur des lexiques externes tels
+que Lefff \cite{Lefff}. Un mot qui n'a jamais \'et\'e rencontr\'e dans le corpus
+d'entra\^inement est recherch\'e dans les lexiques. Donc une des solutions est
+d'utiliser un dictionnaire externe (dans ce cas il faut tout de m\^eme prevoir
+une mani\`ere suppl\'ementaire de g\'erer les mots inconnus au cas o\`u le mot n'existe
+pas dans les lexiques utilis\'es).\\
 
-Nous allons nous concentrer sur la résolution de ce problème dans le cas de la
-première stratégie, quand c'est le parseur CKY probabiliste qui assigne les
-catégories morpho-syntaxiques aux entrées lexicales. \\
+Nous allons nous concentrer sur la r\'esolution de ce probl\`eme dans le cas de la
+premi\`ere strat\'egie, quand c'est le parseur CKY probabiliste qui assigne les
+cat\'egories morpho-syntaxiques aux entr\'ees lexicales. \\
 
 Evidemment, si on estime
-les probabilités des règles lexicales sur le corpus d'entrainement, alors
-n'importe quelle phrase qui contient au moins un mot non-observé dans ce corpus
-va recevoir une probabilité nulle, avec chaque arbre syntaxique de cette phrase
-étant aussi de probabilité nulle. Par conséquent, selon le choix
-d'implémentation soit le parseur probabiliste s'échouera, soit il enverra un
-arbre syntaxique arbitraire (choisi parmi les arbres équiprobables). \\
+les probabilit\'es des r\`egles lexicales sur le corpus d'entrainement, alors
+n'importe quelle phrase qui contient au moins un mot non-observ\'e dans ce corpus
+va recevoir une probabilit\'e nulle, avec chaque arbre syntaxique de cette phrase
+\'etant aussi de probabilit\'e nulle. Par cons\'equent, selon le choix
+d'impl\'ementation soit le parseur probabiliste s'\'echouera, soit il enverra un
+arbre syntaxique arbitraire (choisi parmi les arbres \'equiprobables). \\
 
-Pour contourner cet effet indésirable, il nous faut modifier notre procédure
-d'estimation de la PCFG de façon à ce que la probabilité d'un mot inconnu
-soit non-nulle. Pour le faire on a choisi de tester deux méthodes différentes.
+Pour contourner cet effet ind\'esirable, il nous faut modifier notre proc\'edure
+d'estimation de la PCFG de façon \`a ce que la probabilit\'e d'un mot inconnu
+soit non-nulle. Pour le faire on a choisi de tester deux m\'ethodes diff\'erentes.
 
 \subsubsection{Le traitement des mots inconnus: m\'ethode 1}
 
-Modélisons la probabilité d'un mot $w$ sachant sa catégorie morphosyntaxique
-$C$ comme la probabilité conjointe suivante :
+Mod\'elisons la probabilit\'e d'un mot $w$ sachant sa cat\'egorie morphosyntaxique
+$C$ comme la probabilit\'e conjointe suivante :
 \begin{eqnarray}
 \label{prob_mot_inconnu_0}
  P(W = w \mid \tilde{C} = C) = P(W = w, \mathrm{UNKNOWN} = unknown \mid \tilde{C} = C).
 \end{eqnarray}
-La valeur $unknown$ est égale à 1 si le mot $w$ a été observé dans le
-corpus d'entrainement et 0 sinon. Dès lors que la valeur de la variable
-$\mathrm{UNKNOWN}$ est en dépendance directe de la valeur $w$, on a affaire à
-une relation d'inclusion entre les événements: l'événement $W = w$ est
-inclu dans l'événement $\mathrm{UNKNOWN} = unknown$, donc l'égalité
-\ref{prob_mot_inconnu_0} tient grâce à l'axiome de théorie des probabilités
+La valeur $unknown$ est \'egale \`a 1 si le mot $w$ a \'et\'e observ\'e dans le
+corpus d'entrainement et 0 sinon. D\`es lors que la valeur de la variable
+$\mathrm{UNKNOWN}$ est en d\'ependance directe de la valeur $w$, on a affaire \`a
+une relation d'inclusion entre les \'ev\'enements: l'\'ev\'enement $W = w$ est
+inclu dans l'\'ev\'enement $\mathrm{UNKNOWN} = unknown$, donc l'\'egalit\'e
+\ref{prob_mot_inconnu_0} tient gr\^ace \`a l'axiome de th\'eorie des probabilit\'es
 suivante :
 $$ A \subset B \Rightarrow P(A) = P(A,B).$$
 
-Adoptons que pour chaque catégorie morphosyntaxique $C$ la probabilité de
-rencontrer un mot inconnu est toujours la même et est égale \`a $\alpha$:
+Adoptons que pour chaque cat\'egorie morphosyntaxique $C$ la probabilit\'e de
+rencontrer un mot inconnu est toujours la m\^eme et est \'egale \`a $\alpha$:
 $$ \forall C \text{--- cat\'egorie morphosyntaxique} \; P(\mathrm{UNKNOWN} = 1 \mid \tilde{C} = C) = \alpha.$$
 
-Ensuite on va décomposer la probabilité en \ref{prob_mot_inconnu_0} en
-utilisant la définition de la probabilité conditionnelle.
+Ensuite on va d\'ecomposer la probabilit\'e en \ref{prob_mot_inconnu_0} en
+utilisant la d\'efinition de la probabilit\'e conditionnelle.
 \begin{multline}
 \label{prob_mot_inconnu_cond}
  P(W = w \mid \tilde{C} = C) = P(W = w, \mathrm{UNKNOWN} = unknown \mid \tilde{C} = C) = 
@@ -404,7 +504,7 @@ utilisant la définition de la probabilité conditionnelle.
  P(\mathrm{UNKNOWN} = unknown \mid \tilde{C} = C) P(W = w \mid \mathrm{UNKNOWN} = unknown , \tilde{C} = C).
 \end{multline}
 
- Si le mot $w$ a été observé dans le corpus d'entrainement, alors on a
+ Si le mot $w$ a \'et\'e observ\'e dans le corpus d'entrainement, alors on a
 \begin{multline}
 \label{prob_mot_connu_1}
  P(W = w \mid \tilde{C} = C) = P(W = w, \mathrm{UNKNOWN} = 0 \mid \tilde{C} = C) = 
@@ -413,9 +513,9 @@ utilisant la définition de la probabilité conditionnelle.
  \\
  (1 - \alpha) P(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C).
 \end{multline}
-La probabilité $P(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C)$ est estimée, 
-comme d'habitude, par la fréquence relative de la paire $(w, C)$ dans le corpus
-d'entraînement:
+La probabilit\'e $P(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C)$ est estim\'ee, 
+comme d'habitude, par la fr\'equence relative de la paire $(w, C)$ dans le corpus
+d'entra\^inement:
 \begin{eqnarray*}
 \hat{P}(W = w \mid \mathrm{UNKNOWN} = 0, \tilde{C} = C) =
 \frac{ct(C \rightarrow w)}{\sum\limits_{a \in \Sigma}{ct(C \rightarrow a)}}.
@@ -423,11 +523,11 @@ d'entraînement:
 
 Ensuite on va traiter tous les mots inconnus comme un seul mot sans faire la
 distinction entre eux.
-Par conséquent on peut supposer qu'on a prétraité notre corpus de
-développement (ou de test) de façon à remplacer tous les mots inconnus par le
-même mot $w_{unknown}$ (qui n'a jamais été rencontré dans le corpus
-d'entraînement). Alors $$\forall C \; P(W = w_{unknown} \mid \mathrm{UNKNOWN} =
-1, \tilde{C} = C) = 1$$ et la probabilité d'un mot inconnu est calculée comme
+Par cons\'equent on peut supposer qu'on a pr\'etrait\'e notre corpus de
+d\'eveloppement (ou de test) de façon \`a remplacer tous les mots inconnus par le
+m\^eme mot $w_{unknown}$ (qui n'a jamais \'et\'e rencontr\'e dans le corpus
+d'entra\^inement). Alors $$\forall C \; P(W = w_{unknown} \mid \mathrm{UNKNOWN} =
+1, \tilde{C} = C) = 1$$ et la probabilit\'e d'un mot inconnu est calcul\'ee comme
 suit :
 \begin{multline}
 \label{prob_mot_inconnu_1}
@@ -440,92 +540,92 @@ suit :
 
 \subsubsection{Le traitement des mots inconnus: m\'ethode 2}
 
-L'idée de la deuxième méthode est de calculer la probabilité de
-produire un mot inconnu sachant sa catégorie lexicale $P(UNKNOWN|CAT)$ pour
-chaque catégorie à partir du corpus d'entraînement.\\
+L'id\'ee de la deuxi\`eme m\'ethode est de calculer la probabilit\'e de
+produire un mot inconnu sachant sa cat\'egorie lexicale $P(UNKNOWN|CAT)$ pour
+chaque cat\'egorie \`a partir du corpus d'entra\^inement.\\
 
-Pour cela, il faut fixer une limite en-dessous de laquelle tout mot rencontré dans le corpus est
-considéré rare, et en calculant les fréquences relatives nous le comptons comme
-un mot inconnu. En résultat, le mot "UNKNOWN" a un compte différent de zéro, qui
-est égal à la somme des comptes de tous les mots rares dans le corpus. On peut
-ensuite calculer les fréquences relatives comme si "UNKNOWN" était un mot comme
+Pour cela, il faut fixer une limite en-dessous de laquelle tout mot rencontr\'e dans le corpus est
+consid\'er\'e rare, et en calculant les fr\'equences relatives nous le comptons comme
+un mot inconnu. En r\'esultat, le mot "UNKNOWN" a un compte diff\'erent de z\'ero, qui
+est \'egal \`a la somme des comptes de tous les mots rares dans le corpus. On peut
+ensuite calculer les fr\'equences relatives comme si "UNKNOWN" \'etait un mot comme
 les autres. 
 \\
 
-Cette méthode est préférable, parce qu'elle tient compte de la
-fréquence des mots rares (donc la probabilité de produire un mot inconnu) pour
-chaque catégorie lexicale dans la langue naturelle. La probabilité
-de produire un mot inconnu n'est pas la même pour toutes les
-catégories, elle est plus grande pour les catégories lexicales ouvertes et plus
-petite pour les catégories fermées.
-Intuitivement, il y aura moins de prépositions rares dans un corpus que des noms rares, donc $P(UNKNOWN|P) < P(UNKNOWN|N)$.
+Cette m\'ethode est pr\'ef\'erable, parce qu'elle tient compte de la
+fr\'equence des mots rares (donc la probabilit\'e de produire un mot inconnu) pour
+chaque cat\'egorie lexicale dans la langue naturelle. La probabilit\'e
+de produire un mot inconnu n'est pas la m\^eme pour toutes les
+cat\'egories, elle est plus grande pour les cat\'egories lexicales ouvertes et plus
+petite pour les cat\'egories ferm\'ees.
+Intuitivement, il y aura moins de pr\'epositions rares dans un corpus que des noms rares, donc $P(UNKNOWN|P) < P(UNKNOWN|N)$.
 \\
 
-Cette méthode est particulièrement utile si nous avons un corpus avec des
+Cette m\'ethode est particuli\`erement utile si nous avons un corpus avec des
 textes bien diverses et pas uniformes. 
 
 \subsection{Evaluation}
 
-L'analyse d'une phrase passe par beaucoup d'étapes, chacune de ces étapes peut
-être évaluée afin de trouver des sources d'imprécision.\\
+L'analyse d'une phrase passe par beaucoup d'\'etapes, chacune de ces \'etapes peut
+\^etre \'evalu\'ee afin de trouver des sources d'impr\'ecision.\\
 
-Les étapes à évaluer :
+Les \'etapes \`a \'evaluer :
 \begin{itemize}
-\item Segmentation de l'entrée (Tokénisation)
+\item Segmentation de l'entr\'ee (Tok\'enisation)
 \item Etiquetage morpho-syntaxique (Tagging)
 \item Analyse syntaxique (Parsing)
 \end{itemize}
 
 
-La sortie d'une étape d'analyse forme l'entrée de l'étape suivante. 
+La sortie d'une \'etape d'analyse forme l'entr\'ee de l'\'etape suivante. 
 
-Les types d'entrée :
+Les types d'entr\'ee :
 \begin{itemize}
-\item Texte non-annoté et non-segmenté (en mots)
-\item Texte segmenté (tokénisé)
-\item Texte morpho-syntaxiquement étiqueté (taggé)
-\item Corpus arboré (muni d'annotations syntaxiques)
+\item Texte non-annot\'e et non-segment\'e (en mots)
+\item Texte segment\'e (tok\'enis\'e)
+\item Texte morpho-syntaxiquement \'etiquet\'e (tagg\'e)
+\item Corpus arbor\'e (muni d'annotations syntaxiques)
 \end{itemize}
 
-Pour évaluer la \textbf{tokénisation}, il faut extraire la phrase sans
-étiquetage (bare phrase) de l'arbre correspondant du corpus arboré et comparer
+Pour \'evaluer la \textbf{tok\'enisation}, il faut extraire la phrase sans
+\'etiquetage (bare phrase) de l'arbre correspondant du corpus arbor\'e et comparer
 tous les tokens dans les deux phrases. \\
 
-Pour évaluer le \textbf{tagging}, il faut extraire la phrase avec les catégories
-lexicales (ou juste la séquence des catégories lexicales) de l'arbre
-correspondant du corpus arboré et comparer les catégories lexicales dans les
+Pour \'evaluer le \textbf{tagging}, il faut extraire la phrase avec les cat\'egories
+lexicales (ou juste la s\'equence des cat\'egories lexicales) de l'arbre
+correspondant du corpus arbor\'e et comparer les cat\'egories lexicales dans les
 deux phrases.\\
 
-Pour évaluer le \textbf{parsing}, il faut comparer la meilleure analyse donnée
-par le parseur à l'arbre correspondant du corpus arboré (l'arbre gold).
+Pour \'evaluer le \textbf{parsing}, il faut comparer la meilleure analyse donn\'ee
+par le parseur \`a l'arbre correspondant du corpus arbor\'e (l'arbre gold).
 
-Pour chaque étape, il faut calculer le pourcentage des résultats identiques à
-la référence gold parmi tous les résultats.
+Pour chaque \'etape, il faut calculer le pourcentage des r\'esultats identiques \`a
+la r\'ef\'erence gold parmi tous les r\'esultats.
 
 
 \section{R\'esultats}
 
 \section{Utilisation}
 \subsection{La structure modulaire}
-Le projet consiste des trois modules indépendants qui permettent d'apprendre une
-grammaire à partir de Sequoia Tree Bank \cite{Sequoia} et de l'utiliser pour
-analyser des phrases données par l'utilisateur. Chaque module prend en
-argument l'output du module précedent. L'ordre d'application de ces trois
+Le projet consiste des trois modules ind\'ependants qui permettent d'apprendre une
+grammaire \`a partir de Sequoia Tree Bank \cite{Sequoia} et de l'utiliser pour
+analyser des phrases donn\'ees par l'utilisateur. Chaque module prend en
+argument l'output du module pr\'ecedent. L'ordre d'application de ces trois
 modules est le suivant :
 \begin{enumerate}
-  \item Le module TrainSetReader, étant donné les fichiers de Sequoia Tree Bank,
+  \item Le module TrainSetReader, \'etant donn\'e les fichiers de Sequoia Tree Bank,
   en construit une grammaire hors-contexte probabiliste;
   \item Le module CNFConverter prend la grammaire et la transforme en forme
   normale de Chomsky flexible;
   \item Le module CKYParser se base sur la grammaire apprise par TrainSetReader
-  et transformée par CNFConverter pour donner l'analyse syntaxique des phrases
+  et transform\'ee par CNFConverter pour donner l'analyse syntaxique des phrases
   en français.
 \end{enumerate}
 
 \subsection{TrainSetReader}
 \subsubsection{Nom}
  
-TrainSetReader --- Générer une grammaire à partir d'un corpus d'apprentissage.
+TrainSetReader --- G\'en\'erer une grammaire \`a partir d'un corpus d'apprentissage.
  
 \subsubsection{Synopsis}
  
@@ -538,32 +638,32 @@ unknown_threshold] [-s unknown_label] [-l] [files...]
  
 \subsubsection{Description}
  
-Le programme \texttt{TrainSetReader} lit un texte annoté en constituants
-syntaxiques sous forme arborée, selon les conventions utilisées par le Sequoia Tree Bank. Il en
-génère ensuite une grammaire algébrique probabiliste, chaque règle de réécriture
-voyant sa probabilité estimée par un calcul de fréquence relative. Cette
-grammaire est affichée sur la sortie standard.
+Le programme \texttt{TrainSetReader} lit un texte annot\'e en constituants
+syntaxiques sous forme arbor\'ee, selon les conventions utilis\'ees par le Sequoia Tree Bank. Il en
+g\'en\`ere ensuite une grammaire alg\'ebrique probabiliste, chaque r\`egle de r\'e\'ecriture
+voyant sa probabilit\'e estim\'ee par un calcul de fr\'equence relative. Cette
+grammaire est affich\'ee sur la sortie standard.
  
-Si des fichiers d'entrée sont spécifiés, le programme lira seulement ceux-ci. Si
-aucun fichier d'entrée n'est spécifié, les corpora d'entraînement seront lus sur
-l'entrée standard.
+Si des fichiers d'entr\'ee sont sp\'ecifi\'es, le programme lira seulement ceux-ci. Si
+aucun fichier d'entr\'ee n'est sp\'ecifi\'e, les corpora d'entra\^inement seront lus sur
+l'entr\'ee standard.
 
 \subsubsection{Options}
 
 \begin{description}[style=nextline]
-\item[\texttt{-p, --precision precision}] Spécifie un nombre de chiffres après
-la virgule qui seront affichés avec chaque règle de réécriture. Sa valeur par défaut est
+\item[\texttt{-p, --precision precision}] Sp\'ecifie un nombre de chiffres apr\`es
+la virgule qui seront affich\'es avec chaque r\`egle de r\'e\'ecriture. Sa valeur par d\'efaut est
 \texttt{10}.
-\item[\texttt{-t, --nthreads threads}] Spécifie le nombre de fils d'exécution
-qui seront exécutés en même temps par le programme.
-\item[\texttt{-u, --unknown-threshold unknown\_threshold}] Spécifie le nombre
-d'occurrences dans le corpus en-dessous duquel la partie droite d'une règle de
-réécriture sera considérée comme rare, et donc inconnue.
-\item[\texttt{-s, --unknown-label unknown\_label}] Spécifie le label qui sera
-attribué aux symboles inconnus.
-\item[\texttt{-l, --lexical}] Si cette option est spécifiée, le programme
-affichera la grammaire avec ses règles lexicales (dont la partie droite est un
-symbole terminal). Celles-ci ne sont pas affichées par défaut.
+\item[\texttt{-t, --nthreads threads}] Sp\'ecifie le nombre de fils d'ex\'ecution
+qui seront ex\'ecut\'es en m\^eme temps par le programme.
+\item[\texttt{-u, --unknown-threshold unknown\_threshold}] Sp\'ecifie le nombre
+d'occurrences dans le corpus en-dessous duquel la partie droite d'une r\`egle de
+r\'e\'ecriture sera consid\'er\'ee comme rare, et donc inconnue.
+\item[\texttt{-s, --unknown-label unknown\_label}] Sp\'ecifie le label qui sera
+attribu\'e aux symboles inconnus.
+\item[\texttt{-l, --lexical}] Si cette option est sp\'ecifi\'ee, le programme
+affichera la grammaire avec ses r\`egles lexicales (dont la partie droite est un
+symbole terminal). Celles-ci ne sont pas affich\'ees par d\'efaut.
 \end{description}
 
 \subsection{CNFConverter}
@@ -584,30 +684,30 @@ python cnf-converter.py [-p prob] [-s sing_elimin] [-t term_droite]
 \subsubsection{Description}
  
 Le programme \texttt{CNFConverter} lit une grammaire hors contexte, probabiliste
-ou pas, une règle par ligne, de l'entrée standard.
+ou pas, une r\`egle par ligne, de l'entr\'ee standard.
 Il la transforme ensuite en une grammaire en CNF, avec ou sans productions
-singulières. 
+singuli\`eres. 
 
 \subsubsection{Options}
 
 \begin{description}[style=nextline]
-\item[\texttt{-p, --prob}] Si cette option est spécifiée, le programme considère
-que la grammaire donnée est probabiliste (chaque règle de production est
-précédé par sa probabilité).
-\item[\texttt{-s, --sing\_elimin}] Si cette option est spécifiée, le programme
-va éliminer les productions singulières et renvoyer la grammaire en forme normale
+\item[\texttt{-p, --prob}] Si cette option est sp\'ecifi\'ee, le programme consid\`ere
+que la grammaire donn\'ee est probabiliste (chaque r\`egle de production est
+pr\'ec\'ed\'e par sa probabilit\'e).
+\item[\texttt{-s, --sing\_elimin}] Si cette option est sp\'ecifi\'ee, le programme
+va \'eliminer les productions singuli\`eres et renvoyer la grammaire en forme normale
 de Chomsky stricte (pas flexible).
-\item[\texttt{-t, --term\_droite}] Si cette option est spécifiée, cela
-indique que dans les règles avec plusieurs symboles dans la partie
+\item[\texttt{-t, --term\_droite}] Si cette option est sp\'ecifi\'ee, cela
+indique que dans les r\`egles avec plusieurs symboles dans la partie
 droite il peut y avoir des symboles terminaux.
-\item[\texttt{--save\_transform}] Si cette option est spécifiée, le programme va
-sauvegarder les transformatons éffectuées.
+\item[\texttt{--save\_transform}] Si cette option est sp\'ecifi\'ee, le programme va
+sauvegarder les transformatons \'effectu\'ees.
 \end{description}
 
 \subsection{CKYParser}
 \subsubsection{Nom}
  
-CKYParser --- Effectue l'analyse syntaxique d'une phrase donnée à partir d'une
+CKYParser --- Effectue l'analyse syntaxique d'une phrase donn\'ee \`a partir d'une
 grammaire en CNF.
  
 \subsubsection{Synopsis}
@@ -623,36 +723,36 @@ unknown_label] -g grammar_file [-o output_file] [-n non_lexical_input]
  
 Le programme \texttt{CKYParser} prend en argument une grammaire hors contexte
 en forme normale de Chomsky et renvoie les k meilleures analyses syntaxiques
-pour une phrase donnée en entrée standard (si cette phrase appartent au langage
-engendré par la grammaire) en appliquant l'algorithme CKY à cette phrase.
+pour une phrase donn\'ee en entr\'ee standard (si cette phrase appartent au langage
+engendr\'e par la grammaire) en appliquant l'algorithme CKY \`a cette phrase.
 
 \subsubsection{Options}
 
 \begin{description}[style=nextline]
-\item[\texttt{-l, --log-prob log\_prob}] Si cette option est spécifiée, le
-programme utilisera les log-probabilités dans l'algorithme de parsing.
-\item[\texttt{-k, --k-best k\_best}] Spécifie le nombre maximal des meilleurs
-arbres qui seront renvoyés par le programme.
-\item[\texttt{-a, --apriori-unknown-prob apriori\_unknown\_prob}] Spécifie la
-probabilité apriori à attribuer à la production d'un mot unconnu. Si cette option est spécifiée, la
-méthode du traitement des mots inconnus est changée à APRIORI\_PROB (pour chaque
-catégorie morphosyntaxique, la probabilité de rencontrer un mot inconnu est
-toujours la même et différente de zéro).
-\item[\texttt{-u, --unknown-label unknown\_label}] Spécifie le label qui sera
-attribué aux symboles inconnus. Si cette option est spécifiée, la
-méthode du traitement des mots inconnus est changée à RARE (tous les mots rares
-dans le corpus d'entraînement sont considérés comme inconnus, et la probabilité
-de produire un mot inconnu est calculée pour chaque catégorie morphosyntaxique
-à partir des comptes de ces mots rares).
+\item[\texttt{-l, --log-prob log\_prob}] Si cette option est sp\'ecifi\'ee, le
+programme utilisera les log-probabilit\'es dans l'algorithme de parsing.
+\item[\texttt{-k, --k-best k\_best}] Sp\'ecifie le nombre maximal des meilleurs
+arbres qui seront renvoy\'es par le programme.
+\item[\texttt{-a, --apriori-unknown-prob apriori\_unknown\_prob}] Sp\'ecifie la
+probabilit\'e apriori \`a attribuer \`a la production d'un mot unconnu. Si cette option est sp\'ecifi\'ee, la
+m\'ethode du traitement des mots inconnus est chang\'ee \`a APRIORI\_PROB (pour chaque
+cat\'egorie morphosyntaxique, la probabilit\'e de rencontrer un mot inconnu est
+toujours la m\^eme et diff\'erente de z\'ero).
+\item[\texttt{-u, --unknown-label unknown\_label}] Sp\'ecifie le label qui sera
+attribu\'e aux symboles inconnus. Si cette option est sp\'ecifi\'ee, la
+m\'ethode du traitement des mots inconnus est chang\'ee \`a RARE (tous les mots rares
+dans le corpus d'entra\^inement sont consid\'er\'es comme inconnus, et la probabilit\'e
+de produire un mot inconnu est calcul\'ee pour chaque cat\'egorie morphosyntaxique
+\`a partir des comptes de ces mots rares).
 \item[\texttt{-g, --grammar-file grammar\_file}] Cet argument est obligatoire.
 C'est le chemin vers le fichier qui contient une grammaire en forme normale de
-Chomsky, une règle par ligne.
-\item[\texttt{-o, --output-file output\_file}] Spécifie le chemin vers le
-fichier dans lequel le parseur écrira son output. Si cet argument n'est pas
-donné, le parseur écrit le résultat sur la sortie standard.
+Chomsky, une r\`egle par ligne.
+\item[\texttt{-o, --output-file output\_file}] Sp\'ecifie le chemin vers le
+fichier dans lequel le parseur \'ecrira son output. Si cet argument n'est pas
+donn\'e, le parseur \'ecrit le r\'esultat sur la sortie standard.
 \item[\texttt{-n, --non-lexical-input non\_lexical\_input}] Si cette option est
-spécifiée, le programme considère que toute phrase donnée consiste seulement des
-non-terminaux (catégories lexicales au lieu des mots).
+sp\'ecifi\'ee, le programme consid\`ere que toute phrase donn\'ee consiste seulement des
+non-terminaux (cat\'egories lexicales au lieu des mots).
 \end{description}
 
 
