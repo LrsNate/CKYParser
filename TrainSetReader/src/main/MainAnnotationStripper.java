@@ -3,6 +3,9 @@ package main;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+/**
+ * For each phrase in all the given input files, print the phrase only in words, only in grammatical categories, or both.
+ */
 public class MainAnnotationStripper
 {
 

@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 /**
  * The representation of a syntactic tree.
- * @author Antoine LAFOUASSE
  *
  */
 public class TreeNode
@@ -16,8 +15,8 @@ public class TreeNode
 			"could not be resolved to a bracketed sentence.";
 	
 	/**
-	 * creates a tree consisting of the root only
-	 * with empty string as the label of the root
+	 * Create a tree consisting of the root only,
+	 * with empty string as the label of the root.
 	 */
 	public TreeNode(Symbol value) {
 		this._value = value;
@@ -50,8 +49,6 @@ public class TreeNode
 			this._children = new LinkedList<TreeNode>();
 			if (tab.length > 1) {
 				// this is the lexical entry
-				// this._children.addLast(new TreeNode(tab[1])); 
-				// new Symbol(value = tab[1], is_terminal = true)
 				this._children.addLast(new TreeNode(new Symbol(tab[1], true))); 
 			}
 			return ;
@@ -65,6 +62,10 @@ public class TreeNode
 			this._children.addLast(new TreeNode(TreeNode.getNextChild(v)));
 	}
 	
+	/**
+	 * Convert the tree and all of its subtrees to lists of rewriting rules.
+	 * @return A list of lists of strings. Every element of the list represents one tree in the form of list of a rewriting rule.
+	 */
 	public LinkedList<String[]> dumpWordTab()
 	{
 		LinkedList<String[]>		res;
@@ -79,7 +80,12 @@ public class TreeNode
 		return (res);
 	}
 	
-	private String strippedPhrase(LinkedList<String>	lst) {
+	/**
+	 * Takes a phrase and strips the leading backslashes off the terminals.
+	 * @param lst The phrase to be stripped.
+	 * @return The phrase without backslashes.
+	 */
+	private String strippedPhrase(LinkedList<String> lst) {
 		StringBuffer		res;
 		res = new StringBuffer();
 		for (String s : lst)
@@ -91,6 +97,10 @@ public class TreeNode
 		return (res.toString());
 	}
 	
+	/**
+	 * Get the phrase represented by the tree.
+	 * @return The tagged phrase. The words are of the form "word/tag".
+	 */
 	public String getTaggedPhrase()
 	{
 		LinkedList<String>	lst;
@@ -108,6 +118,10 @@ public class TreeNode
 		return strippedPhrase(lst);
 	}
 	
+	/**
+	 * Get the phrase represented by the tree, without the lexical terminals.
+	 * @return The phrase consisting only of grammatical category tags.
+	 */
 	public String getTaggingOnly()
 	{
 		LinkedList<String>	lst;
@@ -126,6 +140,10 @@ public class TreeNode
 		return res;
 	}
 	
+	/**
+	 * Get the phrase represented by the tree, without the grammatical category tags.
+	 * @return The phrase without tagging.
+	 */
 	public String getBarePhrase()
 	{
 		LinkedList<String>	lst;
@@ -189,6 +207,10 @@ public class TreeNode
 		return (s.toString());
 	}
 	
+	/**
+	 * Convert the tree to the bracketed form.
+	 * @return A string representing the tree.
+	 */
 	public String toBracketed()
 	{
 		StringBuffer	s;
@@ -207,7 +229,11 @@ public class TreeNode
 		return (s.toString());
 	}
 
-	
+	/**
+	 * Convert the tree to a form of a rewriting rule with the root as the LHS of the rule
+	 * and the children as the RHS.
+	 * @return A couple of strings. The first element of the couple is the LHS, and the second is the RHS.
+	 */
 	public String[] toWordTab()
 	{
 		String				res[];
@@ -223,6 +249,11 @@ public class TreeNode
 		return (res);
 	}
 	
+	/**
+	 * Get the next child of the tree from a given string.
+	 * @param s The bracketed string representing a tree.
+	 * @return The next branch of the tree.
+	 */
 	private static String getNextChild(String s)
 	{
 		int		end;
@@ -241,6 +272,11 @@ public class TreeNode
 		return (s.substring(0, end + 1));
 	}
 	
+	/**
+	 * Get the substring of a given string starting with the next child of the tree.
+	 * @param s The bracketed string representing a tree.
+	 * @return The given string starting with the next branch of the tree.
+	 */
 	private static String skipToNextChild(String s)
 	{
 		int		idx;
@@ -280,8 +316,8 @@ public class TreeNode
 	}
 	
 	/**
-	 * copy the root node of this tree (without its children)
-	 * @return: a tree that consists of only one node which is identical to the root of this tree
+	 * Copy the root node of this tree (without its children).
+	 * @return A tree that consists of only one node which is identical to the root of this tree.
 	 */
 	protected TreeNode copy_root() {
 		TreeNode new_node = new TreeNode(this._value);
@@ -290,10 +326,10 @@ public class TreeNode
 	
 	/**
 	 * Copy selected nodes from one tree to another
-	 * preserving the hierarchy relationships between the selected nodes
-	 * @param to_be_deleted
-	 * @param tree_source : the tree from which we copy the selected nodes
-	 * @param new_root : the tree onto which we hook up copies of nodes of another tree
+	 * preserving the hierarchy relationships between the selected nodes.
+	 * @param to_be_deleted Filter to delete auxiliary nodes with certain prefixes.
+	 * @param tree_source The tree from which we copy the selected nodes.
+	 * @param new_root The tree onto which we hook up copies of nodes of another tree.
 	 */
 	private static void selective_subtree_copy(IsAlien to_be_deleted, TreeNode tree_source, TreeNode new_root) {
 		if (!(to_be_deleted.filter(tree_source))) {
@@ -307,11 +343,11 @@ public class TreeNode
 			}
 	}
 	/**
-	 * Used for back transformation of a parse-tree from CNF form to the original form
-	 * Create a new tree by deleting a certain type of nodes from the tree supplied in the parameter list
-	 * @param to_be_deleted: a class that knows to distinguish between the nodes to be deleted and the nodes to be kept in the tree
-	 * @param tree: the tree to be transformed
-	 * @return: a new (transformed) tree 
+	 * Used for back transformation of a parse-tree from CNF form to the original form.
+	 * Create a new tree by deleting a certain type of nodes from the tree supplied in the parameter list.
+	 * @param to_be_deleted A class that knows to distinguish between the nodes to be deleted and the nodes to be kept in the tree.
+	 * @param source_tree The tree to be transformed.
+	 * @return A new (transformed) tree. 
 	 */
 	public static TreeNode eliminate_nodes(IsAlien to_be_deleted, TreeNode source_tree) {
 		// create the top node onto which all the nodes of the source_tree are to be hooked 

@@ -9,9 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * The modelisation of a Probabilistic Context-Free Grammar (PCFG). It consists
- * in a set of weighted rewriting rules, with each rule having its probability
+ * of a set of weighted rewriting rules, with each rule having its probability
  * processed at display time.
- * @author Antoine LAFOUASSE
  */
 public class Grammar
 {	
@@ -20,6 +19,9 @@ public class Grammar
 	private final static int		_defaultMapSize = 5000;
 	
 
+	/**
+	 * Default constructor.
+	 */
 	public Grammar()
 	{
 		this._map = new ConcurrentHashMap<Symbol, RewrRuleCounter>(
@@ -27,10 +29,10 @@ public class Grammar
 	}
 
 	/**
-	 * Adds a rule to the grammar and either creates a new entry or increments
+	 * Add a rule to the grammar and either create a new entry or increment
 	 * its occurrence count.
 	 * @param rule The rule to be added.
-	 * @return the counter of the rule that has just been added
+	 * @return The counter of the rule that has just been added.
 	 */
 	public synchronized RewrRuleCounter addRule(String rule)
 	{
@@ -55,6 +57,10 @@ public class Grammar
 		return rule_counter;
 	}
 	
+	/**
+	 * Add a rewriting rule to the grammar. The rules are grouped by left-hand side.
+	 * @param tab A string representing a rule of the form A -> B C.
+	 */
 	public synchronized void addRule(String tab[])
 	{
 		Symbol lhs = new Symbol(tab[0]);
@@ -65,8 +71,8 @@ public class Grammar
 	}
 	
 	/**
-	 * 
-	 * @param precision
+	 * Display the grammar with a given precision.
+	 * @param precision The number of digits after the decimal separator.
 	 */
 	public void display(int precision)
 	{
@@ -104,7 +110,7 @@ public class Grammar
 	}
 	
 	/**
-	 * Returns a String representation of the grammar, i.e. all the rules
+	 * Return a String representation of the grammar, i.e. all the rules
 	 * contained in it.
 	 * @param precision The precision (in digits after the decimal separator)
 	 * with which the rules' frequency is to be displayed.

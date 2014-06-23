@@ -1,7 +1,11 @@
 package main;
 
 import java.io.FileNotFoundException;
-
+/**
+ * Convert all phrases given by a grammar converted to CNF back by eliminating all the auxiliary non-terminals 
+ * added during the conversion to CNF.
+ *
+ */
 public class MainBackConversion {
 
 	public static final void main(String[] argv) {

@@ -3,7 +3,6 @@ package main;
 /**
  * A simple utility classes used to write messages to the error output with a
  * specific error gravity level. 
- * @author Antoine LAFOUASSE
  *
  */
 public class Messages

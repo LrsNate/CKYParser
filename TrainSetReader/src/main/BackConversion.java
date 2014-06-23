@@ -4,23 +4,33 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+/**
+ * Convert a parse given by a grammar converted to CNF back by eliminating all the auxiliary non-terminals added 
+ * in the process of conversion to CNF. Used for evaluation.
+ *
+ */
 public class BackConversion {
 	
 	private Scanner sc;
 
+	/**
+	 * Default constructor.
+	 * @param input_file The file containing the parse trees to convert.
+	 * @throws FileNotFoundException
+	 */
 	public BackConversion(String input_file) throws FileNotFoundException {
 		sc = new Scanner(new File(input_file));
 	}
 	
 	/**
-	 * Each line of the input file encodes a tree
-	 * Delete all the nodes the labels of which start with the given prefixe,
-	 * print the resulting new tree to standard output
-	 * @param prefixe
-	 * @param mode_probabilistic
+	 * Each line of the input file encodes a tree.
+	 * Delete all the nodes the labels of which start with the given prefix,
+	 * print the resulting new tree to standard output.
+	 * @param prefix The prefix indicating the nodes to be deleted.
+	 * @param mode_probabilistic True if the probability is encoded in given strings.
 	 */
-	public void convert(String prefixe, boolean mode_probabilistic) {
-		IsAlien to_be_deleted = new IsAlien(prefixe);	
+	public void convert(String prefix, boolean mode_probabilistic) {
+		IsAlien to_be_deleted = new IsAlien(prefix);	
 		while (sc.hasNext()) {
 			String res = "";
 			String str_new_tree = sc.next();

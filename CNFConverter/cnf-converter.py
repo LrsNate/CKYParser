@@ -1,25 +1,25 @@
-#!/usr/bin/env python
+f#!/usr/bin/env python
 # -*- coding: iso-8859-1 -*-
 
-# import du module sys pour les entrées sorties
+# import du module sys pour les entrees sorties
 import sys
 # import du module optparse pour la gestion des options / arguments en ligne de commande
 from optparse import OptionParser
 import warnings
 
-# chaîne de caractères qui sera affichée si l'option -h est précisée, ou si les options passées ne sont pas celles déclarées
-usage=u""" Ce programme lit de STDIN une grammaire hors-context (probabiliste ou non) (CFG ou PCFG) 
-            et affiche sur STDOUT la grammaire transformée 
-            en Forme Normale de Chomsky (CNF) (sans productions singulières)
+# chaine de caracteres qui sera affichee si l'option -h est precisee, ou si les options passees ne sont pas celles declarees
+usage=u""" Ce programme lit de STDIN une grammaire hors-contexte (probabiliste ou non) (CFG ou PCFG) 
+            et affiche sur STDOUT la grammaire transformee 
+            en Forme Normale de Chomsky (CNF) (sans productions singulieres)
             ou
-            en Forme Normale de Chomsky Flexible (flexible CNF) (pas d'élimination des productions singulières)
+            en Forme Normale de Chomsky Flexible (flexible CNF) (pas d'elimination des productions singulieres)
             (selon l'option choisie)
-            La grammaire de l'entrée est lit au format suivant
+            La grammaire de l'entree est lue au format suivant
            1. Une regle de production par ligne 
            2. Chaque ligne au format suivant:
             en cas de PCFG: p A -> beta
-	    (où p est la probabilité de lq règle)
-            en cqs de CFG: A -> beta
+	    (ou p est la probabilite de la regle)
+            en cas de CFG: A -> beta
             ( field separator : whitespace characters )
               Terminal symbols: start with a non-escaped slash
 
@@ -29,14 +29,14 @@ usage=u""" Ce programme lit de STDIN une grammaire hors-context (probabiliste ou
 # ==================   Les options    ===============================================
 # gestion des options et des arguments
 parser=OptionParser(usage=usage)
-# déclaration d'une option
+# declaration d'une option
 parser.add_option("-p", "--prob",  action="store_true",  dest="is_prob", help = u"The CFG is probabilistic")
 parser.add_option("-s", "--sing_elimin",  action="store_true",  dest="sing_elimin", help = u"Eliminate singular productions")
 parser.add_option("-t", "--term_droite",  action="store_true",  dest="term_droite", 
-help = u"Indicate that there may be non-terminal symbols in productions that have more than one symbol in the right-hand side")
+help = u"Indicate that there may be terminal symbols in productions that have more than one symbol in the right-hand side")
 parser.add_option("--save_transform",action="store_true",  dest="save_transform", help = u"Save the transformations")
 
-# lecture des arguments et des options passés en ligne de commande
+# lecture des arguments et des options passees en ligne de commande
 (opts,args) = parser.parse_args()
 
 sing_elimin = bool(opts.sing_elimin)

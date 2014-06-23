@@ -3,43 +3,64 @@ package main;
 import java.util.Collections;
 import java.util.LinkedList;
 
+/**
+ * A right-hand side of a rewriting rule.
+ *
+ */
 public class RHS {
 	
 	/**
-	 * the right-hand side of the production
+	 * The right-hand side of a production.
 	 *
 	 */
 	private final LinkedList<Symbol> _rhs;
 	
 	/**
-	 * create an RHS with a single symbol in it
-	 * @param rhs_smb: the symbol in the RHS
+	 * Create a RHS with a single symbol in it.
+	 * @param rhs_smb The symbol in the RHS.
 	 */
 	public RHS(Symbol rhs_smb) {
 		this._rhs = new LinkedList<Symbol>();
 		this._rhs.add(rhs_smb);
 	}
 	
+	/**
+	 * Create a RHS with multiple symbols in it.
+	 * @param rhs The right-hand side as a list of symbols.
+	 */
 	public RHS(LinkedList<Symbol> rhs) {
 		this._rhs = rhs;
 	}
 	
 	/**
-	 * create an RHS out of a list of "names" of symbols
-	 * @param rhs_str_list: a list of strings where each string represents a single Symbol in the RHS
+	 * Create a RHS out of a list of "names" of symbols.
+	 * @param rhs_str_list A list of strings where each string represents a single symbol in the RHS.
 	 */
 	public RHS(String[] rhs_str_list) {
 		this._rhs = Symbol.ListSymbols(rhs_str_list);
 	}
 	
+	/**
+	 * Create a RHS out of a string. Symbols are separated by spaces.
+	 * @param s The string representing the right-hand side of a rule.
+	 */
 	public RHS(String s) {
 		this(s.split(" "));
 	}
 	
+	/**
+	 * Get the symbol in the given position in the RHS.
+	 * @param i The index of the symbol.
+	 * @return A symbol of the RHS.
+	 */
 	public Symbol get(int i) {
 		return this._rhs.get(i);
 	}
 	
+	/**
+	 * Get the length of the RHS (in symbols).
+	 * @return The number of symbols in the RHS.
+	 */
 	public int size() {
 		return this._rhs.size();
 	}
@@ -73,6 +94,10 @@ public class RHS {
 		return false;
 	}
 	
+	/**
+	 * Get a string consisting of the symbols contained in the RHS without keeping their order.
+	 * @return A string that contains a set of all the symbols of the RHS.
+	 */
 	public String getStringUnsorted() {
 		// get a list of string representations of symbols
 		LinkedList<String> list_smb_str = new LinkedList<String>();
@@ -92,8 +117,9 @@ public class RHS {
 	
 	@Override
 	/**
+	 * Get the hashcode of the RHS.
 	 * NOTE: it produces the hashcode of the SET of symbols in the right-hand side
-	 * (i.e. the order does not matter)
+	 * (i.e. the order does not matter).
 	 */
 	public int hashCode()
 	{
