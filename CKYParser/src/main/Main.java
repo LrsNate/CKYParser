@@ -70,7 +70,7 @@ public final class Main
 				} catch (UnknownWordException e) {
 					// no parses were obtained, nothing is printed 
 					// just pass on to the next phrase
-					System.err.println(e.getMessage());
+					//System.err.println(e.getMessage());
 				}
 			}
 			
