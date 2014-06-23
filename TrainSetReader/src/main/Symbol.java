@@ -30,9 +30,13 @@ public class Symbol {
 				throw new IllegalArgumentException();
 			}
 			int count_leading_slashes = count_leading_occ(str, '\\');
+            // this is a terminal symbol
 			if (odd(count_leading_slashes)) {
 				this.value = str.substring(1);
 				this.terminal = true;
+                // convert the value of the terminal symbol to lowercase
+                // if the corresponding option is set
+                if (Environment.getToLowerCase()) { this.value = this.value.toLowerCase(); }
 				return;
 			}
 		}
@@ -49,6 +53,9 @@ public class Symbol {
 	 */
 	public Symbol(String value, boolean terminal) {
 		this.value = value; this.terminal = terminal;
+        if (this.terminal && Environment.getToLowerCase()) { 
+            this.value = this.value.toLowerCase(); 
+        }
 	}
 	
 	/**

@@ -15,10 +15,19 @@ public abstract class Environment
 	private static boolean		_lexical = false;
 	private static	PrintWriter 	_out = null;
 	private static  AnnotationStripperOption annotation_stripper_opt = null;
+    private static  boolean     _to_lowercase = false;
 	
 	public static void closeOutput() {
 		Environment._out.close();
 	}
+
+    public static boolean getToLowerCase() {
+        return Environment._to_lowercase;
+    }
+
+    public static void setToLowerCase(boolean tolowercase) {
+        Environment._to_lowercase = tolowercase;
+    }
 
 	/**
 	 * Get one of the three options for the phrase format.

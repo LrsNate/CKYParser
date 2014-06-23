@@ -33,7 +33,7 @@ public class Symbol {
 			int count_leading_slashes = count_leading_occ(str, '\\');
 			// this is a terminal
 			if (odd(count_leading_slashes)) {
-				this.value = str.substring(1).toLowerCase();
+				this.value = str.substring(1);
 				this.terminal = true;
 				return;
 			}
@@ -52,7 +52,6 @@ public class Symbol {
 	public Symbol(String value, boolean terminal) {
 		this.value = value; 
 		this.terminal = terminal;
-		if (this.terminal) { this.value.toLowerCase(); }
 	}
 	
 	/**
@@ -136,9 +135,17 @@ public class Symbol {
 	@Override
 	public boolean equals(Object o) {
 		if (o instanceof Symbol) {
-			if ((((Symbol)o).IsTerminal() == this.terminal) && (((Symbol)o).getValue().equals(this.value))) {
-				return true;
-			}
+            if (((Symbol)o).IsTerminal()) {
+                // if both symbols are terminal 
+                // their values are compared modulo capitalisation
+                return (this.terminal && 
+                        (((Symbol)o).getValue().toLowerCase().equals(this.value.toLowerCase())));
+            } else {
+                // if both symbols are non-terminal
+                // their values are compared as is
+                return ((!this.terminal) && 
+                        (((Symbol)o).getValue().equals(this.value)))
+            }
 		}
 		return false;
 	}
@@ -147,8 +154,10 @@ public class Symbol {
 	public int hashCode()
 	{
 		String key = this.value;
+        // if the symbol is terminal 
+        // capitalisation is not taken into account
 		if (this.terminal) {
-			key = '\\' + key;
+			key = '\\' + key.toLowerCase();
 		}
 	    return key.hashCode();
 	}

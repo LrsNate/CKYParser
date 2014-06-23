@@ -17,6 +17,7 @@ public final class Main
 		
 		t = new Timer();
 		ap = new ArgumentParser(argv);
+        Environment.setToLowerCase(true);
 		if (Environment.isAltMode())
 			g = new GrammarCountUnknown(
 					Environment.getUnknownLabel(),
