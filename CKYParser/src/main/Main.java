@@ -59,7 +59,10 @@ public final class Main
 						//System.out.println("**" + line_number + "**  " + line);
 						out.println("**" + line_number + "**  " + line);
 						k_best_parses = parser.parse(Symbol.ListSymbols(line.trim().split(" "), ap.getInputIsLexical()), k_best);
-						if (k_best_parses == null) { continue; }
+						if (k_best_parses == null) { 
+							out.println("(NULL null)");
+							continue; 
+						}
 						boolean print_probas = false;
 						if(k_best > 1) {
 							print_probas = true;
