@@ -49,6 +49,10 @@ public class CKY {
 	 * Set to true if log-probabilities are being used to compute the score of a parse tree.
 	 */
 	private boolean _log_mode = false;
+	/**
+	 * the number of best parses to find
+	 */
+	private int 	_k = 1;
 
 	/**
 	 * Default constructor.
@@ -228,6 +232,7 @@ public class CKY {
 	 * @throws UnknownWordException 
 	 */
 	public LinkedList<Tree> parse(LinkedList<Symbol> phrase, int k) throws UnknownWordException {
+		this._k = k;
 		LinkedList<Tree> res = new LinkedList<Tree>();
 		this.init_chart(phrase);
 		
@@ -257,9 +262,24 @@ public class CKY {
 							for (RewrRuleProb rule : rules) {
 								double prob = rule.getProbability();
 								Symbol lhs = rule.getLHS();
+								
+								LinkedList<Tree> cell1_trees_to_consider;
+								LinkedList<Tree> cell2_trees_to_consider;
+								if (this._k == 1) {
+									// if only one best parse is to be returned
+									// than choose only one best parse for each symbol
+									cell1_trees_to_consider = new LinkedList<Tree>();
+									cell1_trees_to_consider.add(cell1.getTrees(smb1).get(0));
+									cell2_trees_to_consider = new LinkedList<Tree>();
+									cell2_trees_to_consider.add(cell2.getTrees(smb2).get(0));
+								} else {
+									cell1_trees_to_consider = cell1.getTrees(smb1);
+									cell2_trees_to_consider = cell2.getTrees(smb2);
+								}
+								
 
-								for (Tree tree1 : cell1.getTrees(smb1)) {
-									for (Tree tree2 : cell2.getTrees(smb2)) {
+								for (Tree tree1 : cell1_trees_to_consider) {
+									for (Tree tree2 : cell2_trees_to_consider) {
 										double new_tree_prob = calculateProbability(prob, tree1.getProb(), tree2.getProb());
 										Tree t = new Tree(lhs, new_tree_prob, tree1, tree2);
 										if (!cell.getSymbols().contains(lhs)
