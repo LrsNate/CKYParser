@@ -244,8 +244,8 @@ public class CKY {
 					Cell cell1 = chart[begin][split];
 					Cell cell2 = chart[split+1][end];
 					
-					System.err.println("==== (" + begin + "," + split + "," + end + ") ====");
-					System.err.println(cell1.getSymbols().size() * cell2.getSymbols().size());
+					//System.err.println("==== (" + begin + "," + split + "," + end + ") ====");
+					//System.err.println(cell1.getSymbols().size() * cell2.getSymbols().size());
 					
 					for (Symbol smb1 : cell1.getSymbols()) {
 						for (Symbol smb2 : cell2.getSymbols()) {

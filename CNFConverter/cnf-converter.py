@@ -1,4 +1,4 @@
-f#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: iso-8859-1 -*-
 
 # import du module sys pour les entrees sorties
@@ -31,15 +31,12 @@ usage=u""" Ce programme lit de STDIN une grammaire hors-contexte (probabiliste o
 parser=OptionParser(usage=usage)
 # declaration d'une option
 parser.add_option("-p", "--prob",  action="store_true",  dest="is_prob", help = u"The CFG is probabilistic")
-parser.add_option("-s", "--sing_elimin",  action="store_true",  dest="sing_elimin", help = u"Eliminate singular productions")
 parser.add_option("-t", "--term_droite",  action="store_true",  dest="term_droite", 
 help = u"Indicate that there may be terminal symbols in productions that have more than one symbol in the right-hand side")
-parser.add_option("--save_transform",action="store_true",  dest="save_transform", help = u"Save the transformations")
 
 # lecture des arguments et des options passees en ligne de commande
 (opts,args) = parser.parse_args()
 
-sing_elimin = bool(opts.sing_elimin)
 term_droite = bool(opts.term_droite)
 is_prob = bool(opts.is_prob)
 # =============================================================================
