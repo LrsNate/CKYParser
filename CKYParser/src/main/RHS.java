@@ -102,7 +102,7 @@ public class RHS {
 		// get a list of string representations of symbols
 		LinkedList<String> list_smb_str = new LinkedList<String>();
 		for (Symbol smb : this._rhs) {
-			list_smb_str.add(smb.toString());
+			list_smb_str.add(smb.getStringForHashcode());
 		}
 		// sort the string representations of the symbols
 	    // in order to get rid of the dependency on the order
