@@ -7,7 +7,7 @@ package main;
  */
 public class Messages
 {
-	private static String	_name = "TrainSetReader";
+	private static String	_name = "CKYParser";
 
 	/**
 	 * Writes an error message to stderr and exits the program.
