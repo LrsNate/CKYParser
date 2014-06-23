@@ -3,24 +3,25 @@ package main;
 import java.util.LinkedList;
 
 /**
- * A symbol: terminal or non-terminal  
- * @author yuliya
+ * A symbol: terminal or non-terminal.
  *
  */
 public class Symbol {
 	/**
-	 * the name of the symbol
+	 * The name of the symbol.
 	 */
 	private final String value;
+	
 	/**
-	 * is true if the symbol is terminal, false otherwise 
+	 * Set to true if the symbol is terminal, false otherwise 
 	 */
 	private final boolean terminal;
 	
 	/**
-	 * Construct a Symbol with the name corresponding to the String in the parameter
-	 * @param str: the string encoding the name of the symbol and its type (terminal / non-terminal) at once \
-	 * (if str starts with an unescaped backslash ('\'), then the Symbol is terminal, and its name is "str minus that backslash")
+	 * Construct a Symbol with the name corresponding to the String in the parameter.
+	 * @param str The string encoding the name of the symbol and its type (terminal / non-terminal) at once
+	 * (if the string starts with an unescaped backslash ('\'), then the Symbol is terminal, 
+	 * and its name is the passed string without that backslash).
 	 */
 	public Symbol(String str) {
 		char first_char = str.charAt(0); 
@@ -41,9 +42,10 @@ public class Symbol {
 	}
 	
 	/**
-	 * 
-	 * @param value: the name of the Symbol
-	 * @param terminal: true if the Symbol is terminal
+	 * Construct a Symbol with the name corresponding to the String in the parameter. 
+	 * The type of the symbol (terminal / non-terminal) is given as a second argument.
+	 * @param value The name of the symbol.
+	 * @param terminal True if the symbol is terminal, false if it is non-terminal.
 	 */
 	public Symbol(String value, boolean terminal) {
 		this.value = value; this.terminal = terminal;
@@ -51,10 +53,10 @@ public class Symbol {
 	
 	/**
 	 * Count the number of leading occurrences of a character in the string
-	 * (i.e. the length of the prefix that contains no other characters than c)
-	 * @param s: a String
-	 * @param c: the character the occurrences of which are to be count
-	 * @return : the number of leading occurrences of the character c in the string s
+	 * (i.e. the length of the prefix that contains no other characters than the given character c).
+	 * @param s String to get the prefix.
+	 * @param c The character the occurrences of which are to be count.
+	 * @return The number of leading occurrences of the character c in the string s.
 	 */
 	private int count_leading_occ(String s, char c) {
 		int i = 0;
@@ -65,9 +67,9 @@ public class Symbol {
 	}
 	
 	/**
-	 * Determine if an integer is odd
-	 * @param x
-	 * @return: true if the integer x is odd, false otherwise
+	 * Determine if an integer is odd.
+	 * @param x The integer to check.
+	 * @return: True if the integer x is odd, false otherwise.
 	 */
 	private boolean odd(int x) {
 		if ( (x & 1) == 1 ) { return true; } 
@@ -75,10 +77,10 @@ public class Symbol {
 	}
 	
 	/**
-	 * convert a list of strings into a list of terminal or non-terminal symbols
-	 * @param list_words: list of strings
-	 * @param are_terminal: set to true if all the symbols are terminal, false if all of them are non-terminal
-	 * @return: list of symbols (produced by calls to the constructor Symbol(String))
+	 * Convert a list of strings into a list of terminal or non-terminal symbols.
+	 * @param list_words A list of strings to convert.
+	 * @param are_terminal Set to true if all the symbols are terminal, false if all of them are non-terminal.
+	 * @return List of symbols (produced by calls to the constructor Symbol(String s)).
 	 */
 	public static LinkedList<Symbol> ListSymbols(String[] list_words, boolean are_terminal) {
 		LinkedList<Symbol> list_symbols = new LinkedList<Symbol>();
@@ -89,11 +91,10 @@ public class Symbol {
 	}
 	
 	/**
-	 * convert a list of strings into a list of symbols
-	 * whether each symbol is terminal or not is being determined from the string itself 
-	 * (based on the slash conventions)
-	 * @param list_words: list of strings
-	 * @return: list of symbols (produced by calls to the constructor Symbol(String))
+	 * Convert a list of strings into a list of symbols.
+	 * Whether each symbol is terminal or not is determined from the string itself (based on the slash conventions).
+	 * @param list_words List of strings.
+	 * @return List of symbols (produced by calls to the constructor Symbol(String s)).
 	 */
 	public static LinkedList<Symbol> ListSymbols(String[] list_words) {
 		LinkedList<Symbol> list_symbols = new LinkedList<Symbol>();
@@ -104,16 +105,16 @@ public class Symbol {
 	}
 	
 	/**
-	 * 
-	 * @return: true iff the Symbol is terminal 
+	 * Detect if the symbol is terminal.
+	 * @return True iff the symbol is terminal.
 	 */
 	public boolean IsTerminal() {
 		return this.terminal;
 	}
 	
 	/**
-	 * 
-	 * @return: the name of the Symbol
+	 * Getter for the value field.
+	 * @return The name of the symbol.
 	 */
 	public String getValue() {
 		return this.value;
@@ -147,28 +148,4 @@ public class Symbol {
 		}
 	    return key.hashCode();
 	}
-
-	/*
-	public static void main(String[] args) {
-		Symbol S1 = new Symbol("SV", false);
-		Symbol S2 = new Symbol("SV", false);
-		System.out.println(S1.equals(S2));
-		System.out.println(S1.hashCode() == S2.hashCode());
-		
-		Map<Symbol, HashSet<Integer> > G = new HashMap<Symbol,HashSet<Integer> >();
-		if (!(G.containsKey(S1))) {
-			G.put(S1, new HashSet<Integer>());		
-		}
-		G.get(S1).add(1);	
-		if (!(G.containsKey(S2))) {
-			System.out.println("not found");
-			G.put(S2, new HashSet<Integer>());		
-		} else {
-			System.out.println("found");
-		}
-		G.get(S2).add(2);
-		
-	}
-	*/
-
 }

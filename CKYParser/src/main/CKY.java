@@ -5,63 +5,65 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
- * CKY parser. Parses a given phrase basing on a PCFG. Gives k best parses. 
- * @author kira
- *
+ * CKY parser. Parses a given phrase according to a PCFG. Gives k best parses. 
+ * 
  */
 public class CKY {
 	
 	/**
-	 * the chart
+	 * The chart of the parser.
 	 */
 	private Cell[][] chart = null;
 	/**
-	 * the size of the phrase being parsed 
-	 * which is equal to the dimensions of the chart
+	 * The length of the phrase being parsed, 
+	 * which is equal to the dimensions of the chart.
 	 */
 	private int n = -1;
 	
 	/**
-	 * the grammar
+	 * The probabilistic context-free grammar.
 	 */
 	private final ReverseGrammar G;
 	
-	// I made it an array instead of having just one field for alpha
-	// in order to leave the possibility of assigning different probs
-	// to different categories...
 	/**
-	 * the apriori probability of getting an unknown word in a category
-	 * key: category CAT
-	 * value: probability of producing an unknown word = P(UNKNOWN | CAT)
+	 * The apriori probability of getting an unknown word in a category.
+	 * There is the possibility of assigning different probabilities
+	 * to different categories.
+	 * Key: lexical category CAT
+	 * Value: probability of producing an unknown word = P(UNKNOWN | CAT)
 	 */	
 	private HashMap<Symbol, Double>  _unknown_probs;
 	
 	/**
-	 * the unique RHS representing all the unknown words
+	 * The unique RHS representing all the unknown words (token "UNKNOWN").
 	 */
 	private RHS _unknown_rhs;
 	
 	/**
-	 * the method of dealing with unknown words
+	 * The method of dealing with unknown words.
 	 */
 	private final DealWithUnknown deal_with_unknown; 
 	
 	/**
-	 * set to true if log-probabilities are being used to compute the score of a parse tree
+	 * Set to true if log-probabilities are being used to compute the score of a parse tree.
 	 */
 	private boolean _log_mode = false;
 
+	/**
+	 * Default constructor.
+	 * @param G The PCFG used for parsing.
+	 */
 	public CKY(ReverseGrammar G) {
 		this.G = G;
-		// set the mode of dealing with unknown words
+		// set the mode of dealing with unknown words to IGNORE
 		// if an unknown terminal occurs in the corpus, then the probability of producing it is taken to be zero
 		deal_with_unknown = DealWithUnknown.IGNORE;
 	}
 	
 	/**
-	 * 
-	 * @param G: the grammar
-	 * @param log_mode: set to true if log-probabilities are to be used to compute the score of a parse tree
+	 * The constructor that defines if log-probabilities will be used or not.
+	 * @param G The grammar used for parsing.
+	 * @param log_mode Set to true if log-probabilities are being used to compute the score of a parse tree.
 	 */
 	public CKY(ReverseGrammar G, boolean log_mode) {
 		this(G);
@@ -70,9 +72,9 @@ public class CKY {
 	
 	/**
 	 * The constructor 
-	 * that corresponds to the mode of deailing with unknown words = APRIORI_PROB
-	 * @param G: the grammar (with lexical rules for the observed words only)
-	 * @param alpha = P(UNKNOWN | CAT) (the same for every morphosyntactic category CAT)
+	 * that corresponds to the mode of dealing with unknown words = APRIORI_PROB.
+	 * @param G The grammar (with lexical rules for the observed words only).
+	 * @param alpha = P(UNKNOWN | CAT) (the same for every morpho-syntactic category CAT)
 	 */
 	public CKY(ReverseGrammar G, double alpha) {
 		this.G = G;
@@ -88,10 +90,11 @@ public class CKY {
 	
 	/**
 	 * The constructor 
-	 * that corresponds to the mode of deailing with unknown words = APRIORI_PROB
-	 * @param G: the grammar (with lexical rules for the observed words only)
-	 * @param alpha = P(UNKNOWN | CAT) (the same for every morphosyntactic category CAT)
-	 * @param log_mode: set to true if log-probabilities are to be used to compute the score of a parse tree
+	 * that corresponds to the mode of dealing with unknown words = APRIORI_PROB
+	 * and defines if log-probabilities will be used or not.
+	 * @param G The grammar (with lexical rules for the observed words only).
+	 * @param alpha = P(UNKNOWN | CAT) (the same for every morpho-syntactic category CAT).
+	 * @param log_mode Set to true if log-probabilities are being used to compute the score of a parse tree.
 	 */
 	public CKY(ReverseGrammar G, double alpha, boolean log_mode) {
 		this(G, alpha);
@@ -100,11 +103,11 @@ public class CKY {
 	
 	/**
 	 * The constructor 
-	 * that corresponds to the mode of deailing with unknown words = RARE
-	 * In this case the probabilities of unknown words
+	 * that corresponds to the mode of dealing with unknown words = RARE.
+	 * In this case, the probabilities of unknown words
 	 * are supposed to be already present in the grammar passed in the parameter.
-	 * @param G: the grammar (with lexical rules for the observed words only)
-	 * @param unknown_word: the unique terminal symbol that represents all the "unknown" words
+	 * @param G The grammar (with lexical rules for the observed words only).
+	 * @param unknown_word The unique terminal symbol that represents all the "unknown" words (token "UNKNOWN").
 	 */
 	public CKY(ReverseGrammar G, Symbol unknown_word) {
 		this.G = G;
@@ -118,12 +121,12 @@ public class CKY {
 	
 	/**
 	 * The constructor 
-	 * that corresponds to the mode of deailing with unknown words = RARE
-	 * In this case the probabilities of unknown words
+	 * that corresponds to the mode of dealing with unknown words = RARE.
+	 * In this case, the probabilities of unknown words
 	 * are supposed to be already present in the grammar passed in the parameter.
-	 * @param G: the grammar (with lexical rules for the observed words only)
-	 * @param unknown_word: the unique terminal symbol that represents all the "unknown" words
-	 * @param log_mode: set to true if log-probabilities are to be used to compute the score of a parse tree
+	 * @param G The grammar (with lexical rules for the observed words only).
+	 * @param unknown_word The unique terminal symbol that represents all the "unknown" words (token "UNKNOWN").
+	 * @param log_mode Set to true if log-probabilities are being used to compute the score of a parse tree.
 	 */
 	public CKY(ReverseGrammar G, Symbol unknown_word, boolean log_mode) {
 		this(G, unknown_word);
@@ -131,11 +134,11 @@ public class CKY {
 	}
 	
 	/**
-	 * 
-	 * @param probRule
-	 * @param probLeftTree
-	 * @param probRightTree
-	 * @return
+	 * Calculate the probability of a derivation tree from the probabilities of its right and left subtrees.
+	 * @param probRule The probability of the rewriting rule corresponding to the tree.
+	 * @param probLeftTree The probability of the left subtree.
+	 * @param probRightTree The probability of the right subtree.
+	 * @return The probability of the tree.
 	 */
 	private double calculateProbability(double probRule, double probLeftTree, double probRightTree) {
 		if (this._log_mode) {
@@ -145,10 +148,10 @@ public class CKY {
 	}
 	
 	/**
-	 * 
-	 * @param probRule
-	 * @param probUniqueDescendant
-	 * @return
+	 * Calculate the probability of a derivation tree from the probabilities of its unique subtree.
+	 * @param probRule The probability of the rewriting rule corresponding to the tree.
+	 * @param probUniqueDescendant The probability of the unique subtree.
+	 * @return The probability of the tree.
 	 */
 	private double calculateProbability(double probRule, double probUniqueDescendant) {
 		double probRightTree;
@@ -162,8 +165,8 @@ public class CKY {
 	
 	
 	/**
-	 * Initialisation of the chart (the insertion of lexical rules + potentially some single productions)
-	 * @param phrase: the phrase to be parsed
+	 * Initialization of the chart (the insertion of lexical rules + potentially some single productions).
+	 * @param phrase The phrase to be parsed.
 	 * @throws UnknownWordException 
 	 */
 	private void init_chart(LinkedList<Symbol> phrase) throws UnknownWordException {
@@ -185,7 +188,6 @@ public class CKY {
 					rule_to_insert.probTakeLog();
 				}
 				chart[i][i].add(new Tree(rule_to_insert));
-				//System.out.println(chart[i][i]);
 			}
 			if(rules.isEmpty()) { // unknown word!
 				if (this.deal_with_unknown.equals(DealWithUnknown.IGNORE)) {
@@ -196,7 +198,7 @@ public class CKY {
 				
 				if (this.deal_with_unknown.equals(DealWithUnknown.APRIORI_PROB)) {
 					// for every category that is capable of producing a terminal symbol
-					// add the corresponding production rule
+					// add the corresponding production rule CAT -> UNK
 					for (Symbol lexNonterm : this._unknown_probs.keySet()) {
 						RewrRuleProb new_rule = new RewrRuleProb(lexNonterm, new RHS(word), this._unknown_probs.get(lexNonterm));
 						if (this._log_mode) { new_rule.probTakeLog(); }
@@ -218,10 +220,10 @@ public class CKY {
 	}
 	
 	/**
-	 * Parsing algorithm
-	 * @param phrase: the phrase to be parsed
-	 * @param k: the number of parse trees to return
-	 * @return k best parse trees of the phrase or null if no parse trees were found 
+	 * Parsing algorithm.
+	 * @param phrase The phrase to be parsed.
+	 * @param k The number of parse trees to return.
+	 * @return k best parse trees of the phrase or null if no parse trees were found.
 	 * @throws UnknownWordException 
 	 */
 	public LinkedList<Tree> parse(LinkedList<Symbol> phrase, int k) throws UnknownWordException {
@@ -309,9 +311,9 @@ public class CKY {
 	}
 	
 	/**
-	 * Auxiliary function for handling single productions
-	 * @param i: row of the chart
-	 * @param j: column of the chart
+	 * Auxiliary function for handling single productions.
+	 * @param i Row of the chart.
+	 * @param j Column of the chart.
 	 */
 	
 	public void handleSingleProds(int i, int j) {
