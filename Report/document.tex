@@ -40,26 +40,25 @@ Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`
 
 \subsection{Analyse syntaxique en constituants}
  On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain
- langage $L_0$. Le but est de trouver l'arbre syntaxique de la phrase
- repr\'esent\'ee par cette s\'equence dans une grammaire donn\'ee.
+ langage $L_0$. Le but est de trouver pour cette phrase l'arbre syntaxique
+ engendr\'e par une grammaire donn\'ee.
 
 \subsection{Le but (l'utilit\'e) de l'analyse syntaxique}
 
-Il faut avouer que l'analyse syntaxique en soi est rarement le but d'un outil de
-TAL quelconque. Par contre, c'est une \'etape qui s'av\`ere cruciale pour la
-possibilit\'e d'une analyse s\'emantique effective, car toute description
-s\'emantique se base en partie sur les relations entre les parties d'une
-phrase. 
+Il faut reconna\ˆitre que l'analyse syntaxique en soi est rarement le but d'un outil de
+TAL quelconque. En revanche, c'est une \'etape qui s'av\`ere cruciale en ce qu'elle ouvre la possibilit\'e d'une analyse s\'emantique efficace, car toute description
+s\'emantique se base en partie sur les relations syntaxiques entre les parties d'une
+phrase.
 
 \subsection{La grammaire}
 
 Une grammaire formelle hors contexte (Context-Free Grammar, CFG) est un
 quadruplet $\langle \Sigma, V, S, R \rangle$, o\`u :
 \begin{itemize}
-\item $\Sigma$ est un ensemble fini des symboles terminaux (l'alphabet)
-\item V est un ensemble fini des symboles non-terminaux
+\item $\Sigma$ est un ensemble fini de symboles terminaux (l'alphabet)
+\item V est un ensemble fini de symboles non-terminaux
 \item S est l'axiome (le symbole de d\'epart de la grammaire), $S \in V$
-\item R est un ensemble fini des r\`egles de production de la forme $A
+\item R est un ensemble fini de r\`egles de production de la forme $A
 \rightarrow \alpha$, o\`u $A \in V$ et $\alpha \in (\Sigma \cup V)$
 \end{itemize}
 
@@ -69,15 +68,15 @@ grammaire. Les mots du langage sont constitu\'es des symboles de l'alphabet
 $\Sigma$.\par
 
 Dans notre projet, les \'el\'ements de l'alphabet sont des mots francais, donc les
-mots du langage sont des phrases en francais. Un \'etape important du projet est de construire
-une grammaire formelle \`a partir des donn\'ees linguistiques (un corpus des phrases
+mots du langage sont des phrases en francais. Une \'etape importante du projet est de construire
+une grammaire formelle \`a partir des donn\'ees linguistiques (un corpus de phrases
 d\'ej\`a pars\'ees et annot\'ees) afin de pouvoir utiliser cette grammaire pour trouver
 la structure syntaxique de n'importe quelle phrase en francais.
 
 \subsection{Ambig\"uit\'e syntaxique et grammaires probabilistes}
 
-Une des propri\'et\'es les plus distinctives des langages naturels qui les
-oppose aux langages de programmation, par exemple, est leur ambig\"uit\'e inh\'erente. L'ambig\"uit\'e peut se pr\'esenter sur des niveaux d'analyse diff\'erents:
+Une des propri\'et\'es les plus distinctives des langages naturels, qui les
+oppose aux langages de programmation par exemple, est leur ambig\"uit\'e inh\'erente. L'ambig\"uit\'e peut se pr\'esenter sur des niveaux d'analyse diff\'erents:
 
 \begin{enumerate}
 \item Ambig\"uit\'e de d\'ecoupage en mot-formes :
@@ -113,7 +112,7 @@ rel\`eve largement d'ambig\"uit\'e r\'eelle aussi bien qu'artificielle. Parmi le
 Et l'ambig\"uit\'e de structures de coordination :
 
 \begin{exe}
-\ex Elle ne mange que des gateaux et des glaces au chocolat.
+\ex Elle ne mange que des g\^ateaux et des glaces au chocolat.
 \end{exe}
 
 Ce constat nous am\`ene \`a conclure que l'un des piliers d'une
@@ -134,13 +133,13 @@ Un petit exemple (en anglais) qui demontre le large
 choix d'analyses pour une phrase ambigue et la n\'ecessit\'e de pouvoir garder plusieures analyses par phrase :
 
 \begin{exe}
-\ex fish people fish tanks
+\ex Fish people fish tanks.
 \end{exe}
 
 Une grammaire probabiliste hors contexte (Probabilistic context-free grammar,
 PCFG) est une grammaire hors contexte dans laquelle une probabilit\'e est
 attribu\'ee \`a chaque r\`egle. La somme des toutes les probabilit\'es des
-productions \`a partir d'une m\^eme partie gauche est \'egale \`a un. Par cons\'equent, 
+productions \`a partir d'une m\^eme partie gauche est \'egale \`a un. Par cons\'equent,
 la probabilit\'e associ\'ee \`a une r\`egle de la forme $A \rightarrow \beta$ peut \^etre interpr\'et\'e
 comme la probabilit\'e conditionnelle $P(\beta \mid A)$ d'obtenir $\beta$ comme fils imm\'ediat de $A$ \'etant
 donn\'e le symb\^ole $A$. \par
@@ -148,30 +147,30 @@ donn\'e le symb\^ole $A$. \par
 En cas d'ambig\"uit\'e, les probabilit\'es associ\'ees aux productions permettent
 de choisir la d\'erivation la plus probable de la phrase. On appelle \textbf{la
 probabilit\'e d'une d\'erivation} le produit des probabilit\'es des r\`egles de
-production qui ont "particip\'e" \`a cette d\'erivation. Il faut noter que la
+production qui ont particip\'e \`a cette d\'erivation. Il faut noter que la
 probabilit\'e maximale de la d\'erivation de la phrase n'est pas toujours obtenue
 en appliquant \`a chaque \'etape de la d\'erivation les r\`egles avec les probabilit\'es
-maximales. 
+maximales.
 
 \section{Choix de m\'ethodologie et d'impl\'ementation}
 
 \subsection{Deux strat\'egies d'analyse}
 
-Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjointe $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
+Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble des r\`egles est l'union disjointe $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
 
 \begin{itemize}
-\item des r\`egles lexicales
+\item les r\`egles lexicales
 $$\mathscr{R}_{LEX} = \left\{ A \rightarrow a \mid
         A \in \mathscr{V}, \, a \in \Sigma \right\}$$
-qui sont des appariements de mot-formes et de leurs cat\'egories syntaxiques
-\item des r\`egles non-lexicales
+qui sont des appariements de mot-formes et de leur cat\'egorie syntaxique
+\item les r\`egles non-lexicales
 $$\mathscr{R}_{NL} = \left\{ A \rightarrow \beta \mid
      A \in \mathscr{V}, \beta \in \mathscr{V}^* \right\},$$
 qui ne contiennent pas de symboles terminaux
 \end{itemize}
 
 Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e puisque
-chaque grammaire hors-contexte peut \^etre transform\'ee en forme susdite sans
+chaque grammaire hors-contexte peut \^etre transform\'ee sous la forme d\'ecrite ci-dessus sans
 que son langage engendr\'e ne soit chang\'e. En m\^eme temps, en adoptant cette
 approche, on peut envisager deux strat\'egies de conception de notre outil de
 l'analyse syntaxique.
@@ -195,9 +194,9 @@ Les deux strat\'egies propos\'ees dans le projet sont les suivantes :
 Pour pouvoir construire une grammaire assez repr\'esentative pour le parseur, il
 faut apprendre cette grammaire sur un corpus avec des phrases d\'ej\`a
 \'etiquet\'ees et analys\'ees syntaxiquement (corpus arbor\'e, tree bank). Pour notre projet, nous
-avons choisi d'entra\^iner et d'\'evaluer le parseur sur le corpus arbor\'e de la
+avons choisi d'entra\^iner et d'\'evaluer le parseur sur le corpus arbor\'e de
 langue francaise Sequoia Tree Bank \cite{Sequoia}. Ce corpus contient des
-phrases en fran\'caises, chacune d'elles \'etant munie d'une structure syntaxique. 
+phrases en fran\'cais, chacune d'elles \'etant munie d'une structure syntaxique.
 Pour chaque phrase il n'y a qu'une seule analyse en constituants propos\'ee.\par
 
 Pour pouvoir \'evaluer la qualit\'e de l'extraction de la grammaire et la qualit\'e du
@@ -211,10 +210,10 @@ parsing, nous divisons le corpus en trois parties :
   r\'esultats;
   \item le corpus de test (test set), qui est utilis\'e pour l'\'evaluation :
   %% l'outil ne se r\'eduit pas au parseur
-  il faut lancer le l'outil de l'analyse syntaxique, comparer les arbres obtenus avec les "vrais" arbres
+  il faut lancer l'outil d'analyse syntaxique, comparer les arbres obtenus avec les ``vrais'' arbres
   pour les m\^emes phrases dans le corpus (les analyses gold, gold parses) et
-  calculer la pr\'ecision et le rappel de l'analyse. 
-  L'\'etape de l'\'evaluation est abord\'e plus en d\'etail dans la section homonyme.
+  calculer la pr\'ecision et le rappel de l'analyse.
+  L'\'etape d'\'evaluation est abord\'ee plus en d\'etail dans la section homonyme.
 \end{itemize}
 
 Afin d'avoir la grammaire la plus compl\`ete possible, nous avons fait le choix
@@ -232,18 +231,18 @@ ci-dessus).
 \subsection{Apprentissage de la grammaire probabiliste}
 
 En g\'en\'eral, l'estimation des probabilit\'es des r\`egles d'une grammaire
-hors-contexte probabiliste (PCFG) se fait par fr\'equences relatives:
+hors-contexte probabiliste (PCFG) se fait par fr\'equences relatives :
 \begin{eqnarray}
 P(A \rightarrow \beta) = \frac{ct(A \rightarrow \beta)}{\sum\limits_{\gamma \in (\Sigma \cup \mathcal{V})^*}{ct(A \rightarrow \gamma)}},
 \end{eqnarray}
-$ct(A \rightarrow \beta)$ --- le nombre de fois que le non-terminal $A$ se
+$ct(A \rightarrow \beta)$ --- le nombre de fois o\`u le non-terminal $A$ se
 r\'e\'ecrit en $\beta$ dans le corpus d'apprentissage.
 
 Une telle estimation par fr\'equences relatives donne l'estimation par maximum de vraisemblence
-sous l'hypoth\`ese d'ind\'ependance suivante. On suppose que dans un arbre syntaxique chaque 
+sous l'hypoth\`ese d'ind\'ependance suivante. On suppose que dans un arbre syntaxique chaque
 symb\^ole se re\'ecrit ind\'ependamment de ses fr\`eres dans l'arbre (c'est \`a dire des noeuds qui se situe
-au m\^eme niveau) aussi bien que de tous ces anc\^etres (des noeuds des niveaux plus hauts, donc plus proche de l'axiome). C'est avec ses hypoth\`eses d'ind\`ependance qu'on obtient la formule du calcul de la probabilit\'e
-d'un arbre par produit des probabilit\'es des r\`egles de re\'ecriture qu'il contient. 
+au m\^eme niveau) aussi bien que de tous ses anc\^etres (des noeuds des niveaux plus hauts, donc plus proche de l'axiome). C'est avec ces hypoth\`eses d'ind\`ependance qu'on obtient la formule du calcul de la probabilit\'e
+d'un arbre par produit des probabilit\'es des r\`egles de re\'ecriture qu'il contient.
 
 En outre, dans leur article de 1998 Chi et Geman ont prouv\'e qu'une PCFG estim\'ee par
 fr\'equences relatives sur un corpus annot\'e est toujours propre
@@ -252,9 +251,9 @@ n'est assign\'ee aux arbres infinis.
 
 Il est important de noter ici que le probl\`eme d'estimation des probabilit\'es
 d'une PCFG vient du fait que le corpus d'entra\^inement, aussi grand soit-il,
-n'est jamais complet, donc il y a toujours des mots-formes qui ne sont pas
-pr\'esents dans la grammaire et dont la cat\'egorie lexicale et la
-probabilit\'e d'\'emission sont donc inconnues. Pour d\'eterminer la cat\'egorie
+n'est jamais complet ; il y a donc toujours des mots-formes qui ne sont pas
+pr\'esents dans la grammaire, dont la cat\'egorie lexicale et la
+probabilit\'e d'\'emission sont de fait inconnues. Pour d\'eterminer la cat\'egorie
 lexicale il est possible d'avoir recours \`a un dictionnaire externe. Mais il
 n'existe pas de solution por conna\^itre la probabilit\'e de la production de ce
 mot inconnu, donc des m\'ethodes artificielles sont utilis\'ees pour estimer
@@ -276,7 +275,7 @@ Nous pouvons alors comparer l'\'efficacit\'e des deux strat\'egies de tagging.
 L'algorithme utilis\'e pour le parseur dans notre projet est l'algorithme de
 Cocke, Younger et Kasami (CKY, parfois not\'e CYK). C'est un algorithme d'analyse
 ascendante (bottom-up parsing), c'est-\`a-dire qu'il part de la phrase tok\'enis\'ee
-et remonte vers l'axiome de la grammaire pour recr\'eer en ordre inverse toutes les r\`egles de la grammaire qu'il
+et remonte vers l'axiome de la grammaire pour retrouver en ordre inverse toutes les r\`egles de la grammaire qu'il
 aurait fallu appliquer pour engendrer cette phrase. La coml\'exit\'e de cet
 algorithme est de $O(n^3)$. \par
 
@@ -335,24 +334,23 @@ Si la r\`egle correspondante est une production singuli\`ere ou une r\`egle lexi
 L'injection des probabilit\'es dans l'algorithme CKY permet de d\'esambiguiser le
 parsing en trouvant les d\'erivations les plus probables. En remontant dans la
 charte CKY des mots s\'epar\'es vers la phrase en entier, les probabilit\'es des
-r\`egles se multiplient, et les plus hautes probabilit\'es donnent des plus lourds
-poids aux arbres correspondants. \par
+r\`egles se multiplient, et les plus hautes probabilit\'es donnent un poids plus \'elev\'e aux arbres correspondants. \par
 
 Il faut noter que si \`a un bas niveau de
 d\'erivation un arbre a plus de poids qu'un autre, ce ne sera pas forc\'ement
-l'arbre le plus "lourd"  qui sera inclus dans l'arbre de d\'erivation le plus
+l'arbre le plus ``lourd''  qui sera inclus dans l'arbre de d\'erivation le plus
 lourd sur un niveau sup\'erieur. Par exemple, si dans la m\^eme case il y a un arbre
 avec la r\`egle $NP \rightarrow X$ \`a la racine, avec une haute probabilit\'e, et un
 autre arbre avec $VP \rightarrow X$, avec une probabilit\'e plus basse, alors que
 dans une case plus haute de la charte il y a deux r\`egles correspondantes : $S
 \rightarrow NP Y$ et $S \rightarrow VP Y$, la probabilit\'e de la deuxi\`eme r\`egle
 \`etant beaucoup plus haute que celle de la premi\`ere, la diff\'erence de poids entre
-les deux arbres peut \^etre neutralis\'ee par ces deux r\`egles. Cela justifie 
+les deux arbres peut \^etre neutralis\'ee par ces deux r\`egles. Cela justifie
 que si \`a la fin on veut ressortir plusieurs meilleurs arbres il
 faut garder toutes les d\'erivations possibles dans chaque case de la charte, au
-lieu d'en garder seulement la meilleure. En revanche, si ne garder qu'un seul arbre par case n'est 
+lieu d'en garder seulement la meilleure. En revanche, si ne garder qu'un seul arbre par case n'est
  dans aucun pas appropri\'e pour la recherche de la meilleure analyse syntaxique,
- dans le cas o\'u seulement le meuilleur arbre est demand\'e 
+ dans le cas o\'u seulement le meuilleur arbre est demand\'e
  il est facile de voir qu'on peut quand m\^eme \'economiser sur le stockage de donn\'ees
  en ne gardant qu'une seule d\'erivation par chaque symb\^ole dans la case. \par
 
@@ -361,10 +359,10 @@ obtient alors toutes les d\'erivations possibles de la phrase (une seule si la
 phrase n'est pas ambigue). En triant les arbres obtenus par ordre d\'ecroissant de
 probabilit\'e, on obtient l'analyse syntaxique le plus probable (le plus
 probablement choisie par un humain). Les k analyses avec les plus hautes
-probabilit\'es (appel\'ees k-best parses) peuvent \^etre renvoy\'ees afin qu'un humain
-puisse en choisir la bonne. Pour la cause d'optimisation \'a l'int\'erieur de chaque case
+probabilit\'es (appel\'ees \textit{k-best parses}) peuvent \^etre renvoy\'ees afin qu'un humain
+puisse en choisir la bonne. Pour des raisons d'optimisation \'a l'int\'erieur de chaque case
 du tableau de parsing on maintient le tri des arbres par ordre croissant de leurs probabilit\'es
-de fa\'con \`a ce qu'\`a l'\'etape final tous les arbres sont d\'ej\`a tri\'es et il suffit d'en prendre 
+de fa\'con \`a ce qu'\`a l'\'etape finale tous les arbres soient d\'ej\`a tri\'es : il suffit alors d'en prendre
 les $k$ premiers.
 
 
@@ -382,22 +380,22 @@ Une grammaire en CNF peut
 aussi engendrer le mot vide : $$S \rightarrow \epsilon$$, o\`u S est l'axiome de
 la grammaire. Par contre, d\`es lors que notre projet est ax\'e au traitement des langages naturels
 qui eux ne contiennent pas le mots vide, ce cas n'est pas trait\'e par nos outils.
- 
+
 Dans notre projet, nous avons besoin de transformer la grammaire en forme
 normale de Chomsky flexible (flexible CNF), qui autorise les productions
 singuli\`eres de la forme $$A \rightarrow B$$. \par
 
 Nous avons impl\'ement\'e la transformation d'une grammaire hors-contexte probabiliste en CNF en
 module s\'epar\'e, qui est utilis\'e en pr\'e-traitement de la grammaire avant
-de la passer au parseur. 
+de la passer au parseur.
 
 La proc\'edure de transformation de la grammaire en forme normal de Chomsky flexible
 se fait par le biais de cr\'eation de nouveaux symb\^oles non-terminaux.
 Pour cette transformation nous adoptons une convention de choix de noms (labels) pour ces non-terminaux
-nouvels. On le fait de fa\'con \`a ce que ces non-terminaux puissent \^etre facilement reconnus et 
+nouvels. On le fait de fa\'con \`a ce que ces non-terminaux puissent \^etre facilement reconnus et
 distingu\'es des non-terminaux de la grammaire d'origine. Par cons\'equent, quand on a besoin de reconvertir
 les arbres syntaxiques issus de la grammaire en CNF aux arbres issus de la grammaire d'origine il nous suffit
-d'enlever ces non-terminaux "artificiels" et de raccrocher leurs fils au noeud parent. Cette op\'eration est 
+d'enlever ces non-terminaux "artificiels" et de raccrocher leurs fils au noeud parent. Cette op\'eration est
 fait r\'ecursivement jusqu'\`a ce que tous les noeuds "artificiels" ne soient \'elimin\'es.
 En ce qui concerne les probabilit\'es de nouvelles r\`egles ins\'er\'ees dans la grammaire prrobabiliste,
 d\`es lors que lors de la tranformation de la grammaire on s'assure que chaque nouvel symb\^ole n'a qu'une
