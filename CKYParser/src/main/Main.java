@@ -35,10 +35,10 @@ public final class Main
 			parser = new CKY(G, false);
 		}
 		
-		//BufferedReader stdin = ArgumentParser0.openFile("D:\\RESULTS\\corpus_dev_bare\\corpus.tagging_only.txt");
+		BufferedReader stdin = ArgumentParser0.openFile("D:\\RESULTS\\corpus_dev_bare\\corpus.tagging_only.txt");
 		
 
-		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+		//BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
@@ -56,6 +56,7 @@ public final class Main
 				try {
 					if (!line.isEmpty()) { 
 						line_number++;
+						//System.out.println("**" + line_number + "**  " + line);
 						out.println("**" + line_number + "**  " + line);
 						k_best_parses = parser.parse(Symbol.ListSymbols(line.trim().split(" "), ap.getInputIsLexical()), k_best);
 						if (k_best_parses == null) { continue; }
@@ -64,7 +65,8 @@ public final class Main
 							print_probas = true;
 						}
 						for (int i = 0; i < k_best_parses.size(); i++) {
-							out.println(k_best_parses.get(i).treeToString(print_probas));						
+							out.println(k_best_parses.get(i).treeToString(print_probas));	
+							//System.out.println(k_best_parses.get(i).treeToString(print_probas));	
 						}
 					}
 				} catch (UnknownWordException e) {
