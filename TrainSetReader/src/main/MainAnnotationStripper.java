@@ -45,6 +45,7 @@ public class MainAnnotationStripper
 				Messages.error(e.getMessage());
 			}
 		}
+        Environment.closeOutput();
 	}
 
 }
