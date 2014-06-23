@@ -3,6 +3,7 @@ package main;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * CKY parser. Parses a given phrase according to a PCFG. Gives k best parses. 
@@ -243,8 +244,8 @@ public class CKY {
 					Cell cell1 = chart[begin][split];
 					Cell cell2 = chart[split+1][end];
 					
-					//System.out.println("==== (" + begin + "," + split + "," + end + ") ====");
-					//System.out.println(cell1.getSymbols().size() * cell2.getSymbols().size());
+					System.err.println("==== (" + begin + "," + split + "," + end + ") ====");
+					System.err.println(cell1.getSymbols().size() * cell2.getSymbols().size());
 					
 					for (Symbol smb1 : cell1.getSymbols()) {
 						for (Symbol smb2 : cell2.getSymbols()) {
@@ -261,22 +262,9 @@ public class CKY {
 									for (Tree tree2 : cell2.getTrees(smb2)) {
 										double new_tree_prob = calculateProbability(prob, tree1.getProb(), tree2.getProb());
 										Tree t = new Tree(lhs, new_tree_prob, tree1, tree2);
-										boolean ruleExists = false;
-										if (cell.getSymbols().contains(lhs)) {
-
-											for (Tree existingT : cell.getTrees(lhs)) {
-										
-												if((t.equals(existingT))) {
-													ruleExists = true;
-					
-												}
-											}
-										}
-					
-										
-										if(!ruleExists) {
+										if (!cell.getSymbols().contains(lhs)
+												|| !cell.getTrees(lhs).contains(t))
 											cell.add(t);
-										}
 									}
 								}
 							}
@@ -318,8 +306,7 @@ public class CKY {
 	
 	public void handleSingleProds(int i, int j) {
 		boolean added = true;
-		int loop = 0;
-		LinkedList<Tree> addedTrees = new LinkedList<Tree>();
+		TreeSet<Tree> addedTrees = new TreeSet<Tree>();
 		Set<Symbol> symbols = chart[i][j].getSymbols();
 		while(added)
 		{
@@ -336,25 +323,10 @@ public class CKY {
 						double new_tree_prob = calculateProbability(prob, tree.getProb());
 						Tree t = new Tree(lhs, new_tree_prob, tree);
 						boolean ruleExists = false;
-						if (chart[i][j].getSymbols().contains(lhs))
-						{
-							for (Tree sP : chart[i][j].getTrees(lhs))
-							{
-								if((t.equals(sP)))
-								{
-									ruleExists = true;
-									break ;
-								}
-							}
-						}
-						
-						for (Tree singleP : addedTrees)
-						{
-							if((t.equals(singleP)))
-								ruleExists = true;
-							if (ruleExists)
-								break ;
-						}
+						if ((chart[i][j].getSymbols().contains(lhs)
+								&& chart[i][j].getTrees(lhs).contains(t))
+							|| addedTrees.contains(t))
+							ruleExists = true;
 						
 						if(ruleExists == false) {
 							addedTrees.add(t);

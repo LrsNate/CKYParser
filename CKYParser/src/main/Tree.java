@@ -141,8 +141,12 @@ public class Tree implements Comparable<Tree>
 	 * @param t The tree to compare.
 	 * @return True if the trees are identical, false otherwise.
 	 */
-	public boolean equals(Tree t) 
+	@Override
+	public boolean equals(Object o)
 	{
+		if (!(o instanceof Tree))
+			return false;
+		Tree t = (Tree)o;
 		if (this._right == null && t._right != null) {
 			return false;
 		}
