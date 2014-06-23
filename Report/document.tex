@@ -35,15 +35,7 @@ mot-occurrence.
 \item Analyse s\'emantique.
 \end{enumerate}
 
-<<<<<<< Upstream, based on origin/master
-Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on souhaite se rapprocher des situations r\'eelles et donc travailler avec des textes bruts, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. La derni\`ere \'etape list\'ee ci-dessus ne fait en revanche pas partie de notre travail...
-=======
-Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es
-lors que pour l'\'evaluation de notre outil on a envie de se rapprocher de la
-situation r\'eelle et donc travailler avec des textes brutes, on passe
-in\'evitablement par les trois premi\`eres \'etapes aussi. Par contre, le dernier
-\'etape list\'e ci-dessus ne fait pas partie de notre travail.
->>>>>>> 0adef2f qqs changements
+Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on souhaite se rapprocher des situations r\'eelles et donc travailler avec des textes bruts, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. La derni\`ere \'etape list\'ee ci-dessus ne fait en revanche pas partie de notre travail.
 
 \subsection{Analyse syntaxique en constituants}
  On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain
@@ -81,155 +73,88 @@ une grammaire formelle \`a partir des donn\'ees linguistiques (un corpus des phr
 d\'ej\`a pars\'ees et annot\'ees) afin de pouvoir utiliser cette grammaire pour trouver
 la structure syntaxique de n'importe quelle phrase en français.
 
-\subsection{ambig\"uit\'e syntaxique et grammaires probabilistes}
+\subsection{Ambig\"uit\'e syntaxique et grammaires probabilistes}
 
-<<<<<<< Upstream, based on origin/master
 Une des propri\'et\'es les plus distinctives des langages naturels qui les
 oppose aux langages de programmation, par exemple, est leur ambig\"uit\'e inh\'erente. L'ambig\"uit\'e peut se pr\'esenter sur des niveaux d'analyse diff\'erents:
-=======
-Une des propri\'et\'es les plus distinctives des langages naturels, qui les
-oppose aux langages de programmation, par exemple, est leur ambiguit\'e
-inh\'erente. L'ambiguit\'e peut se pr\'esenter sur des niveaux de l'analyse
-diff\'erents:
->>>>>>> 0adef2f qqs changements
+
 \begin{enumerate}
-<<<<<<< Upstream, based on origin/master
-\item ambig\"uit\'e de d\'ecoupage en mot-formes:
-//
-EXEMPLE ... d'accord d'+accord ...
-\item ambig\"uit\'e morpho-syntaxique:
-//
-EXEMPLE ... la belle porte le voile ...
-\item ambig\"uit\'e syntaxique:
-EXEMPLE ... la description de l'occupation d'Ath\`enes par les Turcs ottomans ... 
-=======
-\item Ambiguit\'e de d\'ecoupage en mot-formes :\\
-\centerline{\textit{d'accord - d'+accord}}\\
-\item Ambiguit\'e morpho-syntaxique :\\
-\centerline{\textit{la belle porte le voile}}
-\item Ambiguit\'e syntaxique :\\
-\centerline{\textit{la description de l'occupation d'Ath\`enes par les Turcs
-ottomans}}
->>>>>>> 0adef2f qqs changements
+\item Ambig\"uit\'e de d\'ecoupage en mot-formes :
+\begin{exe}
+\ex d'accord - d'+accord
+\end{exe}
+\item Ambig\"uit\'e morpho-syntaxique :
+\begin{exe}
+\ex la belle porte le voile
+\end{exe}
+\item Ambig\"uit\'e syntaxique :
+\begin{exe}
+\ex la description de l'occupation d'Ath\`enes par les Turcs ottomans
+\end{exe}
 \end{enumerate}
 
-Il est important de distinguer deux types d'ambig\"uit\'e, le
-premier \'etant l'ambig\"uit\'e r\'eelle qui correspond au cas quand l'ambig\"uit\'e
-ne peut pas \^etre enlev\'ee par des humains eux-m\^emes en absence de contexte,
-et le deuxi\`eme \'etant l'ambig\"uit\'e artificielle qui ne se pr\'esente que pour des machines --- pour les humains il n'existe dans ces cas de figure qu'une seule variante d'analyse possible.
+
+En parlant de l'ambig\"uit\'e, il est important d'en distinguer deux types :
+\begin{itemize}
+  \item l'ambig\"uit\'e \emph{r\'eelle}, qui correspond au cas quand l'ambig\"uit\'e
+ne peut pas \^etre enlev\'ee par des humains eux-m\^emes en absence de contexte
+\item l'ambig\"uit\'e \emph{artificielle}, qui ne se pr\'esente que pour des machines,
+tandis que pour les humains il n'existe qu'une seule variante d'analyse possible
+\end{itemize} 
 
 On note ici que m\^eme si les deux types d'ambig\"uit\'e sont pr\'esents sur tous les niveaux d'analyse, l'ambig\"uit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
 rel\`eve largement d'ambig\"uit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus de l'ambig\"uit\'e syntaxique r\'eelle on peut mentionner l'ambig\"uit\'e de rattachement pr\'epositionnel : 
 
-<<<<<<< Upstream, based on origin/master
 \begin{exe}
 \ex La fille voit le professeur avec un t\'elescope.
 \end{exe}
-=======
-En parlant de l'ambiguit\'e, il est important d'en distinguer deux types :
-\begin{itemize}
-  \item l'ambiguit\'e \emph{r\'eelle}, qui correspond au cas quand l'ambiguit\'e
-ne peut pas \^etre enlev\'ee par des humains eux-m\^emes en absence de contexte
-\item l'ambiguit\'e \emph{artificielle}, qui ne se pr\'esente que pour des machines,
-tandis que pour les humains il n'existe qu'une seule variante d'analyse possible
-\end{itemize} 
->>>>>>> 0adef2f qqs changements
 
-<<<<<<< Upstream, based on origin/master
 Et l'ambig\"uit\'e de structures de coordination :
-=======
-On note ici que m\^eme si les deux types d'ambiguit\'e sont pr\'esents sur tous
-les niveaux de l'analyse, l'ambiguit\'e r\'eelle est relativement rare en
-tok\'enisation et tagging, tandis que l'analyse syntaxique rel\`eve largement
-d'ambiguit\'e r\'eelle aussi bien qu'artificielle. \\
->>>>>>> 0adef2f qqs changements
 
-<<<<<<< Upstream, based on origin/master
 \begin{exe}
 \ex Elle ne mange que des gateaux et des glaces au chocolat.
 \end{exe}
-=======
-Parmi les cas les plus r\'epandus de l'ambiguit\'e syntaxique r\'eelle on peut
-mentionner l'ambiguit\'e de rattachement pr\'epositionnel : \\
-\centerline{\textit{la fille voit le professeur avec un t\'elescope}}\\
->>>>>>> 0adef2f qqs changements
 
-<<<<<<< Upstream, based on origin/master
 Ce constat nous am\`ene \`a conclure que l'un des piliers d'une
 analyse syntaxique est le traitement de l'ambig\"uit\'e. Deux solutions sont
-envisageables vis \`a vis de ce probl\`eme. On pourrait choisir de ne garder
-qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant
-donn\'ee l'abondance d'ambig\"uit\'e r\'eelle susmentionn\'ee. L'option de
-g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase se pr\'esente comme
-plus avantageuse dans le cadre de ce travail. Dans les cas d'ambig\"uit\'e
-r\'eelle, c'est l'humain qui choisit le bon analyse en se basant sur le
-contexte.
-=======
-et l'ambiguit\'e de structures de coordination : \\
-\centerline{\textit{elle ne mange que des gateaux et des glaces au chocolat}}\\
->>>>>>> 0adef2f qqs changements
+envisageables vis \`a vis de ce probl\`eme.\\
 
-<<<<<<< Upstream, based on origin/master
-\begin{exe}
-\ex Fish people fish tanks
-\end{exe}
-=======
-Ce constat nous am\`ene \`a conclure que l'un des points principaux d'une
-analyse syntaxique consiste en traitement de l'ambiguit\'e. Deux solutions sont
-envisageables vis \`a vis de ce probl\`eme. 
-\\
-
-On pourrait choisir de ne garder
-qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant
-donn\'e l'abondance d'ambiguit\'e r\'eelle susmentionn\'ee (dans cette m\^eme phrase, le
+On pourrait choisir de ne garder qu'une seule analyse par phrase, ce qui semble \^etre peu satisfaisant \'etant
+donn\'e l'abondance d'ambig\"uit\'e r\'eelle susmentionn\'ee (dans cette m\^eme phrase, le
 lecteur peut remarquer la pr\'esence d'ambiguit\'e r\'eelle li\'ee au rattachement du
 participe \emph{susmentionn\'ee}). \\
 
-Une autre option est de g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase.
-Cette option se pr\'esente comme plus avantageuse dans le cadre de ce travail.
-Dans les cas d'ambiguit\'e r\'eelle, c'est l'humain qui choisit le bon analyse en
-se basant sur le contexte. \\
+L'option de g\'en\'erer plusieurs arbres syntaxiques pour chaque phrase se pr\'esente comme
+plus avantageuse dans le cadre de ce travail. Dans les cas d'ambig\"uit\'e
+r\'eelle, c'est l'humain qui choisit le bon analyse en se basant sur le
+contexte. \\
 
 Un petit exemple (en anglais) qui demontre le large
 choix d'analyses pour une phrase ambiguë et la n\'ecessit\'e de pouvoir garder plusieurs analyses par phrase :
-\\
-\centerline{\textit{fish people fish tanks}}\\
->>>>>>> 0adef2f qqs changements
+
+\begin{exe}
+\ex fish people fish tanks
+\end{exe}
 
 Une grammaire probabiliste hors contexte (Probabilistic context-free grammar,
 PCFG) est une grammaire hors contexte dans laquelle une probabilit\'e est
 attribu\'ee \`a chaque r\`egle. La somme des toutes les probabilit\'es des
-<<<<<<< Upstream, based on origin/master
-productions \`a partir d'une m\^eme partie gauche est \'egale \`a un. 
+productions \`a partir d'une m\^eme partie gauche est \'egale \`a un. \\
+ 
 En cas d'ambig\"uit\'e, les probabilit\'es associ\'ees aux productions permettent
-de choisir la d\'erivation la plus probable de la phrase. On appelle la
-probabilit\'e d'une d\'erivation le produit des probabilit\'es des r\`egles de
-production qui ont men\'e \`a cette d\'erivation. Il faut noter que la
-probabilit\'e maximale de la d\'erivation de la phrase n'est pas toujours obtenue
-en appliquant les r\`egles avec les probabilit\'es maximales.
-=======
-productions \`a partir d'une m\^eme partie gauche de r\`egle est \'egale \`a un. \\
-
-En cas d'ambiguit\'e, les probabilit\'es associ\'ees aux productions permettent
 de choisir la d\'erivation la plus probable de la phrase. On appelle \textbf{la
-probabilit\'e d'une derivation} le produit des probabilit\'es des r\`egles de
+probabilit\'e d'une d\'erivation} le produit des probabilit\'es des r\`egles de
 production qui ont "particip\'e" \`a cette d\'erivation. Il faut noter que la
 probabilit\'e maximale de la d\'erivation de la phrase n'est pas toujours obtenue
 en appliquant \`a chaque \'etape de la d\'erivation les r\`egles avec les probabilit\'es
 maximales.
->>>>>>> 0adef2f qqs changements
-
 
 \section{Choix de m\'ethodologie et d'impl\'ementation}
 
 \subsection{Deux strat\'egies d'analyse}
 
-<<<<<<< Upstream, based on origin/master
 Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjointe $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
-=======
-Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S,
-\mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble de r\`egles est l'union disjoint $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
->>>>>>> 0adef2f qqs changements
+
 \begin{itemize}
 \item des r\`egles lexicales
 $$\mathscr{R}_{LEX} = \left\{ A \rightarrow a \mid
@@ -241,15 +166,9 @@ $$\mathscr{R}_{NL} = \left\{ A \rightarrow \beta \mid
 qui ne contiennent pas de symboles terminaux
 \end{itemize}
 
-<<<<<<< Upstream, based on origin/master
 Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e puisque
 chaque grammaire hors-contexte peut \^etre transform\'ee en forme susdite sans
 que son langage engendr\'e ne soit chang\'e. En m\^eme temps, en adoptant cette
-=======
-Cette supposition peut \^etre faite sans perte de g\'en\'eralit\'e, puisque
-chaque grammaire hors-contexte peut \^etre transform\'ee en forme susdite sans
-que son langage engendr\'e soit chang\'e. En m\^eme temps, en adoptant cette
->>>>>>> 0adef2f qqs changements
 approche, on peut envisager deux strat\'egies de conception de notre outil de
 l'analyse syntaxique.
 
