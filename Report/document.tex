@@ -395,8 +395,8 @@ Pour cette transformation nous adoptons une convention de choix de noms (labels)
 nouvels. On le fait de fa\'con \`a ce que ces non-terminaux puissent \^etre facilement reconnus et
 distingu\'es des non-terminaux de la grammaire d'origine. Par cons\'equent, quand on a besoin de reconvertir
 les arbres syntaxiques issus de la grammaire en CNF aux arbres issus de la grammaire d'origine il nous suffit
-d'enlever ces non-terminaux "artificiels" et de raccrocher leurs fils au noeud parent. Cette op\'eration est
-fait r\'ecursivement jusqu'\`a ce que tous les noeuds "artificiels" ne soient \'elimin\'es.
+d'enlever ces non-terminaux ``artificiels'' et de raccrocher leurs fils au noeud parent. Cette op\'eration est
+faite r\'ecursivement jusqu'\`a ce que tous les noeuds ``artificiels'' soient \'elimin\'es.
 En ce qui concerne les probabilit\'es de nouvelles r\`egles ins\'er\'ees dans la grammaire prrobabiliste,
 d\`es lors que lors de la tranformation de la grammaire on s'assure que chaque nouvel symb\^ole n'a qu'une
 seule possibilit\'e de re\'ecriture chaque nouvelle r\`egle a une probabilit\'e \'egale \`a 1.
@@ -405,7 +405,7 @@ seule possibilit\'e de re\'ecriture chaque nouvelle r\`egle a une probabilit\'e 
 
 Si on adopte la deuxi\`eme strat\'egie de l'analyse syntaxique, alors le
 traitement des mots inconnus est laiss\'e au taggeur externe.
-Le taggeur MElt r\'esout ce probl\`eme en se basant sur des lexiques externes tels
+Le taggeur MElt r\'esoud ce probl\`eme en se basant sur des lexiques externes tels
 que Lefff \cite{Lefff}. Un mot qui n'a jamais \'et\'e rencontr\'e dans le corpus
 d'entra\^inement est recherch\'e dans les lexiques. Donc une des solutions est
 d'utiliser un dictionnaire externe (dans ce cas il faut tout de m\^eme prevoir
@@ -416,7 +416,7 @@ Nous allons nous concentrer sur la r\'esolution de ce probl\`eme dans le cas de 
 premi\`ere strat\'egie, quand c'est le parseur CKY probabiliste qui assigne les
 cat\'egories morpho-syntaxiques aux entr\'ees lexicales. \par
 
-Evidemment, si on estime
+\'Evidemment, si on estime
 les probabilit\'es des r\`egles lexicales sur le corpus d'entrainement, alors
 n'importe quelle phrase qui contient au moins un mot non-observ\'e dans ce corpus
 va recevoir une probabilit\'e nulle, avec chaque arbre syntaxique de cette phrase
@@ -496,9 +496,9 @@ chaque cat\'egorie \`a partir du corpus d'entra\^inement.\par
 
 Pour cela, il faut fixer une limite en-dessous de laquelle tout mot rencontr\'e dans le corpus est
 consid\'er\'e rare, et en calculant les fr\'equences relatives nous le comptons comme
-un mot inconnu. En r\'esultat, le mot "UNKNOWN" a un compte diff\'erent de z\'ero, qui
+un mot inconnu. En r\'esultat, le mot \textit{UNKNOWN} a un compte diff\'erent de z\'ero, qui
 est \'egal \`a la somme des comptes de tous les mots rares dans le corpus. On peut
-ensuite calculer les fr\'equences relatives comme si "UNKNOWN" \'etait un mot comme
+ensuite calculer les fr\'equences relatives comme si \textit{UNKNOWN} \'etait un mot comme
 les autres.
 \par
 
@@ -512,11 +512,11 @@ Intuitivement, il y aura moins de pr\'epositions rares dans un corpus que des no
 \par
 
 Cette m\'ethode est particuli\`erement utile si nous avons un corpus avec des
-textes bien diverses et pas uniformes.
+textes bien divers et pas uniformes.
 
 \subsection{Evaluation}
 
-L'analyse d'une phrase passe par beaucoup d'\'etapes, chacune de ces \'etapes peut
+L'analyse d'une phrase passe par beaucoup d'\'etapes, et chacune de ces \'etapes peut
 \^etre \'evalu\'ee afin de trouver des sources d'impr\'ecision.\par
 
 Les \'etapes \`a \'evaluer :
