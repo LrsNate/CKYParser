@@ -18,19 +18,21 @@ public class Symbol {
 	private final boolean terminal;
 	
 	/**
-	 * Construct a Symbol with the name corresponding to the String in the parameter
+	 * Construct a Symbol with the name corresponding to the String in the parameter 
 	 * @param str: the string encoding the name of the symbol and its type (terminal / non-terminal) at once \
-	 * (if str starts with an unescaped backslash ('\'), then the Symbol is terminal, and its name is "str minus that backslash")
+	 * (if str starts with an unescaped backslash ('\'), then the Symbol is terminal, and its name is "str minus that backslash" converted to lowercase)
 	 */
 	public Symbol(String str) {
 		char first_char = str.charAt(0); 
+		// check if this is supposed to be a terminal symbol
 		if (first_char == '\\') {
 			if (!(str.length() > 1)) {
 				throw new IllegalArgumentException();
 			}
 			int count_leading_slashes = count_leading_occ(str, '\\');
+			// this is a terminal
 			if (odd(count_leading_slashes)) {
-				this.value = str.substring(1);
+				this.value = str.substring(1).toLowerCase();
 				this.terminal = true;
 				return;
 			}
@@ -46,7 +48,9 @@ public class Symbol {
 	 * @param terminal: true if the Symbol is terminal
 	 */
 	public Symbol(String value, boolean terminal) {
-		this.value = value; this.terminal = terminal;
+		this.value = value; 
+		this.terminal = terminal;
+		if (this.terminal) { this.value.toLowerCase(); }
 	}
 	
 	/**
