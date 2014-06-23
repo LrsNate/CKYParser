@@ -1,0 +1,2 @@
+( (SENT (NP (NC \NC) (PP (P+D \P+D) (NP (NC \NC) (PP (P \P) (NP (NPP \NPP))))))))
+( (SENT (NP-SUJ (DET \DET) (NC \NC) (PP (P+D \P+D) (NP (NC \NC) (PP (P \P) (NP (NPP \NPP))) (PONCT \PONCT) (VPpart (VPP \VPP) (PP (P \P) (NP (DET \DET) (NC \NC))))))) (PONCT \PONCT) (VN (V \V)) (NP-ATS (PRO \PRO) (PP (P+D \P+D) (NP (NC \NC) (PP (P \P) (NP (DET \DET) (AP (ADV \ADV) (ADJ \ADJ)) (COORD (CC \CC) (NP (DET \DET) (AP (ADV \ADV) (ADJ \ADJ)))))) (PP (P \P) (NP (DET \DET) (NC \NC) (AP (ADJ \ADJ)))) (PP (P \P) (NP (DET \DET) (ADJ \ADJ) (NC \NC) (AP (ADJ \ADJ))))))) (PONCT \PONCT)))

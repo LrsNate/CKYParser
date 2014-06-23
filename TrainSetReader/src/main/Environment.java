@@ -16,6 +16,10 @@ public abstract class Environment
 	private static	PrintWriter 	_out = null;
 	private static  AnnotationStripperOption annotation_stripper_opt = null;
 	
+	public static void closeOutput() {
+		Environment._out.close();
+	}
+
 	/**
 	 * Get one of the three options for the phrase format.
 	 * @return One of the three options for the annotation stripping.
