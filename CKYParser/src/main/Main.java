@@ -35,10 +35,10 @@ public final class Main
 			parser = new CKY(G, false);
 		}
 		
-		BufferedReader stdin = ArgumentParser0.openFile("D:\\RESULTS\\corpus_dev_bare\\corpus.tagging_only.txt");
+		//BufferedReader stdin = ArgumentParser0.openFile("D:\\RESULTS\\corpus_dev_bare\\corpus.tagging_only.txt");
 		
 
-		//BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter out = ap.getOutputFile();
 		String line;
 		int line_number = 0;
