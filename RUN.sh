@@ -38,6 +38,7 @@ DIR_TREES="$DIR_RESULTS""/ParseTrees/"
 mkdir -p "$DIR_TREES"
 
 # ----------------------------------------------------------------------
+echo "## --- découpage du corpus ---"
 ## --- découpage du corpus ---
 DIR_CORPUS="$DIR_RESULTS""/corpus_arbore/"
 mkdir -p "$DIR_CORPUS"
@@ -81,6 +82,7 @@ unknown_label="**UNKNOWN**"
 ## (si l'option correspondante est choisie)
 if [ "$mode_non_lexical" -gt "0" ]
 then
+echo "--- apprentissage de la grammaire non-lexicale ---"
 cat $f_train_corpus_arbore | java -jar "$TRAIN_GRAMMAR" -p 7 -t 1 | "$CMD_grammar_format_issues" > $f_grammar_non_lex
 fi
 
@@ -88,6 +90,7 @@ fi
 ## (si l'option correspondante est choisie)
 if [ "$mode_lexical" -gt "0" ]
 then
+echo "--- apprentissage de la grammaire lexicale ---"
 ## l'option -l pour "lexical" est passée en parametres
 cat $f_train_corpus_arbore | java -jar "$TRAIN_GRAMMAR" -p 7 -t 1 -l | "$CMD_grammar_format_issues" > $f_grammar_lex
 fi
@@ -102,12 +105,14 @@ CNFConverter="$DIR""/CNFConverter/cnf-converter.sh"
 # --- conversion de la grammaire en forme normale de Chomsky ---
 if [ "$mode_non_lexical" -gt "0" ]
 then
+echo "--- parsing non-lexical ---"
 cat $f_grammar_non_lex | "$CNFConverter" > $f_grammar_non_lex".CNF"
 f_grammar_non_lex=$f_grammar_non_lex".CNF"
 fi
 
 if [ "$mode_lexical" -gt "0" ]
 then
+echo "--- parsing lexical ---"
 cat $f_grammar_lex | "$CNFConverter" > $f_grammar_lex".CNF"
 f_grammar_lex=$f_grammar_lex".CNF"
 fi
@@ -125,6 +130,8 @@ f_dev_tagged_phrases="$f_dev_corpus_arbore"".tagged_phrases"
 
 ## ===== AnnotationStripper =====
 ANNOTATION_STRIPPER="$DIR""/AnnotationStripper.jar"
+
+echo "--- préparation des corpus gold (AnnotationStripper) ---"
 
 cat "$f_dev_corpus_arbore" | java -jar "$ANNOTATION_STRIPPER" --get-bare-phrase > "$f_dev_bare_phrases"
 cat "$f_dev_corpus_arbore" | java -jar "$ANNOTATION_STRIPPER" --get-categories > "$f_dev_tags_only"
@@ -145,6 +152,7 @@ then
 ##                              morpho-syntaxiques --------------------
 if [ "$tagging_gold" -gt "0" ]
 then
+ echo "--- utiliser le tagging gold comme données d'entrée du parseur ---"
  ## le corpus de séquences de tags gold
  f_dev_non_lex="$f_dev_tags_only"
 else
@@ -156,6 +164,7 @@ else
 fi # fi tagging_gold
 
 ## ----- appeler le parseur -----
+echo "--- PARSING ---"
 f_parse="$DIR_TREES""/dev_parse_non_lexical.txt"
 cat $f_dev_non_lex | java -jar "$CKYParser"  -k 1 -g "$f_grammar_non_lex" > $f_parse
 
@@ -171,6 +180,7 @@ then
 ## le corpus de phrases non-annotées
  f_dev_lex="$f_dev_bare_phrases"
 
+echo "--- PARSING ---"
 f_parse="$DIR_TREES""/dev_parse_lexical.txt"
 cat $f_dev_lex | java -jar "$CKYParser"  -k 1 -g "$f_grammar_lex" > $f_parse
 
@@ -179,6 +189,7 @@ fi # mode_lexical
 ## ------------------ Reinsert  the lexical elements 
 ##                            into the parse trees ---------------
 
+echo "--- Reinsert  the lexical elements into the parse trees ---"
 ## ====== ReinsertLexicals ======
 CMD_reinsert="$DIR""/sh/ReinsertLexicals/reinsert_lexicals.sh"
 
@@ -194,6 +205,7 @@ $CMD_reinsert $f_parse $f_tagged_phrases > $f_reinserted
 ##                            de la forme normale de Chomsky
 ##                              à la forme de la grammaire d'origine ---------------
 
+echo "= BackConverter ="
 ## ===== BackConverter =====
 BACKConverter="$DIR""/BackConverter.jar"
 
@@ -202,6 +214,7 @@ java -jar "$BACKConverter" --input_file "$f_reinserted" --prefixe "Z" > $f_back_
 
 ## ------------------ Evaluation ----------------
 
+echo "--- Evaluation ---"
 ## ==== EVALB ====
 EVALB="$DIR""/Eval/EVALB/run_evalb.sh"
 

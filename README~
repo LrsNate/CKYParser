@@ -8,6 +8,7 @@ dans le dossier Tagger et appeler la commande make depuis le dossier  melt-2.0b4
 dans le dossier Eval
 et appeler la commande make depuis le dossier EVALB.
 
+
 ========== Boite à outils pour l'analyse syntaxique et son évaluation ==========
 
  --- 0. Découpage aléatoire du corpus de données ---
