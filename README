@@ -1,0 +1,190 @@
+
+Avant d'executer il faut 
+
+1) mettre le dossier avec le MElt tagger (sous le nom melt-2.0b4)
+dans le dossier Tagger et appeler la commande make depuis le dossier  melt-2.0b4.
+2) mettre le dossier avec EVALB (sous le nom EVALB)
+dans le dossier Eval
+et appeler la commande make depuis le dossier EVALB.
+
+
+========== Boite à outils pour l'analyse syntaxique et son évaluation ==========
+
+ --- 0. Découpage aléatoire du corpus de données ---
+                            ( CorpusSplitter )
+
+ = Synopsis =
+./sh/CorpusSplitter/corpus_splitter.sh f_input f_output_stem
+
+= Description =
+Découpe aléatoirement le corpus lu du fichier f_input selon les proportions 60%,20%,20%
+
+ = Arguments =
+f_input : 
+    le fichier d'entrée (qui contient le corpus arboré en entier)
+f_output_stem: 
+    le debut des noms des fichiers de sorties
+= Output =
+Le corpus d'entrainement est mis dans le fichier 
+                                                                            f_output_stem.train
+Le corpus de developpement --- dans le fichier 
+                                                                             f_output_stem.dev
+Le corpus de test --- dans le fichier
+                                                                            f_output_stem.test
+
+--- 1. Apprentissage de la grammaire probabiliste ---
+                        ( TrainSetReader ) 
+
+Générer une grammaire à partir d'un corpus arboré 
+
+= Commandes à éxécuter =
+
+CMD_grammar_format_issues=./sh/grammar_format_issues.sh
+cat $f_train | java -jar TrainSetReader.jar -p [ precision ] -t [ nthreads ] -u [ unknown_threshold ] 
+-s [ unknown_label ] -l [ files ... ] | "$CMD_grammar_format_issues" > $f_grammar
+
+= Description =
+
+Le programme TrainSetReader lit un texte annoté en constituants
+syntaxiques sous forme arborée, selon les conventions utilisées par le Sequoia Tree Bank. Il en
+génère ensuite une grammaire algébrique probabiliste. Cette
+grammaire est affichée sur la sortie standard.
+
+Si des fichiers d'entrée sont spécifiés (dans les derniers arguments du programme après 
+toutes les autres options), le programme lira seulement ceux-ci. Si
+aucun fichier d'entrée n'est spécifié, les corpora d'entraînement seront lus sur
+l'entrée standard.
+
+Le script ./sh/grammar_format_issues.sh s'occupe de quelques différences de formats 
+de numériques sous Windows et Linux.
+
+= Options = 
+
+Voir description détaillé dans le rapport.
+
+= RUN.sh =
+
+Pour changer les options d'entrainement de la grammaire veuillez modifier
+les parametres passés au TrainSetReader at lines 58 et 63 du script RUN.sh
+
+--- 2. Conversion de la grammaire en forme normale de Chomsky ---
+                                ( CNFConverter)
+
+./CNFConverter/cnf-converter.sh
+
+Voir description détaillé dans le rapport.
+
+--- 3. La préparation des corpus gold pour des différentes étapes de l'évaluation ---
+                                ( AnnotationStripper ) 
+
+= Description =
+Enlever de l'annotation syntaxique des phrases du corpus arboré.
+
+= Synopsis = 
+java -jar AnnotationStripper.jar [ --option ]
+
+= Options =
+Une seule option à choisir parmi les suivantes:
+
+--get-bare-phrase
+                            obtenir des phrases nues (dépourvue de l'annotation quelconque)
+
+--get-categories
+                            obtenir des la séquence des catégories 
+                                morpho-syntaxiques pour chaque phrase
+
+--get-tagged-phrase
+                            obtenir des phrases taggées en format conforme à celui
+                                 du tagger MElt
+
+--- 4. Le tagger Melt et la reconversion minimale de sa sortie ---
+                        ( MElt )
+
+4.1. MElt
+
+Tagger et tokéniser (si l'option correspondante est choisie) 
+les phrases de l'entrée standard
+
+= Synopsis =
+ ./Tagger/tagger.sh [ -t ]
+
+= Options =
+ -t
+      si les phrases doivent êtres tokénisées avant d'être taggées 
+
+4.2. Extraire des séquences de catégories morpho-syntaxiques 
+de la sortie du tagger MElt
+
+./Tagger/extract_tags_only.sh
+
+Entrée standard : l'output du tagger MElt
+Sortie standard : des séquences de catégories morpho-syntaxiques 
+                                     dépourvues d'éléments léxicaux
+
+--- 5. Le parseur CKY ---
+ ( CKYParser )
+
+Voir description détaillée dans le rapport.
+
+--- 6. Réinsérer les éléments lexicaux dans leur format initial ---
+                            ( ReinsertLexicals )
+
+Prend la sortie du parseur CKYParser et réinsère des éléments lexicaux dans leur
+format initial (avec la capitalisation propre, etc.) en se basant sur
+un corpus aligné (avec la sortie du parseur) des phrases taggées
+
+= Execution =
+
+./sh/ReinsertLexicals/reinsert_lexicals.sh   f_parse  f_tagged_phrases
+
+= Arguments =
+
+f_parse : la sortie du parseur ( des arbres syntaxiques en format Bracketed )
+f_tagged_phrases : un corpus de phrases taggées 
+
+Sortie standard: des arbres syntaxiques avec des éléments léxicaux issus
+                                du fichier f_tagged_phrases
+
+--- 7. Reconversion des arbres syntaxiques: le retour à la grammaire d'origine ---
+                ( BackConverter )
+
+7.1. 
+
+= Synopsis =
+
+java -jar BackConverter.jar --input-file file --prefixe "Z" [ --prob ]
+
+= Options et arguments =
+
+--input-file file 
+            file = le nom du fichier qui contient des arbres issus du parseur
+--prefixe "Z"
+            spécifie que les noeuds créé pendant la conversion en CNF
+                            commencent tous par le préfixe "Z"
+--prob
+            indiquer cette option si les arbres syntaxiques sont précédées de leurs 
+                probabilités
+
+--- 7.2 En cas de renvoie de k-best meilleurs arbres préceder l'appel au BackConverter
+décrit si-dessus par l'appel à 
+
+./get_parses_only_for_k_best.sh
+
+Entrée standard : la sortie du parseur 
+Sortie standard : 
+
+---- Reconversion pour le cas où k meilleurs arbres sont renvoyés et pas 1 ---
+
+cat $f_parse | ./sh/get_parses_only_for_k_best.sh | java -jar BackConverter.jar --input-file file --prefixe "Z" --prob 
+
+--- 8. Evaluation du parseur ---
+
+./Eval/EVALB/run_evalb.sh
+
+--- 9. Evaluation du Tagger ---
+
+./Eval/eval_tagging.sh
+
+
+
+
