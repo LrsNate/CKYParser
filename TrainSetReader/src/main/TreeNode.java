@@ -208,25 +208,38 @@ public class TreeNode
 	
 	/**
 	 * Convert the tree to the bracketed form.
+	 * @param terminals_backslashed: if true, all the terminals start with a backslash
 	 * @return A string representing the tree.
 	 */
-	public String toBracketed()
+	public String toBracketed(boolean terminals_backslashed)
 	{
 		StringBuffer	s;
 		
 		if (!(this._children.size() > 0)) {
+		  if (terminals_backslashed) {
 			return (this._value.toString());
+		  } else {
+		        return (this._value.getValue());
+		  }
 		}
 		s = new StringBuffer("(");
 		s.append(this._value);
 		for (int i = 0; i < this._children.size(); i++) {
 			s.append(" "); 
-			s.append(this._children.get(i).toBracketed());
+			s.append(this._children.get(i).toBracketed(terminals_backslashed));
 		}
 		s.append(")");
 		
 		return (s.toString());
 	}
+
+	/**                                                                                                                       
+	 * Convert the tree to the bracketed form (with terminal symbols being backslashed).                                                                                
+	 * @return A string representing the tree.                                                                                
+	 */                                                                                                                       
+	 public String toBracketed() {
+	 	return this.toBracketed(true);
+	 }
 
 	/**
 	 * Convert the tree to a form of a rewriting rule with the root as the LHS of the rule

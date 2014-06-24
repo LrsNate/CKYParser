@@ -10,10 +10,10 @@ set -o nounset
 set -o pipefail
 set -o errexit
 # ////////Input arguments /////////////////
-## the tagging to be evaluated
-f_tags="$1"
 ## the gold tagging
-f_tags_gold="$2"
+f_tags_gold="$1"
+## the tagging to be evaluated
+f_tags="$2"
 # /////////////////////////////////////////
 
 cat "$f_tags" | sed -e 's/^ *//g' | awk -v f_tags_gold="$f_tags_gold" '
@@ -41,7 +41,7 @@ BEGIN {
 }
 END {
  ## print out the precision
- print correct / ntokens_total;
+ print "Precision = " correct / ntokens_total;
 }
 '
 
