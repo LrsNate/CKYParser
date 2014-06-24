@@ -2,6 +2,7 @@ package main;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.LinkedList;
 import java.util.Set;
 import java.util.HashSet;
 
@@ -61,6 +62,22 @@ public class GrammarCountUnknown extends Grammar {
 		return rule_counter;
 	}
 	
+	public synchronized RewrRuleCounter addRule(String tab[]) {
+		RewrRuleCounter rule_counter = super.addRule(tab);
+		if (rule_counter.hasLexical()) {
+			lexical_rules.add(rule_counter);
+			for (RHS rhs : rule_counter.getRHS()) {
+				if (rhs.size() == 1) {
+					Symbol rhs_symbol = rhs.get(0);
+					if (rhs_symbol.IsTerminal()) {
+						addTerminal(rhs_symbol);
+					}
+				}
+			}
+		}
+		return rule_counter;
+	}
+	
 	/**
 	 * Add a terminal to the counter of terminal occurrences.
 	 * @param smb The terminal symbol to add.
@@ -78,14 +95,19 @@ public class GrammarCountUnknown extends Grammar {
 	 */
 	public void recomputeLexicalCounts() {
 		for (RewrRuleCounter lex_rule : this.lexical_rules) {
+			LinkedList<RHS> to_be_redistributed = new LinkedList<RHS>();
 			for (RHS rhs : lex_rule.getRHS()) {
 				if (rhs.size() == 1) {
+					System.out.println("We are in rare mode, threshold is " + this._count_threshold);
 					Symbol smb = rhs.get(0);
 					// if the right hand side happens to be a rare terminal 
 					if ((smb.IsTerminal() && count_terminals.containsKey(smb)) && !(count_terminals.get(smb).get() > this._count_threshold)) {
-						lex_rule.redistributeCounts(rhs, this._unknown_rhs);
+						to_be_redistributed.add(rhs);
 					}
 				}
+			}
+			for(RHS rare_rhs : to_be_redistributed) {
+				lex_rule.redistributeCounts(rare_rhs, this._unknown_rhs);
 			}
 		}
 		

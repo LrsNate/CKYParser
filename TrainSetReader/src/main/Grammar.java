@@ -37,7 +37,6 @@ public class Grammar
 	public synchronized RewrRuleCounter addRule(String rule)
 	{
 		String		tab[];
-		
 		tab = rule.split("->");
 		if (tab.length != 2)
 			throw new IllegalArgumentException("Grammar: illegal rule");
@@ -61,13 +60,21 @@ public class Grammar
 	 * Add a rewriting rule to the grammar. The rules are grouped by left-hand side.
 	 * @param tab A string representing a rule of the form A -> B C.
 	 */
-	public synchronized void addRule(String tab[])
+	public synchronized RewrRuleCounter addRule(String tab[])
 	{
 		Symbol lhs = new Symbol(tab[0]);
-		if (this._map.containsKey(lhs))
-			this._map.get(lhs).addRule(new RHS(tab[1]));
-		else
-			this._map.put(lhs, new RewrRuleCounter(lhs, new RHS(tab[1])));
+		RHS rhs = new RHS(tab[1]);
+		RewrRuleCounter rule_counter = null;
+		if (this._map.containsKey(lhs)) {
+			rule_counter = this._map.get(lhs);
+			rule_counter.addRule(new RHS(tab[1]));
+		}
+		else {
+			rule_counter = new RewrRuleCounter(lhs, rhs);
+			this._map.put(lhs, rule_counter);
+		}
+		
+		return rule_counter;
 	}
 	
 	/**
