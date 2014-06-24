@@ -50,8 +50,8 @@ derni\`ere \'etape list\'ee ci-dessus ne fait en revanche pas partie de notre tr
 
 \subsection{Le but (l'utilit\'e) de l'analyse syntaxique}
 
-Il faut reconna\ˆitre que l'analyse syntaxique en soi est rarement le but d'un outil de
-TAL quelconque. En revanche, c'est une \'etape qui s'av\`ere cruciale en ce qu'elle ouvre la possibilit\'e d'une analyse s\'emantique efficace, car toute description
+Il faut reconna\^itre que l'analyse syntaxique en soi est rarement le but d'un
+outil de TAL quelconque. En revanche, c'est une \'etape qui s'av\`ere cruciale en ce qu'elle ouvre la possibilit\'e d'une analyse s\'emantique efficace, car toute description
 s\'emantique se base en partie sur les relations syntaxiques entre les parties d'une
 phrase.
 
@@ -568,9 +568,9 @@ Pour \'evaluer le \textbf{parsing}, il faut comparer la meilleure analyse donn\'
 par le parseur \`a l'arbre correspondant du corpus arbor\'e (l'arbre gold).
 
 Pour chaque \'etape, il faut calculer le pourcentage des r\'esultats identiques \`a
-la r\'ef\'erence gold parmi tous les r\'esultats. Par contre, pour l'\evaluation
-du parseur il ne parait pas convenable de compter le nombre d'arbres syntaxiques
-enti\`erement identiques \`a ceux de la r\'ef\'erence, d'un part, parce que vu
+la r\'ef\'erence gold parmi tous les r\'esultats. Par contre, pour
+l'\'evaluation du parseur il ne para\^it pas convenable de compter le nombre
+d'arbres syntaxiques enti\`erement identiques \`a ceux de la r\'ef\'erence, d'un part, parce que vu
 l'abondance d'ambiguit\'e syntaxique dans les langages naturels il est peut
 probable qu'un r\'esultat haut soit jamais atteignable, d'autre part parce qu'on
 a envie de faire une analyse plus fine de la sortie du parseur. Pour ces deux
@@ -582,15 +582,19 @@ $j$ --- l'indice de son dernier mot (en comptant du d\'ebut de la phrase) et $X$
 est la cat\'egorie syntaxique. Au final le rappel et la pr\'ecision du parsing
 se calculent comme suit:
 $$
-\mathrm{Rappel} = \frac{#\{ \mathrm{constituants} \mathrm{correctes} \}}{#\{
-\mathrm{constituants} \mathrm{gold} \}} 
+\text{Rappel} = \frac{\#constituants\:correctes}{\#
+constituants\:gold}
 $$
 $$
-\mathrm{Precision} = \frac{#\{ \mathrm{constituants} \mathrm{correctes} \}}{#\{
-\mathrm{constituants} \mathrm{issus} \mathrm{du} \mathrm{parseur} \}} 
+\text{Precision} = \frac{\#constituants\:correctes}{\#
+constituants\:issus\:du\:parseur}
 $$
 
-
+Ensuite on peut en calculer une valeur moyenne qui caract\'erise l'efficacit\'e
+du parseur. Cette valeur s'appelle F-mesure (F-score) :
+$$
+\text{F-score} = 2*\frac{precision * rappel}{precision + rappel}
+$$
 
 \section{R\'esultats}
 
