@@ -39,7 +39,7 @@ function get_lexical_terminal() {
 {
   delete tagged_phrase; delete parse;
   numero_de_la_phrase = $1; 
-  gsub("*", "", numero_de_la_phrase);
+  #gsub("*", "", numero_de_la_phrase);
   ## get the line with the parse
   getline; str_parse = $0;
   if (!((getline str_tagged_phrase < f_tagged_phrases) > 0)) {
