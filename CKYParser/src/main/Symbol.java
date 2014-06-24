@@ -149,16 +149,25 @@ public class Symbol {
 		}
 		return false;
 	}
-
-	@Override
-	public int hashCode()
-	{
+	
+	/**
+	 * return a string that is to be used for generating hashCodes
+	 * (for this class as well as for the class RHS)
+	 * @return
+	 */
+	public String getStringForHashcode() {
 		String key = this.value;
-        // if the symbol is terminal
+		// if the symbol is terminal
         // capitalisation is not taken into account
 		if (this.terminal) {
 			key = '\\' + key.toLowerCase();
 		}
-	    return key.hashCode();
+		return key;
+	}
+
+	@Override
+	public int hashCode()
+	{
+	    return getStringForHashcode().hashCode();
 	}
 }

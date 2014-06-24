@@ -35,7 +35,7 @@ public final class Main
 			parser = new CKY(G, false);
 		}
 		
-		//BufferedReader stdin = ArgumentParser0.openFile("D:\\Universite Paris-Diderot\\2ieme semestre\\Projet\\Results\\corpus_dev_bare\\for_testing.txt");
+		//BufferedReader stdin = ArgumentParser0.openFile("D:\\RESULTS\\corpus_dev_bare\\corpus.tagging_only.txt");
 		
 
 		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
@@ -56,21 +56,27 @@ public final class Main
 				try {
 					if (!line.isEmpty()) { 
 						line_number++;
+						//System.out.println("**" + line_number + "**  " + line);
 						out.println("**" + line_number + "**  " + line);
 						k_best_parses = parser.parse(Symbol.ListSymbols(line.trim().split(" "), ap.getInputIsLexical()), k_best);
-						if (k_best_parses == null) { continue; }
+						if (k_best_parses == null) { 
+							out.println("(==NULL== null)");
+							continue; 
+						}
 						boolean print_probas = false;
 						if(k_best > 1) {
 							print_probas = true;
 						}
 						for (int i = 0; i < k_best_parses.size(); i++) {
-							out.println(k_best_parses.get(i).treeToString(print_probas));						
+							out.println(k_best_parses.get(i).treeToString(print_probas));	
+							//System.out.println(k_best_parses.get(i).treeToString(print_probas));	
 						}
 					}
 				} catch (UnknownWordException e) {
 					// no parses were obtained, nothing is printed 
 					// just pass on to the next phrase
 					//System.err.println(e.getMessage());
+					out.println("(==UNK== unk)");
 				}
 			}
 			

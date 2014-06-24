@@ -12,6 +12,7 @@ public class MainBackConversion {
 		BackConversionArgParser arg_parser = new BackConversionArgParser(argv);
 		try {
 			BackConversion C = new BackConversion(arg_parser.getInputFile());
+			Environment.setLexical(true);
 			C.convert(arg_parser.getPrefixe(), arg_parser.getModeProbabilistic());
 		} catch (IllegalArgumentException e) {
 			Messages.warning(e.getMessage());
