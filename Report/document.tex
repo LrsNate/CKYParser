@@ -597,23 +597,100 @@ $$
 $$
 
 \section{R\'esultats}
+Comme nous avons mentionn\'e ci-dessus, le but du projet \'etait de construire
+un analysateur syntaxique (un parseur) pour le francais. Pour faire cela, il est
+obligatoire d'\'etiqueter d'abord les phrases \`a analyser. Nous avons construit
+un parseur probabiliste bas\'e sur l'algorithme CKY qui peut en plus utiliser le
+m\^eme algotrithme probabiliste pour \'etiqueter la phrase donn\'ee. \par
+Nous avons donc impl\'ement\'e deux variantes d'utilisation du module CKYParser
+:
+\begin{itemize}
+  \item version lexicale, quand le parseur recoit en entr\'ee une phrase en mots
+  (bare phrase), et il doit donc \'effectuer le tagging lui-même;
+  \item version non-lexicale, quand le parseur recoit en entr\'ee une s\'equence
+  de tags morpho-syntaxiques obtenue par un taggeur externe (nous avons
+  utilis\'e MElt Tagger) et construit juste l'arbre de la phrase. Pour cela,
+  nous avons d'abord \'evalu\'e la pr\'ecision du tagging \'effectu\'e par MElt
+  Tagger sur notre corpus, ce qui a donn\'e 92\%.
+\end{itemize}
+
+Apr\'es l'\'evaluation des r\'esultats des deux strat\'egies, nous avons conclu
+que quand c'est le parseur qui utilise l'algorithme CKY
+probabiliste pour \'etiqueter la phrase en l'analysant en m\^eme temps, 
+l'\'efficacit\'e du parseur est moins satisfaisante que quand le parseur recoit
+les \'etiquettes morpho-syntaxiques s\^ures du taggeur MElt (qui se base sur
+les mod\`eles Maximum Entropy). \par
+La diff\'erence est particuli\'erement
+saillante dans le cas o\`u le parseur ne traite pas les phrases avec des mots inconnus
+(version primitive de gestion des mots inconnus) : dans la version
+non-lexicale, avec un input \'etiquet\'e, les seuls "mots" inconnus sont des
+cat\'egories lexicales eventuellement absentes dans le corpus d'entra\^inement.
+Quand on utilise une probabilit\'e apriori pour tous les mots inconnus, la
+diff\'erence est quand m\^eme pr\'esente, ce qui nous am\'ene \'a la conslusion
+que le parseur CKY n'est pas tr\'es adapt\'e \`a la t\^ache du tagging, et donne
+meilleurs r\'esultats \'etant utilis\'e en couple avec un taggeur.\par
+
+
+\subsection{Am\'elioration possible}
+Pour am\'eliorer les r\'esultats obtenus par notre parseur (par rapport aux
+r\'esultats obtenus en utilisant le taggeur MElt), il est possible de
+param\'etrer la gestion des mots inconnus.
+Pour la gestion des mots inconnus, nous avons propos\'e deux strat\'egies et
+nous pouvons alors modifier deux param\`etres :
+\begin{itemize}
+  \item  si on donne une probabilit\'e apriori \`a tous les mots inconnus, on
+  peut varier le param\`etre $\alpha$ qui est la probabilit\'e de produire un
+  mot inconnu sachant sa probabilit\'e. Cette probabilit\'e peut \^etre la m\^eme
+  pour toutes les cat\'egories lexicales, ou, pour optimiser encore, on peut
+  fixer la probabilit\'e $\alpha$ diff\'erente pour chaque cat\'egorie.
+  \item si on consid\'ere les mots rarement rencontr\'es dans le corpus
+  d'entra\^inement comme inconnus et on somme leurs probabilit\'es pour obtenir la probabilit\'e de produire un mot inconnu pour
+  chaque cat\'egorie, alors on peut faire varier le param\`etre
+  \textit{unknown\_threshold} qui d\'etermine la limite du nombre des
+  fois que'un mot est rencontr\'e dans le corpus, en-dessous de laquelle le mot
+  est consid\'er\'e comme inconnu.
+\end{itemize} 
+
+En faisant varier les param\`etres dans ces deux approches, nous pourrions
+augmenter l'\'efficacit\'e du parseur impl\'ement\'e dans notre projet.
+
 
 \section{Utilisation}
 \subsection{La structure modulaire}
-Le projet consiste des trois modules ind\'ependants qui permettent d'apprendre une
-grammaire \`a partir de Sequoia Tree Bank \cite{Sequoia} et de l'utiliser pour
-analyser des phrases donn\'ees par l'utilisateur. Chaque module prend en
-argument l'output du module pr\'ecedent. L'ordre d'application de ces trois
-modules est le suivant :
+Pour notre projet nous avons choisi l'impl\'ementation en plusieurs modules
+indépendants qui peuvent être utilisés séparement en ligne de commande. Chaque
+module produit l'information qui peur \^etre utilis\'ee par un autre module.
+\par
+Les trois modules principaux permettent d'apprendre une grammaire \`a
+partir de Sequoia Tree Bank \cite{Sequoia} et de l'utiliser pour analyser des phrases donn\'ees par l'utilisateur. Chaque module prend en argument l'output du module pr\'ecedent. L'ordre d'application de ces trois modules est le suivant :
 \begin{enumerate}
-  \item Le module TrainSetReader, \'etant donn\'e les fichiers de Sequoia Tree Bank,
-  en construit une grammaire hors-contexte probabiliste;
-  \item Le module CNFConverter prend la grammaire et la transforme en forme
-  normale de Chomsky flexible;
-  \item Le module CKYParser se base sur la grammaire apprise par TrainSetReader
-  et transform\'ee par CNFConverter pour donner l'analyse syntaxique des phrases
+  \item Le module \textbf{TrainSetReader}, \'etant donn\'e les fichiers de
+  Sequoia Tree Bank, en construit une grammaire hors-contexte probabiliste;
+  \item Le module \textbf{CNFConverter} prend la grammaire et la transforme en
+  forme normale de Chomsky flexible;
+  \item Le module \textbf{CKYParser} se base sur la grammaire apprise par
+  TrainSetReader et transform\'ee par CNFConverter pour donner l'analyse syntaxique des phrases
   en francais.
 \end{enumerate}
+
+Il y a aussi deux modules suppl\'ementaires qui ne participent pas au
+fonctionnement du programme, mais qui sont utilis\'es pour rendre possible
+l'\'evaluation. Ces deux modules permettent de comparer l'output du programme
+\`a l'analyse gold :
+\begin{itemize}
+  \item Le module \textbf{AnnotationStripper} prend des phrases analys\'ees et
+  enl\`eve toute la structure syntaxique afin d'obtenir la phrase \'ecrite juste
+  en mots sans tags (phrase "nue"), en couples mot/tag (phrase \'etiquet\'ee) ou
+  alors juste en tags (s\'equence des cat\'egories lexicales). Ce module est
+  utilis\'e pour \'evaluer le tagging.
+  \item Le module \textbf{BackConverter} prend des phrases analys\'ees par le
+  parseur CKY (utilisant la grammaire transform\'ee en forme normale de Chomsky), et
+  reconvertit les arbres syntaxiques en arbres g\'en\'er\'es par la grammaire
+  d'origine (non-CNF) en gardant la structure syntaxique. Pour faire cela, le
+  module enl\`eve de l'arbre tous les non-terminaux interm\'ediaires qui ont
+  \'et\'e cr\'ees pendant la transformation de la grammaire en CNF. Ce module
+  est utilis\'e pour \'evaluer le parsing.
+\end{itemize}
 
 \subsection{TrainSetReader}
 \subsubsection{Nom}
@@ -669,7 +746,7 @@ normale de Chomsky flexible.
 
 {\ttfamily
 \begin{verbatim}
-python cnf-converter.py [-p prob] [-t term_droite]
+./CNFConverter/cnf-converter.sh [-p prob] [-t term_droite]
 \end{verbatim}
 }
 
@@ -702,7 +779,7 @@ grammaire en CNF.
 {\ttfamily
 \begin{verbatim}
 java -jar CKYParser.jar [-l log_prob] [-k k_best] [-a apriori_unknown_prob] [-u
-unknown_label] -g grammar_file [-o output_file] [-n non_lexical_input]
+unknown_label] -g grammar_file [-o output_file]
 \end{verbatim}
 }
 
@@ -737,9 +814,6 @@ Chomsky, une r\`egle par ligne.
 \item[\texttt{-o, --output-file output\_file}] Sp\'ecifie le chemin vers le
 fichier dans lequel le parseur \'ecrira son output. Si cet argument n'est pas
 donn\'e, le parseur \'ecrit le r\'esultat sur la sortie standard.
-\item[\texttt{-n, --non-lexical-input non\_lexical\_input}] Si cette option est
-sp\'ecifi\'ee, le programme consid\`ere que toute phrase donn\'ee consiste seulement des
-non-terminaux (cat\'egories lexicales au lieu des mots).
 \end{description}
 
 
