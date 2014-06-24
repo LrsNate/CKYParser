@@ -8,11 +8,15 @@ set -o errexit
 ## mode_non_lexical=1 si les categories morpho-syntaxiques \
 ##   sont  obtenues par un outil exterieur ou issues du corpus gold
 ##  mode_non_lexical=0 sinon
-mode_non_lexical=0
+mode_non_lexical=1
 
 ## tagging_gold=0 si le tagger MElt est utilise pour le tagging en mode non-lexical
 ## tagging_gold=1 pour utiliser le tagging gold
 tagging_gold=1
+
+## log_prob=1 pour utiliser les log-probabilites dans le parseur CKY
+## log_prob=0 sinon
+log_prob=1
 
 ## /////////////////////////////////////////////////////
 if [ "$mode_non_lexical" -gt "0" ]
@@ -139,6 +143,12 @@ cat "$f_dev_corpus_arbore" | java -jar "$ANNOTATION_STRIPPER" --get-tagged-phras
 
 ## ==== CKYParser ====
 CKYParser="$DIR""/CKYParser.jar"
+
+## ---- parse the arguments passed to this script 
+##	and transform them to CKYParser options ----
+parser_opts=""
+if [ "$log_prob" -gt "0" ]; then 
+
 
 ## ------------------ Mode Non-lexical: 
 ##          les catégories morpho-syntaxiques 
