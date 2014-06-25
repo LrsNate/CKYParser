@@ -86,10 +86,10 @@
 0.0909091 AdP -> NP Z39
 0.2727273 AdP -> NP ADV
 1.0000000 ADJ -> \adj
-1.0000000 CLO -> \clo
+1.0000000 CLO -> \**unknown**
 1.0000000 PROREL -> \prorel
 1.0000000 CLS-SUJ -> \cls-suj
-1.0000000 CLR-OBJ -> \clr-obj
+1.0000000 CLR-OBJ -> \**unknown**
 1.0 Z40 -> PONCT VPpart
 1.0 Z41 -> PP Z40
 1.0 Z42 -> PONCT Z41
@@ -193,7 +193,7 @@
 1.0 Z92 -> ADJ PONCT
 0.0078585 AP -> PONCT Z92
 0.0019646 AP -> NC
-1.0000000 ADV-P_OBJ -> \adv-p_obj
+1.0000000 ADV-P_OBJ -> \**unknown**
 1.0000000 VINF -> \vinf
 1.0 Z93 -> V VPP
 0.0011848 VN -> CLR-OBJ Z93
@@ -1225,15 +1225,15 @@
 0.0016420 SENT -> PONCT Z750
 1.0 Z751 -> NP Z290
 0.0049261 SENT -> PONCT Z751
-1.0000000 CLO-OBJ -> \clo-obj
+1.0000000 CLO-OBJ -> \**unknown**
 1.0000000 CS -> \cs
-1.0000000 PROWH -> \prowh
+1.0000000 PROWH -> \**unknown**
 1.0000000 NPP -> \npp
 1.0000000 V -> \v
 1.0000000 VPP -> \vpp
-1.0000000 CLO-DE_OBJ -> \clo-de_obj
-1.0000000 CLO-A_OBJ -> \clo-a_obj
-1.0000000 CLO-ATS -> \clo-ats
+1.0000000 CLO-DE_OBJ -> \**unknown**
+1.0000000 CLO-A_OBJ -> \**unknown**
+1.0000000 CLO-ATS -> \**unknown**
 0.0056818 VPinf -> VN Z407
 1.0 Z752 -> ADV Z84
 1.0 Z753 -> VN Z752
@@ -1336,7 +1336,7 @@
 0.0113636 VPinf -> VN VPinf
 0.0113636 VPinf -> VN Z21
 1.0000000 P -> \p
-1.0000000 VS -> \vs
+1.0000000 VS -> \**unknown**
 1.0 Z797 -> NC Z720
 1.0 Z798 -> ADJ Z797
 0.0002597 NP -> DET Z798
@@ -2433,10 +2433,10 @@
 1.0 Z1382 -> PONCT Z1381
 0.0161290 Ssub -> CS Z1382
 1.0000000 DET -> \det
-1.0000000 CLO-P_OBJ -> \clo-p_obj
+1.0000000 CLO-P_OBJ -> \**unknown**
 1.0000000 PREF -> \pref
 1.0000000 CC -> \cc
-1.0000000 CLO-MOD -> \clo-mod
+1.0000000 CLO-MOD -> \**unknown**
 0.0081301 VPpart -> VPP COORD
 0.0121951 VPpart -> VN
 1.0 Z1383 -> VPP PP

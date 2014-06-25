@@ -52,13 +52,13 @@
 
 1.0000000 ADJ -> \adj
 
-1.0000000 CLO -> \clo
+1.0000000 CLO -> \**unknown**
 
 1.0000000 PROREL -> \prorel
 
 1.0000000 CLS-SUJ -> \cls-suj
 
-1.0000000 CLR-OBJ -> \clr-obj
+1.0000000 CLR-OBJ -> \**unknown**
 
 0.0204082 Sint -> NP VN PP PONCT PP PONCT VPpart
 0.0204082 Sint -> NP VN ADV VPinf
@@ -112,7 +112,7 @@
 0.0078585 AP -> PONCT ADJ PONCT
 0.0019646 AP -> NC
 
-1.0000000 ADV-P_OBJ -> \adv-p_obj
+1.0000000 ADV-P_OBJ -> \**unknown**
 
 1.0000000 VINF -> \vinf
 
@@ -492,11 +492,11 @@
 0.0016420 SENT -> PONCT VN ADV PP Srel PONCT PONCT Sint PONCT
 0.0049261 SENT -> PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT NP PONCT
 
-1.0000000 CLO-OBJ -> \clo-obj
+1.0000000 CLO-OBJ -> \**unknown**
 
 1.0000000 CS -> \cs
 
-1.0000000 PROWH -> \prowh
+1.0000000 PROWH -> \**unknown**
 
 1.0000000 NPP -> \npp
 
@@ -504,11 +504,11 @@
 
 1.0000000 VPP -> \vpp
 
-1.0000000 CLO-DE_OBJ -> \clo-de_obj
+1.0000000 CLO-DE_OBJ -> \**unknown**
 
-1.0000000 CLO-A_OBJ -> \clo-a_obj
+1.0000000 CLO-A_OBJ -> \**unknown**
 
-1.0000000 CLO-ATS -> \clo-ats
+1.0000000 CLO-ATS -> \**unknown**
 
 0.0056818 VPinf -> VN PP Ssub PONCT
 0.0056818 VPinf -> P VN ADV PP NP
@@ -569,7 +569,7 @@
 
 1.0000000 P -> \p
 
-1.0000000 VS -> \vs
+1.0000000 VS -> \**unknown**
 
 0.0002597 NP -> DET ADJ NC PONCT NP PONCT VPpart
 0.0002597 NP -> ADJ DET NC VPpart PONCT NP PONCT
@@ -1085,13 +1085,13 @@
 
 1.0000000 DET -> \det
 
-1.0000000 CLO-P_OBJ -> \clo-p_obj
+1.0000000 CLO-P_OBJ -> \**unknown**
 
 1.0000000 PREF -> \pref
 
 1.0000000 CC -> \cc
 
-1.0000000 CLO-MOD -> \clo-mod
+1.0000000 CLO-MOD -> \**unknown**
 
 0.0081301 VPpart -> VPP COORD
 0.0121951 VPpart -> VN
