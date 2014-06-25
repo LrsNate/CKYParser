@@ -25,7 +25,9 @@ Universit\'e Paris 7 - Paris Diderot}
 \section{Pr\'esentation du probl\`eme}
 
 Le pr\'esent projet s'inscrit dans le cadre du domaine de Traitement Automatique
-des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs  \`a extraire de l'information des textes en langage naturel en minimisant l'implication des humains. G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
+des Langues Naturelles. L'enjeu principal de ce domaine est d'apprendre aux ordinateurs  
+\`a extraire de l'information des textes en langage naturel en minimisant l'implication des humains. 
+G\'en\'eralement l'analyse automatique de ces textes se fait par plusieurs \'etapes selon leurs niveaux de sophistication:
 
 \begin{enumerate}
 \item D\'ecoupage du texte en phrases.
@@ -36,7 +38,10 @@ mot-occurrence.
 \item Analyse s\'emantique.
 \end{enumerate}
 
-Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre outil on souhaite se rapprocher des situations r\'eelles et donc travailler avec des textes bruts, on passe in\'evitablement par les trois premi\`eres \'etapes aussi. La derni\`ere \'etape list\'ee ci-dessus ne fait en revanche pas partie de notre travail.
+Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`es lors que pour l'\'evaluation de notre 
+outil on souhaite se rapprocher des situations r\'eelles et donc travailler avec des textes bruts, 
+on passe in\'evitablement par certains de premi\`eres \'etapes aussi. La
+derni\`ere \'etape list\'ee ci-dessus ne fait en revanche pas partie de notre travail.
 
 \subsection{Analyse syntaxique en constituants}
  On suppose qu'en entr\'ee on a une s\'equence de mots provenant d'un certain
@@ -45,8 +50,8 @@ Dans notre projet nous nous concentrons sur l'analyse syntaxique. Cependant, d\`
 
 \subsection{Le but (l'utilit\'e) de l'analyse syntaxique}
 
-Il faut reconna\ˆitre que l'analyse syntaxique en soi est rarement le but d'un outil de
-TAL quelconque. En revanche, c'est une \'etape qui s'av\`ere cruciale en ce qu'elle ouvre la possibilit\'e d'une analyse s\'emantique efficace, car toute description
+Il faut reconna\^itre que l'analyse syntaxique en soi est rarement le but d'un
+outil de TAL quelconque. En revanche, c'est une \'etape qui s'av\`ere cruciale en ce qu'elle ouvre la possibilit\'e d'une analyse s\'emantique efficace, car toute description
 s\'emantique se base en partie sur les relations syntaxiques entre les parties d'une
 phrase.
 
@@ -102,8 +107,10 @@ ne peut pas \^etre enlev\'ee par des humains eux-m\^emes en absence de contexte
 tandis que pour les humains il n'existe qu'une seule variante d'analyse possible
 \end{itemize}
 
-On note ici que m\^eme si les deux types d'ambig\"uit\'e sont pr\'esents sur tous les niveaux d'analyse, l'ambig\"uit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
-rel\`eve largement d'ambig\"uit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus de l'ambig\"uit\'e syntaxique r\'eelle on peut mentionner l'ambig\"uit\'e de rattachement pr\'epositionnel :
+On note ici que m\^eme si les deux types d'ambig\"uit\'e sont pr\'esents sur tous les niveaux d'analyse, 
+l'ambig\"uit\'e r\'eelle est relativement rare en tok\'enisation et tagging, tandis que l'analyse syntaxique
+rel\`eve largement d'ambig\"uit\'e r\'eelle aussi bien qu'artificielle. Parmi les cas les plus r\'epandus 
+de l'ambig\"uit\'e syntaxique r\'eelle on peut mentionner l'ambig\"uit\'e de rattachement pr\'epositionnel :
 
 \begin{exe}
 \ex La fille voit le professeur avec un t\'elescope.
@@ -156,7 +163,8 @@ maximales.
 
 \subsection{Deux strat\'egies d'analyse}
 
-Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ l'ensemble des r\`egles est l'union disjointe $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
+Supposons que dans notre grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \tilde{\mathrm{P}} \right>$ 
+l'ensemble des r\`egles est l'union disjointe $\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$ de deux types de r\`egles:
 
 \begin{itemize}
 \item les r\`egles lexicales
@@ -216,11 +224,14 @@ parsing, nous divisons le corpus en trois parties :
   L'\'etape d'\'evaluation est abord\'ee plus en d\'etail dans la section homonyme.
 \end{itemize}
 
-Afin d'avoir la grammaire la plus compl\`ete possible, nous avons fait le choix
-d'utiliser la plus grande partie du corpus (60\% de toutes les phrases du
-corpus) pour l'apprentissage. Le reste est divis\'e \'egalement entre les deux
-autres parties, donc le corpus de d\'eveloppement et le corpus de test consistent
-chacun de 20\% de la totalit\'e des phrases. \par
+Afin d'avoir la grammaire la plus compl\`ete possible tout en gardant
+l'homog\'en\'eit\'e du corpus d'apprentissage en termes de style du langage,
+nous avons d'abord fait le choix d'utiliser la partie de Sequoia Tree Bank
+issue de Wikip\'edia (comme il \'etait le plus grand de ceux inclus dans ce
+corpus arbor\'e), ensuite on a choisi un pourcentage de phrases pr\'epond\'erant
+(60\% de toutes les phrases du corpus) \'a \^etre utilis\'e pour l'apprentissage. 
+Le reste est divis\'e \'egalement entre les deux autres parties, donc le corpus de d\'eveloppement 
+et le corpus de test consistent chacun de 20\% de la totalit\'e des phrases. \par
 
 Pour \^etre s\^urs que les r\'esultats de l'\'evaluation ne d\'ependent pas de la mani\`ere
 dont le corpus est divis\'e en parties, nous choisissons \`a chaque fois au hasard
@@ -241,7 +252,8 @@ r\'e\'ecrit en $\beta$ dans le corpus d'apprentissage.
 Une telle estimation par fr\'equences relatives donne l'estimation par maximum de vraisemblence
 sous l'hypoth\`ese d'ind\'ependance suivante. On suppose que dans un arbre syntaxique chaque
 symb\^ole se re\'ecrit ind\'ependamment de ses fr\`eres dans l'arbre (c'est \`a dire des noeuds qui se situe
-au m\^eme niveau) aussi bien que de tous ses anc\^etres (des noeuds des niveaux plus hauts, donc plus proche de l'axiome). C'est avec ces hypoth\`eses d'ind\`ependance qu'on obtient la formule du calcul de la probabilit\'e
+au m\^eme niveau) aussi bien que de tous ses anc\^etres (des noeuds des niveaux plus hauts, donc plus proche de l'axiome). 
+C'est avec ces hypoth\`eses d'ind\`ependance qu'on obtient la formule du calcul de la probabilit\'e
 d'un arbre par produit des probabilit\'es des r\`egles de re\'ecriture qu'il contient.
 
 En outre, dans leur article de 1998 Chi et Geman ont prouv\'e qu'une PCFG estim\'ee par
@@ -279,21 +291,22 @@ et remonte vers l'axiome de la grammaire pour retrouver en ordre inverse toutes 
 aurait fallu appliquer pour engendrer cette phrase. La coml\'exit\'e de cet
 algorithme est de $O(n^3)$. \par
 
-Le parseur bas\'e sur l'algorithm CKY attend en entr\'ee une grammaire sous forme
-normale de Chomsky et une phrase (tok\'enis\'ee) \`a analyser. La phrase peut \^etre
-d\'ej\`a \'etiquet\'ee, dans ce cas c'est une s\'equence de cat\'egories lexicales qui est
-pass\'ee \`a l'algorithme.
+Le parseur bas\'e sur l'algorithme CKY attend en entr\'ee une grammaire sous
+forme normale de Chomsky et une phrase (tok\'enis\'ee) \`a analyser. La phrase peut \^etre
+d\'ej\`a \'etiquet\'ee, dans ce cas c'est une s\'equence de cat\'egories
+morpho-syntaxiques qui est pass\'ee \`a l'algorithme.
 
 \subsubsection{L'algorithme standard}
 Dans la version classique de l'algorithme CKY, l'algorithme parcourt la phrase
 donn\'ee en analysant toutes ses sous-cha\^ines possibles, en commencant par les
 sous-chaines de longueur 1 (donc des mots de la phrase) et en remontant vers la
-plus grande sous-cha\^ine qui est la phrase elle-m\^eme. L'algorithme
-part toujours de la partie droite de la r\`egle et cherche dand la
-grammaire toutes les parties gauches correspondantes. \par
+plus grande sous-cha\^ine qui est la phrase elle-m\^eme. L'algorithme est
+ascendant, ce qui veut dire qu'il part toujours de la partie droite de la
+r\`egle et cherche dans la grammaire toutes les parties gauches correspondantes. \par
 
 L'algorithme CKY peut
-\^etre graphiquement repr\'esent\'ee par un tableau bidimensionnel carr\'e avec la longueur de cot\'e \'egale \`a la longueur de la phrase (\'egalement appell\'e la charte CKY (CKY chart)).
+\^etre graphiquement repr\'esent\'ee par un tableau bidimensionnel carr\'e avec la longueur 
+de cot\'e \'egale \`a la longueur de la phrase (\'egalement appell\'e la charte CKY (CKY chart)).
 Seule une moiti\'e des cases du tableau est utilis\'ee. Chaque case du tableau correspond \`a une sous-cha\^ine de la phrase.
 L'algorithme \'ecrit dans chaque case les r\`egles de la grammaire qui pourraient
 engendrer cette sous-cha\^ine. En remontant vers la case qui correspond \`a la
@@ -304,11 +317,21 @@ par cette grammaire.\par
 
 La grammaire utilis\'ee par l'algorithme CKY doit obligatoirement \^etre sous forme
 normale de Chomsky (flexible), c'est-\`a-dire que la partie droite des r\`egles de
-d\'erivation consiste soit d'un terminal, soit de deux non-terminaux. Les productions
-singuli\`eres (les productions de la forme $A \rightarrow B$, o\`u $A,B \in V$) sont
-autoris\'ees aussi dans la forme flexible. Cette obligation est
+d\'erivation consiste soit d'un terminal, soit de deux non-terminaux. Cette obligation est
 due au fait que pour chaque case, l'algorithme parcourt toutes les divisions possibles de la sous-cha\^ine
-correspondante en deux parties. \par
+correspondante en deux parties. Les productions
+singuli\`eres (les productions de la forme $A \rightarrow B$, o\`u $A,B \in V$) sont
+autoris\'ees aussi dans la forme flexible. La n\'ec\'essit\'e de garder les
+productions singuli\`eres vient du fait que m\^eme si on fait un pretraitement
+de la grammaire pour faire l'analyse syntaxique, on tient \`a ce que cette
+transformation soit r\'eversible pour qu'on pourrait \`a la fin pr\'esenter
+comme r\'esultat le meilleur arbre syntaxique issu de la grammaire d'origine et
+pas de la grammaire transform\'ee.
+L'\'elimination des productions singuli\`eres ne pr\'esente pas de possibilit\'e de 
+se d\'ecider sur la pr\'esence de ces productions dans l'analyse finale de la
+phrase. Par contre, la reconversion des autres transformations est simple et est d\'ecrite dans l'une des
+sections suivantes.
+\par
 
 En cas de productions singuli\`eres, plusieurs r\`egles sont gard\'ees dans la case
 correspondante. Dans notre projet, nous avons impl\'ement\'e les r\`egles dans les
@@ -322,8 +345,8 @@ de les reconstruire \`a l\'etape de la pr\'esentation du r\'esultat.
 \subsubsection{L'injection des probabilit\'es dans l'algorithme}
 
 La version probabiliste de l'algorithme CKY est une extension de la version
-classique. La seule diff\'erence consiste du fait qu'une probabilit\'e est attribu\'ee
-\`a chaque r\`egle de la grammaire et donc \`a chaque arbre de d\'erivation. La
+classique. La seule diff\'erence consiste au fait qu'une probabilit\'e est
+attribu\'ee \`a chaque r\`egle de la grammaire et donc \`a chaque arbre de d\'erivation. La
 probabilit\'e d'un arbre de d\'erivation est calcul\'ee comme suit :
 $$P(tree) = P(rule) * P(left subtree) * P(right subtree)$$
 
@@ -350,16 +373,18 @@ que si \`a la fin on veut ressortir plusieurs meilleurs arbres il
 faut garder toutes les d\'erivations possibles dans chaque case de la charte, au
 lieu d'en garder seulement la meilleure. En revanche, si ne garder qu'un seul arbre par case n'est
  dans aucun pas appropri\'e pour la recherche de la meilleure analyse syntaxique,
- dans le cas o\'u seulement le meuilleur arbre est demand\'e
- il est facile de voir qu'on peut quand m\^eme \'economiser sur le stockage de donn\'ees
- en ne gardant qu'une seule d\'erivation par chaque symb\^ole dans la case. \par
+ dans le cas o\'u seulement un seul meuilleur arbre est demand\'e
+ il est facile de voir qu'on peut quand m\^eme \'economiser sur le stockage de
+ donn\'ees et la compl\'exit\'e en ne gardant qu'une seule d\'erivation par
+ chaque symb\^ole (de partie gauche des r\`egles) dans la case. \par
 
 Dans la case au coin du tableau (la case qui correspond \`a la phrase enti\`ere) on
 obtient alors toutes les d\'erivations possibles de la phrase (une seule si la
 phrase n'est pas ambigue). En triant les arbres obtenus par ordre d\'ecroissant de
-probabilit\'e, on obtient l'analyse syntaxique le plus probable (le plus
-probablement choisie par un humain). Les k analyses avec les plus hautes
-probabilit\'es (appel\'ees \textit{k-best parses}) peuvent \^etre renvoy\'ees afin qu'un humain
+probabilit\'e, on obtient l'analyse syntaxique le plus probable de point de vue
+de la PCFG appris sur le corpus d'entrainement, ce qui correspond dans l'id\'eal 
+\`a l'analyse le plus probablement choisie par un humain.
+Les k analyses avec les plus hautes probabilit\'es (appel\'ees \textit{k-best parses}) peuvent \^etre renvoy\'ees afin qu'un humain
 puisse en choisir la bonne. Pour des raisons d'optimisation \'a l'int\'erieur de chaque case
 du tableau de parsing on maintient le tri des arbres par ordre croissant de leurs probabilit\'es
 de fa\'con \`a ce qu'\`a l'\'etape finale tous les arbres soient d\'ej\`a tri\'es : il suffit alors d'en prendre
@@ -378,8 +403,7 @@ CNF, toutes le r\`egles ont la forme $$A \rightarrow BC$$ ou $$A \rightarrow
 
 Une grammaire en CNF peut
 aussi engendrer le mot vide : $$S \rightarrow \epsilon$$, o\`u S est l'axiome de
-la grammaire. Par contre, d\`es lors que notre projet est ax\'e au traitement des langages naturels
-qui eux ne contiennent pas le mots vide, ce cas n'est pas trait\'e par nos outils.
+la grammaire. 
 
 Dans notre projet, nous avons besoin de transformer la grammaire en forme
 normale de Chomsky flexible (flexible CNF), qui autorise les productions
@@ -544,27 +568,129 @@ Pour \'evaluer le \textbf{parsing}, il faut comparer la meilleure analyse donn\'
 par le parseur \`a l'arbre correspondant du corpus arbor\'e (l'arbre gold).
 
 Pour chaque \'etape, il faut calculer le pourcentage des r\'esultats identiques \`a
-la r\'ef\'erence gold parmi tous les r\'esultats.
+la r\'ef\'erence gold parmi tous les r\'esultats. Par contre, pour
+l'\'evaluation du parseur il ne para\^it pas convenable de compter le nombre
+d'arbres syntaxiques enti\`erement identiques \`a ceux de la r\'ef\'erence, d'un part, parce que vu
+l'abondance d'ambiguit\'e syntaxique dans les langages naturels il est peut
+probable qu'un r\'esultat haut soit jamais atteignable, d'autre part parce qu'on
+a envie de faire une analyse plus fine de la sortie du parseur. Pour ces deux
+raisons au lieu de compter les arbres on compte les constituants correctement
+identifi\'es. Chaque constituant d'une structure syntaxique d'une phrase
+correspond \`a une sous-cha\^ine de cette phrase et peut \^etre identifi\'e \`a
+un triplet $(i,j,X)$ dont $i$ est l'indice du premier mot de la sous-cha\^ine,
+$j$ --- l'indice de son dernier mot (en comptant du d\'ebut de la phrase) et $X$
+est la cat\'egorie syntaxique. Au final le rappel et la pr\'ecision du parsing
+se calculent comme suit:
+$$
+\text{Rappel} = \frac{\#constituants\:correctes}{\#
+constituants\:gold}
+$$
+$$
+\text{Precision} = \frac{\#constituants\:correctes}{\#
+constituants\:issus\:du\:parseur}
+$$
 
+Ensuite on peut en calculer une valeur moyenne qui caract\'erise l'efficacit\'e
+du parseur. Cette valeur s'appelle F-mesure (F-score) :
+$$
+\text{F-score} = 2*\frac{precision * rappel}{precision + rappel}
+$$
 
 \section{R\'esultats}
+Comme nous avons mentionn\'e ci-dessus, le but du projet \'etait de construire
+un analysateur syntaxique (un parseur) pour le francais. Pour faire cela, il est
+obligatoire d'\'etiqueter d'abord les phrases \`a analyser. Nous avons construit
+un parseur probabiliste bas\'e sur l'algorithme CKY qui peut en plus utiliser le
+m\^eme algotrithme probabiliste pour \'etiqueter la phrase donn\'ee. \par
+Nous avons donc impl\'ement\'e deux variantes d'utilisation du module CKYParser
+:
+\begin{itemize}
+  \item version lexicale, quand le parseur recoit en entr\'ee une phrase en mots
+  (bare phrase), et il doit donc \'effectuer le tagging lui-même;
+  \item version non-lexicale, quand le parseur recoit en entr\'ee une s\'equence
+  de tags morpho-syntaxiques obtenue par un taggeur externe (nous avons
+  utilis\'e MElt Tagger) et construit juste l'arbre de la phrase. Pour cela,
+  nous avons d'abord \'evalu\'e la pr\'ecision du tagging \'effectu\'e par MElt
+  Tagger sur notre corpus, ce qui a donn\'e 92\%.
+\end{itemize}
+
+Apr\'es l'\'evaluation des r\'esultats des deux strat\'egies, nous avons conclu
+que quand c'est le parseur qui utilise l'algorithme CKY
+probabiliste pour \'etiqueter la phrase en l'analysant en m\^eme temps, 
+l'\'efficacit\'e du parseur est moins satisfaisante que quand le parseur recoit
+les \'etiquettes morpho-syntaxiques s\^ures du taggeur MElt (qui se base sur
+les mod\`eles Maximum Entropy). \par
+La diff\'erence est particuli\'erement
+saillante dans le cas o\`u le parseur ne traite pas les phrases avec des mots inconnus
+(version primitive de gestion des mots inconnus) : dans la version
+non-lexicale, avec un input \'etiquet\'e, les seuls "mots" inconnus sont des
+cat\'egories lexicales eventuellement absentes dans le corpus d'entra\^inement.
+Quand on utilise une probabilit\'e apriori pour tous les mots inconnus, la
+diff\'erence est quand m\^eme pr\'esente, ce qui nous am\'ene \'a la conslusion
+que le parseur CKY n'est pas tr\'es adapt\'e \`a la t\^ache du tagging, et donne
+meilleurs r\'esultats \'etant utilis\'e en couple avec un taggeur.\par
+
+
+\subsection{Am\'elioration possible}
+Pour am\'eliorer les r\'esultats obtenus par notre parseur (par rapport aux
+r\'esultats obtenus en utilisant le taggeur MElt), il est possible de
+param\'etrer la gestion des mots inconnus.
+Pour la gestion des mots inconnus, nous avons propos\'e deux strat\'egies et
+nous pouvons alors modifier deux param\`etres :
+\begin{itemize}
+  \item  si on donne une probabilit\'e apriori \`a tous les mots inconnus, on
+  peut varier le param\`etre $\alpha$ qui est la probabilit\'e de produire un
+  mot inconnu sachant sa probabilit\'e. Cette probabilit\'e peut \^etre la m\^eme
+  pour toutes les cat\'egories lexicales, ou, pour optimiser encore, on peut
+  fixer la probabilit\'e $\alpha$ diff\'erente pour chaque cat\'egorie.
+  \item si on consid\'ere les mots rarement rencontr\'es dans le corpus
+  d'entra\^inement comme inconnus et on somme leurs probabilit\'es pour obtenir la probabilit\'e de produire un mot inconnu pour
+  chaque cat\'egorie, alors on peut faire varier le param\`etre
+  \textit{unknown\_threshold} qui d\'etermine la limite du nombre des
+  fois que'un mot est rencontr\'e dans le corpus, en-dessous de laquelle le mot
+  est consid\'er\'e comme inconnu.
+\end{itemize} 
+
+En faisant varier les param\`etres dans ces deux approches, nous pourrions
+augmenter l'\'efficacit\'e du parseur impl\'ement\'e dans notre projet.
+
 
 \section{Utilisation}
 \subsection{La structure modulaire}
-Le projet consiste des trois modules ind\'ependants qui permettent d'apprendre une
-grammaire \`a partir de Sequoia Tree Bank \cite{Sequoia} et de l'utiliser pour
-analyser des phrases donn\'ees par l'utilisateur. Chaque module prend en
-argument l'output du module pr\'ecedent. L'ordre d'application de ces trois
-modules est le suivant :
+Pour notre projet nous avons choisi l'impl\'ementation en plusieurs modules
+indépendants qui peuvent être utilisés séparement en ligne de commande. Chaque
+module produit l'information qui peur \^etre utilis\'ee par un autre module.
+\par
+Les trois modules principaux permettent d'apprendre une grammaire \`a
+partir de Sequoia Tree Bank \cite{Sequoia} et de l'utiliser pour analyser des phrases donn\'ees par l'utilisateur. Chaque module prend en argument l'output du module pr\'ecedent. L'ordre d'application de ces trois modules est le suivant :
 \begin{enumerate}
-  \item Le module TrainSetReader, \'etant donn\'e les fichiers de Sequoia Tree Bank,
-  en construit une grammaire hors-contexte probabiliste;
-  \item Le module CNFConverter prend la grammaire et la transforme en forme
-  normale de Chomsky flexible;
-  \item Le module CKYParser se base sur la grammaire apprise par TrainSetReader
-  et transform\'ee par CNFConverter pour donner l'analyse syntaxique des phrases
+  \item Le module \textbf{TrainSetReader}, \'etant donn\'e les fichiers de
+  Sequoia Tree Bank, en construit une grammaire hors-contexte probabiliste;
+  \item Le module \textbf{CNFConverter} prend la grammaire et la transforme en
+  forme normale de Chomsky flexible;
+  \item Le module \textbf{CKYParser} se base sur la grammaire apprise par
+  TrainSetReader et transform\'ee par CNFConverter pour donner l'analyse syntaxique des phrases
   en francais.
 \end{enumerate}
+
+Il y a aussi deux modules suppl\'ementaires qui ne participent pas au
+fonctionnement du programme, mais qui sont utilis\'es pour rendre possible
+l'\'evaluation. Ces deux modules permettent de comparer l'output du programme
+\`a l'analyse gold :
+\begin{itemize}
+  \item Le module \textbf{AnnotationStripper} prend des phrases analys\'ees et
+  enl\`eve toute la structure syntaxique afin d'obtenir la phrase \'ecrite juste
+  en mots sans tags (phrase "nue"), en couples mot/tag (phrase \'etiquet\'ee) ou
+  alors juste en tags (s\'equence des cat\'egories lexicales). Ce module est
+  utilis\'e pour \'evaluer le tagging.
+  \item Le module \textbf{BackConverter} prend des phrases analys\'ees par le
+  parseur CKY (utilisant la grammaire transform\'ee en forme normale de Chomsky), et
+  reconvertit les arbres syntaxiques en arbres g\'en\'er\'es par la grammaire
+  d'origine (non-CNF) en gardant la structure syntaxique. Pour faire cela, le
+  module enl\`eve de l'arbre tous les non-terminaux interm\'ediaires qui ont
+  \'et\'e cr\'ees pendant la transformation de la grammaire en CNF. Ce module
+  est utilis\'e pour \'evaluer le parsing.
+\end{itemize}
 
 \subsection{TrainSetReader}
 \subsubsection{Nom}
@@ -620,7 +746,7 @@ normale de Chomsky flexible.
 
 {\ttfamily
 \begin{verbatim}
-python cnf-converter.py [-p prob] [-t term_droite]
+./CNFConverter/cnf-converter.sh [-p prob] [-t term_droite]
 \end{verbatim}
 }
 
@@ -653,7 +779,7 @@ grammaire en CNF.
 {\ttfamily
 \begin{verbatim}
 java -jar CKYParser.jar [-l log_prob] [-k k_best] [-a apriori_unknown_prob] [-u
-unknown_label] -g grammar_file [-o output_file] [-n non_lexical_input]
+unknown_label] -g grammar_file [-o output_file]
 \end{verbatim}
 }
 
@@ -688,9 +814,6 @@ Chomsky, une r\`egle par ligne.
 \item[\texttt{-o, --output-file output\_file}] Sp\'ecifie le chemin vers le
 fichier dans lequel le parseur \'ecrira son output. Si cet argument n'est pas
 donn\'e, le parseur \'ecrit le r\'esultat sur la sortie standard.
-\item[\texttt{-n, --non-lexical-input non\_lexical\_input}] Si cette option est
-sp\'ecifi\'ee, le programme consid\`ere que toute phrase donn\'ee consiste seulement des
-non-terminaux (cat\'egories lexicales au lieu des mots).
 \end{description}
 
 

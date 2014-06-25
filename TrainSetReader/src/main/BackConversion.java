@@ -33,7 +33,7 @@ public class BackConversion {
 		IsAlien to_be_deleted = new IsAlien(prefix);	
 		while (sc.hasNext()) {
 			String res = "";
-			String str_new_tree = sc.next();
+			String str_new_tree = sc.nextLine();
 			if (mode_probabilistic) {
 				String arr[] = str_new_tree.split(" ", 2);
 				String probability = arr[0];
@@ -42,7 +42,8 @@ public class BackConversion {
 			}
 			TreeNode input_tree = new TreeNode(str_new_tree);
 			TreeNode output_tree = TreeNode.eliminate_nodes(to_be_deleted, input_tree);
-			res = res + output_tree.toBracketed();
+			boolean terminals_backslashed = false;
+			res = res + output_tree.toBracketed(terminals_backslashed);
 			System.out.println(res);
 		}
 		sc.close();

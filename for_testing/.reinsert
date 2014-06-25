@@ -1,0 +1,73 @@
+(SENT (NP (NC Affaire) (PP (P+D des) (NP (NC caporaux) (PP (P de) (NP (NPP Souain)))))))
+(SENT (NP (DET L') (Z958 (NC affaire) (Z60 (PP (P+D des) (NP (NC caporaux) (PP (P de) (NP (NPP Souain))))) (Z59 (PONCT ,) (VPpart (VPP fusillés) (PP (P pour) (NP (DET l') (NC exemple)))))))) (Z751 (PONCT ,) (Z51 (VN (V est)) (Z50 (NP (PRO un)) (Z49 (PP (P+D des) (Z62 (NP (NC cas) (PP (P parmi) (NP (DET les) (AP (ADV plus) (ADJ flagrants))))) (COORD (CC et) (NP (DET les) (AP (ADV plus) (ADJ médiatisés)))))) (Z26 (PP (P de) (NP (DET l') (Z989 (NC injustice) (Z869 (AP (ADJ militaire)) (PP (P durant) (NP (DET la) (Z1162 (ADJ Première) (Z1077 (NC Guerre) (AP (ADJ mondiale)))))))))) (PONCT .)))))))
+(SENT (NP (DET Le) (Z1149 (ADJ 11) (Z1148 (NC avril) (NC 1920)))) (Z236 (PONCT ,) (Z235 (NP (DET le) (Z940 (NC ministère) (PP (P de) (NP (DET la) (NC justice))))) (Z234 (VN (V refusait)) (Z209 (VPinf (P d') (Z24 (VN (VINF examiner)) (NP (DET le) (NC dossier)))) (PONCT .))))))
+(SENT (NP (DET Le) (Z1360 (NC caporal) (NPP Lechat))) (Z369 (VN (V fut) (VPP ré-inhumé)) (Z368 (PP (P+D au) (NP (NC cimetière) (PP (P+D du) (NP (NPP Ferré))))) (Z15 (NP (DET le) (Z1149 (ADJ 16) (Z1148 (NC octobre) (NC 1924)))) (PONCT .)))))
+(SENT (NP (DET la) (Z1077 (NC presse) (AP (ADJ régionale) (COORD (CC et) (AP (ADJ nationale)))))) (Z644 (VN (ADV ne) (V cessa)) (Z643 (VPinf (P de) (Z56 (VN (VINF parler)) (Z55 (PP (P de) (NP (DET l') (NC affaire))) (COORD (CC et) (Srel (NP (DET les) (NC soutiens)) (Z36 (VN (V affluèrent)) (PP (P de) (NP (NC dizaines) (PP (P d') (NP (NC associations) (PP (P de) (NP (NC mutilés) (PP (P de) (NP (NC guerre))))))))))))))) (Z157 (COORD (CC et) (PP (P d') (NP (ADJ anciens) (NC combattants)))) (PONCT .)))))
+(SENT (PONCT -) (Z713 (NP (NC Général) (Z1191 (NPP André) (Z1141 (NPP Bach) (Z37 (PONCT ,) (NP (NPP Fusillés) (PP (P pour) (NP (DET l') (NC exemple)))))))) (Z586 (PONCT -) (Z585 (NP (NC 1914-1915)) (Z355 (PONCT ,) (Z338 (NP (NC Éditions) (NPP Tallandier)) (Z337 (PONCT ,) (Z336 (NP (NC 2003)) (Z252 (PONCT -RRB-) (PONCT .))))))))))
+(SENT (NP (NC Affaire)))
+(SENT (VN (CLS-SUJ Elle) (Z103 (V semble) (Z102 (ADV essentiellement) (VPP due)))) (Z26 (PP (P à) (NP (DET une) (Z1047 (NC compétition) (Z972 (PP (P+D des) (NP (NC médias) (PP (P entre) (NP (PRO eux))))) (Z895 (PONCT ,) (Srel (NP (PRO chacun)) (Z31 (VN (VPR reprenant)) (Z30 (NP (DET l') (Z940 (NC information) (PP (P+D du) (NP (NC concurrent))))) (VPinf (P en) (VN (CLO-OBJ l') (VPR amplifiant))))))))))) (PONCT .)))
+(SENT (ADV En_fait) (Z291 (PONCT ,) (Z290 (Srel (NP (DET l') (NC histoire)) (Z1511 (VN (V retient)) (Z1510 (ADV aujourd'_hui) (Z32 (NP (DET quelques) (Z1372 (NC centaines) (Z72 (PP (P de) (NP (NC morts))) (Z71 (PP (P dans) (NP (ADJ toute) (Z1404 (DET la) (NPP Roumanie)))) (Z70 (PONCT ,) (COORD (CC et) (Z17 (ADV moins) (PP (P de) (NP (PRO 200) (Srel (PP (P à) (Z1580 (NP (NPP Timisoara) (PONCT -LRB-)) (ADV seulement))) (NP (PRO 96)))))))))))) (PP (P selon) (NP (DET les) (Z1281 (NC décomptes) (Z360 (AP (ADJ officiels)) (PONCT -RRB-))))))))) (PONCT .))))
+(SENT (NP (DET Les) (Z1368 (NC cadavres) (Z291 (PONCT ,) (Z290 (Srel (PP (PROREL dont)) (Z1508 (NP (DET les) (NC images)) (Z24 (VN (V avaient) (VPP fait)) (NP (DET le) (Z940 (NC tour) (PP (P+D du) (NP (NC monde)))))))) (PONCT ,))))) (Z83 (VN (V avaient) (Z125 (ADV en_réalité) (Z110 (VPP été) (VPP sortis)))) (Z26 (PP (P de) (NP (DET la) (Z940 (NC morgue) (PP (P d') (NP (DET un) (Z1077 (NC hôpital) (AP (ADJ local)))))))) (PONCT ;))))
+(SENT (PONCT -) (NP (NPP Ceausescu)))
+(SENT (NP (NC Catégories)) (Z196 (PONCT :) (Z195 (NP (NPP Wikipédia)) (Z16 (PONCT :) (Z15 (NP (NC ébauche) (NPP Roumanie)) (PONCT .))))))
+(SENT (NP (NC Désinformation)) (PONCT .))
+(SENT (NP (NC Médias)) (PONCT .))
+(SENT (ADV En_fait) (Z291 (PONCT ,) (Z290 (Srel (NP (DET ce) (NC témoignage)) (Z94 (VN (V était)) (AP (ADV entièrement) (ADJ faux)))) (PONCT .))))
+(SENT (NP (DET La) (Z1327 (ADJ jeune) (NC fille))) (Z92 (VN (V était)) (Z91 (NP (DET la) (Z940 (NC fille) (PP (P de) (NP (DET l') (Z940 (NC ambassadeur) (PP (P+D du) (NP (NPP Koweït)))))))) (Z26 (PP (P à) (NP (NPP Washington))) (PONCT .)))))
+(SENT (NP (DET La) (Z1069 (NC machination) (VPpart (VN (V a) (VPP fonctionné)) (PP (P grâce_à) (NP (DET l') (Z940 (NC intervention) (PP (P de) (NP (NPP Lauri) (NPP Fitz-Pegado))))))))) (Z730 (PONCT ,) (Z729 (NP (PROREL qui)) (Z728 (VN (V a) (VPP convaincu)) (Z727 (NP (DET les) (Z1011 (NC députés) (Ssub (CS que) (Z80 (NP (DET l') (NC identité)) (Z29 (VN (ADV n') (Z103 (V était) (Z102 (ADV pas) (VPP révélée)))) (VPinf (P pour) (Z24 (VN (VINF protéger)) (NP (DET la) (NC famille))))))))) (Z577 (PP (P de) (NP (DET la) (Z1327 (ADJ jeune) (NC femme)))) (Z337 (PONCT [) (Z336 (NP (NC 2)) (Z252 (PONCT ]) (PONCT .))))))))))
+(SENT (NP (NPP Lauri) (NPP Fitz-Pegado)) (Z619 (VN (V avait) (VPP travaillé)) (Z618 (PP (P pour) (NP (DET le) (Z1393 (NC gouvernement) (ADV auparavant)))) (Z617 (PONCT ,) (Z577 (PP (P dans) (NP (DET l') (Z1086 (NPP Agence) (PP (P de) (NP (DET l') (NC Information)))))) (Z337 (PONCT [) (Z336 (NP (NC 3)) (Z252 (PONCT ]) (PONCT .)))))))))
+(SENT (ADV Par_ailleurs) (Z291 (PONCT ,) (Z290 (Srel (NP (DET le) (Z1077 (NC gouvernement) (AP (ADJ américain)))) (Z31 (VN (V aurait) (Z119 (PP (P selon) (NP (DET plusieurs) (Z938 (NC sources) (Z16 (PONCT [) (Z15 (NP (NC 4)) (PONCT ])))))) (VPP payé))) (Z30 (NP (DET 14) (Z940 (NC millions) (PP (P de) (NP (NC dollars) (PP (P à) (NP (DET cette) (NC compagnie))))))) (VPinf (P pour) (Z29 (VN (CLO-OBJ l') (Z112 (VINF avoir) (VPP aidée))) (VPinf (P à) (Z43 (VN (VINF médiatiser)) (Z32 (NP (DET la) (Z940 (NC guerre) (PP (P+D du) (NP (NPP Golfe))))) (PP (P sous) (NP (DET un) (Z989 (NC jour) (Z869 (AP (ADJ favorable)) (PP (P à) (NP (DET l') (Z1077 (NC intervention) (AP (ADJ occidentale))))))))))))))))) (PONCT .))))
+(SENT (PONCT -) (Z335 (PONCT -LRB-) (Z334 (NP (ET en)) (Z333 (PONCT -RRB-) (Z332 (NP (NPP Ian) (NPP Urbina)) (Z331 (PONCT ,) (Z330 (NP (NPP HBO) (NP (ET adds) (NP (ET disclaimer) (Z1401 (ET to) (Z1374 (ET Gulf) (Z1309 (ET War) (ET movie))))))) (Z196 (PONCT ,) (Z195 (NP (NPP Asia) (NPP Times)) (Z16 (PONCT ,) (Z15 (NP (NC Nov) (Z1046 (NC 13) (Z912 (PONCT ,) (NC 2002)))) (PONCT .))))))))))))
+(SENT (PONCT -) (Z195 (NP (NC Guerre) (PP (P+D du) (NP (NPP Koweït)))) (Z16 (PONCT -LRB-) (Z15 (NP (NC 1990-1991)) (PONCT -RRB-)))))
+(SENT (PP (P En) (NP (NC 1973))) (Z554 (PONCT ,) (Z553 (NP (NPP Valéry) (Z1331 (NPP Giscard) (Z203 (PP (P d') (NP (NPP Estaing) (Z895 (PONCT ,) (Srel (NP (NC ministre) (PP (P+D des) (NP (NC Finances) (PP (P de) (NP (NPP Georges) (NPP Pompidou)))))) (Z42 (VN (V reçoit)) (Z41 (PP (P+D du) (NP (NC chef) (PP (P d') (NP (NC État) (AP (ADJ centrafricain)))))) (NP (DET une) (Z940 (NC plaquette) (PP (P de) (NP (NC diamants) (AP (ADJ africains)))))))))))) (Z16 (PONCT -LRB-) (Z15 (NP (DET deux) (Z1322 (NC étoiles) (Z1321 (PP (P de) (NP (ADJ petites) (NC pierres))) (AP (ADJ fines))))) (PONCT -RRB-)))))) (Z552 (PONCT ,) (Z551 (NP (NC échantillon) (PP (P de) (NP (DET la) (Z940 (NC production) (PP (P de) (NP (DET l') (Z940 (NC école) (PP (P de) (NP (NC taille) (PP (P de) (NP (NC pierre) (PP (PROREL qu'))))))))))))) (Z550 (VN (CLS-SUJ il) (V avait)) (Z153 (VPpart (VPP créée) (PP (P à) (NP (NPP Bangui)))) (PONCT .))))))))
+**24** DET NC V ADV VPP P DET NC CC DET NC P NC PONCT
+**25** DET NC P+D NC DET NPP V PRO P+D NC VPP P DET NPP VPP CC DET NPP PROREL V ADV P DET NC PROREL CLR V VINF DET NC PONCT ADV VPP P DET NC NPP NPP PONCT ADJ NC P NPP NPP PROREL CLS-SUJ V DET NC PONCT CLS-SUJ V VPP P DET NPP P DET NC P DET NC P NPP PONCT PONCT NC PONCT PONCT
+**26** DET NC P+D NC P DET NC V VPP P+D NC P NPP P DET NPP P NPP CS DET NC PONCT DET NC PONCT V VPP P DET NC ADJ P+D NC PONCT
+**27** PONCT PONCT NPP NPP P NPP PONCT DET NC CC DET NC PONCT
+**28** DET NC PONCT NC NC PONCT NC PONCT
+**29** PONCT PONCT NPP NPP V ADV DET NC P+D NC DET NC P+D NC NPP NPP PONCT NC PONCT
+**30** NC PONCT NC PREF ADJ ADJ
+**31** DET NC P+D NC P+D NPP V DET NC ADJ P DET NC P NPP NPP PONCT
+**32** CLS-SUJ V DET NC P DET NC ADJ P+D NPP CC DET NPP P DET NC P+D NC PROREL V VPP DET NC ADJ P CLR VPR P NPP PONCT
+**33** DET NC V P NC VPP ADJ P DET NC PONCT PROREL V VPP VPP CC VPP P DET NC PONCT
+**34** P NPP
+**35** DET NC VPP P NPP CLR V P DET NC PONCT
+**36** NPP PONCT NC NC PONCT
+**37** NC
+**38** NC PONCT NPP PONCT NC NC P NPP
+**39** NC P+D NC ADJ P DET NC P NPP
+**40** DET NPP V DET NC ADJ VPP P NPP NPP PONCT CC PROREL CLS-SUJ V P DET NC DET NC PONCT CS CLS-SUJ V DET NC P NC P NPP PONCT
+**41** NPP NPP V VPP P DET NC P DET NC P NC ADJ CC NC PONCT
+**42** NC P DET NC
+**43** PONCT NC ADJ NC NC PONCT DET NC ADJ P NPP V VPP DET NC P NC P DET NC PONCT
+**44** PONCT NC P+D ADJ VPP P NC
+**45** NC P+D ADJ VPP P NC
+**46** DET NC P+D ADJ VPP P NC P+D NC P+D NC P NPP V DET NC P NC ADJ ADJ P+D ADJ NC PREF ADJ P DET NC P NPP CC P+D NC ADJ P+D NPP PONCT
+**47** P DET NC PONCT NPP NPP PONCT ADJ NC NPP P DET NC PONCT PONCT NPP NPP PONCT NC P+D NC P+D NPP ADJ NPP NPP PONCT CC ADV DET NC P NPP NPP PONCT DET ADJ NC NC P NPP ADJ PONCT NPP PONCT PONCT
+**48** NPP PONCT
+**49** DET NC NPP NPP CLR V VINF DET NC P DET NC PONCT
+**50** PONCT ADJ NC NC PONCT DET ADJ NC ADJ V VPP P NPP P DET NC NPP NPP PONCT
+**51** PONCT ADJ NC NC PONCT DET NC VPP P NPP NPP P NPP NPP PONCT NPP PONCT CC NPP NPP PONCT NPP PONCT P DET NPP ADJ V VPP CS DET NC P DET NC P DET NC ADJ VPP P DET ADJ NC P DET NC ADJ P NC ADV V ADV DET PONCT NC PONCT PONCT
+**52** PONCT ADJ NC NC PONCT DET ADJ NC P NC NPP NPP CC NPP NPP V P NC DET PREF NC CC PREF NC P+D ADJ NC PONCT VPP P VINF VPP DET NC ADJ PONCT ADJ CC ADJ P VINF ADV P DET NC ADJ DET NC ADJ PONCT
+**53** DET NC PROREL V VPP P NC CC P NC P NC PONCT
+**54** PONCT ADJ NC NC PONCT DET NC P DET NC V VPP P+D DET NC VPP P NC PONCT
+**55** DET NC V P PONCT NC ADJ PONCT P NC ADJ P NC CC NC PONCT
+**56** DET NPP V VINF P PONCT NC ADJ PONCT VPR PONCT VPP NC P DET NC PONCT P+D NC ADJ P NC CC NC PONCT
+**57** NPP NPP V VPP P DET NC P VINF DET NC P NC PROREL V VPP NC P DET NC ADJ PONCT VPR CS DET NC V VPP PONCT
+**58** DET NC P+D NC PONCT ADV VPP NC P+D NC PONCT V DET NC CC DET NC ADJ CC ADJ VPP P DET NC ADJ P+D NC P+D ADJ NC PONCT
+**59** P DET NC PONCT DET NC NPP PONCT NC P DET NC P NPP PONCT VPP P DET NC P DET NC CC DET NC ADJ CC ADJ PONCT V VPP P VINF P+D NC P DET NC CC NC PONCT CC ADV ADV P VINF DET NC PONCT NPP PONCT PONCT DET NC P NC PONCT ADV ADV ADJ PONCT P+D NPP P PROREL V CC V VPP DET NC ADJ ADJ P NC ADV ADJ P NPP NPP CC DET NC NPP PONCT
+**60** NC
+**61** NC P+D NC P NPP
+**62** DET ADJ NC P DET NC
+**63** NPP NPP V VPP DET NC P NC P VINF VINF DET NC PONCT DET NC NC V NPP CC V VPP P NPP NPP PONCT DET NC NC V DET NPP ADJ CC DET NC NC PONCT VPP P NPP NPP CC NPP NPP PONCT PROREL V NPP CC DET NPP PONCT
+**64** DET ADJ NC V P DET NC P NC ADJ P NPP NPP VPP P DET NC ADJ P NC PONCT
+**65** DET NC PONCT VPP PONCT NC ADJ PONCT PONCT V VINF DET NC CC DET NC ADJ PONCT
+**66** NC
+**67** PONCT P DET NC P+D NC P NPP PONCT NPP PONCT ADJ NC NC
+**68** NC NC PONCT NPP NPP PONCT
+**69** DET NC V CS PONCT PONCT P NC P NC NC P NPP PONCT DET NC ADJ V VPP VPP P+D NC ADJ VPP P DET NC ADJ P P NPP PONCT PONCT
+**70** NC
+**71** CC CS CLS-SUJ V NPP NPP PONCT NPP NPP V VPP P DET NC P+D NC VPP P NPP NPP PONCT ADV P DET NC P DET NC P+D NC ADJ NPP NPP PONCT
+**72** ADV P VINF DET NC PONCT P NC ADJ P DET NC PONCT NPP NPP V DET NC P+D NC NC PONCT P PROREL CLS-SUJ V PONCT DET NC P DET NC ADJ PONCT PONCT PRO PROREL DET PRO P DET NC PONCT NPP NPP PONCT V P DET NC P DET PONCT NC P+D NPP PONCT PONCT DET NPP ADJ ADJ PONCT
+**73** PRO ADV V ADVWH-P_OBJ DET NC V ADV PONCT
+ERROR: length mismatch between the non-lexical parse and the tagged phrase

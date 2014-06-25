@@ -1,0 +1,4 @@
+(0.01 (SENT (NP (NC Affaire) (PP (P+D des) (NP (NC caporaux) (PP (P de) (NP (NPP Souain))))))))
+(0.45 (SENT (NP (NC Affaire) (PP (P+D des) (NP (NC caporaux))) (PP (P de) (NP (NPP Souain))))))
+(0.99 (SENT (NP (NC Affaire) (PP (P+D des) (NP (NC caporaux) (PP (P de) (NP (NPP Souain))))))))
+(0.87 (SENT (NP (NC Affaire) (PP (P+D des) (NP (NC caporaux))) (PP (P de) (NP (NPP Souain))))))
