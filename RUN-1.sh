@@ -18,12 +18,44 @@ tagging_gold=1
 ## log_prob=0 sinon
 log_prob=1
 
+## set to a positive integer
+## k_best = le nombre de meilleurs arbres syntaxiques
+## à envoyer pour chaque phrase
+## NOTE: si (k_best > 1) l'étape de l'évaluation du parseur
+## 		n'est pas éffectué
+## 	( l'évaluation est prévue seulement pour k_best = 1)
+k_best=2
+
+
+## set  unknown_threshold to a positive integer
+## in order to estimate the probabilities of unknown words
+## in each category 
+## by frequencies of rare words
+## A word is considered rare if  its number of occurrences
+## in the corpus is less than or equal to unknown_threshold
+unknown_threshold=0
+## set to zero to turn this option off
+# unknown_threshold=0
+
+## apriori probability of getting an unknown word 
+## in a category
+apriori_prob=0
+# set to zero to turn this option off
+# apriori_prob=0
+
 ## /////////////////////////////////////////////////////
 if [ "$mode_non_lexical" -gt "0" ]
 then
 mode_lexical=0
 else
 mode_lexical=1
+fi
+
+if [ "$unknown_threshold" -gt "0" ]
+then
+rare_mode=1
+else
+rare_mode=0
 fi
 
 ## le répositoire où se trouvent tous les scripts, programmes aussi bien que les données
@@ -81,13 +113,26 @@ TRAIN_GRAMMAR="$DIR""/TrainSetReader.jar"
 CMD_grammar_format_issues="$DIR""/sh/grammar_format_issues.sh"
 
 unknown_label="**UNKNOWN**"
+grammar_opts=""
+if [ "$rare_mode" -gt "0" ]
+then
+echo "--- Mode de l'apprentissage de la grammaire: rare words treated as unknown ---"
+grammar_opts="-u $unknown_threshold -s $unknown_label"
+fi
 
 #--- apprentissage de la grammaire depourvue de règles lexicales ---
 ## (si l'option correspondante est choisie)
 if [ "$mode_non_lexical" -gt "0" ]
 then
 echo "--- apprentissage de la grammaire non-lexicale ---"
-cat $f_train_corpus_arbore | java -jar "$TRAIN_GRAMMAR" -p 7 -t 1 | "$CMD_grammar_format_issues" > $f_grammar_non_lex
+  if [ "$rare_mode" -gt "0" ]
+  then 
+  echo "--- Mode de l'apprentissage de la grammaire: rare words treated as unknown ---"
+  cat $f_train_corpus_arbore | java -jar "$TRAIN_GRAMMAR" -p 7 -t 1 -u $unknown_threshold -s $unknown_label | "$CMD_grammar_format_issues" > $f_grammar_non_lex
+  else
+  cat $f_train_corpus_arbore | java -jar "$TRAIN_GRAMMAR" -p 7 -t 1 | 
+"$CMD_grammar_format_issues" > $f_grammar_non_lex
+  fi
 fi
 
 # --- apprentissage de la grammaire pourvue de règles lexicales ---
@@ -96,7 +141,7 @@ if [ "$mode_lexical" -gt "0" ]
 then
 echo "--- apprentissage de la grammaire lexicale ---"
 ## l'option -l pour "lexical" est passée en parametres
-cat $f_train_corpus_arbore | java -jar "$TRAIN_GRAMMAR" -p 7 -t 1 -l | "$CMD_grammar_format_issues" > $f_grammar_lex
+cat $f_train_corpus_arbore | java -jar "$TRAIN_GRAMMAR" -p 7 -t 1 -l "$grammar_opts" | "$CMD_grammar_format_issues" > $f_grammar_lex
 fi
 
 # ----------------------------------------------------------------------
@@ -147,8 +192,17 @@ CKYParser="$DIR""/CKYParser.jar"
 ## ---- parse the arguments passed to this script 
 ##	and transform them to CKYParser options ----
 parser_opts=""
-if [ "$log_prob" -gt "0" ]; then 
-
+if [ "$log_prob" -gt "0" ]; then parser_opts="$parser_opts"" -l"; fi
+if [ ! "$k_best" -gt "0" ]; then k_best=1; fi
+parser_opts="$parser_opts"" -k $k_best";
+if [ "$apriori_prob" -gt "0" ]; then 
+parser_opts="$parser_opts"" -a $apriori_prob"; 
+else
+if [ "$rare_mode" -gt "0" ]; then
+parser_opts="$parser_opts"" -u $unknown_label";
+fi
+fi
+## ---------------------------------------------------
 
 ## ------------------ Mode Non-lexical: 
 ##          les catégories morpho-syntaxiques 
@@ -176,7 +230,7 @@ fi # fi tagging_gold
 ## ----- appeler le parseur -----
 echo "--- PARSING ---"
 f_parse="$DIR_TREES""/dev_parse_non_lexical.txt"
-cat $f_dev_non_lex | java -jar "$CKYParser"  -k 1 -g "$f_grammar_non_lex" > $f_parse
+cat $f_dev_non_lex | java -jar "$CKYParser" "$parser_opts" -g "$f_grammar_non_lex" > $f_parse
 
 fi # fi mode_non_lexical
 
@@ -192,7 +246,7 @@ then
 
 echo "--- PARSING ---"
 f_parse="$DIR_TREES""/dev_parse_lexical.txt"
-cat $f_dev_lex | java -jar "$CKYParser"  -k 1 -g "$f_grammar_lex" > $f_parse
+cat $f_dev_lex | java -jar "$CKYParser" "$parser_opts" -g "$f_grammar_lex" > $f_parse
 
 fi # mode_lexical
 
@@ -201,7 +255,12 @@ fi # mode_lexical
 
 echo "--- Reinsert  the lexical elements into the parse trees ---"
 ## ====== ReinsertLexicals ======
+if [ "$k_best" -gt "1" ]
+then
+CMD_reinsert="$DIR""/sh/ReinsertLexicals/reinsert_lexicals_for_k_best.sh"
+else
 CMD_reinsert="$DIR""/sh/ReinsertLexicals/reinsert_lexicals.sh"
+fi
 
 f_tagged_phrases="$f_dev_tagged_phrases"
 
@@ -222,7 +281,13 @@ BACKConverter="$DIR""/BackConverter.jar"
 f_back_converted=$f_reinserted".back_converted"
 java -jar "$BACKConverter" --input_file "$f_reinserted" --prefixe "Z" > $f_back_converted
 
+echo "==================================================================="
+echo "Le résultat du parsing peut être retrouvé dans le fichier suivant"
+echo "$f_back_converted"
+
 ## ------------------ Evaluation ----------------
+if [ "$k_best" -gt "1" ]                                                                         
+then
 
 echo "--- Evaluation ---"
 ## ==== EVALB ====
@@ -230,4 +295,6 @@ EVALB="$DIR""/Eval/EVALB/run_evalb.sh"
 
 f_gold="$f_dev_corpus_arbore"
 $EVALB $f_gold  $f_back_converted >  $f_back_converted".EVALB"
+
+fi
 
