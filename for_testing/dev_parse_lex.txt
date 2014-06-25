@@ -1,0 +1,404 @@
+**1**   Affaire des caporaux de Souain
+0.01 (SENT (NP (NC \affaire) (PP (P+D \des) (NP (NC \caporaux) (PP (P \de) (NP (NPP \souain)))))))
+0.02 (SENT (NP (NC \affaire) (PP (P+D \des) (NP (NC \caporaux) (PP (P \de) (NP (NPP \souain)))))))
+0.03 (SENT (NP (NC \affaire) (PP (P+D \des) (NP (NC \caporaux) (PP (P \de) (NP (NPP \souain)))))))
+**2**   L' affaire des caporaux de Souain , fusillés pour l' exemple , est un des cas parmi les plus flagrants et les plus médiatisés de l' injustice militaire durant la Première Guerre mondiale
+0.01 (==UNK== unk)
+0.02 (==UNK== unk)
+0.03 (==UNK== unk)
+**3**   Le 11 avril 1920 , le ministère de la justice refusait d' examiner le dossier .
+0.59 (==UNK== unk)
+**4**   Le caporal Lechat fut ré-inhumé au cimetière du Ferré le 16 octobre 1924 .
+0.01 (==UNK== unk)
+**5**   la presse régionale et nationale ne cessa de parler de l' affaire et les soutiens affluèrent de dizaines d' associations de mutilés de guerre et d' anciens combattants .
+0.01 (==UNK== unk)
+**6**   - Général André Bach , Fusillés pour l' exemple - 1914-1915 , Éditions Tallandier , 2003 -RRB- .
+0.023 (==UNK== unk)
+**7**   Affaire
+0.01 (SENT (NP (NC \affaire)))
+**8**   Elle semble essentiellement due à une compétition des médias entre eux , chacun reprenant l' information du concurrent en l' amplifiant .
+0.01 (==UNK== unk)
+**9**   En_fait , l' histoire retient aujourd'_hui quelques centaines de morts dans toute la Roumanie , et moins de 200 à Timisoara -LRB- seulement 96 selon les décomptes officiels -RRB- .
+0.01 (==UNK== unk)
+**10**   Les cadavres , dont les images avaient fait le tour du monde , avaient en_réalité été sortis de la morgue d' un hôpital local ;
+0.01 (==UNK== unk)
+**11**   - Ceausescu
+0.01 (SENT (PONCT \-) (NP (NPP \ceausescu)))
+0.02 (SENT (PONCT \-) (NP (NPP \ceausescu)))
+0.03 (SENT (PONCT \-) (NP (NPP \ceausescu)))
+**12**   Catégories : Wikipédia : ébauche Roumanie .
+0.01 (SENT (NP (NC \catégories)) (Z196 (PONCT \:) (Z195 (NP (NPP \wikipédia)) (Z16 (PONCT \:) (Z15 (NP (NC \ébauche) (NPP \roumanie)) (PONCT \.))))))
+**13**   Désinformation .
+0.01 (==UNK== unk)
+**14**   Médias .
+0.01 (SENT (NP (NC \médias)) (PONCT \.))
+**15**   En_fait , ce témoignage était entièrement faux .
+0.01 (==UNK== unk)
+**16**   La jeune fille était la fille de l' ambassadeur du Koweït à Washington .
+0.01 (==UNK== unk)
+**17**   La machination a fonctionné grâce_à l' intervention de Lauri Fitz-Pegado , qui a convaincu les députés que l' identité n' était pas révélée pour protéger la famille de la jeune femme [ 2 ] .
+0.01 (==UNK== unk)
+**18**   Lauri Fitz-Pegado avait travaillé pour le gouvernement auparavant , dans l' Agence de l' Information [ 3 ] .
+0.01 (==UNK== unk)
+**19**   Par_ailleurs , le gouvernement américain aurait selon plusieurs sources [ 4 ] payé 14 millions de dollars à cette compagnie pour l' avoir aidée à médiatiser la guerre du Golfe sous un jour favorable à l' intervention occidentale .
+0.01 (==UNK== unk)
+**20**   - -LRB- en -RRB- Ian Urbina , HBO adds disclaimer to Gulf War movie , Asia Times , Nov 13 , 2002 .
+0.01 (==UNK== unk)
+**21**   - Guerre du Koweït -LRB- 1990-1991 -RRB-
+0.01 (==UNK== unk)
+**22**   En 1973 , Valéry Giscard d' Estaing , ministre des Finances de Georges Pompidou reçoit du chef d' État centrafricain une plaquette de diamants africains -LRB- deux étoiles de petites pierres fines -RRB- , échantillon de la production de l' école de taille de pierre qu' il avait créée à Bangui .
+0.01 (==UNK== unk)
+**23**   Il est surtout consterné par l' attitude du Monde , alors_que la veille son directeur , Jacques Fauvet , est venu à l' Élysée pour un dîner au_cours duquel celui-ci a discuté des affaires nationales et internationales avec le Président .
+0.01 (==UNK== unk)
+**24**   Son attitude est cependant perçue comme de_l' arrogance et un aveu de culpabilité .
+0.01 (==UNK== unk)
+**25**   Une contre-enquête du journal Le Point infirme la_plupart des informations publiées dans Le Canard enchaîné et Le Monde lesquelles reposent essentiellement sur une note qui s' avéra être un faux , apparemment rédigé par le journaliste Roger Delpey , ancien conseiller de Jean-Bedel Bokassa dont il rédigeait une biographie -LRB- il est arrêté par la DST à la sortie de l' ambassade de Libye -RRB- [ 3 ] .
+0.01 (==UNK== unk)
+**26**   Une partie du montant de leur vente est rétrocédé au gouvernement de Bangui pour la Croix-Rouge de Centrafrique alors_que le reste -LRB- 67_025 francs -RRB- est versé à des oeuvres caritatives du pays .
+0.01 (==UNK== unk)
+**27**   - ^ Valéry Giscard d' Estaing , Le Pouvoir et la vie .
+0.01 (SENT (PONCT \-) (Z196 (PONCT \^) (Z195 (NP (NPP \valéry) (Z1086 (NPP \giscard) (PP (P \d') (NP (NPP \estaing))))) (Z16 (PONCT \,) (Z15 (NP (DET \le) (Z935 (NC \pouvoir) (COORD (CC \et) (NP (DET \la) (NC \vie))))) (PONCT \.))))))
+**28**   L' affrontement , Cie 12 , 1991 .
+0.01 (==UNK== unk)
+**29**   - ^ Roger Delpey est aussi l' auteur du livre La manipulation aux éditions Jacques Grancher , 1981 .
+0.01 (==UNK== unk)
+**30**   Catégorie : Affaire politico- financière française
+0.01 (SENT (NP (NC \catégorie) (Z1341 (PONCT \:) (Z1340 (NC \affaire) (Z23 (AP (PREF \politico-) (ADJ \financière)) (AP (ADJ \française)))))))
+**31**   L' Affaire des disparus du Beach est une affaire congolaise sous le régime de Denis Sassou-Nguesso .
+0.01 (==UNK== unk)
+**32**   Il signe des accords avec la République démocratique du Congo et le HCR pour le retour des réfugiés qui avaient fui la guerre civile en se réfugiant à Kinshasa .
+0.01 (==UNK== unk)
+**33**   Certaines rumeurs parlent de personnes entassées vivantes dans des containers , qui auraient été soudés et jetés dans le fleuve .
+0.01 (==UNK== unk)
+**34**   En France
+0.01 (SENT (NP (ET \en) (NPP \france)))
+**35**   Les plaintes déposées en France se heurtent à des difficultés .
+0.01 (==UNK== unk)
+**36**   Wikipédia : ébauche histoire .
+0.01 (SENT (NP (NPP \wikipédia)) (Z16 (PONCT \:) (Z15 (NP (NC \ébauche) (NC \histoire)) (PONCT \.))))
+**37**   Histoire
+0.01 (SENT (NP (NC \histoire)))
+**38**   Catégories : Wikipédia : ébauche histoire de France
+0.01 (SENT (NP (NC \catégories) (Z1091 (COORD (PONCT \:) (NP (NPP \wikipédia))) (Z1090 (COORD (PONCT \:) (NP (NC \ébauche) (NC \histoire))) (PP (P \de) (NP (NPP \france)))))))
+**39**   Affaire des emplois fictifs de la mairie de Paris
+0.01 (SENT (NP (NC \affaire) (PP (P+D \des) (NP (NC \emplois) (Z869 (AP (ADJ \fictifs)) (PP (P \de) (NP (DET \la) (Z940 (NC \mairie) (PP (P \de) (NP (NPP \paris)))))))))))
+**40**   Le RPR était un parti politique créé par Jacques Chirac , et dont il était à l' époque le président , en_même_temps_qu' il exerçait la fontion de maire de Paris .
+0.01 (==UNK== unk)
+**41**   Alain Juppé est jugé pour sa responsabilité dans cette affaire comme supérieur hiérarchique et complice .
+0.01 (==UNK== unk)
+**42**   Chronologie de l' affaire
+0.01 (SENT (NP (NC \chronologie) (PP (P \de) (NP (DET \l') (NC \affaire)))))
+**43**   - Vendredi 30 janvier 2004 : le tribunal correctionnel de Nanterre a prononcé un jugement de culpabilité pour les protagonistes .
+0.01 (==UNK== unk)
+**44**   - Affaire des faux chargés de mission
+0.01 (==UNK== unk)
+**45**   Affaire des faux chargés de mission
+0.01 (==UNK== unk)
+**46**   L' affaire des faux chargés de mission du cabinet du maire de Paris est une affaire d' emplois fictifs connexe aux différentes affaires politico- financières de la ville de Paris et du financement illégal du RPR .
+0.01 (==UNK== unk)
+**47**   Parmi les bénéficiaires , Michel Aurillac -LRB- ancien ministre RPR de la Coopération -RRB- , François Debré -LRB- frère du président du Conseil constitutionnel Jean-Louis Debré -RRB- ou encore le chauffeur de Marc Blondel , l' ancien secrétaire général de Force ouvrière -LRB- FO -RRB- .
+0.01 (==UNK== unk)
+**48**   Paris .
+0.01 (SENT (NP (NPP \paris)) (PONCT \.))
+**49**   Le juge Brice Raymondeau-Castanet se voit confier l' instruction de l' affaire .
+0.01 (==UNK== unk)
+**50**   - 7 février 1996 : Une nouvelle information judiciaire est ouverte à Paris par le juge Hervé Stéphan .
+0.01 (==UNK== unk)
+**51**   - 6 février 1998 : Les recours formés contre Laurent Dominati par Dominique Bertinotti -LRB- PS -RRB- et Yves Contassot -LRB- Vert -RRB- devant le Conseil constitutionnel sont rejetés au_motif_que les erreurs dans les inscriptions sur les listes électorales relevées dans le 3e arrondissement durant les élections législatives de 1997 ne constituent pas des " manoeuvres " .
+0.01 (==UNK== unk)
+**52**   - 25 mai 2000 : Les nouveaux juges d' instruction Jean-Paul Valat et Philippe Coirre mettent en examen quinze ex- élus ou ex- fonctionnaires du 3e arrondissement , soupçonnés d' avoir mobilisé des réseaux politiques , familiaux ou professionnels afin_d' inscrire indûment sur les listes électorales des sympathisants politiques .
+0.01 (==UNK== unk)
+**53**   Une décision qui est confirmée en appel puis en cassation en 2002 .
+0.01 (==UNK== unk)
+**54**   - 18 mars 2002 : La fin de l' instruction est notifiée aux quinze personnes mises en examen .
+0.01 (==UNK== unk)
+**55**   Quinze prévenus comparaissent pour " manoeuvres frauduleuses " lors_des élections municipales de 1989 et 1995 .
+0.01 (==UNK== unk)
+**56**   Les Dominati doivent répondre de " manoeuvres frauduleuses " ayant " porté atteinte à la sincérité " des élections municipales de 1989 et 1995 .
+0.01 (==UNK== unk)
+**57**   Jacques Dominati a menacé à l' audience de produire une liste d' élus qui auraient eu recours à ces pratiques irrégulières , soutenant que la pratique était généralisée .
+0.01 (==UNK== unk)
+**58**   L' affaire des fiches -LRB- parfois appelée affaire des casseroles -RRB- concerne un fichage et une ségrégation politique et religieuse menée dans l' armée française au début du XXe siècle .
+0.01 (==UNK== unk)
+**59**   Pour l' anecdote , le colonel Pétain , directeur de l' école de Saint-Cyr , connu à l' époque pour son athéisme et ses sympathies républicaines et dreyfusardes , sera abordé pour collaborer au fichage de ses subordonnés et étudiants , et peut-être aussi pour intégrer la loge " Alsace-Lorraine " , la loge de prestige , d'_ailleurs très modérée , du GO à laquelle appartiennent ou ont appartenu des notables républicains modérés de tendance plutôt nationaliste comme Jules Ferry ou le général Joffre .
+0.01 (==UNK== unk)
+**60**   Références
+0.01 (SENT (NP (NC \références)))
+**61**   Affaire des frégates de Taïwan
+0.01 (SENT (NP (NC \affaire) (PP (P+D \des) (NP (NC \frégates) (PP (P \de) (NP (NPP \taïwan)))))))
+**62**   Les différents volets de l' affaire
+0.01 (==UNK== unk)
+**63**   Thomson CSF A activé trois réseaux d' intermédiaires pour faire aboutir son dossier : Le réseau a cible Taïwan et est animé par Andrew Wang , le réseau B cible la Chine populaire et le réseau C , animé par Alfred Sirven et Edmond Kwan , qui cible Taïwan et la France .
+0.01 (==UNK== unk)
+**64**   Ces trois réseaux apparaissent dans une série de notes internes de Thomson CSF saisies par les juges français en 2000 .
+0.01 (==UNK== unk)
+**65**   Ce réseau , appelé " réseau traditionnel " , doit traiter l' administration et la présidence taïwanaise .
+0.01 (==UNK== unk)
+**66**   Références
+0.01 (SENT (NP (NC \références)))
+**67**   - Dans le sillage des frégates de Taiwan , Libération , 19 mai 2006
+0.01 (SENT (PONCT \-) (Z403 (PP (P \dans) (NP (DET \le) (Z940 (NC \sillage) (PP (P+D \des) (NP (NC \frégates) (PP (P \de) (NP (NPP \taiwan)))))))) (Z343 (PONCT \,) (Z342 (NP (NPP \libération)) (Z37 (PONCT \,) (NP (ADJ \19) (Z1148 (NC \mai) (NC \2006))))))))
+**68**   Réseau B -LRB- Lily Liu -RRB-
+0.01 (SENT (NP (NC \réseau) (NC \b)) (Z16 (PONCT \-lrb-) (Z15 (NP (NPP \lily) (NPP \liu)) (PONCT \-rrb-))))
+**69**   La note ajoutait que , " au_cours_du voyage d' octobre 1990 à Pékin , une réponse positive avait été obtenue des responsables chinois rencontrés dans le contexte difficile d' après Tiananmen " .
+0.01 (==UNK== unk)
+**70**   Références
+0.01 (SENT (NP (NC \références)))
+**71**   Mais s' il rencontra Alfred Sirven , Jean-François Briand fut tenu dans l' ignorance du rôle joué par Christine Deviers-Joncour , a_fortiori de sa proximité avec le ministre des Affaires étrangères Roland Dumas .
+0.01 (==UNK== unk)
+**72**   Peu avant_de quitter le groupe , en_raison_de désaccords persistants avec son PDG , Jean-François Briand bloqua le paiement du réseau C , derrière lequel il entrevoyait " le financement d' un parti politique " , ce que l' un de ses collaborateurs , Alain Fribourg , interpréta comme le soupçon d' un " financement du PS " , le Parti socialiste français .
+0.01 (==UNK== unk)
+**73**   Nul ne sait où la piste conduisait ensuite .
+0.01 (==UNK== unk)
+**74**   - Une autre enquête est en cours à Taiwan pour les actes de corruption des fonctionnaires et des personnalités politiques taïwanaises .
+0.01 (==UNK== unk)
+**75**   Il évoqua également des retours de rétrocommissions vers l' Europe -LRB- Luxembourg , Suisse , Monaco -RRB- .
+0.01 (==UNK== unk)
+**76**   - Frégates de Taïwan : l' ancien directeur adjoint de la Société générale à Taïwan témoigne , Sud Ouest , 13 mars 2002
+0.01 (==UNK== unk)
+**77**   En_effet , l' article 18 du contrat Bravo interdisait explicitement de rémunérer des intermédiaires .
+0.01 (==UNK== unk)
+**78**   Le 7 juin 2006 , Dominique de Talancé a été désaisi du dossier et remplacé par Xavière Simeoni , puis Françoise Desset .
+0.01 (==UNK== unk)
+**79**   - Le 10 octobre 2006 , les juges d' instruction Renaud Van Ruymbeke et Françoise Desset ont notifié aux parties l' article 175 du code de procédure pénale qui met fin à leurs investigations .
+0.01 (==UNK== unk)
+**80**   Ensuite , les juges renverront le dossier d' instruction au parquet de Paris .
+0.01 (==UNK== unk)
+**81**   - Ministère de l' économie et des finances : Mi-avril 2002 , les juges ont une nouvelle fois demandé au ministre de l' Économie Laurent Fabius la levée du secret défense afin_d' obtenir la déclassification de documents de Thomson , maître d' oeuvre du contrat .
+0.01 (==UNK== unk)
+**82**   Son successeur Francis Mer , membre du gouvenement de Jean-Pierre Raffarin a opposé également le secret défense en juin 2002 .
+0.01 (==UNK== unk)
+**83**   Thierry Imbot , fils de l' ancien directeur de la DGSE René Imbot , est décédé en octobre 2000 à Paris en chutant du quatrième étage de son appartement .
+0.01 (==UNK== unk)
+**84**   - Le 16 juin 2006 , les juges Renaud van Ruymbeke et Xavière Simeoni -LRB- qui remplace Dominique de Talancé -RRB- ont adressé une nouvelle demande de levée du secret défense au ministère de l' Économie et des Finances , seul habilité à saisir la commission consultative du secret de la défense nationale -LRB- CCSDN -RRB- .
+0.01 (==UNK== unk)
+**85**   Alain Madelin -LRB- UMP -RRB- et François Hollande -LRB- PS -RRB- se sont prononcés en_faveur_de cette levée .
+0.01 (==UNK== unk)
+**86**   Affaire Clearstream 2
+0.01 (SENT (NP (NC \affaire) (NP (NPP \clearstream) (AP (ADJ \2)))))
+**87**   En mai et juin 2004 , le juge Renaud Van Ruymbeke a reçu deux lettres anonymes et un CD-ROM contenant des listings de comptes de la chambre de compensation luxembourgeoise Clearstream .
+0.01 (==UNK== unk)
+**88**   - Rapidement , ces listes se sont avérées être en_partie des faux , parmi les titulaires de comptes cachés , des noms de responsables politiques français se sont glissés et le scénario conspirationniste du corbeau peut être une manipulation du juge Van Ruymbeke dans le but de protéger sa source .
+0.01 (==UNK== unk)
+**89**   En avril 2006 , les investigations judiciaires ont montré que le ministre de la Défense Michèle Alliot-Marie , et le ministre des Affaires étrangères de l' époque Dominique de Villepin , auraient été au courant de la circulation de ces listes falsifiées dans les milieux du renseignement avant_même la réception des lettres anonymes par le juge Ruymbeke .
+0.01 (==UNK== unk)
+**90**   - En 2001 , le juge genevois Paul Perraudin a bloqué à Zurich 1,2 milliard de francs suisses appartenant sur les comptes suisses de l' intermédiaire taiwanais , Andrew Wang , 73 ans .
+0.01 (==UNK== unk)
+**91**   Réfugié aux États-Unis , Andrew Wang est recherché à Taïwan dans l' enquête sur le meurtre du capitaine Yin Chin-Feun .
+0.01 (==UNK== unk)
+**92**   L' enquête à Taïwan
+0.01 (SENT (NP (DET \l') (Z940 (NC \enquête) (PP (P \à) (NP (NPP \taïwan))))))
+**93**   - Les hommes d' affaires : Alain Gomez
+0.01 (SENT (PONCT \-) (Z342 (NP (DET \les) (Z940 (NC \hommes) (PP (P \d') (NP (NC \affaires))))) (Z37 (PONCT \:) (NP (NPP \alain) (NPP \gomez)))))
+**94**   - Jean-Claude Desjeux , l' ancien directeur juridique de Thomson CSF , a reconnu avoir reçu un million de francs en 1997 sur un compte domicilié en Suisse .
+0.01 (==UNK== unk)
+**95**   Il a été mis en examen pour " recel d' abus de biens sociaux " par le juge Renaud Van Ruymbeke .
+0.01 (SENT (VN (CLS-SUJ \il) (Z111 (V \a) (Z110 (VPP \été) (VPP \mis)))) (Z49 (PP (P \en) (NP (NC \examen) (PP (P \pour) (NP (PONCT \") (Z998 (NC \recel) (Z26 (PP (P \d') (NP (NC \abus) (PP (P \de) (NP (NC \biens) (AP (ADJ \sociaux)))))) (PONCT \"))))))) (Z26 (PP (P \par) (NP (DET \le) (Z1187 (NC \juge) (NP (NPP \renaud) (Z1231 (ET \van) (NPP \ruymbeke)))))) (PONCT \.))))
+**96**   Il travaillait en relation avec Jean-Claude Albessard , responsable de la société pour l' Asie , terrassé en mai 2000 par un cancer foudroyant .
+0.01 (==UNK== unk)
+**97**   - Thierry Imbot : Fils du général Imbot , ancien de la DGSE reconverti dans les affaires , il a participé à la vente des frégates .
+0.01 (==UNK== unk)
+**98**   Accident thérapeutique en 2001 .
+0.01 (==UNK== unk)
+**99**   - L' armée française n' a pas besoin de ces frégates et le budget de la France ne peut rembourser 16 milliards de francs plus intérêts .
+0.01 (SENT (PP (P \-) (NP (DET \l') (Z1077 (NC \armée) (AP (ADJ \française))))) (Z298 (VN (ADV \n') (V \a)) (Z297 (ADV \pas) (Z15 (NP (NC \besoin) (Z970 (PP (P \de) (NP (DET \ces) (NC \frégates))) (Z902 (COORD (CC \et) (Sint (NP (DET \le) (Z940 (NC \budget) (PP (P \de) (NP (DET \la) (NPP \france))))) (Z82 (ADV \ne) (Z24 (VN (V \peut) (VINF \rembourser)) (NP (DET \16) (Z940 (NC \milliards) (PP (P \de) (NP (NC \francs))))))))) (COORD (CC \plus) (NP (NC \intérêts)))))) (PONCT \.)))))
+**100**   ISBN 220725478X
+0.01 (==UNK== unk)
+**101**   Broché - 285 pages .
+0.01 (==UNK== unk)
+**102**   Broché - 437 pages .
+0.01 (==UNK== unk)
+**103**   Catégories : Affaire des frégates de Taïwan .
+0.01 (SENT (NP (NC \catégories)) (Z16 (PONCT \:) (Z15 (NP (NC \affaire) (PP (P+D \des) (NP (NC \frégates) (PP (P \de) (NP (NPP \taïwan)))))) (PONCT \.))))
+**104**   République de Chine
+0.01 (SENT (NP (NC \république) (PP (P \de) (NP (NPP \chine)))))
+**105**   Après avoir exploré le volet parisien de ce dossier -LRB- affaire des HLM de Paris -RRB- , le magistrat du tribunal de Créteil s' intéresse à ses ramifications dans les Hauts-de-Seine .
+0.01 (==UNK== unk)
+**106**   Il est accusé d' avoir voulu soutirer une importante somme d' argent au conseiller général des Hauts-de-Seine , Didier Schuller , menacé par l' enquête , pour solliciter la clémence de son gendre .
+0.01 (==UNK== unk)
+**107**   Il est mis en examen et écroué , pour " trafic d' influence et abus de biens sociaux " .
+0.01 (==UNK== unk)
+**108**   M. Schuller est poursuivi pour " recel d' abus de biens sociaux et trafic d' influence " .
+0.01 (==UNK== unk)
+**109**   M. Balkany est renvoyé par le juge d' instruction pour " complicité de trafic d' influence " , en désaccord avec le parquet , qui concluait à son innocence et au non- lieu .
+0.01 (==UNK== unk)
+**110**   - 21 juin 2005 : Début du procès .
+0.01 (SENT (PONCT \-) (Z195 (NP (ADJ \21) (Z1148 (NC \juin) (NC \2005))) (Z16 (PONCT \:) (Z15 (NP (NC \début) (PP (P+D \du) (NP (NC \procès)))) (PONCT \.)))))
+**111**   Particulièrement complexe , l' instruction fut émaillée de multiples incidents -LRB- Affaire Schuller-Maréchal , refus des policiers de perquisitionner chez Jean Tiberi , dénonciations d' un mystérieux corbeau ... -RRB- et bifurcations -LRB- Affaire des HLM des Hauts-de-Seine -RRB- .
+0.01 (==UNK== unk)
+**112**   Parmi ces entreprises figurent Tecni , filiale de Vivendi - Générale des Eaux , la Cofreth , entreprise de chauffage , la SAR , entreprise de Travaux publics , la Somatem , entreprise d' ascenseurs , et d'_autres ...
+0.01 (==UNK== unk)
+**113**   - 20 janvier 1994 : la Direction générale des impôts -LRB- DGI -RRB- transmet au parquet de Créteil une enquête sur une entreprise appartenant à Francis Poullain , soupçonné d' avoir réglé des fausses factures par l' intermédiaire de ses sociétés , lesquelles auraient bénéficié de marchés passés par l' OPAC -LRB- Office public d' aménagement et de construction de la ville de Paris -RRB- .
+0.01 (==UNK== unk)
+**114**   Michel Roussin serait plus un intermédiaire qu' un bénéficiaire final de l' argent .
+0.01 (==UNK== unk)
+**115**   Le juge , souhaitant en avoir le coeur net , prend une série d' initiatives .
+0.01 (==UNK== unk)
+**116**   Le jour même de l' audition de ce témoin , il demande à la police judiciaire -LRB- PJ -RRB- de filer Francis Poullain .
+0.01 (==UNK== unk)
+**117**   RH , comme Rémy Halbwax ;
+0.01 (==UNK== unk)
+**118**   Jean-Claude Méry est placé sous mandat de dépôt .
+0.01 (SENT (NP (NPP \jean-claude) (NPP \méry)) (Z83 (VN (V \est) (VPP \placé)) (Z26 (PP (P \sous) (NP (NC \mandat) (PP (P \de) (NP (NC \dépôt))))) (PONCT \.))))
+**119**   Dans l' appartement de l' ancien ministre de la Coopération , le magistrat découvre une correspondance avec une banque suisse .
+0.01 (==UNK== unk)
+**120**   - 13 décembre 1994 : perquisition à Clichy au siège du " Clichois " , le journal électoral de Didier Schuller , conseiller général RPR des Hauts-de-Seine , proche de Patrick Balkany , dont il est son député suppléant , et du ministre de l' Intérieur , Charles Pasqua .
+0.01 (==UNK== unk)
+**121**   - 15 décembre 1994 : Quarante-huit heures après la perquisition au Clichois , Didier Schuller porte plainte contre le Dr Maréchal , beau-père du juge Éric Halphen .
+0.01 (==UNK== unk)
+**122**   Les policiers foncent au Mercure à l' heure dite .
+0.01 (==UNK== unk)
+**123**   Une femme , Françoise Montfort , présidente de la société AVS -LRB- Assainissement voierie service -RRB- , s' apprête à remettre 46_000 francs dans une enveloppe à un homme d' affaires , Jean-Paul Schimpf , ex- gérant d' une filiale de la Screg .
+0.01 (==UNK== unk)
+**124**   Tous deux sont arrêtés immédiatement .
+0.01 (SENT (NP (PRO \tous) (Srel (NP (PRO \deux)) (Z1613 (VN (V \sont) (VPP \arrêtés)) (ADV \immédiatement)))) (PONCT \.))
+**125**   Quant_à Françoise Montfort , elle admet très vite avoir dû payer , pendant des années , une taxe de 3 à 5 % pour l' obtention de marchés publics à l' office HLM des Hauts-de-Seine .
+0.01 (==UNK== unk)
+**126**   - 30 mai 1996 : François Ciolina met en_cause Jean Tiberi , maire de Paris .
+0.01 (SENT (PP (P \-) (NP (DET \30) (Z1148 (NC \mai) (NC \1996)))) (Z481 (PONCT \:) (Z480 (NP (NPP \françois) (NPP \ciolina)) (Z479 (VN (V \met)) (Z478 (ADV-P_OBJ \en_cause) (Z15 (NP (NPP \jean) (Z1141 (NPP \tiberi) (Z37 (PONCT \,) (NP (NC \maire) (PP (P \de) (NP (NPP \paris))))))) (PONCT \.)))))))
+**127**   - 27 juin 1996 : perquisition au domicile de Jean Tiberi , maire de Paris .
+0.01 (SENT (PONCT \-) (Z195 (NP (ADJ \27) (Z1148 (NC \juin) (NC \1996))) (Z16 (PONCT \:) (Z15 (NP (NC \perquisition) (PP (P+D \au) (NP (NC \domicile) (PP (P \de) (NP (NPP \jean) (Z1141 (NPP \tiberi) (Z37 (PONCT \,) (NP (NC \maire) (PP (P \de) (NP (NPP \paris))))))))))) (PONCT \.)))))
+**128**   - 28 octobre 1999 : l' instruction du juge Éric Halphen est officiellement clôturée .
+0.01 (==UNK== unk)
+**129**   Le juge n' est pas parvenu à démontrer formellement l' existence d' un système de financement occulte du RPR .
+0.01 (==UNK== unk)
+**130**   - 5 avril 2006 : dernier jour du procès des HLM de paris consacré aux plaidoiries .
+0.01 (==UNK== unk)
+**131**   Les ascenseurs des HLM de Paris
+0.01 (SENT (NP (DET \les) (Z940 (NC \ascenseurs) (PP (P+D \des) (NP (NC \hlm) (PP (P \de) (NP (NPP \paris))))))))
+**132**   - L' enquête a montré que , pour cet appel d' offres , des commissions avaient été versées , via le règlement de factures d' " assistance commerciale " à l' une des sociétés de Jean-Claude Méry .
+0.01 (==UNK== unk)
+**133**   Jean-Claude Méry , expliquait -il , lui avait mis " le couteau sous la gorge " .
+0.01 (==UNK== unk)
+**134**   Collusions maçonniques
+0.01 (==UNK== unk)
+**135**   Comme dans d'_autres affaires politico- financières françaises des années 1990 , plusieurs protagonistes de cette affaire appartiennent à des loges maçonniques : Jean-Claude Méry , Jacky Chaisaz , Didier Schuller -LRB- loge Silence de la GLNF -RRB- .
+0.01 (==UNK== unk)
+**136**   Seuls les Verts et le FN n' ont pas participé à ce détournement .
+0.01 (==UNK== unk)
+**137**   Les montants détournés aux frais du contribuable francilien se montent à plusieurs dizaines de millions d' euros -LRB- 300 à 600 millions de francs -RRB- .
+0.01 (==UNK== unk)
+**138**   Chargé des lycées depuis les premières lois de décentralisation , le conseil régional dirigé par le RPR et dont le président était Michel Giraud a engagé , entre 1988 et 1997 , 24 milliards de francs de travaux de rénovation , extension et construction dans 471 établissements , il a été prélevé 2 % de " commissions occultes " que se sont partagés ces grands partis , au prorata de leur représentation à l' assemblée régionale -LRB- 0,8 % pour la gauche et 1,2 % pour la droite -RRB- .
+0.01 (==UNK== unk)
+**139**   Soit , au_total , un_peu_plus de 150 millions de francs ont été versés par les grands groupes : Bouygues , Eiffage , Spie-Batignolles , Suez et Générale des eaux .
+0.01 (==UNK== unk)
+**140**   Protagonistes
+0.01 (SENT (NP (NC \protagonistes)))
+**141**   - Louise-Yvonne Casetta , trésorière occulte du RPR , ancêtre de l' UMP .
+0.01 (==UNK== unk)
+**142**   La justice soupçonne que l' argent liquide ayant servi à régler les billets d' avion -LRB- pour un montant de 336.210,00 EUR -RRB- puisse provenir de versements en espèces des commissions occultes versées par les entreprises de BTP attributaires des marchés publics , ce qui serait un abus de biens sociaux .
+0.01 (==UNK== unk)
+**143**   Aucun lien n' a pu être établi entre ces espèces et l' argent de la corruption des marchés d' Île-de-France .
+0.01 (==UNK== unk)
+**144**   Dans son ordonnance , Jacques Chirac est évoqué a plusieurs reprises , mais le juge ne peut pas poursuivre le président de la république qui est protègé par son immunité .
+0.01 (==UNK== unk)
+**145**   Le procès en première instance s' est terminé le mercredi 26 octobre 2005 .
+0.01 (==UNK== unk)
+**146**   - Michel Giraud a été condamné à 4 ans de prison avec sursis et 80_000 euros d' amende .
+0.01 (==UNK== unk)
+**147**   L' audience d' appel survient après la nomination par Jacques Chirac le 13 septembre 2006 d' un de ses anciens conseillers , Laurent Le Mesle , au poste de procureur général de Paris .
+0.01 (==UNK== unk)
+**148**   Ce magistrat ne sera pas physiquement présent à l' audience mais sera en position de dicter les réquisitions au magistrat chargé du procès .
+0.01 (==UNK== unk)
+**149**   Références
+0.01 (SENT (NP (NC \références)))
+**150**   - revue de presse sur le site de Denis Touret .
+0.01 (==UNK== unk)
+**151**   - Guy Drut
+0.01 (SENT (PONCT \-) (NP (NPP \guy) (NPP \drut)))
+**152**   Plusieurs clubs sont accusés d' avoir influencé la désignation des arbitres pour leurs matches .
+0.01 (==UNK== unk)
+**153**   Le scandale des matches truqués
+0.01 (SENT (NP (DET \le) (Z940 (NC \scandale) (PP (P+D \des) (NP (NC \matches) (VPpart (VPP \truqués)))))))
+**154**   En septembre 2005 , le parquet de Turin avait dans un premier temps classé l' affaire , les écoutes téléphoniques ne permettant pas d' établir de corruption ou d' achat de match .
+0.01 (==UNK== unk)
+**155**   Les douze membres du Conseil d' administration de la Juve , dont faisait partie Moggi , démissionnent le 11 mai 2006 [ 2 ] .
+0.01 (==UNK== unk)
+**156**   La Juve est déchue des titres acquis dans le Calcio lors_des saisons 2004-2005 et 2005-2006 et ne pourra prendre part à l' édition 2006-2007 de la Ligue des champions [ 3 ] .
+0.01 (==UNK== unk)
+**157**   Les clubs italiens font appel .
+0.01 (==UNK== unk)
+**158**   La Fiorentina et la Lazio de Rome restent en Série A mais sont privées de Coupe d' Europe .
+0.01 (==UNK== unk)
+**159**   Rebondissement le 27 octobre 2006 par suite de la décision de la Cour arbitrale du comité national olympique italien : les clubs condamnés voient leurs pénalités réduites de façon importante , ainsi la Juventus passe de 17 à 9 points de retard , la Fiorentina de 19 à 15 et la Lazio de 11 à 3 .
+0.01 (==UNK== unk)
+**160**   - ^ cf. " Quand la Juve choisit l' arbitre ... " , L' Équipe , 5 mai 2006
+0.01 (==UNK== unk)
+**161**   Wikipédia : ébauche droit .
+0.01 (SENT (NP (NPP \wikipédia)) (Z16 (PONCT \:) (Z15 (NP (NC \ébauche) (AP (ADJ \droit))) (PONCT \.))))
+**162**   Marcel Fontaine et Marcel Carton , tous deux diplomates , ont été enlevés le 22 mars 1985 à Beyrouth , Jean Paul Kauffmann , journaliste , deux mois plus_tard alors à son arrivée dans la même ville où il vient faire un reportage .
+0.01 (==UNK== unk)
+**163**   Il est , au moment de son enlèvement sur la route de l' aéroport en compagnie du chercheur Michel Seurat , enlevé avec lui et qui devait mourir en captivité en mars 1986 .
+0.01 (==UNK== unk)
+**164**   Philippe Rochot , Georges Hansen , Aurel Cornéa et Jean-Louis Normandin .
+0.01 (==UNK== unk)
+**165**   Puis , les sommes étaient retirées par des proches de Safa et apportées à l' association France Orient , où elles étaient réceptionnées par J.-C. Marchianni ou sa secrétaire .
+0.01 (==UNK== unk)
+**166**   Il fait aujourd'_hui l' objet d' un mandat d' arrêt international , et dans un entretien accordé au Monde , il confirme la position " officielle " selon laquelle il n' y aurait pas eu de versement de rançon .
+0.01 (==UNK== unk)
+**167**   Dernier élément non négligeable et pourtant souvent " oublié par la presse " .
+0.01 (==UNK== unk)
+**168**   Affaire des paillotes
+0.01 (SENT (NP (NC \affaire) (PP (P+D \des) (NP (NC \paillotes)))))
+**169**   Le 19 avril 1999 un incendie ravage la paillote Chez Francis construite dans l' illégalité en bord de mer , sur le domaine public maritime , plage de Cala d' Orzo au sud du golfe d' Ajaccio en Corse -LRB- France -RRB- .
+0.01 (==UNK== unk)
+**170**   Trois gendarmes du Groupe de Peletons de Sécurité -LRB- G.P.S -RRB- reconnaissent avoir incendié volontairement la paillote sur ordre du Colonel Mazères .
+0.01 (==UNK== unk)
+**171**   - Bernard Bonnet préfet de l' époque : trois ans de prison , dont un ferme et trois ans de privation de ses droits civiques et civils .
+0.01 (==UNK== unk)
+**172**   - 18 novembre 2002 : L' affaire en appel
+0.01 (SENT (PONCT \-) (Z342 (NP (ADJ \18) (Z1148 (NC \novembre) (NC \2002))) (Z37 (PONCT \:) (NP (DET \l') (Z940 (NC \affaire) (PP (P \en) (NP (NC \appel))))))))
+**173**   Le tribunal a jugé , après analyse de la loi , que si l' État était bien propriétaire , selon lui , des constructions incendiées , puisqu' établies illicitement sur le domaine public maritime , cela ne pouvait cependant autoriser le préfet à ordonner la destruction des paillotes dans les conditions réalisées .
+0.01 (==UNK== unk)
+**174**   Wikipédia : ébauche Corse-du-Sud .
+0.01 (==UNK== unk)
+**175**   Affaire politico- financière française .
+0.01 (SENT (NP (NC \affaire) (Z23 (AP (PREF \politico-) (ADJ \financière)) (AP (ADJ \française)))) (PONCT \.))
+**176**   Le photographe Adnan Hajj travaillait depuis plus de dix ans pour l' agence Reuters au Proche-Orient [ 1 ] .
+0.01 (==UNK== unk)
+**177**   D'_autres photos semblent assez clairement avoir subi des retouches pour accentuer leur caractère dramatique .
+0.01 (==UNK== unk)
+**178**   Voir aussi
+0.01 (SENT (VPinf (VN (VINF \voir)) (ADV \aussi)))
+**179**   - Pallywood
+0.01 (==UNK== unk)
+**180**   Power Line .
+0.01 (==UNK== unk)
+**181**   Dernier accès à l' URL : 2006-08-08 .
+0.01 (==UNK== unk)
+**182**   Page accédé le 2006-08-07 .
+0.01 (SENT (NP (NC \page) (VPpart (VPP \accédé) (NP (DET \le) (NC \2006-08-07)))) (PONCT \.))
+**183**   - -LRB- fr -RRB- Opinion : " L' affaire Adnan Hajj : première manipulation emblématique de l' ère numérique " par Andre Gunthert for ARHV , 8 août 2006
+0.01 (==UNK== unk)
+**184**   - -LRB- en -RRB- Opinion : " Institutional Failure at Reuters " par Thomas Lifson pour Yahoo! News , 7 août 2006
+0.01 (==UNK== unk)
+**185**   Catégories : Wikipédia : ébauche conflit israélo- arabe .
+0.01 (==UNK== unk)
+**186**   Histoire de la photographie
+0.01 (==UNK== unk)
+**187**   L' affaire des piastres , trafic de piastres ou scandale des piastres est un scandale financier et politique de la Quatrième République né dans le contexte de la Guerre d' Indochine .
+0.01 (SENT (NP (DET \l') (Z940 (NC \affaire) (PP (P+D \des) (NP (NC \piastres))))) (Z687 (PONCT \,) (Z686 (NP (NC \trafic) (Z55 (PP (P \de) (NP (NC \piastres))) (COORD (CC \ou) (NP (NC \scandale) (PP (P+D \des) (NP (NC \piastres))))))) (Z51 (VN (V \est)) (Z50 (NP (DET \un) (Z1077 (NC \scandale) (AP (ADJ \financier) (COORD (CC \et) (AP (ADJ \politique)))))) (Z49 (PP (P \de) (NP (DET \la) (Z1394 (ADJ \quatrième) (Z1069 (NC \république) (VPpart (VPP \né) (PP (P \dans) (NP (DET \le) (Z940 (NC \contexte) (PP (P \de) (NP (DET \la) (NC \guerre))))))))))) (Z26 (PP (P \d') (NP (NPP \indochine))) (PONCT \.))))))))
+**188**   Après avoir contribué à diminuer le soutien à la guerre , il tourna court avec la perte de l' Indochine et le climat politique et social qui s' ensuivit , peu propice aux débats sur la période coloniale ; il n' eut pas de suites judiciaires en France .
+0.01 (==UNK== unk)
+**189**   Le taux de change pour les transferts Indochine-France fut fixé à 17 F en 1945 , alors_que sa valeur sur les marchés asiatiques était de 10 F ou moins .
+0.01 (==UNK== unk)
+**190**   La situation troublée de l' époque ne facilitant pas les contrôles de l' OIC et encore moins les inculpations , un trafic florissant par_le_biais_de fausses exportations , fausses factures ou surfacturations , impliquant Français et Vietnamiens , se mit en_place à_partir_de 1948 .
+0.01 (==UNK== unk)
+**191**   L' affaire fut mise à jour en 1950 , mais ne suscita qu' un intérêt limité chez les parlementaires , jusqu'_en 1952-1953 où l'_on se rendit compte que le Viet Minh en profitait également , et qu' une partie des armes tournées contre les soldats français -LRB- y_compris tiralleurs sénégalais et marocains -RRB- avaient donc été acquises grâce_à ce trafic entretenu par l' avidité de certains .
+0.01 (==UNK== unk)
+**192**   L' effet sur l' opinion fut extrêmement dommageable .
+0.01 (==UNK== unk)
+**193**   Ces changements furent mal accueillis au Vietnam et considérés comme un signe avant-coureur du retrait français .
+0.01 (==UNK== unk)
+**194**   En juillet de l' année suivante , les accords de Genève étaient signés et l' Indochine française avait vécu .
+0.01 (==UNK== unk)
+**195**   - Yves Gras , " Histoire de la Guerre d' Indochine " , Plon , Paris , 1979 .
+0.01 (==UNK== unk)
+**196**   - Jules Roy , La bataille de Dien Bien Phu : Julliard , 1963 ; Albin Michel , 1989 .
+0.01 (==UNK== unk)
+**197**   - dernier résumé : l' " Affaire des piastres "
+0.01 (==UNK== unk)
+0.01 (==UNK== unk)
+0.01 (==UNK== unk)
+0.01 (==UNK== unk)
+0.01 (==UNK== unk)

@@ -98,7 +98,6 @@ public class GrammarCountUnknown extends Grammar {
 			LinkedList<RHS> to_be_redistributed = new LinkedList<RHS>();
 			for (RHS rhs : lex_rule.getRHS()) {
 				if (rhs.size() == 1) {
-					System.out.println("We are in rare mode, threshold is " + this._count_threshold);
 					Symbol smb = rhs.get(0);
 					// if the right hand side happens to be a rare terminal 
 					if ((smb.IsTerminal() && count_terminals.containsKey(smb)) && !(count_terminals.get(smb).get() > this._count_threshold)) {
