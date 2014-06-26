@@ -1,0 +1,119 @@
+\documentclass{beamer}
+
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{qtree}
+
+\begin{document}
+\begin{frame}
+\frametitle{Introduction : but de l'analyse syntaxique}
+\pause
+\textbf{Objectif} : mettre en \'evidence la structure d'un \'enonc\'e.
+
+\vspace{1cm}
+\pause
+
+\textbf{Buts} :
+\pause
+
+\begin{itemize}
+\item Pr\'eparation \`a l'analyse s\'emantique
+\pause
+\item Test de grammaticalit\'e
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\'Etapes d'analyse}
+\pause
+
+\textbf{Ex} : \texttt{200*6+137}
+
+\pause
+\textbf{Segmentation} : \pause \texttt{[200, *, 6, +, 137]}
+
+\pause
+\textbf{Analyse syntaxique}
+
+\Tree [ .E [ .E [ .T [ .T [ .F 200 ] ] * [ .F 6 ] ] ] + [ .T [ .F 137 ] ] ]
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Grammaires formelles}
+
+\pause
+\textbf{D\'efinition formelle}
+
+$$G = \left< X, V, S, \delta \right>$$
+
+\pause
+\begin{itemize}
+\item $X$ un ensemble fini de symboles terminaux
+\pause
+\item $V$ un ensemble fini de symboles non-terminaux
+\pause
+\item $S \in V$ l'axiome de la grammaire
+\pause
+\item $\delta$ un ensemble de r\`egles de r\'e\'ecriture
+\end{itemize}
+
+\pause
+\textbf{Forme normale de Chomsky}
+\pause
+\begin{itemize}
+\item R\`egles lexicales
+\begin{itemize}
+\item $NC \rightarrow cornemuse$
+\end{itemize}
+\pause
+\item R\`egles non-lexicales
+\begin{itemize}
+\item $NP \rightarrow DET\;NC$
+\item $NP \rightarrow NPP$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{PCFG : grammaires probabilistes}
+\pause
+\textbf{D\'efinition formelle}
+
+$$G = \left< X, V, S, \delta, \textcolor{red}{P} \right>$$
+
+\pause
+\textbf{Probabilit\'e d'une r\`egle}
+
+$$P(X = A \rightarrow \alpha) = P(\alpha \mid A)$$
+
+\pause
+\textbf{Probabilit\'e d'un arbre de d\'erivation}
+
+$$P(T = t) = \prod_{i=1}^{n} P(\alpha_i \rightarrow \beta_i)$$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{\'Etiquettage morpho-syntaxique (tagging)}
+\pause
+\textbf{Objectif} :
+
+\begin{center}Assigner \`a chaque symbole terminal un symbole non-terminal\end{center}
+
+\vspace{1cm}
+
+\pause
+\textbf{Strat\'egies} :
+\begin{itemize}
+\pause
+\item Utiliser les r\`egles lexicales de la grammaire
+\pause
+\item Faire appel \`a un tagger externe
+\end{itemize}
+\end{frame}
+
+\end{document}
