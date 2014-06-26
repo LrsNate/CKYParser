@@ -116,4 +116,36 @@ $$P(T = t) = \prod_{i=1}^{n} P(\alpha_i \rightarrow \beta_i)$$
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Apprentissage de la grammaire : TrainSetReader}
+Module TrainSetReader
+\begin{itemize}
+  \item input : corpus arbor\'e
+  \item output : grammaire hors-contexte probabiliste non-CNF
+\end{itemize}
+
+Corpus utilis\'e : \textbf{Sequoia TreeBank}
+ \begin{itemize}
+  \item $\approx$ 3200 phrases
+  \item arbres en forme bracketed
+  \item phrases tagg\'ees et pars\'ees
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Apprentissage de la grammaire : TrainSetReader}
+Transformer une phrase en une liste des r\`egles : 
+\begin{itemize}
+  \item chaque noeud est une production (sauf les noeuds terminaux)
+  \item LHS = noeud de l'arbre, RHS = ses enfants
+\end{itemize}
+Calculer la probabilit\'e de chaque r\`egle : 
+\begin{itemize}
+  \item calcul par fr\'equences relatives
+  \item LHS = cl\'e, RHS = valeur compt\'ee
+  \item pour chaque RHS, $P(LHS \rightarrow RHS_{i}) = \frac{counts(LHS
+  \rightarrow RHS_{i})}{\sum_{RHS}counts(LHS \rightarrow RHS)}$
+\end{itemize}
+\end{frame}
+
 \end{document}
