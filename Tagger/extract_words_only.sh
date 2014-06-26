@@ -12,8 +12,8 @@ cat /dev/stdin | awk '
   n = split($i, a, "/");
   ## the tag is always the last one after the last slash 
   word = a[1];
-  for (i = 2; i < n; i++) {
-    word = word + "/" + a[i];
+  for (j = 2; j < n; j++) {
+    word = word + "/" + a[j];
   }
   s = s " " word;
  }
