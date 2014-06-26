@@ -181,12 +181,12 @@ Calculer la probabilit\'e de chaque r\`egle :
 \frametitle{Parser CKY probabiliste}
 \begin{itemize}
   \item - algorithme de parsing ascendant (Cocke-Kasami-Younger)
-  \item - multiplie les probabilit\'es \`a chaque niveau
-  \item - peut servir de taggeur
-  \item - donne l'analyse le plus probable
-  \item - peut donner k-best analyses
   \item - utilise une grammaire `invers\'ee'' : cl\'e = partie droite
   (RHS), valeur = toutes les productions avec cette RHS
+  \item - multiplie les probabilit\'es \`a chaque niveau
+  \item - peut int\'egrer la t\^ache du tagging
+  \item - donne l'analyse le plus probable
+  \item - peut donner k-best analyses
 \end{itemize}
 \end{frame}
 
