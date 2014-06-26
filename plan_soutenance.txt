@@ -1,0 +1,31 @@
+1. Intro, qu'est ce qu'on a fait en deux mots
+
+2. Stratégie lexicale et stratégie non-lexicale
+
+3. Interêt du CKY probabiliste 
+(desambiguation, k-best, possibilité d'être utilisé comme taggeur) 
+et son fonctionnement 
+
+6. Apprentissage de la grammaire par TrainSetReader
+
+5. Corpus Sequoia
+
+4. Le traitement des mots inconnus: IGNORE, RARE, APRIORI_PROB
+
+7. Resultats : le taggeur MElt est meilleur que le taggeur CKY (+ un peu sur le fonctionnement du MElt?)
+
+8. Resultats : sources de l'inéfficacité 
+ - taille du corpus : comparer Sequoia et PennTreeBank
+ - paramètres de la gestion des mots inconnus
+   (pas trop d'espoir a cet egard)
+ - integration de l'info morphologique (la flexion)
+    pour l'estimation des probas P(unknown|CAT)
+ - limites des capacités de l'algo CKY standard
+
+9. Des problèmes à resoudre dans le futur, 
+ce qu'on pourrait améliorer 
+!!! Chercher a optimiser l'algo k-best !!!
+ - integration de l'info morphologique 
+     pour l'estimation des probas P(unknown|CAT)
+ - version de CKY lexicalisée, vertical markovization
+
