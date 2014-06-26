@@ -1,0 +1,19 @@
+0.9 SENT -> NP VP                                                        
+0.1 SENT -> VP                                                           
+0.5 VP -> V NP                                                        
+0.1 VP -> V                                                           
+0.3 VP -> V @VP_V                                                     
+0.1 VP -> V PP                                                        
+1.0 @VP_V -> NP PP                                                    
+0.1 NP -> NP NP                                                       
+0.2 NP -> NP PP                                                       
+0.7 NP -> N                                                           
+1.0 PP -> P NP                                                        
+0.5 N -> \people                                                     
+0.2 N -> \fish                                                       
+0.2 N -> \tanks                                                      
+0.1 N -> \rods                                                       
+0.1 V -> \people                                                     
+0.6 V -> \fish                                                       
+0.3 V -> \tanks                                                      
+1.0 P -> \with                                                       
