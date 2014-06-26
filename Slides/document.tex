@@ -1,587 +1,117 @@
 \documentclass{beamer}
 
-\mode<presentation>
-{
-  \usetheme{warsaw}
-}
-
 \usepackage[francais]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{tikz}
-\usetikzlibrary{shapes,shapes.geometric,arrows, positioning}
-\usepackage{amsthm}
-\usepackage{multimedia}
-\usepackage[mathscr]{eucal}
-
-\usepackage{color}
-
-\newcommand{\beqn}{\begin{eqnarray*}}
-\newcommand{\eeqn}{\end{eqnarray*}}
-\newcommand{\beqnm}{\begin{eqnarray}}
-\newcommand{\eeqnm}{\end{eqnarray}}
-\newcommand{\pth}[1]{\left[ #1\right]}
-\newcommand{\br}{\mathbb{R}}
-\newcommand{\E}{\boldsymbol{E}}
-
-\tikzstyle{block} = [rectangle, draw, fill=gray!20, text width=5em, text centered, rounded corners]
-\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
-\tikzstyle{cloud} = [draw, ellipse,fill=blue!40, text centered]
-\tikzstyle{echec} = [rectangle, draw, fill=gray!20, text width=5em, text centered, draw=red, very thick]
-
-\title{Analyse syntaxique en constituants}
-
-\subtitle{Implémentation d'un analyseur syntaxique probabiliste}
-
-\author{Antoine LAFOUASSE, Yulia MATVEEVA, Kira KIRANOVA}
-
-% - Use the \inst command only if there are several affiliations.
-% - Keep it simple, no one is interested in your street address.
-\institute{Université Paris Diderot --- Paris 7}
-
-\date{25 mars 2013}
-
-% If you have a file called "university-logo-filename.xxx", where xxx
-% is a graphic format that can be processed by latex or pdflatex,
-% resp., then you can add a logo as follows:
-
-% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
-% \logo{\pgfuseimage{university-logo}}
-
-% If you wish to uncover everything in a step-wise fashion, uncomment
-% the following command:
-
-%\beamerdefaultoverlayspecification{<+->}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{qtree}
 
 \begin{document}
-
 \begin{frame}
-\maketitle
-\end{frame}
+\frametitle{Introduction : but de l'analyse syntaxique}
+\pause
+\textbf{Objectif} : mettre en \'evidence la structure d'un \'enonc\'e.
 
-\begin{frame}
-\frametitle{Table des matières}
-\tableofcontents[pausesections]
-% You might wish to add the option [pausesections]
-\end{frame}
+\vspace{1cm}
+\pause
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Buts} :
+\pause
 
-\section{Présentation du problème}
-\begin{frame}
-\frametitle{Le problème}
-\begin{block}{La tâche globale}
- Pour toute phrase $s$ d'un langage $L_0$ trouver une analyse en constituants :
- \\
- \begin{tikzpicture}[auto, node distance = 4cm]
-    % Place nodes
-    \node [block, label=\text{Input}] (phrase) { phrase $ s \in L_0 $ };
-    \node [cloud, right of=phrase] (parser) {Parser};
-    \node [block, right of=parser, label=\text{Output}] (arbre) { arbre syntaxique de $s$};
-    % Draw edges
-    \path [line] (phrase) -- (parser);
-    \onslide<1,2>{\path [line] (parser) -- (arbre);}
-    \onslide<2->{
-     % another node
-     \node [block, below of=phrase, node distance = 2cm] (grammar) { grammaire formelle $G$ };
-     \path [line] (grammar) -- (parser);
-    }
-    \onslide<3>{
-     \node [echec, below of=arbre, node distance = 2cm] (echec) { \color{red} Échec };
-     % node[above] : put a label on the path
-     \path [line,dashed] (parser) edge node[above] {$s \in L(G)$} (arbre);
-     % sloped : put a label along the path
-     \path [line,dashed, draw=red] (parser) edge node[above,sloped] { \color{red} $s \notin L(G)$} (echec);
-    }
-\end{tikzpicture}
-\end{block}
-
-Input: {\tt Marie fait le ménage.}
-\\
-Output: $\left[_{S} \left[_{NP} \left[_{N} \text{\tt Marie} \right] \right] \left[_{VP}  \left[_{V^\prime} \left[_{V} \text{\tt fait} \right]
-\left[_{NP} \left[_{DET} \text{\tt le} \right] \left[_{N} \text{\tt ménage} \right] \right]
-\right] \right] \right]$
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{La grammaire}
-
-La grammaire $G$ --- une grammaire formelle hors-contexte (CFG).
-
-\begin{block}{Définition formelle}
-     Une grammaire formelle hors-contexte $G$ est un quadruplet $\left< \Sigma, \mathscr{V}, S, \mathscr{R} \right>$:
-     \\
-     { \color<2>{red} $\Sigma$ --- un ensemble fini de symboles terminaux, }
-     \\
-     { \color<2>{red} $\mathscr{V}$ --- un ensemble fini de symboles non-terminaux, }
-     \\
-     { \color<3>{red} $S \in \mathscr{V}$ --- l'axiome, }
-     \\
-     { \color<4>{red} $\mathscr{R}$ } --- un ensemble fini de {\color<4>{red} règles de production} de la forme
-        { \color<4>{red} $A \rightarrow \beta$ } ou $A \in \mathscr{V}$ et $\beta \in \left( \Sigma \cup \mathscr{V} \right)^*$.
-   \end{block}
-
-\only<1-4>{
-$ \left[_{ \color<3>{red} S } \left[_{NP} \left[_{N} \text{\tt Marie} \right] \right] \left[_{VP}  \left[_{V^\prime} \left[_{V} \text{\tt fait} \right]
-\left[_{NP} \left[_{DET} \text{\tt le} \right] \left[_{N} \text{\tt ménage} \right] \right]
-\right] \right] \right] $
-}
-
-\only<2,3>{ \color<2>{red} \beqn \Sigma = \{ \text{\tt Marie}, \text{\tt Paul}, \text{\tt fait}, \text{\tt le}, \text{\tt ménage}, \text{\tt court} \} \eeqn
-%\only<3,4>{
-$$\mathscr{V} = \{ {\color<3>{red} S}, NP, DET, N, VP, V^\prime, V \} $$
-}
-\only<4>{ \color{red}
-%\resizebox{.7\hsize}{!}{
-\begin{columns}[t]
-\begin{column}{5cm}
-\begin{align*}
- S \; \rightarrow \; NP \; VP,
- \\
- NP \; \rightarrow \; DET \; N,
- \\
- \ldots
- \end{align*}
- \end{column}
- \begin{column}{5cm}
- \begin{align*}
- VP \; \rightarrow \; V^\prime
- \\
- N \; \rightarrow \; \text{\tt ménage}
- \\
- \ldots
- \end{align*}
- \end{column}
-\end{columns}
-}
-
-\only<5>{
-\begin{block}{Arbre syntaxique}
-Tout arbre syntaxique $T_{(s, G)}$ de la séquence de symboles terminaux donnée $s$ peut être vu comme une suite de règles de production, l'application desquelles (dans une dérivation gauche) conduit de l'axiome à la séquence $s$.
-\end{block}
-}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Grammaire probabiliste}
-
-{\small
-\begin{block}{Grammaire probabiliste}
-La grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, {\color{red} \tilde{\mathrm{P}}} \right>$ --- une grammaire formelle hors-contexte probabiliste (PCFG):
-\begin{flushleft}
-{\color{red} $\tilde{\mathrm{P}}$ : $\mathscr{R} \rightarrow \br$ } est une fonction :
-\\
-$\forall \, R \in \mathscr{R}, \, R = (A \rightarrow \beta)$
-\\
-$\tilde{\mathrm{P}} (R) = \mathrm{P} (\beta \mid A) =$ la probabilité que A se réecrive en $\beta$,
-\end{flushleft}
-$$\tilde{\mathrm{P}} (R) \geq 0, \, \sum_{\gamma : (A \rightarrow \gamma) \in \mathscr{R}} \tilde{\mathrm{P}} (A \rightarrow \gamma) = 1.$$
-\end{block}
-
-\onslide<2>{
-\begin{block}{Probabilité d'un arbre syntaxique}
- Soit $G$ --- une PCFG, $s \in L(G)$ --- une phrase du langage engendré par $G$,
- $T_{(s, G)} = (\alpha_1 \rightarrow \beta_1, \ldots, \alpha_n \rightarrow \beta_n)$ --- un arbre syntaxique.
- La probabilité d'un arbre syntaxique $T_{(s, G)}$:
- \\
- $\mathrm{P} (T_{(s,G)}) = \prod_{i=1}^{n} \tilde{\mathrm{P}} (\alpha_i \rightarrow \beta_i)$
- %se calcule comme le produit des probabilités de toutes les règles de production que cet arbre contient.
-
-\end{block}
-}
-}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Pourquoi une grammaire probabiliste ?}
-
-\begin{block}{Ambiguïté syntaxique}
-$\mathcal{T}(s,G)$ --- l'ensemble de tous les arbres syntaxiques que la phrase $s$ admet.
-\\
-Ambiguité: $\mid \mathcal{T}(s,G) \mid > 1$.
-\end{block}
-
-\begin{block}{Rangement des variantes d'analyse}
-Pour tout $T_{(i,s,G)} \in \mathcal{T}(s,G)$
-\\
-$\gamma_i = \mathrm{P} (T_{(i,s,G)})$ --- un score qu'on assigne à cet arbre syntaxique.
-\\
-La meilleure analyse syntaxique : $$T_{(i^*,s,G)} = \underset{T_{(i,s,G)} \in \mathcal{T}(s,G)}{\mathrm{argmax}} \mathrm{P} (T_{(i,s,G)})$$.
-\end{block}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{La grammaire}
-{\small
-\begin{block}{}
- Grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R}, \mathrm{P} \right>$
- \\
- $\Sigma$ --- symboles terminaux, $\mathscr{V}$ --- symboles non-terminaux
-\end{block}
-}
-
-\begin{block}{Règles de production}
-$$\mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}$$
-$\mathscr{R}_{LEX}$ : le lexique, i.e. des appariements de mot-formes et de leurs catégories syntaxiques :
-%\begin{multline*}
-\\
-$\mathscr{R}_{LEX} = \left\{ A \rightarrow a \mid
-        A \in \mathscr{V}, \, a \in \Sigma \right\}$
-     \\
-     \begin{flushright}
-     $\mathscr{R}_{LEX} = \{ V \; \rightarrow \; \text{\tt fait}, N \; \rightarrow \; \text{\tt fait},
-     N \; \rightarrow \; \text{\tt ménage}, \ldots \}$
-     \end{flushright}
-%\end{multline*}
-     $\mathscr{R}_{NL}$ : les règles non-lexicales :
-     \\
-$\mathscr{R}_{NL} = \left\{ A \rightarrow \beta \mid
-     A \in \mathscr{V}, \beta \in \mathscr{V}^* \right\},$
-     \\
-\begin{flushright}
-     $\mathscr{R}_{NL} = \{ NP \; \rightarrow \; DET \; N, \; VP \; \rightarrow V^\prime, \ldots \}$
-\end{flushright}
-\end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Stratégie 1.}
- Grammaire $G = \left< \Sigma, \mathscr{V}, S, \mathscr{R} = \mathscr{R}_{LEX} \uplus \mathscr{R}_{NL}, \mathrm{P} \right>$.
-\begin{block}{}
- \begin{tikzpicture}[auto, node distance = 4cm]
-    % Place nodes
-    \node [block, label=\text{Input}] (phrase) { phrase $ s \in L_0 $ };
-    \node [cloud, right of=phrase] (parser) {Parser};
-    \node [block, right of=parser, label=\text{Output}] (arbre) { arbre(s) syntaxique(s) de $s$};
-    % Draw edges
-    \path [line] (phrase) -- (parser);
-    % another node
-     \node [block, below of=phrase, node distance = 2cm] (grammar) { grammaire formelle $G$ };
-     \path [line] (grammar) -- (parser);
-     \node [echec, below of=arbre, node distance = 2cm] (echec) { \color{red} Échec };
-     % node[above] : put a label on the path
-     \path [line,dashed] (parser) edge node[above] {$s \in L(G)$} (arbre);
-     % sloped : put a label along the path
-     \path [line,dashed, draw=red] (parser) edge node[above,sloped] { \color{red} $s \notin L(G)$} (echec);
-\end{tikzpicture}
-\end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Stratégie 2.}
-Soit la phrase $s$ une séquence de mot-occurrences $(w_1, w_2, \ldots, w_n)$.
-
-\begin{block}{}
-Découper le problème en deux:
-\begin{enumerate}
-\item
- Identifier la catégorie $C_i$ de chaque mot-occurrence $w_i$ dans la phrase $s$.
-\item
- Trouver l'analyse syntaxique de la phrase $s$ en ne se basant que sur les catégories des mots dans la phrase $s$.
-\end{enumerate}
-\end{block}
-
-\begin{block}{Tagging}
-\begin{tikzpicture}[auto, node distance = 4cm]
-    % Place nodes
-    \node [block, label=\text{Input}] (phrase) { phrase $s$ };
-    \node [cloud, right of=phrase] (taggeur) {Taggeur};
-    \node [block, right of=taggeur, label=\text{Output}] (phrase_taguee) { phrase taggée $<s, C>$ };
-    % Draw edges
-    \path [line] (phrase) -- (taggeur);
-    \path [line] (taggeur) -- (phrase_taguee);
-\end{tikzpicture}
-$s = (w_1, w_2, \ldots, w_n)$, $C = (C_1, C_2, \ldots, C_n)$
-\end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Stratégie 2.}
-
-{ \small Grammaire $G = G_{LEX} + G_{NL}$. }
-
-\begin{block}{}
-\begin{tikzpicture}[auto, node distance = 4cm]
-
-    % Place nodes
-    \node [block] (phrase) { \small phrase = séquence de mots $s$ };
-    \onslide<2>{
-     % nodes
-     \node [cloud, right of = phrase] (tokeniseur) {Tokeniser};
-     \node [block, right of = tokeniseur, label=\text{Input}] (string) { \small chaîne de caractères };
-     % edges
-     \path [line] (string) -- (tokeniseur);
-     \path [line] (tokeniseur) -- (phrase);
-    }
-    \begin{scope}[node distance=0.5cm]
-    \node [cloud, below= of phrase] (taggeur) {Tagger};
-    \node [block, below= of taggeur] (phrase_taguee) { \small séquence de catégories $C$ };
-    \end{scope}
-    % Draw edges
-    \path [line] (phrase) -- (taggeur);
-    \path [line] (taggeur) -- (phrase_taguee);
-
-    % Place nodes
-    \node [cloud, right of = phrase_taguee] (parser) {Parser};
-    \node [block, right of = parser, label=\text{Output}] (arbre) { arbre(s) syntaxique(s) de $s$};
-    % Draw edges
-    \path [line] (phrase_taguee) -- (parser);
-     % another node
-     \node [block, below of=phrase_taguee, node distance = 1.8cm] (grammar) { grammaire non-lexicale $G_{NL}$ };
-     \path [line] (grammar) -- (parser);
-     \node [echec, below of=arbre, node distance = 2cm] (echec) { \color{red} Échec };
-     % node[above] : put a label on the path
-     \path [line,dashed] (parser) edge node[above] {$C \in L(G_{NL})$} (arbre);
-     % sloped : put a label along the path
-     \path [line,dashed, draw=red] (parser) edge node[above,sloped] { \color{red} $C \notin L(G_{NL})$} (echec);
-\end{tikzpicture}
-\end{block}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Choix de méthodologie et d’implémentation}
-\begin{frame}
-\frametitle{Corpus d'apprentissage, de test et de contrôle}
-
-\begin{block}{}
-\begin{tikzpicture}[auto, node distance = 4cm]
-   % Place nodes
-    \node [block] (sequoia) { Sequoia Tree Bank };
-    \node [block, below of= sequoia, node distance = 2cm] (testset) {TestSet};
-    \node [block, left of= testset] (trainset) {TrainSet};
-    \node [block, right of= testset] (controlset) {ControlSet};
-    % edges
-     \path [line] (sequoia) -- (trainset);
-     \path [line] (sequoia) -- (testset);
-     \path [line,dashed] (sequoia) -- (controlset);
-\end{tikzpicture}
-\end{block}
-
-\begin{block}{Sequoia TreeBank}
-Un corpus arboré de la langue française :
-$$ \text{Sequoia TreeBank} = \text{un ensemble} \; \left\{ \left< s, T_{(s, G^{(0)})} \right> \right\} $$
-de paires de phrases et de structures en constituants associées.
-\\
-$$ \text{Pour chaque phrase une seule structure en constituants.} $$
-\end{block}
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Apprentissage de la grammaire}
-
-\begin{block}{}
-\begin{tikzpicture}[auto, node distance = 4cm]
-    % Place nodes
-    \node [block] (trainset) { TrainSet };
-    \node [cloud, right of = trainset] (trainsetreader) {TrainSetreader};
-    \node [block, right of = trainsetreader] (pcfg_g0) {PCFG $G^{(0)}_{NL}$};
-    % edges
-     \path [line] (trainset) -- (trainsetreader);
-     \path [line] (trainsetreader) -- (pcfg_g0);
-\end{tikzpicture}
-\end{block}
-
-\begin{block}{}%{TrainSetreader: Apprentissage de la grammaire}
 \begin{itemize}
+\item Pr\'eparation \`a l'analyse s\'emantique
 \pause
-\item \textbf{Entrée :} [TrainSet] Corpus arboré (Sequoia Tree Bank)
-\pause
-\item \textbf{Sortie :} Grammaire hors-contexte probabiliste
-\pause
-\item Estimation de la probabilité de chaque règle :
-$$P(A \rightarrow \beta) = \frac{ct(A \rightarrow \beta)}{\sum\limits_{\gamma \in (\Sigma \cup \mathcal{V})^*}{ct(A \rightarrow \gamma)}}$$
-\end{itemize}
-\end{block}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Analyse syntaxique: parser CKY}
-\begin{itemize}
-\item \textbf{Entrées :}
-\pause
-\begin{itemize}
-\item Grammaire hors-contexte probabiliste
-\pause
-\item {[}Test Set{]} Phrase segmentée et étiquetée
-\end{itemize}
-\pause
-\item \textbf{Sortie :} \textit{n-best} arbres de dérivation
-\end{itemize}
-\pause
-Caractéristiques de l'algorithme CKY :
-\pause
-\begin{itemize}
-\item Analyse ascendante
-\pause
-\item Parser tabulaire
-\pause
-\item L'algorithme repose sur la fusion de deux syntagmes (d'où la grammaire en CNF).
-\end{itemize}
-\end{frame}
-
-%--------------- 1-0------------
-\begin{frame}
-\frametitle{Forme normale de Chomsky}
-Types de règle :
-\\
-\pause
-$\left.\parbox{4cm}{
-\begin{itemize}
-\item \textbf{Règles non-lexicales :} \\ $A \rightarrow BC$ \\ $A, B, C, \in \mathcal{V}$
-\pause
-\item \textbf{Règles lexicales :} \\ $A \rightarrow a$ \\ $A \in V, a \in \Sigma$
-\pause
-\end{itemize}
-}\right\rbrace \text{Forme Normale de Chomsky (CNF)}$
-\\
-\pause
-\begin{itemize}
-\item \textbf{CNF flexible:} \\ $A \rightarrow B$ \\ $A, B \in \mathcal{V}$
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Chronologie d'exécution}
-\begin{enumerate}
-\pause
-\item Apprentissage de la grammaire
-\pause
-\item Conversion de la grammaire en forme normale de Chomsky
-\pause
-\item Analyse syntaxique
-\pause
-\item Reconversion de la sortie
-% La conversion en CNF est reversible.
-\pause
-\item Évaluation
-\end{enumerate}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Évaluation}
-Étapes à évaluer :
-\pause
-\begin{itemize}
-\item Segmentation de l'entrée (Tokenisation)
-\pause
-\item Étiquetage morpho-syntaxique (Tagging)
-\pause
-\item Analyse syntaxique (Parsing)
+\item Test de grammaticalit\'e
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Évaluation}
-Types d'entrée :
+\frametitle{\'Etapes d'analyse}
 \pause
-\begin{itemize}
-\item Texte non-annoté et non-segmenté (en mots)
+
+\textbf{Ex} : \texttt{200*6+137}
+
 \pause
-\item Texte segmenté (tokenisé)
+\textbf{Segmentation} : \pause \texttt{[200, *, 6, +, 137]}
+
 \pause
-\item Texte morpho-syntaxiquement étiqueté (taggé)
-\pause
-\item Corpus arboré (muni d'annotations syntaxiques)
-\end{itemize}
+\textbf{Analyse syntaxique}
+
+\Tree [ .E [ .E [ .T [ .T [ .F 200 ] ] * [ .F 6 ] ] ] + [ .T [ .F 137 ] ] ]
+
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Implémentation}
-\begin{columns}[t]
-\begin{column}{5cm}
-\begin{block}{Notre implémentation}
-\parbox{5cm}{
+\frametitle{Grammaires formelles}
+
+\pause
+\textbf{D\'efinition formelle}
+
+$$G = \left< X, V, S, \delta \right>$$
+
+\pause
 \begin{itemize}
-\item Apprentissage de la grammaire
-\item Parseur CKY: le noyau du projet
-\item Conversion de la grammaire en CNF flexible, reconversion en forme originale
-\item Évaluation:
+\item $X$ un ensemble fini de symboles terminaux
+\pause
+\item $V$ un ensemble fini de symboles non-terminaux
+\pause
+\item $S \in V$ l'axiome de la grammaire
+\end{itemize}
+
+\pause
+\textbf{Forme normale de Chomsky}
+\pause
 \begin{itemize}
-\item du tokeniser
-\item du tagger
+\item R\`egles lexicales
+\begin{itemize}
+\item $NC \rightarrow cornemuse$
+\end{itemize}
+\pause
+\item R\`egles non-lexicales
+\begin{itemize}
+\item $NP \rightarrow DET\;NC$
+\item $NP \rightarrow NPP$
 \end{itemize}
 \end{itemize}
-}
-\end{block}
-\end{column}
-\begin{column}{5cm}
-\begin{block}{Outils utilisés}
-\parbox{5cm}{
-\begin{itemize}
-\item Tagger: MElt
-\item Évaluation:
-\begin{itemize}
-\item de l'analyse syntaxique: Evalb
-\end{itemize}
-\end{itemize}
-}
-\end{block}
-\end{column}
-\end{columns}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{PCFG : grammaires probabilistes}
+\pause
+\textbf{D\'efinition formelle}
+
+$$G = \left< X, V, S, \delta, \textcolor{red}{P} \right>$$
+
+\pause
+\textbf{Probabilit\'e d'une r\`egle}
+
+$$P(X = A \rightarrow \alpha) = P(\alpha \mid A)$$
+
+\pause
+\textbf{Probabilit\'e d'un arbre de d\'erivation}
+
+$$P(T = t) = \prod_{i=1}^{n} P(\alpha_i \rightarrow \beta_i)$$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{\'Etiquettage morpho-syntaxique (tagging)}
+\pause
+\textbf{Objectif} :
+
+\begin{center}Assigner \`a chaque symbole terminal un symbole non-terminal\end{center}
+
+\vspace{1cm}
+
+\pause
+\textbf{Strat\'egies} :
+\begin{itemize}
+\pause
+\item Utiliser les r\`egles lexicales de la grammaire
+\pause
+\item Faire appel \`a un tagger externe
+\end{itemize}
+\end{frame}
 
 \end{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{d}
-
-\begin{block}{}
-\begin{tikzpicture}[auto, node distance = 4cm]
-    % Place nodes
-    \node [block] (trainset) { TrainSet: {\small $\{ <s_i, T_{(s_i, \tilde{G}^{(0)})}> \}_{i=1}^N$ } };
-    \node [cloud, right of = trainset] (trainsetreader) {TrainSetreader};
-    \node [block, right of = trainsetreader] (pcfg_g0) {PCFG $G^{(0)}_{NL}$};
-    \node [cloud, above of = pcfg_g0, node distance = 2cm] (cnf_converter) {CNF-converter};
-    \node [block, above of = cnf_converter, node distance = 2cm] (pcfg_cnf_g1) { PCFG $G^{(1)}_{NL}$ en CNF flexible };
-    \node [cloud, left of = pcfg_cnf_g1] (parseur) { Parseur CKY };
-    \node [block, left of = parseur] (phrase) { TestSet: phrases tagguees {\small $\{ <r_i, C_i> \}_{i=1}^M$ } };
-    % edges
-     \path [line] (trainset) -- (trainsetreader);
-     \path [line] (trainsetreader) -- (pcfg_g0);
-     \path [line] (pcfg_g0) -- (cnf_converter);
-     \path [line] (cnf_converter) -- (pcfg_cnf_g1);
-     \path [line] (pcfg_cnf_g1) -- (parseur);
-     \path [line] (phrase) -- (parseur);
-
-\end{tikzpicture}
-\end{block}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Reconversion de la sortie}
-\begin{itemize}
-\item La conversion en CNF consiste a ajouter des symbôles non-terminaux a la grammaire.
-\pause
-\item
-\pause
-\item Supprimer les noeuds de l'arbre qui n'appartiennent pas a la grammaire d'origine.
-\end{itemize}
-\end{frame}
