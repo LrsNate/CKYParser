@@ -7,11 +7,35 @@
 \usepackage{xcolor}
 \usepackage{qtree}
 
+\title{Analyse syntaxique en constituants}
+
+\subtitle{Impl\'ementation d'un analyseur syntaxique probabiliste}
+
+\author{Kira KIRANOVA, Antoine LAFOUASSE, Yulia MATVEEVA}
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+\institute{Universit\'e Paris Diderot --- Paris 7}
+
+\date{25 mars 2013}
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{logo_p7.jpg}
+ \logo{\pgfuseimage{university-logo}}
+
 \begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
 \begin{frame}
 \frametitle{Introduction : but de l'analyse syntaxique}
 \pause
-\textbf{Objectif} : mettre en \'evidence la structure d'un \'enonc\'e.
+\textbf{Objectif} : mettre en \'evidence la structure d'un \'enonc\'e
 
 \vspace{1cm}
 \pause
@@ -33,7 +57,7 @@
 \textbf{Ex} : \texttt{200*6+137}
 
 \pause
-\textbf{Segmentation} : \pause \texttt{[200, *, 6, +, 137]}
+\textbf{Segmentation} : \texttt{[200, *, 6, +, 137]}
 
 \pause
 \textbf{Analyse syntaxique}
@@ -119,26 +143,31 @@ $$P(T = t) = \prod_{i=1}^{n} P(\alpha_i \rightarrow \beta_i)$$
 \begin{frame}
 \frametitle{Apprentissage de la grammaire : TrainSetReader}
 Module TrainSetReader
+\pause
 \begin{itemize}
-  \item input : corpus arbor\'e
-  \item output : grammaire hors-contexte probabiliste non-CNF
+  \item \textbf{Entr\'ee} : corpus arbor\'e
+  \pause
+  \item \textbf{Sortie} : grammaire hors-contexte probabiliste non-CNF
 \end{itemize}
 
+\pause
 Corpus utilis\'e : \textbf{Sequoia TreeBank}
  \begin{itemize}
-  \item $\approx$ 3200 phrases
-  \item arbres en forme bracketed
-  \item phrases tagg\'ees et pars\'ees
+  \pause
+  \item $\approx$ 3200 phrases annot\'ees
+  \pause
+  \item arbres sous forme parenth\'es\'ee
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Apprentissage de la grammaire : TrainSetReader}
-Transformer une phrase en une liste des r\`egles : 
+Transformer une phrase en un ensemble de r\`egles : 
 \begin{itemize}
-  \item chaque noeud est une production (sauf les noeuds terminaux)
+  \item chaque noeud d'un arbre est une production (sauf les noeuds terminaux)
   \item LHS = noeud de l'arbre, RHS = ses enfants
 \end{itemize}
+\pause
 Calculer la probabilit\'e de chaque r\`egle : 
 \begin{itemize}
   \item calcul par fr\'equences relatives
@@ -151,7 +180,7 @@ Calculer la probabilit\'e de chaque r\`egle :
 \begin{frame}
 \frametitle{Parser CKY probabiliste}
 \begin{itemize}
-  \item - algorihtme de parsing ascendant (Cocke-Kasami-Younger)
+  \item - algorithme de parsing ascendant (Cocke-Kasami-Younger)
   \item - multiplie les probabilit\'es \`a chaque niveau
   \item - peut servir de taggeur
   \item - donne l'analyse le plus probable
