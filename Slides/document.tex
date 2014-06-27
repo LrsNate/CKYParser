@@ -6,6 +6,9 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{qtree}
+\usepackage{amsthm}
+\usepackage{multimedia}
+\usepackage[mathscr]{eucal}
 
 \title{Analyse syntaxique en constituants}
 
@@ -271,5 +274,288 @@ Pour augmenter l'\'efficacit\'e du parseur :
   \item faire varier le param\'etre $t$ (la limite)
 \end{itemize}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\'Evaluation de tagging}
+\begin{block}{Tagging}
+ \textbf{\`A \'evaluer}: assignation des cat\'egories morpho-syntaxiques aux tokens (mot-occurrences).
+\end{block}
+\pause
+ (Pr\'ecision = Rappel) du taggueur:
+$$ \frac{\# \text{cat\'egories bien identifi\'ees}}{\# \text{total de tokens dans la phrase}} $$
+\pause
+\begin{columns}[t]
+\begin{column}{5cm}
+\begin{block}{MElt (mod\`ele MaxEnt)}
+92 \%
+\end{block}
+\end{column}
+\begin{column}{5cm}
+\begin{block}{CKY muni d'une grammaire lexicale}
+88 \%
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\'Evaluation de parsing}
+
+\onslide<1->{
+\begin{block}{Ce qu'on pourrait faire}
+ Compter les arbres (issus du parseur) enti\`erement identiques \`a ceux du corpus arbor\'e (gold).
+\end{block}
+}
+\onslide<2>{
+\begin{block}{Pourquoi pas ?}
+ \begin{itemize}
+ \item Pas r\'ealistique % de s'attendre \`a ce que les arbres soient identiques
+ \item Analyse pas assez fine
+ \end{itemize}
+\end{block}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\'Evaluation de parsing}
+
+\only<1,3>{
+\begin{align*}
+\left[_{\color<3>{red} NP} \left[_{\color<3>{red} DET} \text{\tt le}_1 \right]
+\left[_{\color<3>{red} NP}
+\left[_{\color<3>{red} N} \text{\tt professeur}_2 \right]
+\left[_{\color<3>{red} PP} \left[_{\color<3>{red} P} \text{\tt avec}_3 \right]
+\left[_{\color<3>{red} NP} \left[_{\color<3>{red} DET} \text{\tt le}_4 \right] \left[_{\color<3>{red} N} \text{\tt telescope}_5 \right]  \right]
+\right]
+ \right]
+\right]
+\end{align*}
+}
+\only<2>{
+\begin{align*}
+\left[ \left[ \text{\tt le}_1 \right]
+\left[
+\left[ \text{\tt professeur}_2 \right]
+\left[ \left[ \text{\tt avec}_3 \right]
+\left[ \left[ \text{\tt le}_4 \right] \left[ \text{\tt telescope}_5 \right]  \right]
+\right]
+ \right]
+ \right]
+\end{align*}
+}
+
+\onslide<1->{
+\begin{block}{Parsing}
+ \textbf{\`A \'evaluer}:
+ \begin{enumerate}
+ \item {\color<2>{red} D\'ecoupage en constituants \textbf{(Bracketing measures)}}
+ \item D\'ecoupage en constituants + {\color<3>{red} l'\'etiquettage de constituants (types de syntagmes) \textbf{(Labeled measures)}}
+ \end{enumerate}
+\end{block}
+}
+
+ \onslide<4->{
+\begin{multline*}
+\text{Rappel} = \frac{\# \text{constituants correctes} }{\#
+\text{constituants gold} }
+\end{multline*}
+\begin{multline*}
+\text{Precision} = \frac{\# \text{constituants correctes} }{\#
+\text{constituants issus du parseur} }
+\end{multline*}
+\begin{multline*}
+\text{F-score} = \frac{2 \text{Rappel} \text{Precision} }{ \text{Rappel} + \text{Precision} }
+\end{multline*}
+}
+
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\'Evaluation de parsing}
+\pause
+\begin{block}{}
+ L'outil utilis\'e pour l'\'evaluation : \textbf{EVALB}.
+\end{block}
+\pause
+
+\begin{block}{\'Evaluer le parseur seul (tagging gold)}
+\begin{columns}[t]
+\begin{column}{5cm}
+\begin{block}{Bracketing}
+Recall         =  64.19
+\\
+Precision      =  67.85
+\\
+F-score       =  65.97
+\end{block}
+\end{column}
+\begin{column}{5cm}
+\begin{block}{Labeled}
+Recall         =  62.99
+\\
+Precision      =  66.58
+\\
+FMeasure       =  64.74
+\end{block}
+\end{column}
+\end{columns}
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\'Evaluation de parsing}
+
+\onslide<1->{
+\begin{block}{}
+ L'outil utilis\'e pour l'\'evaluation : \textbf{EVALB}.
+\end{block}
+
+\'Evaluer l'enchainement (tagging + parsing).
+}
+
+\onslide<2->{
+\begin{block}{Avec le taggeur MElt}
+Bracketing Recall         =  61.49
+\\
+Bracketing Precision      =  64.01
+\\
+Bracketing FMeasure       =  62.73
+\end{block}
+}
+
+\onslide<3->{
+\begin{block}{CKY tout seul}
+\only<4>{
+\begin{itemize}
+\item \textbf{MODE: donner une probabilit\'e apriori d'un mot inconnu}
+\\
+Bracketing Recall         =  55.52
+\\
+Bracketing Precision      =  62.16
+\\
+Bracketing FMeasure       =  58.65
+\end{itemize}
+}
+\only<5>{
+\begin{itemize}
+\item \textbf{MODE: consid\'erer les mots rares comme inconnus}
+\\
+Bracketing Recall         =  58.48
+\\
+Bracketing Precision      =  62.67
+\\
+Bracketing FMeasure       =  60.51
+\end{itemize}
+}
+\end{block}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\'Evaluation de parsing: conclusions}
+\pause
+\begin{enumerate}
+\item Il ne faut pas laisser tout le travail au parseur, mais utiliser d'abord un taggueur
+\pause
+\item En g\'en\'eral les r\'esultats laissent \`a d\'esirer
+\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Sources d'inn\'efficacit\'es, am\'eliorations possibles}
+\pause
+\begin{enumerate}
+\item \textbf{Taille du corpus}:
+\\ $\approx$ 1000 phrases de Wikip\'edia en total,
+\\ $\approx$ 600 phrases dans le corpus d'entrainement
+\pause
+\item \textbf{Param\`etres de gestion de mots inconnus}
+\pause
+\begin{itemize}
+\item Int\'egration de l'information morphologique (la flexion)
+\\ dans l'estimation des probabilit\'es de mots inconnus
+\end{itemize}
+\pause
+\item \textbf{Limites des capacit\'es de CKY probabiliste}
+\pause
+\begin{itemize}
+\item Parsing non-lexicalis\'e
+\pause
+\item Trop d'hypoth\`eses d'ind\'ependance:
+\\ un noeud se re\'ecrit ind\'ependamment de ses fr\^eres et anc\^etres dans l'arbre
+syntaxique
+\end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Am\'eliorations possibles: extensions de CKY probabiliste}
+\begin{enumerate}
+\setcounter{enumi}{0}
+\item \textbf{Algorithme standard}:
+$$P(\beta \mid \text{type de syntagme})$$
+\end{enumerate}
+
+\pause
+\begin{enumerate}
+\item \textbf{Lexicalisation}:
+$$P(\beta \mid \text{type de syntagme}, \text{t\^ete lexicale})$$
+\pause
+\item \textbf{Markovization horizontale}:
+\pause
+\\ Ajouter la d\'ependance des fr\^eres dans l'arbre
+$$P(\beta \mid \text{type de syntagme}, \text{des noeuds du m\^eme niveau dans l'arbre})$$
+\pause
+\item \textbf{Markovization verticale}:
+$$P(\beta \mid \text{type de syntagme}, \text{le parent du noeud})$$
+\end{enumerate}
+
+\pause
+Probl\`emes ?
+\pause
+Donn\'ees \'eparses $\Rightarrow$ N\'ec\'essit\'e de techniques de lissage.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Am\'eliorations possibles: question de la complexit\'e}
+
+\begin{block}{Impl\'ementation actuelle}
+\begin{itemize}
+\item \textbf{Un seul meilleur arbre}:
+\\
+algorithme \`a la Viterbi
+\item \textbf{k meilleurs arbres}:
+\\ parcours de tous les arbres possibles dans chaque case pour chaque symb\^ole
+\end{itemize}
+\end{block}
+
+\pause
+
+Chercher \`a r\'eduire la compl\'exit\'e de la version $\mathrm{k\-best}$ !
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
