@@ -7,11 +7,35 @@
 \usepackage{xcolor}
 \usepackage{qtree}
 
+\title{Analyse syntaxique en constituants}
+
+\subtitle{Impl\'ementation d'un analyseur syntaxique probabiliste}
+
+\author{Kira KIRANOVA, Antoine LAFOUASSE, Yulia MATVEEVA}
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+\institute{Universit\'e Paris Diderot --- Paris 7}
+
+\date{25 mars 2013}
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{logo_p7.jpg}
+ \logo{\pgfuseimage{university-logo}}
+
 \begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
 \begin{frame}
 \frametitle{Introduction : but de l'analyse syntaxique}
 \pause
-\textbf{Objectif} : mettre en \'evidence la structure d'un \'enonc\'e.
+\textbf{Objectif} : mettre en \'evidence la structure d'un \'enonc\'e
 
 \vspace{1cm}
 \pause
@@ -33,7 +57,7 @@
 \textbf{Ex} : \texttt{200*6+137}
 
 \pause
-\textbf{Segmentation} : \pause \texttt{[200, *, 6, +, 137]}
+\textbf{Segmentation} : \texttt{[200, *, 6, +, 137]}
 
 \pause
 \textbf{Analyse syntaxique}
@@ -113,6 +137,138 @@ $$P(T = t) = \prod_{i=1}^{n} P(\alpha_i \rightarrow \beta_i)$$
 \item Utiliser les r\`egles lexicales de la grammaire
 \pause
 \item Faire appel \`a un tagger externe
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Apprentissage de la grammaire : TrainSetReader}
+Module TrainSetReader
+\pause
+\begin{itemize}
+  \item \textbf{Entr\'ee} : corpus arbor\'e
+  \pause
+  \item \textbf{Sortie} : grammaire hors-contexte probabiliste non-CNF
+\end{itemize}
+
+\pause
+Corpus utilis\'e : \textbf{Sequoia TreeBank}
+ \begin{itemize}
+  \pause
+  \item $\approx$ 3200 phrases annot\'ees
+  \pause
+  \item arbres sous forme parenth\'es\'ee
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Apprentissage de la grammaire : TrainSetReader}
+Transformer une phrase en un ensemble de r\`egles : 
+\begin{itemize}
+  \item chaque noeud d'un arbre est une production (sauf les noeuds terminaux)
+  \item LHS = noeud de l'arbre, RHS = ses enfants
+\end{itemize}
+\pause
+Calculer la probabilit\'e de chaque r\`egle : 
+\begin{itemize}
+  \item calcul par fr\'equences relatives
+  \item LHS = cl\'e, RHS = valeur compt\'ee
+  \item pour chaque RHS, $P(LHS \rightarrow RHS_{i}) = \frac{counts(LHS
+  \rightarrow RHS_{i})}{\sum_{RHS}counts(LHS \rightarrow RHS)}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parser CKY probabiliste}
+\begin{itemize}
+  \item - algorithme de parsing ascendant (Cocke-Kasami-Younger)
+  \item - utilise une grammaire `invers\'ee'' : cl\'e = partie droite
+  (RHS), valeur = toutes les productions avec cette RHS
+  \item - multiplie les probabilit\'es \`a chaque niveau
+  \item - peut int\'egrer la t\^ache du tagging
+  \item - donne l'analyse le plus probable
+  \item - peut donner k-best analyses
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parser CKY probabiliste}
+Exemple d'ambiguit\'e du rattachement du syntagme pr\'epositionnel :\\
+\textbf{la fille voit le professeur avec un t\'elescope} \\~\\
+
+\only<1>{\textbf{Analyse 1} : $VP \rightarrow VP\:PP$ \\ \Tree [ .VP [
+.VP [ .V voit ] [ .NP [ .DET le ] [ .N professeur ] ] ] [ .PP [ .P avec ] [ .NP [ .DET
+un ] [ .N telescope ] ] ] ]}
+\only<2>{\textbf{Analyse 2} : $NP \rightarrow NP\:PP$ \\
+\Tree [ .VP [ .V voit ] [ .NP [ .NP [ .DET le ] [ .N professeur ] ] [ .PP [ .P
+avec ] [ .NP [ .DET un ] [ .N telescope ] ] ] ] ]}
+\only<3>{
+\begin{columns}
+\begin{column}{3cm}
+\textbf{Grammaire (r\'egles lexicales omises) :} \\ $S
+\rightarrow NP\:VP$ \\ $NP \rightarrow NP\:PP$ \\ $NP \rightarrow Det\:N$ \\ $VP \rightarrow
+VP\:PP$ \\ $VP \rightarrow V\:NP$ \\ $VP \rightarrow V$ \\ $PP \rightarrow
+P\:NP$
+\end{column}
+\begin{column}{7cm}
+Analyse 1 : $VP \rightarrow VP\:PP$ (la fille a le t\'elescope) \\
+$P(analyse_{1}) = P(VP \rightarrow VP\:PP) * P(VP \rightarrow V\:NP) * P(PP \rightarrow
+P\:NP) * $ \ldots toutes les productions pr\'ec\'edentes  \\~\\
+
+Analyse 2 : $NP \rightarrow NP\:PP$ (le professeur a le
+telescope) \\
+$P(analyse_{2}) = P(VP \rightarrow V\:NP) * P(NP \rightarrow NP\:PP) * P(PP
+\rightarrow P\:NP) * $ \ldots toutes les productions pr\'ec\'edentes
+\end{column}
+\end{columns}
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{Traitement des mots inconnus}
+M\^eme le plus grand corpus ne contient pas tous les mots de la langue. Quoi
+faire si on rencontre un mot inconnu?
+\begin{itemize}
+  \item - approche primitive : ignorer les mots inconnus, arr\^eter le parsing
+  d\`es qu'on en voit un
+  \item - approche plus sophistiqu\'ee : donner une probabilit\'e aux r\`egles
+  $NONTERMINAL \rightarrow TERMINAL\_INCONNU$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Traitement des mots inconnus}
+\textbf{Strat\'egie 1 : probabilit\'e apriori} \\~\\
+
+Choisir une probabilit\'e $\alpha = P(UNKNOWN|CAT)$. \\
+Pour toute r\`egle lexicale, multiplier sa probabilit\'e par $(1 - \alpha)$,
+pour avoir $\sum_{term} P(term|CAT) = 1$. \\~\\
+
+Pour augmenter l'\'efficacit\'e du parseur :
+
+\begin{itemize}
+  \item choisir un param\'etre $\alpha$ diff\'erent pour chaque cat\'egorie :
+  $P(UNKNOWN | NOM) > P(UNKNOWN | PREP)$
+  \item faire varier le param\'etre $\alpha$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Traitement des mots inconnus}
+\textbf{Strat\'egie 2 : mots rares} \\~\\
+
+Choisir une limite $t$. Si un mot $w$ est recontr\'e moins de $t$ fois dans le
+corpus d'apprentissage, il est consid\'er\'e \textbf{rare}. On ajoute la
+probabilit\'e de produire $w$ \`a la probabilit\'e de produire un mot inconnu. 
+$$\sum_{rare} P(rare|CAT) = P(UNKNOWN|CAT)$$
+=> on a la valeur de P(UNKNOWN|CAT) pour chaque cat\'egorie
+s\'epar\'ement. \\~\\
+
+Pour augmenter l'\'efficacit\'e du parseur :
+
+\begin{itemize}
+  \item utiliser un lemmatiseur en pr\'e-traitement, pour \'eviter de manquer
+  des formes fl\'echies
+  \item faire varier le param\'etre $t$ (la limite)
 \end{itemize}
 \end{frame}
 
