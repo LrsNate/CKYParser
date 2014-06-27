@@ -21,14 +21,20 @@ BEGIN {
  correct = 0; ntokens_total = 0;
 }
 {
-  str_tags = $0;
+  str_tags = $0; nr = NR;
   if (!((getline str_gold < f_tags_gold) > 0)) {
+    print nr;
     print "ERROR: Not enough lines in the file with gold tags.";
   	exit 1;
   }
   ngold = split(str_gold, gold, " "); 
   ntags = split(str_tags, tags, " ");
   if (ngold != ntags) {
+    if (str_tags ~ "NULL") {
+      ntokens_total += ntags;
+      next;
+    }
+      print nr;
       print "ERROR: length mismatch during tagger evaluation";
       exit 1;
   }
