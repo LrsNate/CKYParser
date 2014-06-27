@@ -187,7 +187,7 @@ Calculer la probabilit\'e de chaque r\`egle :
   \item - utilise une grammaire `invers\'ee'' : cl\'e = partie droite
   (RHS), valeur = toutes les productions avec cette RHS
   \item - multiplie les probabilit\'es \`a chaque niveau
-  \item - peut int\'egrer la t\^ache du tagging
+  \item - peut int\'egrer la t\^ache du tagging : $$Phrase \rightarrow Tagger \rightarrow Parser (grammaire non-lexicale)$$ $$Phrase \rightarrow Parser (grammaire avec des productions lexicales)$$
   \item - donne l'analyse le plus probable
   \item - peut donner k-best analyses
 \end{itemize}
